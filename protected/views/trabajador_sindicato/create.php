@@ -11,18 +11,25 @@
  
 ?>
 </div>
-<?php// echo CHtml::beginForm(); ?>
+
 
 <h1>Asociar Nomina Con Sindicato</h1>
-<?php $dataProvider= new CActiveDataProvider('trabajador_sindicato',[
-    'criteria'=>[
+<?php $dataProvider= new CActiveDataProvider('trabajador_sindicato',array(
+    'criteria'=>array(
         'condition'=>"nomina_sindicato='".$_GET['convencion']."'"
-]]);
+    ),
+    'pagination'=>array(
+                        'pageSize'=>20000,
+                        ),
+     
+
+    )
+    );
 
             $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider'=>$dataProvider,
                 'id'=>'show-list',
-
+                
                 'columns'=>array(
         
          // muestra el atributo "titulo"

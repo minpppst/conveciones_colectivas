@@ -19,7 +19,7 @@
  * @property integer $codigo_ocupacion
  * @property integer $tiempo_serv_establecimiento_anios
  * @property integer $tiempo_serv_establecimiento_meses
- * @property integer $tiempo_ejerciciendo_prefesion_anios
+ * @property integer $tiempo_ejerciendo_profesion_anios
  * @property integer $tiempo_ejerciendo_profesion_meses
  * @property string $remuneracion_antes_contra_empleado
  * @property string $remuneracion_antes_contra_obrero
@@ -67,8 +67,8 @@ class Nomina extends CActiveRecord
                                 'wrongType'=>'Only csv allowed.',
                                 'tooLarge'=>'File too large! 5MB is the limit'),
                         
-			array('nombres,cedula nacionalidad, pais_origen, lugar_nacimiento, sexo, edad, estado_civil, nivel_educativo, grado_anio_aprobado, oficio_dentro_establecimiento, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciciendo_prefesion_anios, tiempo_ejerciendo_profesion_meses, remuneracion_antes_contra_empleado, remuneracion_antes_contra_obrero, remuneracion_despues_contra_empleado, remuneracion_despues_contra_obrero, carga_familiar, cod_convencion', 'required'),
-			array('edad, grado_anio_aprobado, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciciendo_prefesion_anios, tiempo_ejerciendo_profesion_meses, carga_familiar', 'numerical', 'integerOnly'=>true),
+			array('nombres,cedula nacionalidad, pais_origen, lugar_nacimiento, sexo, edad, estado_civil, nivel_educativo, grado_anio_aprobado, oficio_dentro_establecimiento, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciendo_profesion_anios, tiempo_ejerciendo_profesion_meses, remuneracion_antes_contra_empleado, remuneracion_antes_contra_obrero, remuneracion_despues_contra_empleado, remuneracion_despues_contra_obrero, carga_familiar, cod_convencion', 'required'),
+			array('edad, grado_anio_aprobado, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciendo_profesion_anios, tiempo_ejerciendo_profesion_meses, carga_familiar', 'numerical', 'integerOnly'=>true),
 			array('nombres, pais_origen, lugar_nacimiento', 'length', 'max'=>100),
 			array('nacionalidad, sexo, estado_civil', 'length', 'max'=>1),
 			array('nivel_educativo', 'length', 'max'=>2),
@@ -77,7 +77,7 @@ class Nomina extends CActiveRecord
 			array('cod_convencion,cedula', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nombres, cedula, nacionalidad, pais_origen, lugar_nacimiento, sexo, edad, estado_civil, nivel_educativo, grado_anio_aprobado, oficio_dentro_establecimiento, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciciendo_prefesion_anios, tiempo_ejerciendo_profesion_meses, remuneracion_antes_contra_empleado, remuneracion_antes_contra_obrero, remuneracion_despues_contra_empleado, remuneracion_despues_contra_obrero, carga_familiar, cod_convencion', 'safe', 'on'=>'search'),
+			array('id, nombres, cedula, nacionalidad, pais_origen, lugar_nacimiento, sexo, edad, estado_civil, nivel_educativo, grado_anio_aprobado, oficio_dentro_establecimiento, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciendo_profesion_anios, tiempo_ejerciendo_profesion_meses, remuneracion_antes_contra_empleado, remuneracion_antes_contra_obrero, remuneracion_despues_contra_empleado, remuneracion_despues_contra_obrero, carga_familiar, cod_convencion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -114,7 +114,7 @@ class Nomina extends CActiveRecord
 			'codigo_ocupacion' => 'Codigo Ocupacion',
 			'tiempo_serv_establecimiento_anios' => 'Tiempo Serv Establecimiento Anios',
 			'tiempo_serv_establecimiento_meses' => 'Tiempo Serv Establecimiento Meses',
-			'tiempo_ejerciciendo_prefesion_anios' => 'Tiempo Ejerciciendo Prefesion Anios',
+			'tiempo_ejerciendo_profesion_anios' => 'Tiempo Ejerciciendo Profesion Anios',
 			'tiempo_ejerciendo_profesion_meses' => 'Tiempo Ejerciendo Profesion Meses',
 			'remuneracion_antes_contra_empleado' => 'Remuneracion Antes Contra Empleado',
 			'remuneracion_antes_contra_obrero' => 'Remuneracion Antes Contra Obrero',
@@ -152,7 +152,7 @@ class Nomina extends CActiveRecord
 		$criteria->compare('codigo_ocupacion',$this->codigo_ocupacion);
 		$criteria->compare('tiempo_serv_establecimiento_anios',$this->tiempo_serv_establecimiento_anios);
 		$criteria->compare('tiempo_serv_establecimiento_meses',$this->tiempo_serv_establecimiento_meses);
-		$criteria->compare('tiempo_ejerciciendo_prefesion_anios',$this->tiempo_ejerciciendo_prefesion_anios);
+		$criteria->compare('tiempo_ejerciendo_profesion_anios',$this->tiempo_ejerciendo_profesion_anios);
 		$criteria->compare('tiempo_ejerciendo_profesion_meses',$this->tiempo_ejerciendo_profesion_meses);
 		$criteria->compare('remuneracion_antes_contra_empleado',$this->remuneracion_antes_contra_empleado,true);
 		$criteria->compare('remuneracion_antes_contra_obrero',$this->remuneracion_antes_contra_obrero,true);

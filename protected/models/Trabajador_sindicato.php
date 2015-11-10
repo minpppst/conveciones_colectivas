@@ -118,6 +118,8 @@ class Trabajador_sindicato extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('nomina_sindicato',$this->nomina_sindicato,true);
+                //$criteria->with = array('nominaSindicato');
+                //$criteria->addSearchCondition('nominaSindicato.nombre',$this->nomina_sindicato);
 		$criteria->compare('trabajador',$this->trabajador,true);
                 $criteria->compare('trabajadores_amparados_conve_col',$this->trabajadores_amparados_conve_col,true);
                 $criteria->compare('trabajadores_afiliados_sindicato',$this->trabajadores_afiliados_sindicato);
@@ -133,9 +135,20 @@ class Trabajador_sindicato extends CActiveRecord
 		$criteria->compare('secretario_vigilancia_disciplina',$this->secretario_vigilancia_disciplina);
 		$criteria->compare('secretario_otro',$this->secretario_otro);
 		$criteria->compare('delegado_sindical',$this->delegado_sindical);
-
+               
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+        
+          public function behaviors()
+                {
+                    return array(
+                        // Classname => path to Class
+                        'ActiveRecordLogableBehavior'=>
+                            'application.behaviors.ActiveRecordLogableBehavior',
+                    );
+                }
 }

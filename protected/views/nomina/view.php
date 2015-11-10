@@ -36,7 +36,7 @@ $this->menu=array(
 		'codigo_ocupacion',
 		'tiempo_serv_establecimiento_anios',
 		'tiempo_serv_establecimiento_meses',
-		'tiempo_ejerciciendo_prefesion_anios',
+		'tiempo_ejerciendo_profesion_anios',
 		'tiempo_ejerciendo_profesion_meses',
 		'remuneracion_antes_contra_empleado',
 		'remuneracion_antes_contra_obrero',

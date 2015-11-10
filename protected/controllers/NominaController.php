@@ -62,6 +62,10 @@ class NominaController extends Controller
 	 */
 	public function actionCreate()
 	{
+            
+            
+            
+            
 		$model=new Nomina;
                 $bandera=0;
 		// Uncomment the following line if AJAX validation is needed
@@ -91,9 +95,19 @@ class NominaController extends Controller
                              if(!empty($data[3]) && ($data[3]=='x' || $data[3]=='X')){
                                  $data[3]='V';
                              }else{
-                             
-                             $data[3]='E';
+                                 if(!empty($data[4]) && ($data[4]=='x' || $data[4]=='X')){
+                                 $data[3]='E';
+                             }else{
+                                 echo "<script type='text/javascript'>
+                                        alert('Error, Nacionalidad No Cumple Los Parametros');
+                                        history.back(-1);
+                                        </script>"; 
+                                        $transaction->rollback();
+                                        
+                                        exit(); 
                              }
+                             
+                                 }
                             
                              if($data[9]!='S' && $data[9]!='C' && $data[9]!='D' && $data[9]!='V'){
                                  
@@ -123,20 +137,31 @@ class NominaController extends Controller
                              
                              
                                  
-                           
-            $llenar = Yii::app()->db->createCommand("INSERT INTO nomina( `nombres`,`cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`,
-                     `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`,
-                     `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciciendo_prefesion_anios`,
-                     `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`,
-                     `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`)
-                    VALUES 
-                    ('".$data[1]."','".$data[2]."','".$data[3]."',
-                    '".$data[5]."','".$data[6]."','".$data[7]."',
-                    '".$data[8]."','".$data[9]."','0".$data[10]."',
-                    '".$data[11]."','".$data[12]."','".$data[13]."',
-                    '".$data[14]."','".$data[15]."','".$data[16]."',
-                    '".$data[17]."','".$data[18]."','".$data[19]."','".$data[20]."','".$data[21]."','".$data[22]."','".$_POST['Nomina']['cod_convencion']."')")->execute();
-                             
+                      $model_nomina=new Nomina; 
+                              $model_nomina->nombres=utf8_encode($data[1]); 
+                              $model_nomina->cedula=$data[2];       
+                              $model_nomina->nacionalidad=$data[3];
+                              $model_nomina->pais_origen=$data[5];
+                              $model_nomina->lugar_nacimiento=utf8_encode($data[6]);
+                              $model_nomina->sexo=$data[7];
+                              $model_nomina->edad=$data[8];
+                              $model_nomina->estado_civil=$data[9];
+                              $model_nomina->nivel_educativo="0".$data[10];
+                              $model_nomina->grado_anio_aprobado=utf8_encode($data[11]);
+                              $model_nomina->oficio_dentro_establecimiento=$data[12];
+                              $model_nomina->codigo_ocupacion=$data[13];
+                              $model_nomina->tiempo_serv_establecimiento_anios=$data[14];
+                              $model_nomina->tiempo_serv_establecimiento_meses=$data[15];
+                              $model_nomina->tiempo_ejerciendo_profesion_anios=$data[16];
+                              $model_nomina->tiempo_ejerciendo_profesion_meses=$data[17];
+                              $model_nomina->remuneracion_antes_contra_empleado=$data[18];
+                              $model_nomina->remuneracion_antes_contra_obrero=$data[19];
+                              $model_nomina->remuneracion_despues_contra_empleado=$data[20];
+                              $model_nomina->remuneracion_despues_contra_obrero=$data[21];
+                              $model_nomina->carga_familiar=$data[22];
+                              $model_nomina->cod_convencion=$_POST['Nomina']['cod_convencion'];
+                              $llenar = Yii::app()->db->createCommand()->insert($model_nomina->tableName(),$model_nomina->attributes);
+                              
 
                             //  $newmodel->save();            
                        
@@ -145,17 +170,32 @@ class NominaController extends Controller
                        $row++;               
                    }
                    
-                   
+                       $id_nomina=Yii::app()->db->getLastInsertID('Nomina'); 
+                       $id_trabajador=Yii::app()->db->getLastInsertID('Trabajador_sindicato'); 
+                       $nombre_usuario=Yii::app()->user->Name;
+                       $userid=       Yii::app()->user->id;
+                       
+                       
+                      // echo "insert into activerecordlog(`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                        //          values ('User ".$nombre_usuario." ultimo id ".$id_nomina."','CREATE', 'Nomina','".$id_nomina."',now(),'".$userid."')";exit();
+                        Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                                  values ('User ".$nombre_usuario." created nomina ultimo id ".$id_nomina."','CREATE', 'Nomina','".$id_nomina."',now(),'".$userid."')")->execute();
+                         Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                                  values ('User ".$nombre_usuario. " create trabajador ultimo id". $id_trabajador."','CREATE', 'trabajador_nomina','".$id_trabajador."',now(),'".$userid."')")->execute();
+                        
                    $transaction->commit();
+                   
                    $bandera=1;
-                         echo "<script type='text/javascript'>
+                       
+                        
+                        echo "<script type='text/javascript'>
                          alert('Se Ha Guardado Con exito La Nomina');
                          </script>";
                    }catch(CDbException $error){
                     
                     $transaction->rollback();
-                    echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos.</div>"; //for ajax
-                   //echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos. Error:".$error."</div>"; //for ajax
+                  //  echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos.</div>"; //for ajax
+                   echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos. Error:".$error."</div>"; //for ajax
                    }                    
                }                            
                                   
@@ -195,12 +235,12 @@ class NominaController extends Controller
                      //   echo $data['nombres']; exit();
                     
                     $llenar = Yii::app()->db->createCommand("update nomina set 
-                        `nombres`='".$data['nombres']."',
-                        `cedula`='".$data['cedula']."',
-                        `nacionalidad`='".$data['nacionalidad']."',
-                        `pais_origen`='".$data['pais_origen']."',
-                        `lugar_nacimiento`='".$data['lugar_nacimiento']."',
-                        `sexo`='".$data['sexo']."',
+                     `nombres`='".$data['nombres']."',
+                     `cedula`='".$data['cedula']."',
+                     `nacionalidad`='".$data['nacionalidad']."',
+                     `pais_origen`='".$data['pais_origen']."',
+                     `lugar_nacimiento`='".$data['lugar_nacimiento']."',
+                     `sexo`='".$data['sexo']."',
                      `edad`='".$data['edad']."',
                      `estado_civil`='".$data['estado_civil']."',
                      `nivel_educativo`='".$data['nivel_educativo']."',
@@ -217,7 +257,7 @@ class NominaController extends Controller
                      `remuneracion_despues_contra_obrero`='".$data['remuneracion_despues_contra_obrero']."',
                      `carga_familiar`='".$data['carga_familiar']."',
                      `cod_convencion`='".$data['cod_convencion']."'
-                    where id='".$data['id']."'")->execute();    
+                     where id='".$data['id']."'")->execute();    
                     
                     
                     
@@ -301,4 +341,9 @@ class NominaController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        
+    
+        
+        
 }

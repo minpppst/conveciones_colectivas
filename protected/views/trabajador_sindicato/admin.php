@@ -42,11 +42,19 @@ or <b>=</b>)
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'nomina_sindicato',
-		//'trabajador',
+		//array('name'=>'nomina_sindicato','value'=>'$data->nominaSindicato->nombre', 'type'=>'text',),
+		array(
+                'header'=>'Convencion',
+                'name'=>'nomina_sindicato',
+                'value'=>'$data->nominaSindicato->nombre',
+                'htmlOptions'=>array('style'=>'text-align: center', 'with'=>'80px'),
+                'filter'=>Chtml::listData(Convencion::model()->findAll(), 'id','nombre'),
+                ),
+                'trabajador',
 		'secretario_general:boolean',
 		'secretario_ejecutivo:boolean',
 		'secretario_tesorero:boolean',
+                
                
 		/*
 		'secretario_finanzas',

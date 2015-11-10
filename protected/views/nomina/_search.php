@@ -87,8 +87,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'tiempo_ejerciciendo_prefesion_anios'); ?>
-		<?php echo $form->textField($model,'tiempo_ejerciciendo_prefesion_anios'); ?>
+		<?php echo $form->label($model,'tiempo_ejerciendo_profesion_anios'); ?>
+		<?php echo $form->textField($model,'tiempo_ejerciendo_profesion_anios'); ?>
 	</div>
 
 	<div class="row">

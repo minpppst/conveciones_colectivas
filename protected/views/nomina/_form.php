@@ -104,9 +104,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'tiempo_ejerciciendo_prefesion_anios'); ?>
-		<?php echo $form->textField($model,'tiempo_ejerciciendo_prefesion_anios'); ?>
-		<?php echo $form->error($model,'tiempo_ejerciciendo_prefesion_anios'); ?>
+		<?php echo $form->labelEx($model,'tiempo_ejerciendo_profesion_anios'); ?>
+		<?php echo $form->textField($model,'tiempo_ejerciendo_profesion_anios'); ?>
+		<?php echo $form->error($model,'tiempo_ejerciendo_profesion_anios'); ?>
 	</div>
 
 	<div class="row">

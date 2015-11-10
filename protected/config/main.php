@@ -157,7 +157,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=gestion_convencion',
+			'connectionString' => 'mysql:host=localhost;dbname=convenciones_colectivas',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

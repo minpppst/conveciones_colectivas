@@ -3267,3 +3267,1192 @@ HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=cruge/ui/
 2015/11/06 13:39:17 [error] [exception.CrugeException.401] action_site_index<br/>401
 REQUEST_URI=/convenciones_colectivas_resp/
 ---
+2015/11/09 13:07:21 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/11/09 13:46:49 [error] [php] Use of undefined constant php - assumed 'php' (C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php:14)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): Trabajador_sindicatoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): Trabajador_sindicatoController->renderPartial()
+#2 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): Trabajador_sindicatoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): Trabajador_sindicatoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): Trabajador_sindicatoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): Trabajador_sindicatoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): Trabajador_sindicatoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php (14)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (102)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 13:47:13 [error] [php] Use of undefined constant php - assumed 'php' (C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php:14)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): Trabajador_sindicatoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): Trabajador_sindicatoController->renderPartial()
+#2 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): Trabajador_sindicatoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): Trabajador_sindicatoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): Trabajador_sindicatoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): Trabajador_sindicatoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): Trabajador_sindicatoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php (14)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (102)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 13:48:15 [error] [php] Use of undefined constant php - assumed 'php' (C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php:14)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): Trabajador_sindicatoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): Trabajador_sindicatoController->renderPartial()
+#2 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): Trabajador_sindicatoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): Trabajador_sindicatoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): Trabajador_sindicatoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): Trabajador_sindicatoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): Trabajador_sindicatoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php (14)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (102)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 13:50:07 [error] [php] Use of undefined constant php - assumed 'php' (C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php:14)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): Trabajador_sindicatoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): Trabajador_sindicatoController->renderPartial()
+#2 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): Trabajador_sindicatoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): Trabajador_sindicatoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): Trabajador_sindicatoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): Trabajador_sindicatoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): Trabajador_sindicatoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php (14)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (102)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 13:54:54 [error] [php] Use of undefined constant php - assumed 'php' (C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php:14)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): Trabajador_sindicatoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): Trabajador_sindicatoController->renderPartial()
+#2 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): Trabajador_sindicatoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): Trabajador_sindicatoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): Trabajador_sindicatoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): Trabajador_sindicatoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): Trabajador_sindicatoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php (14)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (102)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 14:00:25 [error] [exception.CException] exception 'CException' with message 'Propiedad "CGridView"."pagination" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('pagination', Array)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Trabajador_sindicatoController), 'zii.widgets.gri...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php(218): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#8 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): CController->render('create', Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Trabajador_sind...')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8&nueva=1
+---
+2015/11/09 14:12:52 [error] [exception.CException] exception 'CException' with message 'Propiedad "CActiveDataProvider"."enablePagination" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(83): CComponent->__set('enablePaginatio...', false)
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php(26): CActiveDataProvider->__construct('trabajador_sind...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#6 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): CController->render('create', Array)
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Trabajador_sind...')
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8&nueva=1
+---
+2015/11/09 14:12:58 [error] [exception.CException] exception 'CException' with message 'Propiedad "CActiveDataProvider"."enablePagination" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(83): CComponent->__set('enablePaginatio...', false)
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php(26): CActiveDataProvider->__construct('trabajador_sind...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#6 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): CController->render('create', Array)
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Trabajador_sind...')
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8&nueva=1
+---
+2015/11/09 14:14:24 [error] [exception.CException] exception 'CException' with message 'Propiedad "CActiveDataProvider"."enablePagination" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(83): CComponent->__set('enablePaginatio...', false)
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\create.php(27): CActiveDataProvider->__construct('trabajador_sind...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#6 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(102): CController->render('create', Array)
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Trabajador_sind...')
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8&nueva=1
+---
+2015/11/09 15:38:53 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "convencion" no se encuentra definida en la clase active record "Trabajador_sindicato".' in C:\wamp\www\yii\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'convencion')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1549): CActiveFinder->__construct(Object(Trabajador_sindicato), Array)
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato%2Fadmin&Trabajador_sindicato_page=1&ajax=trabajador-sindicato-grid&Trabajador_sindicato%5Bid%5D=&Trabajador_sindicato%5Bnomina_sindicato%5D=8&Trabajador_sindicato%5Btrabajador%5D=&Trabajador_sindicato%5Bsecretario_general%5D=&Trabajador_sindicato%5Bsecretario_ejecutivo%5D=&Trabajador_sindicato%5Bsecretario_tesorero%5D=
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+---
+2015/11/09 15:38:59 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "convencion" no se encuentra definida en la clase active record "Trabajador_sindicato".' in C:\wamp\www\yii\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'convencion')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1549): CActiveFinder->__construct(Object(Trabajador_sindicato), Array)
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato%2Fadmin&Trabajador_sindicato_page=1&ajax=trabajador-sindicato-grid&Trabajador_sindicato%5Bid%5D=&Trabajador_sindicato%5Bnomina_sindicato%5D=8&Trabajador_sindicato%5Btrabajador%5D=&Trabajador_sindicato%5Bsecretario_general%5D=&Trabajador_sindicato%5Bsecretario_ejecutivo%5D=&Trabajador_sindicato%5Bsecretario_tesorero%5D=
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+---
+2015/11/09 15:40:22 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "convencion" no se encuentra definida en la clase active record "Trabajador_sindicato".' in C:\wamp\www\yii\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'convencion')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1549): CActiveFinder->__construct(Object(Trabajador_sindicato), Array)
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato%2Fadmin&Trabajador_sindicato_page=1&ajax=trabajador-sindicato-grid&Trabajador_sindicato%5Bid%5D=&Trabajador_sindicato%5Bnomina_sindicato%5D=8&Trabajador_sindicato%5Btrabajador%5D=&Trabajador_sindicato%5Bsecretario_general%5D=&Trabajador_sindicato%5Bsecretario_ejecutivo%5D=&Trabajador_sindicato%5Bsecretario_tesorero%5D=
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+---
+2015/11/09 15:40:24 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "convencion" no se encuentra definida en la clase active record "Trabajador_sindicato".' in C:\wamp\www\yii\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'convencion')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1549): CActiveFinder->__construct(Object(Trabajador_sindicato), Array)
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato%2Fadmin&Trabajador_sindicato_page=1&ajax=trabajador-sindicato-grid&Trabajador_sindicato%5Bid%5D=&Trabajador_sindicato%5Bnomina_sindicato%5D=8&Trabajador_sindicato%5Btrabajador%5D=&Trabajador_sindicato%5Bsecretario_general%5D=&Trabajador_sindicato%5Bsecretario_ejecutivo%5D=&Trabajador_sindicato%5Bsecretario_tesorero%5D=
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+---
+2015/11/09 15:40:30 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "convencion" no se encuentra definida en la clase active record "Trabajador_sindicato".' in C:\wamp\www\yii\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'convencion')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1549): CActiveFinder->__construct(Object(Trabajador_sindicato), Array)
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato%2Fadmin&Trabajador_sindicato_page=1&ajax=trabajador-sindicato-grid&Trabajador_sindicato%5Bid%5D=&Trabajador_sindicato%5Bnomina_sindicato%5D=8&Trabajador_sindicato%5Btrabajador%5D=&Trabajador_sindicato%5Bsecretario_general%5D=&Trabajador_sindicato%5Bsecretario_ejecutivo%5D=&Trabajador_sindicato%5Bsecretario_tesorero%5D=
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+---
+2015/11/09 15:40:33 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "convencion" no se encuentra definida en la clase active record "Trabajador_sindicato".' in C:\wamp\www\yii\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'convencion')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1549): CActiveFinder->__construct(Object(Trabajador_sindicato), Array)
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato%2Fadmin&Trabajador_sindicato_page=1&ajax=trabajador-sindicato-grid&Trabajador_sindicato%5Bid%5D=&Trabajador_sindicato%5Bnomina_sindicato%5D=nueva&Trabajador_sindicato%5Btrabajador%5D=&Trabajador_sindicato%5Bsecretario_general%5D=&Trabajador_sindicato%5Bsecretario_ejecutivo%5D=&Trabajador_sindicato%5Bsecretario_tesorero%5D=
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+---
+2015/11/09 15:41:58 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "convencion" no se encuentra definida en la clase active record "Trabajador_sindicato".' in C:\wamp\www\yii\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'convencion')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1549): CActiveFinder->__construct(Object(Trabajador_sindicato), Array)
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/index
+---
+2015/11/09 15:43:01 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'convencion.nombre' in 'where clause'. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM `trabajador_sindicato` `t`  LEFT OUTER JOIN `convencion` `nominaSindicato` ON (`t`.`nomina_sindicato`=`nominaSindicato`.`id`)  WHERE ((nomina_sindicato LIKE :ycp0) AND (convencion.nombre LIKE :ycp1)).
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php (91)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (607)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 15:43:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'convencion.nombre' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `trabajador_sindicato` `t`  LEFT OUTER JOIN `convencion` `nominaSindicato` ON (`t`.`nomina_sindicato`=`nominaSindicato`.`id`)  WHERE ((nomina_sindicato LIKE :ycp0) AND (convencion.nombre LIKE :ycp1))' in C:\wamp\www\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(718): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1550): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#9 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#14 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#16 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#28 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#29 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#30 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato%2Fadmin&Trabajador_sindicato%5Bid%5D=&Trabajador_sindicato%5Bnomina_sindicato%5D=8&Trabajador_sindicato%5Btrabajador%5D=&Trabajador_sindicato%5Bsecretario_general%5D=&Trabajador_sindicato%5Bsecretario_ejecutivo%5D=&Trabajador_sindicato%5Bsecretario_tesorero%5D=&Trabajador_sindicato_page=1&ajax=trabajador-sindicato-grid
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+---
+2015/11/09 15:43:57 [error] [php] strtr() expects parameter 1 to be string, object given (C:\wamp\www\yii\framework\db\schema\CDbCriteria.php:250)
+Stack trace:
+#0 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(41): Trabajador_sindicato->search()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): Trabajador_sindicatoController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): Trabajador_sindicatoController->renderFile()
+#4 C:\wamp\www\yii\framework\web\CController.php(782): Trabajador_sindicatoController->renderPartial()
+#5 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): Trabajador_sindicatoController->render()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): Trabajador_sindicatoController->runAction()
+#9 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): Trabajador_sindicatoController->filterAccessControl()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(265): Trabajador_sindicatoController->runActionWithFilters()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(282): Trabajador_sindicatoController->run()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato%2Fadmin&Trabajador_sindicato%5Bid%5D=&Trabajador_sindicato%5Bnomina_sindicato%5D=8&Trabajador_sindicato%5Btrabajador%5D=&Trabajador_sindicato%5Bsecretario_general%5D=&Trabajador_sindicato%5Bsecretario_ejecutivo%5D=&Trabajador_sindicato%5Bsecretario_tesorero%5D=&Trabajador_sindicato_page=1&ajax=trabajador-sindicato-grid
+in C:\wamp\www\convenciones_colectivas_resp\protected\models\Trabajador_sindicato.php (122)
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php (41)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (607)
+2015/11/09 15:45:11 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "Convencion" no se encuentra definida en la clase active record "Trabajador_sindicato".' in C:\wamp\www\yii\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'Convencion')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1549): CActiveFinder->__construct(Object(Trabajador_sindicato), Array)
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\views\trabajador_sindicato\admin.php(91): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(607): CController->render('admin', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionAdmin()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/index
+---
+2015/11/09 16:42:34 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=site/index
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=cruge/ui/usermanagementadmin
+---
+2015/11/09 19:13:04 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=site/index
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=8
+---
+2015/11/09 19:13:10 [error] [php] Trying to get property of non-object (C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\_view_relacional.php:23)
+Stack trace:
+#0 C:\wamp\www\yii\framework\zii\widgets\CListView.php(281): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(128): CListView->renderContent()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\wamp\www\convenciones_colectivas_resp\protected\views\site\index.php(30): SiteController->widget()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\SiteController.php(90): SiteController->render()
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#15 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\_view_relacional.php (23)
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\site\index.php (30)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\SiteController.php (90)
+2015/11/09 19:13:58 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=cruge/ui/login
+---
+2015/11/09 19:14:02 [error] [php] Trying to get property of non-object (C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\_view_relacional.php:23)
+Stack trace:
+#0 C:\wamp\www\yii\framework\zii\widgets\CListView.php(281): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(128): CListView->renderContent()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\wamp\www\convenciones_colectivas_resp\protected\views\site\index.php(30): SiteController->widget()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\SiteController.php(90): SiteController->render()
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#15 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\_view_relacional.php (23)
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\site\index.php (30)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\SiteController.php (90)
+2015/11/09 19:14:17 [error] [php] Trying to get property of non-object (C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\_view.php:18)
+Stack trace:
+#0 C:\wamp\www\yii\framework\zii\widgets\CListView.php(281): ConvencionController->renderFile()
+#1 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(128): CListView->renderContent()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\index.php(19): ConvencionController->widget()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): ConvencionController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): ConvencionController->renderFile()
+#10 C:\wamp\www\yii\framework\web\CController.php(782): ConvencionController->renderPartial()
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php(294): ConvencionController->render()
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ConvencionController->actionIndex()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ConvencionController->runAction()
+#15 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(265): ConvencionController->runActionWithFilters()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ConvencionController->run()
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Convencion/index
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\_view.php (18)
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\index.php (19)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (294)
+2015/11/09 19:14:27 [error] [php] Trying to get property of non-object (C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\_view.php:18)
+Stack trace:
+#0 C:\wamp\www\yii\framework\zii\widgets\CListView.php(281): ConvencionController->renderFile()
+#1 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(128): CListView->renderContent()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\index.php(19): ConvencionController->widget()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): ConvencionController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): ConvencionController->renderFile()
+#10 C:\wamp\www\yii\framework\web\CController.php(782): ConvencionController->renderPartial()
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php(294): ConvencionController->render()
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ConvencionController->actionIndex()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ConvencionController->runAction()
+#15 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(265): ConvencionController->runActionWithFilters()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ConvencionController->run()
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Convencion/index
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\_view.php (18)
+in C:\wamp\www\convenciones_colectivas_resp\protected\views\convencion\index.php (19)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (294)
+2015/11/09 20:03:06 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nomina"."tiempo_ejerciendo_profesion_anios" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('tiempo_ejercien...', '')
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(151): CActiveRecord->__set('tiempo_ejercien...', '')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+---
+2015/11/09 20:06:12 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nomina"."tiempo_ejerciendo_profesion_anios" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('tiempo_ejercien...', '')
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(151): CActiveRecord->__set('tiempo_ejercien...', '')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+---
+2015/11/09 20:06:42 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nomina"."tiempo_ejerciendo_profesion_anios" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('tiempo_ejercien...', '')
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(151): CActiveRecord->__set('tiempo_ejercien...', '')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+---
+2015/11/09 20:07:12 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nomina"."tiempo_ejerciendo_profesion_anios" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('tiempo_ejercien...', '')
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(151): CActiveRecord->__set('tiempo_ejercien...', '')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+---
+2015/11/09 20:09:14 [error] [exception.CException] exception 'CException' with message 'Nomina y sus behaviors no tienen un método o closure llamado "nomina".' in C:\wamp\www\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('nomina', Array)
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(159): CActiveRecord->__call('nomina', Array)
+#2 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(159): Nomina->nomina()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+---
+2015/11/09 20:11:46 [error] [exception.CException] exception 'CException' with message 'Nomina y sus behaviors no tienen un método o closure llamado "nomina".' in C:\wamp\www\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('nomina', Array)
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(159): CActiveRecord->__call('nomina', Array)
+#2 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(159): Nomina->nomina()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+---
+2015/11/09 20:11:54 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nomina"."csv_file" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('csv_file')
+#1 C:\wamp\www\yii\framework\validators\CFileValidator.php(165): CActiveRecord->__get('csv_file')
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(Nomina), 'csv_file')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(Nomina), NULL)
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
+#5 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(160): CActiveRecord->save()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#17 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+---
+2015/11/09 20:12:36 [error] [php] Missing argument 2 for CDbCommand::insert(), called in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php on line 159 and defined (C:\wamp\www\yii\framework\db\CDbCommand.php:1224)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): NominaController->runAction()
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): NominaController->filterAccessControl()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): NominaController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): NominaController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:13:14 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombres' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES (:id, :nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:13:49 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombres' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES (:id, :nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:14:33 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombres' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES (:id, :nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:18:21 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombres' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES (:id, :nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:18:56 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombres' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES (:id, :nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:28:26 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombres' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `Nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES (:id, :nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:28:52 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombres' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `Nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES (:id, :nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:29:05 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombres' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `Nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES (:id, :nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:29:48 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cod_convencion' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `Nomina` (`nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `id`, `cod_convencion`) VALUES (:nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :id, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:30:11 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cod_convencion' cannot be null. La sentencia SQL ejecutada fue: INSERT INTO `Nomina` (`nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `id`, `cod_convencion`) VALUES (:nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :id, :cod_convencion).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (159)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/09 20:45:24 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8-19667073' for key 'PRIMARY'. La sentencia SQL ejecutada fue: insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('8', '19667073').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (171)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 13:17:59 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/11/10 13:31:52 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/10 13:31:52 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/10 13:31:52 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/10 13:32:50 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/10 13:32:50 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/10 13:32:50 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/10 13:40:30 [error] [exception.CException] exception 'CException' with message 'Evento "NominaController"."onAfterSave" no se encuentra definido.' in C:\wamp\www\yii\framework\base\CComponent.php:475
+Stack trace:
+#0 C:\wamp\www\yii\framework\base\CComponent.php(513): CComponent->getEventHandlers('onAfterSave')
+#1 C:\wamp\www\yii\framework\base\CBehavior.php(111): CComponent->attachEventHandler('onAfterSave', Array)
+#2 C:\wamp\www\yii\framework\base\CBehavior.php(51): CBehavior->_attachEventHandlers()
+#3 C:\wamp\www\yii\framework\base\CComponent.php(328): CBehavior->attach(Object(NominaController))
+#4 C:\wamp\www\yii\framework\base\CComponent.php(297): CComponent->attachBehavior('ActiveRecordLog...', 'application.beh...')
+#5 C:\wamp\www\yii\framework\web\CController.php(114): CComponent->attachBehaviors(Array)
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(359): CController->__construct('nomina', NULL)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(276): CWebApplication->createController('nomina/create')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8&nueva=1
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=site/index
+---
+2015/11/10 13:46:07 [error] [exception.CException] exception 'CException' with message 'Propiedad "NominaController"."Owner" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(67): CComponent->__get('Owner')
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=8&nueva=1
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=site/index
+---
+2015/11/10 14:07:23 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8-19667073' for key 'PRIMARY'. La sentencia SQL ejecutada fue: insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('8', '19667073').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (168)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:07:54 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''description',`action`, 'model', 'idModel','creationdate','userid')
+           ' at line 1. La sentencia SQL ejecutada fue: insert into activerecordlog('description',`action`, 'model', 'idModel','creationdate','userid')
+                                  values ('User historico ultimo id0','create nomina', 'create', 'Nomina','0',now(),'4').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (182)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:07:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbTransaction se encuentra inactiva y no puede realizar la operación commit ni roll back.' in C:\wamp\www\yii\framework\db\CDbTransaction.php:84
+Stack trace:
+#0 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(192): CDbTransaction->rollback()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionCreate()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/create')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=10
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/create&convencion=10
+---
+2015/11/10 14:08:39 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '10-19667073' for key 'PRIMARY'. La sentencia SQL ejecutada fue: insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('10', '19667073').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (168)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:10:39 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''description',`action`, 'model', 'idModel','creationdate','userid')
+           ' at line 1. La sentencia SQL ejecutada fue: insert into activerecordlog('description',`action`, 'model', 'idModel','creationdate','userid')
+                                  values ('User historico ultimo id152','create nomina', 'create', 'Nomina','152',now(),'4').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (178)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:11:21 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''description','action', 'model', 'idModel','creationdate','userid')
+           ' at line 1. La sentencia SQL ejecutada fue: insert into activerecordlog('description','action', 'model', 'idModel','creationdate','userid')
+                                  values ('User historico ultimo id202','create nomina', 'create', 'Nomina','202',now(),'4').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (178)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:14:05 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''description','action', 'model', 'idModel','creationdate','userid')
+           ' at line 1. La sentencia SQL ejecutada fue: insert into activerecordlog('description','action', 'model', 'idModel','creationdate','userid')
+                                  values ('User historico ultimo id 252','CREATE', 'Nomina','252',now(),'4').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (178)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:15:07 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''description', 'action', 'model', 'idModel','creationdate', 'userid')
+         ' at line 1. La sentencia SQL ejecutada fue: insert into activerecordlog('description', 'action', 'model', 'idModel','creationdate', 'userid')
+                                  values ('User historico ultimo id 302','CREATE', 'Nomina','302',now(),'4').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (178)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:21:12 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''description', 'action', 'model', 'idModel', 'creationdate', 'userid')
+        ' at line 1. La sentencia SQL ejecutada fue: insert into activerecordlog('description', 'action', 'model', 'idModel', 'creationdate', 'userid')
+                                  values ('User historico create trabajador ultimo id402','CREATE', 'trabajador_nomina','402',now(),'4').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (184)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:21:35 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''description', 'action', 'model', 'idModel', 'creationdate', 'userid')
+        ' at line 1. La sentencia SQL ejecutada fue: insert into activerecordlog ('description', 'action', 'model', 'idModel', 'creationdate', 'userid')
+                                  values ('User historico create trabajador ultimo id452','CREATE', 'trabajador_nomina','452',now(),'4').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (184)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 14:58:10 [error] [php] Undefined variable: arr1 (C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php:149)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): Trabajador_sindicatoController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): Trabajador_sindicatoController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): Trabajador_sindicatoController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): Trabajador_sindicatoController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/getvalue
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (149)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 15:06:28 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'secretario_ejeecutivo' in 'field list'. La sentencia SQL ejecutada fue: update trabajador_sindicato set secretario_ejeecutivo = 1 where id=540.
+in C:\wamp\www\convenciones_colectivas_resp\protected\models\funciones.php (68)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (163)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 15:06:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'secretario_ejeecutivo' in 'field list'. The SQL statement executed was: update trabajador_sindicato set secretario_ejeecutivo = 1 where id=540' in C:\wamp\www\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\wamp\www\convenciones_colectivas_resp\protected\models\funciones.php(68): CDbCommand->execute()
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(163): funciones::llenar_check(4, Array, '1')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionGetValue()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getvalue')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/getvalue
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=10
+---
+2015/11/10 15:07:41 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'secretario_ejeecutivo' in 'field list'. La sentencia SQL ejecutada fue: update trabajador_sindicato set secretario_ejeecutivo = 1 where id=540.
+in C:\wamp\www\convenciones_colectivas_resp\protected\models\funciones.php (68)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (163)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 15:07:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'secretario_ejeecutivo' in 'field list'. The SQL statement executed was: update trabajador_sindicato set secretario_ejeecutivo = 1 where id=540' in C:\wamp\www\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\wamp\www\convenciones_colectivas_resp\protected\models\funciones.php(68): CDbCommand->execute()
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(163): funciones::llenar_check(4, Array, '1')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionGetValue()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getvalue')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/getvalue
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=10
+---
+2015/11/10 15:08:49 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'secretario_ejeecutivo' in 'field list'. La sentencia SQL ejecutada fue: update trabajador_sindicato set secretario_ejeecutivo = 1 where id=540.
+in C:\wamp\www\convenciones_colectivas_resp\protected\models\funciones.php (68)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (163)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 15:08:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'secretario_ejeecutivo' in 'field list'. The SQL statement executed was: update trabajador_sindicato set secretario_ejeecutivo = 1 where id=540' in C:\wamp\www\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\wamp\www\convenciones_colectivas_resp\protected\models\funciones.php(68): CDbCommand->execute()
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(163): funciones::llenar_check(4, Array, '1')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionGetValue()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getvalue')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/getvalue
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=10
+---
+2015/11/10 15:09:11 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'secretario_ejeecutivo' in 'field list'. La sentencia SQL ejecutada fue: update trabajador_sindicato set secretario_ejeecutivo = 1 where id=540.
+in C:\wamp\www\convenciones_colectivas_resp\protected\models\funciones.php (68)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php (163)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 15:09:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'secretario_ejeecutivo' in 'field list'. The SQL statement executed was: update trabajador_sindicato set secretario_ejeecutivo = 1 where id=540' in C:\wamp\www\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\wamp\www\convenciones_colectivas_resp\protected\models\funciones.php(68): CDbCommand->execute()
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\Trabajador_sindicatoController.php(163): funciones::llenar_check(4, Array, '1')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): Trabajador_sindicatoController->actionGetValue()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getvalue')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/getvalue
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=Trabajador_sindicato/create&convencion=10
+---
+2015/11/10 15:16:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/index
+---
+2015/11/10 15:16:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trabajador_sind...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/admin
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=trabajador_sindicato/view&id=8
+---
+2015/11/10 15:31:22 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8-19667073' for key 'PRIMARY'. La sentencia SQL ejecutada fue: insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('8', '19667073').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (168)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/10 15:33:05 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8-19667073' for key 'PRIMARY'. La sentencia SQL ejecutada fue: insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('8', '19667073').
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (168)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)

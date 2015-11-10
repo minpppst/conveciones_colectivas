@@ -4,11 +4,24 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/trabajador_sindicato/view.php</file>
-            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/ConvencionController.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/EmpresaController.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/models/Trabajador_sindicato.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/update.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/Trabajador_sindicatoController.php</file>
-            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/trabajador_sindicato/update.php</file>
-            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/trabajador_sindicato/index.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/config/main.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/_form.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/create.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/ConvencionController.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/_form_file.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/_view.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/admin.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/view.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/models/Empresa.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/models/Nomina.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/trabajador_sindicato/admin.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/index.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/NominaController.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/nomina/_search.php</file>
         </group>
     </open-files>
 </project-private>
