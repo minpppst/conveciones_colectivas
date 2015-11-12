@@ -119,11 +119,14 @@ class Empresa extends CActiveRecord
                     if(empty($_POST['telefono'][0]))
                         $this->addError('telefono', 'El Telefono no puede ser nulo');
                     if(!empty($_POST['telefono'][1]))
-                    $this->telefono=$_POST['telefono'][0]."-".$_POST['telefono'][1];
+                    $this->telefono=$_POST['telefono'][0]."/".$_POST['telefono'][1];
                     else
                         $this->telefono=$_POST['telefono'][0];
                     
                 }
+                
+                
+                
         
         
         

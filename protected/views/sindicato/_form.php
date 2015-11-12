@@ -106,13 +106,13 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'municipio'); ?>
                <?php //si esta creando municipio
-                if($model->isNewRecord==1){
+               if ($model->estado == 0 || $model->estado == '') {
                 ?>
             
             
                 <?php echo $form->dropDownList($model,'municipio',array(),
                        
-                        array('ajax' => array(
+                    array('ajax' => array(
                     'type' => 'POST',
                     'url' => CController::createUrl('Sindicato/Selectparroquia'),
                     'update' => '#'.CHtml::activeId($model,'parroquia'),),
@@ -127,37 +127,24 @@
                             'prompt' => 'Seleccione un Municipio...')
                 );}
                 //modificando organismo
-                
-                else {
-                         $tipo=$model->estado;
-                         // Si se está modificando un registro
-                         $sql="select count(id_municipio) as resultado from municipios where id_estado='$tipo';";
-                         //
-                         $connection=Yii::app()->db;
-                         //
-                         $command=$connection->createCommand($sql);
-                         //
-                         $row=$command->queryRow();
-                         //
-                         $bandera=$row['resultado'];
-                         //
-                         if ($bandera==0) {
-                         //
-                         echo $form->dropDownList($model,'municipio',
-                         array('0' => 'Seleccione un Municipio')); }
-                         // Si el tipo de organismo no tiene ningún
-                         else {
-                         // organismo solo muestra Seleccione un Organismo
-                         echo $form->dropDownList($model,'municipio',
-                         CHtml::listData(Municipios::model()->findAllBySql(
-                         //Aquí van los datos de la búsqueda del segundo combo
-                         "select * from municipios where id_estado
-                         =:keyword order by id_estado=:clave2 asc",
-                         array(':keyword'=>$model->estado,':clave2'=>$model->estado)),
-                         'id_municipio','municipio'));
-                         }
-                         }    
-
+                else
+                {
+                $list = Municipios::model()->findALL(array('condition'=>"id_estado=$model->estado"));
+                $niveles=CHtml::listData($list,'id_municipio','municipio');
+                echo $form->dropDownList($model,'municipio',$niveles,
+                       
+                    array('ajax' => array(
+                    'type' => 'POST',
+                    'url' => CController::createUrl('Sindicato/Selectparroquia'),
+                    'update' => '#'.CHtml::activeId($model,'parroquia'),),
+                            'beforeSend'=>'function(){ 
+                     
+                       $("#Sindicato_parroquia").find("option").remove();
+                       
+                       } ',
+                       'prompt' => 'Seleccione un Municipio...')
+                );
+                }
                 ?> 
             
             
@@ -168,8 +155,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'parroquia'); 
-                if($model->isNewRecord==1){?>
-		<?php echo $form->dropDownList($model,'parroquia',
+                 if ($model->municipio == 0 || $model->municipio == '') {
+                 
+		 echo $form->dropDownList($model,'parroquia',
                         array(),
                         array('prompt'=>'Seleccione una Parroquia')
                      
@@ -177,33 +165,12 @@
                 
                  } //si esta modificando
                  else{
-                 $tipo=$model->municipio;
-                         // Si se está modificando un registro
-                         $sql="select count(id_municipio) as resultado from parroquias where id_municipio='$tipo';";
-                         //
-                         $connection=Yii::app()->db;
-                         //
-                         $command=$connection->createCommand($sql);
-                         //
-                         $row=$command->queryRow();
-                         //
-                         $bandera=$row['resultado'];
-                         //
-                         if ($bandera==0) {
-                         //
-                         echo $form->dropDownList($model,'parroquia',
-                         array('0' => 'Seleccione una  Parroquia')); }
-                         // Si el tipo de organismo no tiene ningún
-                         else {
-                         // organismo solo muestra Seleccione un Organismo
-                         echo $form->dropDownList($model,'parroquia',
-                         CHtml::listData(Parroquias::model()->findAllBySql(
-                         //Aquí van los datos de la búsqueda del segundo combo
-                         "select * from parroquias where id_municipio
-                         =:keyword order by id_parroquia=:clave2 asc",
-                         array(':keyword'=>$model->municipio,':clave2'=>$model->municipio)),
-                         'id_parroquia','parroquia'));
-                         }
+                 $list = Parroquias::model()->findALL(array('condition'=>"id_municipio=$model->municipio"));
+                        $niveles=CHtml::listData($list,'id_parroquia','parroquia');  
+                        echo $form->dropDownList($model,'parroquia',
+                        $niveles,
+                        array('prompt'=>'Seleccione una Parroquia')
+                        ); 
                 
                 
                  }
@@ -215,21 +182,23 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'telefono'); ?> 
                 <?php if($model->isNewRecord){
+                    $telefono = explode("/", $model->telefono);
                     $model->telefono="";
                  ?>
-		<?php echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]'));
+		<?php echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]', 'value'=>$telefono[0]));
 // echo $form->textField($model,'telefono',array('size'=>20,'maxlength'=>50));
                 ?>&nbsp;&nbsp;&nbsp; 
-                <?php  echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]')); ?>
+                <?php  echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]', 'value'=>!empty($telefono[1]) ? $telefono[1]: '')); ?>
                <?php }else{
                    
-               $telefono = explode("/", $model->telefono);
+                $telefono = explode("/", $model->telefono);
                ?>
                 
                <?php echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]', 'value'=>$telefono[0]));
 // echo $form->textField($model,'telefono',array('size'=>20,'maxlength'=>50));
                 ?>&nbsp;&nbsp;&nbsp; 
-               <?php  echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]','value'=>!empty($telefono[1]) ? $telefono[1]: '')); }?> 
+               <?php  echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]','value'=>!empty($telefono[1]) ? $telefono[1]: ''));
+               }?> 
                 
                 
                 
@@ -295,6 +264,9 @@
 	</div>
 
 	<div class="row">
+            <?php if ($model->fecha_registro!='') {
+                    $model->fecha_registro=date('d-m-Y',strtotime($model->fecha_registro));
+                    } ?>
 		<?php echo $form->labelEx($model,'fecha_registro'); ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -306,7 +278,7 @@
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_registro,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -329,7 +301,12 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_actualizacion'); ?>
+		<?php echo $form->labelEx($model,'fecha_actualizacion'); 
+                
+                 if ($model->fecha_actualizacion!='') {
+                 $model->fecha_actualizacion=date('d-m-Y',strtotime($model->fecha_actualizacion));}
+                
+                ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
@@ -340,7 +317,7 @@
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_actualizacion,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -367,8 +344,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_inicio_vigencia'); ?>
-		<?php 
+		<?php echo $form->labelEx($model,'fecha_inicio_vigencia'); 
+                 if ($model->fecha_inicio_vigencia!='') {
+                 $model->fecha_inicio_vigencia=date('d-m-Y',strtotime($model->fecha_inicio_vigencia));}
+                 
+                 ?>
+		
+                    <?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
                 'attribute'=>'fecha_inicio_vigencia',
@@ -378,7 +360,7 @@
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_inicio_vigencia,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -399,7 +381,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_cese_vigencia'); ?>
+		<?php echo $form->labelEx($model,'fecha_cese_vigencia'); 
+                 if ($model->fecha_cese_vigencia!='') {
+                 $model->fecha_cese_vigencia=date('d-m-Y',strtotime($model->fecha_cese_vigencia));}
+                
+                
+                
+                ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
@@ -410,7 +398,7 @@
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_cese_vigencia,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -431,7 +419,14 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_informe_finanzas'); ?>
+            
+		<?php echo $form->labelEx($model,'fecha_informe_finanzas'); 
+                
+                if ($model->fecha_informe_finanzas!='') {
+                 $model->fecha_informe_finanzas=date('d-m-Y',strtotime($model->fecha_informe_finanzas));}
+
+                
+                ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
@@ -442,7 +437,7 @@
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_informe_finanzas,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -463,7 +458,11 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_nomina_afiliado'); ?>
+		<?php echo $form->labelEx($model,'fecha_nomina_afiliado'); 
+                
+                 if ($model->fecha_nomina_afiliado!='') {
+                 $model->fecha_nomina_afiliado=date('d-m-Y',strtotime($model->fecha_nomina_afiliado));}
+                ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
@@ -474,7 +473,7 @@
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_nomina_afiliado,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -495,7 +494,11 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_ultimas_elecciones'); ?>
+		<?php echo $form->labelEx($model,'fecha_ultimas_elecciones'); 
+                
+                  if ($model->fecha_ultimas_elecciones!='') {
+                 $model->fecha_ultimas_elecciones=date('d-m-Y',strtotime($model->fecha_ultimas_elecciones));}
+                ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
@@ -506,7 +509,7 @@
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_ultimas_elecciones,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,

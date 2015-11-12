@@ -66,6 +66,7 @@ class Convencion extends CActiveRecord
 			array('cod_convencion', 'length', 'max'=>11),
 			array('referencia', 'length', 'max'=>15), 
                         array('cod_convencion', 'unique', 'attributeName'=>'cod_convencion'), 
+                        array('fecha_deposito, fecha_inicio, fecha_venc, fecha_auto_homo','formatear_fechas'),
                         // The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, nombre, numero_expediente, inspectoria, sector, ambito, edicion, fecha_deposito, fecha_inicio, fecha_venc, duracion_meses, fecha_auto_homo, costo_contrato, costo_contrato_sin_prestaciones, cod_convencion, referencia', 'safe', 'on'=>'search'),
@@ -85,6 +86,16 @@ class Convencion extends CActiveRecord
                                 
                                 }    
                             }
+                            
+                            
+                            public function formatear_fechas(){
+            $this->fecha_auto_homo =Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_auto_homo);
+                    $this->fecha_deposito=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_deposito);
+                    $this->fecha_inicio=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_inicio);
+                    $this->fecha_venc=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_venc);
+                    
+                   
+            }
 
 
                             

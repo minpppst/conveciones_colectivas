@@ -42,14 +42,37 @@ $this->menu=array(
 		array('name'=>'tipo_organizacion',
                 'value'=>$model->tipoOrganizacion->descripcion,),
                 
-		'fecha_registro',
-		'fecha_actualizacion',
+		//'fecha_registro',
+                array('name'=>'fecha_registro',
+                    'value'=>Yii::app()->dateFormatter->format("dd/M/yyyy", $model->fecha_registro)
+                    ),
+                 array('name'=>'fecha_actualizacion',
+                    'value'=>Yii::app()->dateFormatter->format("dd/M/yyyy", $model->fecha_actualizacion)
+                    ),
+		//'fecha_actualizacion',
 		'duracion_junta_directiva',
-		'fecha_inicio_vigencia',
-		'fecha_cese_vigencia',
-		'fecha_informe_finanzas',
-		'fecha_nomina_afiliado',
-		'fecha_ultimas_elecciones',
+                 array('name'=>'fecha_inicio_vigencia',
+                    'value'=>Yii::app()->dateFormatter->format("dd/M/yyyy", $model->fecha_inicio_vigencia)
+                    ),
+		//'fecha_inicio_vigencia',
+                
+		//'fecha_cese_vigencia',
+                array('name'=>'fecha_cese_vigencia',
+                    'value'=>Yii::app()->dateFormatter->format("dd/M/yyyy", $model->fecha_cese_vigencia)
+                    ),
+                    
+		//'fecha_informe_finanzas',
+                array('name'=>'fecha_informe_finanzas',
+                    'value'=>Yii::app()->dateFormatter->format("dd/M/yyyy", $model->fecha_informe_finanzas)
+                    ),
+		//'fecha_nomina_afiliado',
+                array('name'=>'fecha_nomina_afiliado',
+                    'value'=>Yii::app()->dateFormatter->format("dd/M/yyyy", $model->fecha_nomina_afiliado)
+                    ),
+		//'fecha_ultimas_elecciones',
+                array('name'=>'fecha_ultimas_elecciones',
+                    'value'=>Yii::app()->dateFormatter->format("dd/M/yyyy", $model->fecha_ultimas_elecciones)
+                    ),
 		'cod_convencion',
 	),
 )); ?>

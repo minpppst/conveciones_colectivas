@@ -78,6 +78,7 @@ class Sindicato extends CActiveRecord
                         array('telefono','validartelefono'),
                         array('nro_boleta_inscripcion','validarboleta'),
                         array('fecha_cese_vigencia','compare','compareAttribute'=>'fecha_inicio_vigencia','operator'=>'>=','message'=>'Fecha de Cese de Vigencia debe ser superior a Fecha de Inicio Vigencia'),
+                        array('fecha_registro, fecha_actualizacion,fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones','formatear_fechas'),
                         
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -98,7 +99,7 @@ class Sindicato extends CActiveRecord
                     if(empty($_POST['telefono'][0]))
                         $this->addError('telefono', 'El Telefono no puede ser nulo');
                     if(!empty($_POST['telefono'][1]))
-                    $this->telefono=$_POST['telefono'][0]."-".$_POST['telefono'][1];
+                    $this->telefono=$_POST['telefono'][0]."/".$_POST['telefono'][1];
                     else
                         $this->telefono=$_POST['telefono'][0];
                     
@@ -111,6 +112,18 @@ class Sindicato extends CActiveRecord
             
             
         }
+        
+        
+        public function formatear_fechas(){
+            $this->fecha_actualizacion=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_actualizacion);
+                   $this->fecha_cese_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_cese_vigencia);
+                   $this->fecha_informe_finanzas=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_informe_finanzas);
+                   $this->fecha_inicio_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_inicio_vigencia);
+                   $this->fecha_nomina_afiliado=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_nomina_afiliado);
+                   $this->fecha_registro=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_registro);
+                   $this->fecha_ultimas_elecciones=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_ultimas_elecciones);
+                   $this->federacion_nacional=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->federacion_nacional);
+            }
         
 
 	/**

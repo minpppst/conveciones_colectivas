@@ -143,9 +143,9 @@ class EmpresaController extends Controller
                     
                         
 			$model->attributes=$_POST['Empresa'];
-                        $model->telefono=$_POST['telefono'][0]."-".$_POST['telefono'][1];
+                        $model->telefono=$_POST['telefono'][0]."/".$_POST['telefono'][1];
                         
-                     
+                       
                         
                         if($model->save())
 				$this->redirect(array('view','id'=>$model->id));

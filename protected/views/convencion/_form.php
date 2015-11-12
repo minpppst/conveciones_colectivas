@@ -122,7 +122,11 @@ $(document).ready(function(){
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_deposito'); ?>
+		<?php echo $form->labelEx($model,'fecha_deposito'); 
+                
+                if ($model->fecha_deposito!='') {
+                 $model->fecha_deposito=date('d-m-Y',strtotime($model->fecha_deposito));}
+                ?>
 		<?php 
                
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -134,7 +138,7 @@ $(document).ready(function(){
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_deposito,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -156,7 +160,10 @@ $(document).ready(function(){
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_inicio'); ?>
+		<?php echo $form->labelEx($model,'fecha_inicio'); 
+                 if ($model->fecha_inicio!='') {
+                 $model->fecha_inicio=date('d-m-Y',strtotime($model->fecha_inicio));}
+                ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
@@ -167,7 +174,7 @@ $(document).ready(function(){
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_inicio,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -188,7 +195,11 @@ $(document).ready(function(){
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_venc'); ?>
+		<?php echo $form->labelEx($model,'fecha_venc'); 
+                if ($model->fecha_venc!='') {
+                 $model->fecha_venc=date('d-m-Y',strtotime($model->fecha_venc));}
+                
+                ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
@@ -199,7 +210,7 @@ $(document).ready(function(){
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_venc,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,
@@ -226,7 +237,11 @@ $(document).ready(function(){
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_auto_homo'); ?>
+		<?php echo $form->labelEx($model,'fecha_auto_homo'); 
+                if ($model->fecha_auto_homo!='') {
+                 $model->fecha_auto_homo=date('d-m-Y',strtotime($model->fecha_auto_homo));}
+                
+                ?>
 		<?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
@@ -237,7 +252,7 @@ $(document).ready(function(){
                 'options'=>array(
                 'autoSize'=>true,
                 'defaultDate'=>$model->fecha_auto_homo,
-                'dateFormat'=>'yy-mm-dd',
+                'dateFormat'=>'dd-mm-yy',
                 
                 'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
                 'buttonImageOnly'=>true,

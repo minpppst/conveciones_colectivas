@@ -219,11 +219,15 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'municipio'); ?>
                <?php //si esta creando municipio
-                if($model->isNewRecord==1){
+               // if($model->isNewRecord==1){
                 ?>
             
             
-                <?php echo $form->dropDownList($model,'municipio',array(),
+                <?php 
+                
+                if ($model->estado == 0 || $model->estado == '') {
+
+                        echo $form->dropDownList($model,'municipio',array(),
                        
                         array('ajax' => array(
                     'type' => 'POST',
@@ -239,9 +243,32 @@
                             
                             'prompt' => 'Seleccione un Municipio...')
                 );}
+                else{
+                    $list = Municipios::model()->findALL(array('condition'=>"id_estado=$model->estado"));
+                    $niveles=CHtml::listData($list,'id_municipio','municipio');  
+                    echo $form->dropDownList($model,'municipio',$niveles,
+                       
+                        array('ajax' => array(
+                    'type' => 'POST',
+                    'url' => CController::createUrl('Empresa/Selectparroquia'),
+                    'update' => '#'.CHtml::activeId($model,'parroquia'),),
+                            'beforeSend'=>'function(){ 
+                     
+                       $("#Empresa_parroquia").find("option").remove();
+                       
+                       } ',
+                            
+                            
+                            
+                            'prompt' => 'Seleccione un Municipio...')
+                );
+                    
+                    
+                }
+               // }
                 //modificando organismo
                 
-                else {
+               /* else {
                          $tipo=$model->estado;
                          // Si se está modificando un registro
                          $sql="select count(id_municipio) as resultado from municipios where id_estado='$tipo';";
@@ -270,7 +297,7 @@
                          'id_municipio','municipio'));
                          }
                          }    
-
+*/
                 ?> 
             
             
@@ -281,45 +308,23 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'parroquia'); 
-                if($model->isNewRecord==1){?>
-		<?php echo $form->dropDownList($model,'parroquia',
+                
+                if ($model->municipio == 0 || $model->municipio == '') {
+                        echo $form->dropDownList($model,'parroquia',
                         array(),
                         array('prompt'=>'Seleccione una Parroquia')
                      
                         ); 
+                }else{
+                        $list = Parroquias::model()->findALL(array('condition'=>"id_municipio=$model->municipio"));
+                        $niveles=CHtml::listData($list,'id_parroquia','parroquia');  
+                        echo $form->dropDownList($model,'parroquia',
+                        $niveles,
+                        array('prompt'=>'Seleccione una Parroquia')
+                        ); 
+                }
                 
-                 } //si esta modificando
-                 else{
-                 $tipo=$model->municipio;
-                         // Si se está modificando un registro
-                         $sql="select count(id_municipio) as resultado from parroquias where id_municipio='$tipo';";
-                         //
-                         $connection=Yii::app()->db;
-                         //
-                         $command=$connection->createCommand($sql);
-                         //
-                         $row=$command->queryRow();
-                         //
-                         $bandera=$row['resultado'];
-                         //
-                         if ($bandera==0) {
-                         //
-                         echo $form->dropDownList($model,'parroquia',
-                         array('0' => 'Seleccione una  Parroquia')); }
-                         // Si el tipo de organismo no tiene ningún
-                         else {
-                         // organismo solo muestra Seleccione un Organismo
-                         echo $form->dropDownList($model,'parroquia',
-                         CHtml::listData(Parroquias::model()->findAllBySql(
-                         //Aquí van los datos de la búsqueda del segundo combo
-                         "select * from parroquias where id_municipio
-                         =:keyword order by id_parroquia=:clave2 asc",
-                         array(':keyword'=>$model->municipio,':clave2'=>$model->municipio)),
-                         'id_parroquia','parroquia'));
-                         }
-                
-                
-                 }
+                 
                 ?>
 		
 		<?php echo $form->error($model,'parroquia'); ?>
@@ -328,12 +333,13 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'telefono'); ?> 
                 <?php if($model->isNewRecord){
+                     $telefono = explode("/", $model->telefono);
                     $model->telefono="";
                  ?>
-		<?php echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]'));
+		<?php echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]', 'value'=>$telefono[0]));
 // echo $form->textField($model,'telefono',array('size'=>20,'maxlength'=>50));
                 ?>&nbsp;&nbsp;&nbsp; 
-                <?php  echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]')); ?>
+                <?php  echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]', 'value'=>!empty($telefono[1]) ? $telefono[1]: '')); ?>
                <?php }else{
                    
                $telefono = explode("/", $model->telefono);
@@ -342,7 +348,9 @@
                <?php echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]', 'value'=>$telefono[0]));
 // echo $form->textField($model,'telefono',array('size'=>20,'maxlength'=>50));
                 ?>&nbsp;&nbsp;&nbsp; 
-               <?php  echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]','value'=>!empty($telefono[1]) ? $telefono[1]: '')); }?> 
+               <?php  echo CHtml::activetextField($model,'telefono',array('size'=>20,'maxlength'=>50, 'placeholder'=>'Eje: 0212-1234567', 'name'=>'telefono[]','value'=>!empty($telefono[1]) ? $telefono[1]: '')); 
+               
+               }?> 
                 
                 
                 

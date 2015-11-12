@@ -121,9 +121,10 @@ class SindicatoController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Sindicato']))
+		if(isset($_POST['Sindicato'])  && isset($_POST['telefono']))
 		{
 			$model->attributes=$_POST['Sindicato'];
+                        $model->telefono=$_POST['telefono'][0]."/".$_POST['telefono'][1];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
