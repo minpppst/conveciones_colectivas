@@ -4826,3 +4826,58 @@ in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
 in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\SindicatoController.php (126)
 in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
 in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/13 12:52:49 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/11/13 15:55:20 [error] [php] Uninitialized string offset: 0 (C:\wamp\www\yii\framework\i18n\CDateFormatter.php:93)
+Stack trace:
+#0 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(794): Convencion->validate()
+#3 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php(116): Convencion->save()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ConvencionController->actionCreate()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ConvencionController->runAction()
+#7 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ConvencionController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ConvencionController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=convencion/create
+in C:\wamp\www\convenciones_colectivas_resp\protected\models\Convencion.php (92)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (116)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+2015/11/13 15:59:10 [error] [php] Uninitialized string offset: 0 (C:\wamp\www\yii\framework\i18n\CDateFormatter.php:93)
+Stack trace:
+#0 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(794): Convencion->validate()
+#3 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php(116): Convencion->save()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ConvencionController->actionCreate()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ConvencionController->runAction()
+#7 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ConvencionController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ConvencionController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=convencion/create
+in C:\wamp\www\convenciones_colectivas_resp\protected\models\Convencion.php (92)
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (116)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+2015/11/13 16:06:48 [warning] [application] Error al definir unsafe el atributo "fecha_informe_finanzas" de "Sindicato".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\SindicatoController.php (99)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/13 16:19:29 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=site/index
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=sindicato/create
+---

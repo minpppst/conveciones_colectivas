@@ -89,12 +89,14 @@ class Convencion extends CActiveRecord
                             
                             
                             public function formatear_fechas(){
-            $this->fecha_auto_homo =Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_auto_homo);
+                                
+                     if(!empty($this->fecha_auto_homo) && !empty($this->fecha_deposito) && !empty($this->fecha_inicio) && !empty($this->fecha_venc)){
+                    $this->fecha_auto_homo =Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_auto_homo);
                     $this->fecha_deposito=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_deposito);
                     $this->fecha_inicio=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_inicio);
                     $this->fecha_venc=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_venc);
                     
-                   
+                     }
             }
 
 

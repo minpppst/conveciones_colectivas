@@ -6,11 +6,14 @@
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/models/Sindicato.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/EmpresaController.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/SindicatoController.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/convencion/admin.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/models/Empresa.php</file>
-            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/sindicato/_view.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/convencion/_search.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/models/Convencion.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/sindicato/view.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/sindicato/_form.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/convencion/_form.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/empresa/create.php</file>
             <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/empresa/_form.php</file>
         </group>
     </open-files>

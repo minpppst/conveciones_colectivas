@@ -115,14 +115,18 @@ class Sindicato extends CActiveRecord
         
         
         public function formatear_fechas(){
-            $this->fecha_actualizacion=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_actualizacion);
+                   
+            
+                   if(!empty($this->fecha_actualizacion) && !empty($this->fecha_cese_vigencia) &&!empty($this->fecha_informe_finanzas) && !empty($this->fecha_inicio_vigencia) && !empty($this->fecha_nomina_afiliado) && !empty($this->fecha_registro) && !empty($this->fecha_ultimas_elecciones)) 
+                   { $this->fecha_actualizacion=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_actualizacion);
                    $this->fecha_cese_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_cese_vigencia);
                    $this->fecha_informe_finanzas=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_informe_finanzas);
                    $this->fecha_inicio_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_inicio_vigencia);
                    $this->fecha_nomina_afiliado=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_nomina_afiliado);
                    $this->fecha_registro=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_registro);
                    $this->fecha_ultimas_elecciones=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_ultimas_elecciones);
-                   $this->federacion_nacional=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->federacion_nacional);
+                  
+                   }
             }
         
 
