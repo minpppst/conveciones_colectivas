@@ -81,7 +81,7 @@ class Convencion extends CActiveRecord
                             public function validarambito($atribute){
                                
                                 if($this->ambito!=2 && (empty($this->costo_contrato) || empty($this->costo_contrato_sin_prestaciones))){
-                               $this->addError($atribute,'Campos Costos Son Obligatorios, Cuando No Son Ambito Nacional.'); 
+                                $this->addError($atribute,'Campos Costos Son Obligatorios, Cuando No Son Ambito Nacional.');
                                
                                 
                                 }    

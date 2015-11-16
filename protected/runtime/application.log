@@ -4881,3 +4881,86 @@ in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
 REQUEST_URI=/convenciones_colectivas_resp/index.php?r=site/index
 HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=sindicato/create
 ---
+2015/11/16 13:24:33 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/11/16 14:09:53 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:26:48 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:27:06 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:34:56 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:35:33 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:35:36 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:35:54 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:35:58 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:37:09 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:38:09 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:39:57 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 14:43:17 [warning] [application] Error al definir unsafe el atributo "id" de "Convencion".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ConvencionController.php (106)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 19:10:04 [error] [exception.CrugeException.401] action_empresa_create<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=empresa/create&convencion=8&nueva=1
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?q=
+---
+2015/11/16 19:10:49 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 19:11:56 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/16 19:11:56 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/16 19:11:56 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (240)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (230)
+2015/11/16 19:12:11 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)

@@ -68,8 +68,8 @@ class ConvencionController extends Controller
                 $bandera=0;
 		
                 $resultado="";
-                if(isset($_GET['antecedente'])){
-                    
+                if(isset($_GET['antecedente']) && !isset($_POST['Convencion']) ){
+                  
                  $connection = Yii::app()->db;
                     $sql ="SELECT cod_convencion as referencia
                         FROM convencion AS p
@@ -92,7 +92,7 @@ class ConvencionController extends Controller
                     $model=$this->loadModel($_GET['antecedente']);
                     $this->render('convencion_antecedente',array(
 			'model'=>$model, 'resultado'=>$resultado, 'bandera'=>1,
-		));
+		));   
                     $bandera=1;
                     
                 }
