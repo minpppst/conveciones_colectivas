@@ -2,11 +2,7 @@
 /* @var $this NominaController */
 /* @var $model Nomina */
 
-$this->breadcrumbs=array(
-	'Nominas'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
-);
+
 
 $this->menu=array(
 	//array('label'=>'Listar Nomina', 'url'=>array('index')),
@@ -16,6 +12,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Nomina <?php echo $model->id; ?></h1>
+<h1>Modificar Trabajador <?php //echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -4964,3 +4964,180 @@ CrugeUser->validate es false
 </ul></div>
 in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
 in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/16 20:12:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "gii" solicitada.' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('gii')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('gii')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/gii')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=site/gii
+---
+2015/11/16 20:30:24 [error] [exception.CException] exception 'CException' with message 'El alias "ext.redactor.ERedactorWidget" es inválido. Asegúrese de que apunta a un archivo PHP y el archivo tiene permisos de lectura.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.redactor.ER...', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(ClausurasController), 'ext.redactor.ER...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.redactor.ER...', Array)
+#3 C:\wamp\www\convenciones_colectivas_resp\protected\views\clausuras\_form.php(31): CBaseController->widget('ext.redactor.ER...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#7 C:\wamp\www\convenciones_colectivas_resp\protected\views\clausuras\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ClausurasController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ClausurasController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('clausuras/creat...')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=clausuras/create
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=clausuras/index
+---
+2015/11/16 20:47:25 [error] [exception.CException] exception 'CException' with message 'Propiedad "Clausuras"."text" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('text')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('text')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1417): CHtml::resolveValue(Object(Clausuras), 'text')
+#3 C:\wamp\www\convenciones_colectivas_resp\protected\extensions\redactor\ERedactorWidget.php(65): CHtml::activeTextArea(Object(Clausuras), 'text', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(173): ERedactorWidget->run()
+#5 C:\wamp\www\convenciones_colectivas_resp\protected\views\clausuras\_form.php(31): CBaseController->widget('ext.redactor.ER...', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#9 C:\wamp\www\convenciones_colectivas_resp\protected\views\clausuras\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\ClausurasController.php(79): CController->render('create', Array)
+#15 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ClausurasController->actionCreate()
+#16 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('clausuras/creat...')
+#26 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=clausuras/create
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=clausuras/index
+---
+2015/11/17 13:43:48 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/11/17 13:46:58 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nomina"."apellidos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('apellidos')
+#1 C:\wamp\www\convenciones_colectivas_resp\protected\views\nomina\_view.php(17): CActiveRecord->__get('apellidos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(130): require('C:\wamp\www\con...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, false)
+#4 C:\wamp\www\yii\framework\zii\widgets\CListView.php(281): CBaseController->renderFile('C:\wamp\www\con...', Array)
+#5 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(128): CBaseListView->renderContent()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(173): CBaseListView->run()
+#10 C:\wamp\www\convenciones_colectivas_resp\protected\views\nomina\index.php(21): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(299): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): NominaController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/index')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#28 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/index
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/update&id=6697264&convencion=8
+---
+2015/11/17 15:11:30 [warning] [application] Error al definir unsafe el atributo "fecha_informe_finanzas" de "Sindicato".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\SindicatoController.php (126)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/17 15:18:21 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=site/index
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=convencion/view&id=8
+---
+2015/11/17 15:18:43 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/11/17 15:18:55 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/17 15:18:58 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/17 15:19:01 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/17 15:19:06 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/11/17 15:19:34 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=cruge/ui/login
+---
+2015/11/17 15:20:03 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=cruge/ui/login
+---
+2015/11/17 15:20:15 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=cruge/ui/login
+---
+2015/11/17 15:24:15 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)

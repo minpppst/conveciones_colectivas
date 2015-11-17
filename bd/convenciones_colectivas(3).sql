@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 16-11-2015 a las 19:42:33
+-- Tiempo de generación: 17-11-2015 a las 15:25:04
 -- Versión del servidor: 5.5.20
 -- Versión de PHP: 5.3.10
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `activerecordlog` (
   `creationdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `userid` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=40 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
 
 --
 -- Volcado de datos para la tabla `activerecordlog`
@@ -76,7 +76,8 @@ INSERT INTO `activerecordlog` (`id`, `description`, `action`, `model`, `idModel`
 (36, 'User admin changed municipio for Empresa[3].', 'CHANGE', 'Empresa', 3, 'municipio', '2015-11-12 16:12:55', '1'),
 (37, 'User admin changed parroquia for Empresa[3].', 'CHANGE', 'Empresa', 3, 'parroquia', '2015-11-12 16:12:55', '1'),
 (38, 'User admin changed telefono for Empresa[3].', 'CHANGE', 'Empresa', 3, 'telefono', '2015-11-12 16:12:55', '1'),
-(39, 'User admin changed duracion_meses for Convencion[8].', 'CHANGE', 'Convencion', 8, 'duracion_meses', '2015-11-16 14:46:33', '1');
+(39, 'User admin changed duracion_meses for Convencion[8].', 'CHANGE', 'Convencion', 8, 'duracion_meses', '2015-11-16 14:46:33', '1'),
+(40, 'User admin changed telefono for Empresa[3].', 'CHANGE', 'Empresa', 3, 'telefono', '2015-11-17 13:44:54', '1');
 
 -- --------------------------------------------------------
 
@@ -554,6 +555,28 @@ INSERT INTO `clase` (`id`, `codigo_seccion`, `codigo_division`, `codigo_grupo`, 
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `clausuras`
+--
+
+CREATE TABLE IF NOT EXISTS `clausuras` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `numero_clausura` int(11) NOT NULL,
+  `descripcion_clausura` text NOT NULL,
+  `cod_convencion` bigint(20) unsigned NOT NULL,
+  UNIQUE KEY `id` (`id`),
+  KEY `cod_convencion` (`cod_convencion`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `clausuras`
+--
+
+INSERT INTO `clausuras` (`id`, `numero_clausura`, `descripcion_clausura`, `cod_convencion`) VALUES
+(1, 1, '&nbsp;probando <br>', 8);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `contacto_empresa`
 --
 
@@ -670,9 +693,9 @@ INSERT INTO `convencion_vieja` (`id`, `cod_interno`, `cod_convencion`, `cod_conv
 
 CREATE TABLE IF NOT EXISTS `cruge_authassignment` (
   `userid` int(11) NOT NULL,
-  `bizrule` text CHARACTER SET latin1,
-  `data` text CHARACTER SET latin1,
-  `itemname` varchar(64) CHARACTER SET latin1 NOT NULL,
+  `bizrule` text,
+  `data` text,
+  `itemname` varchar(64) NOT NULL,
   PRIMARY KEY (`userid`,`itemname`),
   KEY `fk_cruge_authassignment_cruge_authitem1` (`itemname`),
   KEY `fk_cruge_authassignment_user` (`userid`)
@@ -683,9 +706,7 @@ CREATE TABLE IF NOT EXISTS `cruge_authassignment` (
 --
 
 INSERT INTO `cruge_authassignment` (`userid`, `bizrule`, `data`, `itemname`) VALUES
-(2, NULL, 'N;', 'invitados'),
-(3, NULL, 'N;', 'cargadores'),
-(4, NULL, 'N;', 'cargadores');
+(3, NULL, 'N;', 'cargador');
 
 -- --------------------------------------------------------
 
@@ -694,11 +715,11 @@ INSERT INTO `cruge_authassignment` (`userid`, `bizrule`, `data`, `itemname`) VAL
 --
 
 CREATE TABLE IF NOT EXISTS `cruge_authitem` (
-  `name` varchar(64) CHARACTER SET latin1 NOT NULL,
+  `name` varchar(64) NOT NULL,
   `type` int(11) NOT NULL,
-  `description` text CHARACTER SET latin1,
-  `bizrule` text CHARACTER SET latin1,
-  `data` text CHARACTER SET latin1,
+  `description` text,
+  `bizrule` text,
+  `data` text,
   PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -707,6 +728,12 @@ CREATE TABLE IF NOT EXISTS `cruge_authitem` (
 --
 
 INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
+('action_clausuras_admin', 0, '', NULL, 'N;'),
+('action_clausuras_create', 0, '', NULL, 'N;'),
+('action_clausuras_delete', 0, '', NULL, 'N;'),
+('action_clausuras_index', 0, '', NULL, 'N;'),
+('action_clausuras_update', 0, '', NULL, 'N;'),
+('action_clausuras_view', 0, '', NULL, 'N;'),
 ('action_convencion_admin', 0, '', NULL, 'N;'),
 ('action_convencion_cambiarpadre', 0, '', NULL, 'N;'),
 ('action_convencion_create', 0, '', NULL, 'N;'),
@@ -753,31 +780,21 @@ INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) 
 ('action_trabajador_sindicato_update', 0, '', NULL, 'N;'),
 ('action_trabajador_sindicato_view', 0, '', NULL, 'N;'),
 ('action_ui_editprofile', 0, '', NULL, 'N;'),
-('action_ui_fieldsadmincreate', 0, '', NULL, 'N;'),
-('action_ui_fieldsadminlist', 0, '', NULL, 'N;'),
-('action_ui_rbacajaxassignment', 0, '', NULL, 'N;'),
 ('action_ui_rbacajaxsetchilditem', 0, '', NULL, 'N;'),
 ('action_ui_rbacauthitemchilditems', 0, '', NULL, 'N;'),
 ('action_ui_rbacauthitemcreate', 0, '', NULL, 'N;'),
-('action_ui_rbaclistops', 0, '', NULL, 'N;'),
 ('action_ui_rbaclistroles', 0, '', NULL, 'N;'),
-('action_ui_rbaclisttasks', 0, '', NULL, 'N;'),
 ('action_ui_rbacusersassignments', 0, '', NULL, 'N;'),
-('action_ui_sessionadmin', 0, '', NULL, 'N;'),
-('action_ui_systemupdate', 0, '', NULL, 'N;'),
 ('action_ui_usermanagementadmin', 0, '', NULL, 'N;'),
-('action_ui_usermanagementcreate', 0, '', NULL, 'N;'),
-('action_ui_usermanagementupdate', 0, '', NULL, 'N;'),
 ('admin', 0, '', NULL, 'N;'),
-('cargadores', 2, 'cargan convenciones', '', 'N;'),
+('cargador', 2, 'el que carga la data', '', 'N;'),
+('controller_clausuras', 0, '', NULL, 'N;'),
 ('controller_convencion', 0, '', NULL, 'N;'),
 ('controller_empresa', 0, '', NULL, 'N;'),
 ('controller_nomina', 0, '', NULL, 'N;'),
 ('controller_sindicato', 0, '', NULL, 'N;'),
 ('controller_site', 0, '', NULL, 'N;'),
-('controller_trabajador_sindicato', 0, '', NULL, 'N;'),
-('edit-advanced-profile-features', 0, 'C:\\wamp\\www\\convenciones_colectivas_resp\\protected\\modules\\cruge\\views\\ui\\usermanagementupdate.php linea 114', NULL, 'N;'),
-('invitados', 2, 'afuera', '', 'N;');
+('controller_trabajador_sindicato', 0, '', NULL, 'N;');
 
 -- --------------------------------------------------------
 
@@ -786,8 +803,8 @@ INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) 
 --
 
 CREATE TABLE IF NOT EXISTS `cruge_authitemchild` (
-  `parent` varchar(64) CHARACTER SET latin1 NOT NULL,
-  `child` varchar(64) CHARACTER SET latin1 NOT NULL,
+  `parent` varchar(64) NOT NULL,
+  `child` varchar(64) NOT NULL,
   PRIMARY KEY (`parent`,`child`),
   KEY `child` (`child`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -797,37 +814,58 @@ CREATE TABLE IF NOT EXISTS `cruge_authitemchild` (
 --
 
 INSERT INTO `cruge_authitemchild` (`parent`, `child`) VALUES
-('cargadores', 'action_convencion_admin'),
-('cargadores', 'action_convencion_cambiarpadre'),
-('cargadores', 'action_convencion_create'),
-('cargadores', 'action_convencion_index'),
-('cargadores', 'action_convencion_ordenar'),
-('cargadores', 'action_convencion_ordenar_convenciones'),
-('cargadores', 'action_convencion_update'),
-('cargadores', 'action_convencion_view'),
-('cargadores', 'action_empresa_admin'),
-('cargadores', 'action_empresa_autocomplete'),
-('cargadores', 'action_empresa_create'),
-('cargadores', 'action_empresa_index'),
-('cargadores', 'action_empresa_llenarcampos'),
-('cargadores', 'action_empresa_selectmunicipio'),
-('cargadores', 'action_empresa_selectparroquia'),
-('cargadores', 'action_empresa_update'),
-('cargadores', 'action_empresa_view'),
-('cargadores', 'action_sindicato_admin'),
-('cargadores', 'action_sindicato_create'),
-('cargadores', 'action_sindicato_index'),
-('cargadores', 'action_sindicato_selectmunicipio'),
-('cargadores', 'action_sindicato_selectparroquia'),
-('cargadores', 'action_sindicato_update'),
-('cargadores', 'action_sindicato_view'),
-('cargadores', 'action_site_contact'),
-('cargadores', 'action_site_error'),
-('cargadores', 'action_site_index'),
-('cargadores', 'action_site_login'),
-('invitados', 'action_site_login'),
-('cargadores', 'action_site_logout'),
-('invitados', 'controller_site');
+('cargador', 'action_clausuras_admin'),
+('cargador', 'action_clausuras_create'),
+('cargador', 'action_clausuras_index'),
+('cargador', 'action_clausuras_update'),
+('cargador', 'action_clausuras_view'),
+('cargador', 'action_convencion_admin'),
+('cargador', 'action_convencion_cambiarpadre'),
+('cargador', 'action_convencion_create'),
+('cargador', 'action_convencion_index'),
+('cargador', 'action_convencion_ordenar'),
+('cargador', 'action_convencion_ordenar_convenciones'),
+('cargador', 'action_convencion_update'),
+('cargador', 'action_convencion_view'),
+('cargador', 'action_empresa_admin'),
+('cargador', 'action_empresa_autocomplete'),
+('cargador', 'action_empresa_create'),
+('cargador', 'action_empresa_index'),
+('cargador', 'action_empresa_llenarcampos'),
+('cargador', 'action_empresa_selectmunicipio'),
+('cargador', 'action_empresa_selectparroquia'),
+('cargador', 'action_empresa_update'),
+('cargador', 'action_empresa_view'),
+('cargador', 'action_nomina_admin'),
+('cargador', 'action_nomina_create'),
+('cargador', 'action_nomina_index'),
+('cargador', 'action_nomina_update'),
+('cargador', 'action_nomina_view'),
+('cargador', 'action_sindicato_admin'),
+('cargador', 'action_sindicato_create'),
+('cargador', 'action_sindicato_index'),
+('cargador', 'action_sindicato_selectmunicipio'),
+('cargador', 'action_sindicato_selectparroquia'),
+('cargador', 'action_sindicato_update'),
+('cargador', 'action_sindicato_view'),
+('cargador', 'action_site_contact'),
+('cargador', 'action_site_error'),
+('cargador', 'action_site_index'),
+('cargador', 'action_site_login'),
+('cargador', 'action_site_logout'),
+('cargador', 'action_trabajador_sindicato_admin'),
+('cargador', 'action_trabajador_sindicato_create'),
+('cargador', 'action_trabajador_sindicato_getvalue'),
+('cargador', 'action_trabajador_sindicato_index'),
+('cargador', 'action_trabajador_sindicato_update'),
+('cargador', 'action_trabajador_sindicato_view'),
+('cargador', 'controller_clausuras'),
+('cargador', 'controller_convencion'),
+('cargador', 'controller_empresa'),
+('cargador', 'controller_nomina'),
+('cargador', 'controller_sindicato'),
+('cargador', 'controller_site'),
+('cargador', 'controller_trabajador_sindicato');
 
 -- --------------------------------------------------------
 
@@ -837,16 +875,16 @@ INSERT INTO `cruge_authitemchild` (`parent`, `child`) VALUES
 
 CREATE TABLE IF NOT EXISTS `cruge_field` (
   `idfield` int(11) NOT NULL AUTO_INCREMENT,
-  `fieldname` varchar(20) CHARACTER SET latin1 NOT NULL,
-  `longname` varchar(50) CHARACTER SET latin1 DEFAULT NULL,
+  `fieldname` varchar(20) NOT NULL,
+  `longname` varchar(50) DEFAULT NULL,
   `position` int(11) DEFAULT '0',
   `required` int(11) DEFAULT '0',
   `fieldtype` int(11) DEFAULT '0',
   `fieldsize` int(11) DEFAULT '20',
   `maxlength` int(11) DEFAULT '45',
   `showinreports` int(11) DEFAULT '0',
-  `useregexp` varchar(512) CHARACTER SET latin1 DEFAULT NULL,
-  `useregexpmsg` varchar(512) CHARACTER SET latin1 DEFAULT NULL,
+  `useregexp` varchar(512) DEFAULT NULL,
+  `useregexpmsg` varchar(512) DEFAULT NULL,
   `predetvalue` mediumblob,
   PRIMARY KEY (`idfield`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -879,81 +917,27 @@ CREATE TABLE IF NOT EXISTS `cruge_session` (
   `created` bigint(30) DEFAULT NULL,
   `expire` bigint(30) DEFAULT NULL,
   `status` int(11) DEFAULT '0',
-  `ipaddress` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
+  `ipaddress` varchar(45) DEFAULT NULL,
   `usagecount` int(11) DEFAULT '0',
   `lastusage` bigint(30) DEFAULT NULL,
   `logoutdate` bigint(30) DEFAULT NULL,
-  `ipaddressout` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
+  `ipaddressout` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idsession`),
   KEY `crugesession_iduser` (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Volcado de datos para la tabla `cruge_session`
 --
 
 INSERT INTO `cruge_session` (`idsession`, `iduser`, `created`, `expire`, `status`, `ipaddress`, `usagecount`, `lastusage`, `logoutdate`, `ipaddressout`) VALUES
-(1, 1, 1445550681, 1445552481, 0, '127.0.0.1', 1, 1445550681, 1445550689, '127.0.0.1'),
-(2, 1, 1445550702, 1445552502, 0, '127.0.0.1', 2, 1445550869, 1445550872, '127.0.0.1'),
-(3, 1, 1445615490, 1445617290, 0, '127.0.0.1', 2, 1445615672, 1445615675, '127.0.0.1'),
-(4, 1, 1445615682, 1445617482, 1, '127.0.0.1', 1, 1445615682, NULL, NULL),
-(5, 3, 1445615870, 1445627870, 0, '127.0.0.1', 1, 1445615870, 1445616174, '127.0.0.1'),
-(6, 3, 1445616185, 1445628185, 0, '127.0.0.1', 1, 1445616185, 1445616379, '127.0.0.1'),
-(7, 3, 1445616392, 1445628392, 0, '127.0.0.1', 1, 1445616392, 1445617472, '127.0.0.1'),
-(8, 3, 1445617479, 1445629479, 0, '127.0.0.1', 1, 1445617479, 1445619069, '127.0.0.1'),
-(9, 3, 1445619077, 1445631077, 0, '127.0.0.1', 1, 1445619077, 1445628768, '127.0.0.1'),
-(10, 1, 1445628772, 1445640772, 0, '127.0.0.1', 1, 1445628772, 1445629896, '127.0.0.1'),
-(11, 1, 1445629996, 1445641996, 0, '127.0.0.1', 2, 1445630677, 1445630681, '127.0.0.1'),
-(12, 3, 1445630686, 1445642686, 0, '127.0.0.1', 1, 1445630686, 1445630750, '127.0.0.1'),
-(13, 3, 1445630762, 1445642762, 0, '127.0.0.1', 1, 1445630762, 1445630765, '127.0.0.1'),
-(14, 3, 1445630913, 1445642913, 0, '127.0.0.1', 1, 1445630913, 1445630916, '127.0.0.1'),
-(15, 3, 1445630953, 1445642953, 0, '127.0.0.1', 1, 1445630953, 1445631019, '127.0.0.1'),
-(16, 1, 1445631030, 1445643030, 0, '127.0.0.1', 1, 1445631030, 1445631039, '127.0.0.1'),
-(17, 3, 1445631049, 1445643049, 0, '127.0.0.1', 1, 1445631049, 1445631051, '127.0.0.1'),
-(18, 3, 1445631057, 1445643057, 0, '127.0.0.1', 1, 1445631057, 1445631060, '127.0.0.1'),
-(19, 3, 1445631081, 1445643081, 0, '127.0.0.1', 1, 1445631081, 1445631100, '127.0.0.1'),
-(20, 3, 1445631211, 1445643211, 0, '127.0.0.1', 1, 1445631211, 1445631211, '127.0.0.1'),
-(21, 3, 1445631220, 1445643220, 0, '127.0.0.1', 1, 1445631220, 1445631229, '127.0.0.1'),
-(22, 1, 1445631232, 1445643232, 0, '127.0.0.1', 1, 1445631232, 1445631235, '127.0.0.1'),
-(23, 3, 1445631241, 1445643241, 0, '127.0.0.1', 1, 1445631241, 1445631246, '127.0.0.1'),
-(24, 3, 1445873110, 1445885110, 0, '127.0.0.1', 1, 1445873110, 1445873522, '127.0.0.1'),
-(25, 3, 1445873555, 1445885555, 0, '127.0.0.1', 1, 1445873555, 1445873582, '127.0.0.1'),
-(26, 1, 1445874027, 1445886027, 0, '127.0.0.1', 1, 1445874027, 1445874164, '127.0.0.1'),
-(27, 3, 1445874250, 1445886250, 0, '127.0.0.1', 1, 1445874250, 1445874273, '127.0.0.1'),
-(28, 3, 1445874284, 1445886284, 0, '127.0.0.1', 1, 1445874284, 1445874291, '127.0.0.1'),
-(29, 1, 1445874300, 1445886300, 0, '127.0.0.1', 1, 1445874300, 1445880632, '127.0.0.1'),
-(30, 1, 1445884999, 1445896999, 0, '127.0.0.1', 2, 1445887072, NULL, NULL),
-(31, 1, 1445898225, 1445910225, 0, '127.0.0.1', 1, 1445898225, 1445901645, '127.0.0.1'),
-(32, 1, 1445960978, 1445972978, 0, '127.0.0.1', 3, 1445972056, NULL, NULL),
-(33, 1, 1445973231, 1445985231, 0, '127.0.0.1', 1, 1445973231, NULL, NULL),
-(34, 1, 1445985258, 1445997258, 0, '127.0.0.1', 2, 1445985379, NULL, NULL),
-(35, 1, 1446047110, 1446059110, 0, '127.0.0.1', 2, 1446050300, NULL, NULL),
-(36, 1, 1446059169, 1446071169, 0, '127.0.0.1', 2, 1446067941, NULL, NULL),
-(37, 1, 1446072337, 1446084337, 0, '127.0.0.1', 2, 1446072791, NULL, NULL),
-(38, 1, 1446219705, 1446231705, 0, '127.0.0.1', 3, 1446229093, NULL, NULL),
-(39, 1, 1446478907, 1446490907, 0, '127.0.0.1', 4, 1446486324, 1446486625, '127.0.0.1'),
-(40, 1, 1446486631, 1446498631, 0, '127.0.0.1', 1, 1446486631, 1446488086, '127.0.0.1'),
-(41, 3, 1446487465, 1446499465, 1, '127.0.0.1', 1, 1446487465, NULL, NULL),
-(42, 1, 1446488090, 1446500090, 0, '127.0.0.1', 1, 1446488090, NULL, NULL),
-(43, 1, 1446502726, 1446514726, 0, '127.0.0.1', 2, 1446507654, NULL, NULL),
-(44, 1, 1446568977, 1446580977, 0, '127.0.0.1', 2, 1446569183, NULL, NULL),
-(45, 1, 1446595722, 1446607722, 0, '127.0.0.1', 1, 1446595722, 1446596939, '127.0.0.1'),
-(46, 1, 1446654890, 1446666890, 0, '127.0.0.1', 1, 1446654890, NULL, NULL),
-(47, 1, 1447096442, 1447108442, 0, '127.0.0.1', 1, 1447096442, 1447099621, '127.0.0.1'),
-(48, 1, 1447099624, 1447111624, 1, '127.0.0.1', 1, 1447099624, NULL, NULL),
-(49, 1, 1447161487, 1447173487, 0, '127.0.0.1', 1, 1447161487, 1447162277, '127.0.0.1'),
-(50, 1, 1447162289, 1447174289, 0, '127.0.0.1', 1, 1447162289, 1447162384, '127.0.0.1'),
-(51, 4, 1447162390, 1447174390, 0, '127.0.0.1', 1, 1447162390, 1447168598, '127.0.0.1'),
-(52, 1, 1447168601, 1447180601, 0, '127.0.0.1', 1, 1447168601, NULL, NULL),
-(53, 1, 1447185568, 1447197568, 1, '127.0.0.1', 1, 1447185568, NULL, NULL),
-(54, 1, 1447253967, 1447265967, 0, '127.0.0.1', 1, 1447253967, 1447254292, '127.0.0.1'),
-(55, 1, 1447266606, 1447278606, 0, '127.0.0.1', 1, 1447266606, 1447274456, '127.0.0.1'),
-(56, 1, 1447339463, 1447351463, 1, '127.0.0.1', 1, 1447339463, NULL, NULL),
-(57, 1, 1447419345, 1447431345, 1, '127.0.0.1', 1, 1447419345, NULL, NULL),
-(58, 1, 1447431573, 1447443573, 1, '127.0.0.1', 1, 1447431573, NULL, NULL),
-(59, 1, 1447680282, 1447692282, 0, '127.0.0.1', 1, 1447680282, NULL, NULL),
-(60, 1, 1447701096, 1447713096, 0, '127.0.0.1', 1, 1447701096, 1447701127, '127.0.0.1'),
-(61, 1, 1447701152, 1447713152, 1, '127.0.0.1', 1, 1447701152, NULL, NULL);
+(1, 1, 1447773506, 1447775306, 0, '127.0.0.1', 1, 1447773506, 1447773520, '127.0.0.1'),
+(2, 1, 1447773528, 1447775328, 0, '127.0.0.1', 1, 1447773528, 1447773530, '127.0.0.1'),
+(3, 3, 1447773573, 1447775373, 0, '127.0.0.1', 1, 1447773573, 1447773574, '127.0.0.1'),
+(4, 3, 1447773603, 1447775403, 0, '127.0.0.1', 1, 1447773603, 1447773603, '127.0.0.1'),
+(5, 3, 1447773615, 1447775415, 0, '127.0.0.1', 1, 1447773615, 1447773615, '127.0.0.1'),
+(6, 1, 1447773647, 1447775447, 0, '127.0.0.1', 1, 1447773647, 1447773850, '127.0.0.1'),
+(7, 3, 1447773861, 1447775661, 0, '127.0.0.1', 1, 1447773861, 1447773881, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -963,8 +947,8 @@ INSERT INTO `cruge_session` (`idsession`, `iduser`, `created`, `expire`, `status
 
 CREATE TABLE IF NOT EXISTS `cruge_system` (
   `idsystem` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
-  `largename` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `largename` varchar(45) DEFAULT NULL,
   `sessionmaxdurationmins` int(11) DEFAULT '30',
   `sessionmaxsameipconnections` int(11) DEFAULT '10',
   `sessionreusesessions` int(11) DEFAULT '1' COMMENT '1yes 0no',
@@ -976,8 +960,8 @@ CREATE TABLE IF NOT EXISTS `cruge_system` (
   `registerusingterms` int(11) DEFAULT '0',
   `terms` blob,
   `registerusingactivation` int(11) DEFAULT '1',
-  `defaultroleforregistration` varchar(64) CHARACTER SET latin1 DEFAULT NULL,
-  `registerusingtermslabel` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
+  `defaultroleforregistration` varchar(64) DEFAULT NULL,
+  `registerusingtermslabel` varchar(100) DEFAULT NULL,
   `registrationonlogin` int(11) DEFAULT '1',
   PRIMARY KEY (`idsystem`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
@@ -987,7 +971,7 @@ CREATE TABLE IF NOT EXISTS `cruge_system` (
 --
 
 INSERT INTO `cruge_system` (`idsystem`, `name`, `largename`, `sessionmaxdurationmins`, `sessionmaxsameipconnections`, `sessionreusesessions`, `sessionmaxsessionsperday`, `sessionmaxsessionsperuser`, `systemnonewsessions`, `systemdown`, `registerusingcaptcha`, `registerusingterms`, `terms`, `registerusingactivation`, `defaultroleforregistration`, `registerusingtermslabel`, `registrationonlogin`) VALUES
-(1, 'default', NULL, 200, 10, 1, -1, -1, 0, 0, 0, 0, '', 2, '', '', 0);
+(1, 'default', NULL, 30, 10, 1, -1, -1, 0, 0, 0, 0, '', 0, '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -1000,24 +984,24 @@ CREATE TABLE IF NOT EXISTS `cruge_user` (
   `regdate` bigint(30) DEFAULT NULL,
   `actdate` bigint(30) DEFAULT NULL,
   `logondate` bigint(30) DEFAULT NULL,
-  `username` varchar(64) CHARACTER SET latin1 DEFAULT NULL,
-  `email` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
-  `password` varchar(64) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Hashed password',
-  `authkey` varchar(100) CHARACTER SET latin1 DEFAULT NULL COMMENT 'llave de autentificacion',
+  `username` varchar(64) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(64) DEFAULT NULL COMMENT 'Hashed password',
+  `authkey` varchar(100) DEFAULT NULL COMMENT 'llave de autentificacion',
   `state` int(11) DEFAULT '0',
   `totalsessioncounter` int(11) DEFAULT '0',
   `currentsessioncounter` int(11) DEFAULT '0',
   PRIMARY KEY (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `cruge_user`
 --
 
 INSERT INTO `cruge_user` (`iduser`, `regdate`, `actdate`, `logondate`, `username`, `email`, `password`, `authkey`, `state`, `totalsessioncounter`, `currentsessioncounter`) VALUES
-(1, NULL, NULL, 1447701152, 'admin', 'admin@tucorreo.com', 'admin', NULL, 1, 0, 0),
+(1, NULL, NULL, 1447773647, 'admin', 'admin@tucorreo.com', 'admin', NULL, 1, 0, 0),
 (2, NULL, NULL, NULL, 'invitado', 'invitado', 'nopassword', NULL, 1, 0, 0),
-(3, 1445615839, NULL, 1446487465, 'cargador1', 'walter86.79@gmail.com', '123456', 'e1c9786bfb0395fc34fb0f6c4284bea9', 1, 0, 0),
+(3, 1445615839, NULL, 1447773861, 'cargador1', 'walter86.79@gmail.com', '123456', 'e1c9786bfb0395fc34fb0f6c4284bea9', 1, 0, 0),
 (4, 1447162236, NULL, 1447162390, 'historico', 'walter86_79@hotmail.com', 'historico', 'f1d7660e9f66d67c634545fbc72a992a', 1, 0, 0);
 
 -- --------------------------------------------------------
@@ -1170,7 +1154,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
 --
 
 INSERT INTO `empresa` (`id`, `razon_social`, `rif`, `identificacion_laboral`, `seguro_social`, `actividad_economica`, `sector`, `capital_empresa`, `nro_sucursales`, `direccion`, `estado`, `municipio`, `parroquia`, `telefono`, `fax`, `correo`, `web`, `rnc`, `cod_convencion`) VALUES
-(3, 'nuevaempresa', 'V173898149', '10101011', '10101', 738, 2, '10000.00', 20, 'caracas', 6, 66, 209, '0212-4813637/0212-4813638', '0212-4813639', 'walter86_79@hotmail.com', 'http://kkk.com', '17389814', 8),
+(3, 'nuevaempresa', 'V173898149', '10101011', '10101', 738, 2, '10000.00', 20, 'caracas', 6, 66, 209, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://kkk.com', '17389814', 8),
 (4, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 19, 'caracas', 3, 29, 82, '', '02124813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 10),
 (6, 'asociarladesde1', 'V173898149', '1234', '12333', 352, 2, '98291922.00', 7, 'caracas', 14, 236, 637, '1010', '1010', 'walter86_79@hotmail.com', 'walter.com', '173898148', 12),
 (7, 'probando otra empresa', 'V173898149', '123456-1', '123456', 133, 2, '150000000.00', 5, 'caracas', 24, 462, 1133, '02124813639', '02124813639', 'walter86_79@hotmail.com', 'soulip.com', '', 8),
@@ -4414,6 +4398,74 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`id`, `nombres`, `cedula`, `correo`, `nivel`, `estatus`, `telefono`, `login`, `clave`) VALUES
 (1, 'administrador', 123456, 'example@example.com', 1, 1, '02125555555', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
 (2, 'cargador', 123456, 'probando@probnado.com', 2, 1, '02124813639', 'cargador', 'f2b318b5e71f2afe39fcda462a7702f7');
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `clausuras`
+--
+ALTER TABLE `clausuras`
+  ADD CONSTRAINT `clausuras_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
+
+--
+-- Filtros para la tabla `convencion`
+--
+ALTER TABLE `convencion`
+  ADD CONSTRAINT `convencion_ibfk_2` FOREIGN KEY (`ambito`) REFERENCES `ambito` (`id`),
+  ADD CONSTRAINT `convencion_ibfk_1` FOREIGN KEY (`inspectoria`) REFERENCES `inspectoria` (`id`);
+
+--
+-- Filtros para la tabla `cruge_authassignment`
+--
+ALTER TABLE `cruge_authassignment`
+  ADD CONSTRAINT `fk_cruge_authassignment_cruge_authitem1` FOREIGN KEY (`itemname`) REFERENCES `cruge_authitem` (`name`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_cruge_authassignment_user` FOREIGN KEY (`userid`) REFERENCES `cruge_user` (`iduser`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `cruge_authitemchild`
+--
+ALTER TABLE `cruge_authitemchild`
+  ADD CONSTRAINT `crugeauthitemchild_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `cruge_authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `crugeauthitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `cruge_authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `cruge_fieldvalue`
+--
+ALTER TABLE `cruge_fieldvalue`
+  ADD CONSTRAINT `fk_cruge_fieldvalue_cruge_user1` FOREIGN KEY (`iduser`) REFERENCES `cruge_user` (`iduser`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_cruge_fieldvalue_cruge_field1` FOREIGN KEY (`idfield`) REFERENCES `cruge_field` (`idfield`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `empresa`
+--
+ALTER TABLE `empresa`
+  ADD CONSTRAINT `empresa_ibfk_6` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
+  ADD CONSTRAINT `empresa_ibfk_1` FOREIGN KEY (`actividad_economica`) REFERENCES `rama` (`id`),
+  ADD CONSTRAINT `empresa_ibfk_2` FOREIGN KEY (`sector`) REFERENCES `sector` (`id`),
+  ADD CONSTRAINT `empresa_ibfk_3` FOREIGN KEY (`estado`) REFERENCES `estados` (`id_estado`),
+  ADD CONSTRAINT `empresa_ibfk_4` FOREIGN KEY (`municipio`) REFERENCES `municipios` (`id_municipio`),
+  ADD CONSTRAINT `empresa_ibfk_5` FOREIGN KEY (`parroquia`) REFERENCES `parroquias` (`id_parroquia`);
+
+--
+-- Filtros para la tabla `nomina`
+--
+ALTER TABLE `nomina`
+  ADD CONSTRAINT `nomina_ibfk_2` FOREIGN KEY (`nivel_educativo`) REFERENCES `nivel_educativo` (`cod_interno`),
+  ADD CONSTRAINT `nomina_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
+
+--
+-- Filtros para la tabla `sindicato`
+--
+ALTER TABLE `sindicato`
+  ADD CONSTRAINT `sindicato_ibfk_7` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
+  ADD CONSTRAINT `sindicato_ibfk_1` FOREIGN KEY (`estado`) REFERENCES `estados` (`id_estado`),
+  ADD CONSTRAINT `sindicato_ibfk_2` FOREIGN KEY (`municipio`) REFERENCES `municipios` (`id_municipio`),
+  ADD CONSTRAINT `sindicato_ibfk_3` FOREIGN KEY (`parroquia`) REFERENCES `parroquias` (`id_parroquia`),
+  ADD CONSTRAINT `sindicato_ibfk_4` FOREIGN KEY (`sector`) REFERENCES `sector` (`id`),
+  ADD CONSTRAINT `sindicato_ibfk_5` FOREIGN KEY (`ambito`) REFERENCES `ambito` (`id`),
+  ADD CONSTRAINT `sindicato_ibfk_6` FOREIGN KEY (`tipo_organizacion`) REFERENCES `tipo_organizacion` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
