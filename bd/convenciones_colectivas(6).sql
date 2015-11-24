@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-11-2015 a las 15:25:04
+-- Tiempo de generación: 24-11-2015 a las 13:16:05
 -- Versión del servidor: 5.5.20
 -- Versión de PHP: 5.3.10
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `activerecordlog` (
   `creationdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `userid` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=60 ;
 
 --
 -- Volcado de datos para la tabla `activerecordlog`
@@ -77,7 +77,26 @@ INSERT INTO `activerecordlog` (`id`, `description`, `action`, `model`, `idModel`
 (37, 'User admin changed parroquia for Empresa[3].', 'CHANGE', 'Empresa', 3, 'parroquia', '2015-11-12 16:12:55', '1'),
 (38, 'User admin changed telefono for Empresa[3].', 'CHANGE', 'Empresa', 3, 'telefono', '2015-11-12 16:12:55', '1'),
 (39, 'User admin changed duracion_meses for Convencion[8].', 'CHANGE', 'Convencion', 8, 'duracion_meses', '2015-11-16 14:46:33', '1'),
-(40, 'User admin changed telefono for Empresa[3].', 'CHANGE', 'Empresa', 3, 'telefono', '2015-11-17 13:44:54', '1');
+(40, 'User admin changed telefono for Empresa[3].', 'CHANGE', 'Empresa', 3, 'telefono', '2015-11-17 13:44:54', '1'),
+(41, 'User admin deleted Empresa[10].', 'DELETE', 'Empresa', 10, '', '2015-11-17 20:09:37', '1'),
+(42, 'User admin deleted Convencion[17].', 'DELETE', 'Convencion', 17, '', '2015-11-17 20:10:33', '1'),
+(43, 'User admin created nomina ultimo id 704', 'CREATE', 'Nomina', 704, NULL, '2015-11-18 13:55:10', '1'),
+(44, 'User admin created nomina ultimo id 754', 'CREATE', 'Nomina', 754, NULL, '2015-11-18 16:51:25', '1'),
+(45, 'User admin created nomina ultimo id 804', 'CREATE', 'Nomina', 804, NULL, '2015-11-18 20:10:48', '1'),
+(46, 'User admin created nomina ultimo id 854', 'CREATE', 'Nomina', 854, NULL, '2015-11-19 14:47:37', '1'),
+(47, 'User admin update trabajador columna trabajadores_amparados_conve_col', 'UPDATE', 'trabajador_nomina', 8, NULL, '2015-11-19 16:11:16', '1'),
+(48, 'User admin update trabajador columna trabajadores_afiliados_sindicato', 'UPDATE', 'trabajador_nomina', 8, NULL, '2015-11-19 16:11:16', '1'),
+(49, 'User admin created nomina ultimo id 904', 'CREATE', 'Nomina', 904, NULL, '2015-11-19 18:10:15', '1'),
+(50, 'User admin created nomina ultimo id 954', 'CREATE', 'Nomina', 954, NULL, '2015-11-20 13:25:43', '1'),
+(51, 'User admin created nomina ultimo id 1004', 'CREATE', 'Nomina', 1004, NULL, '2015-11-23 13:51:10', '1'),
+(52, 'User admin created nomina ultimo id 1054', 'CREATE', 'Nomina', 1054, NULL, '2015-11-23 15:48:21', '1'),
+(53, 'User admin created nomina ultimo id 1104', 'CREATE', 'Nomina', 1104, NULL, '2015-11-23 15:48:46', '1'),
+(54, 'User admin created nomina ultimo id 50', 'CREATE', 'Nomina', 50, NULL, '2015-11-23 15:54:44', '1'),
+(55, 'User admin created nomina ultimo id 100', 'CREATE', 'Nomina', 100, NULL, '2015-11-23 16:00:32', '1'),
+(56, 'User admin created nomina ultimo id 50', 'CREATE', 'Nomina', 50, NULL, '2015-11-23 16:07:17', '1'),
+(57, 'User admin created nomina ultimo id 101', 'CREATE', 'Nomina', 101, NULL, '2015-11-23 18:31:07', '1'),
+(58, 'User admin changed razon_social for Empresa[3].', 'CHANGE', 'Empresa', 3, 'razon_social', '2015-11-23 18:56:29', '1'),
+(59, 'User admin created nomina ultimo id 151', 'CREATE', 'Nomina', 151, NULL, '2015-11-23 20:13:51', '1');
 
 -- --------------------------------------------------------
 
@@ -560,19 +579,10 @@ INSERT INTO `clase` (`id`, `codigo_seccion`, `codigo_division`, `codigo_grupo`, 
 
 CREATE TABLE IF NOT EXISTS `clausuras` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `numero_clausura` int(11) NOT NULL,
-  `descripcion_clausura` text NOT NULL,
   `cod_convencion` bigint(20) unsigned NOT NULL,
   UNIQUE KEY `id` (`id`),
   KEY `cod_convencion` (`cod_convencion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `clausuras`
---
-
-INSERT INTO `clausuras` (`id`, `numero_clausura`, `descripcion_clausura`, `cod_convencion`) VALUES
-(1, 1, '&nbsp;probando <br>', 8);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -634,7 +644,6 @@ INSERT INTO `convencion` (`id`, `nombre`, `numero_expediente`, `inspectoria`, `s
 (13, 'nueva', '2', '080', 1, 1, 1010, '2015-10-15', '2015-10-15', '2015-10-15', 10, '2015-10-15', '259999.0000', '24999.0000', '8-04', ''),
 (14, 'nueva', '199', '080', 1, 1, 2, '2015-10-15', '2015-10-15', '2015-10-15', 10, '2015-10-29', '121212.0000', '1212.0000', '8-05', ''),
 (15, 'desde1', '1919', '001', 2, 1, 2, '2015-10-15', '2015-10-15', '2015-10-15', 10, '2015-10-15', '18888.0000', '81882.0000', '12-02', ''),
-(17, 'probandoactiverecord', '10101010101', '002', 2, 2, 50, '2015-10-15', '2015-10-14', '2015-10-07', 4, '2015-10-15', '10.0000', '10.0000', '17-01', ''),
 (18, 'nueva', '33333', '080', 1, 2, 12, '2015-10-21', '2015-10-15', '2015-10-08', 5, '2015-10-21', '10101010101010.0000', '10101010101.0000', '8-03', ''),
 (19, 'nueva', '9999999', '001', 2, 3, 1, '2015-10-06', '2015-10-21', '2015-10-14', 10, '2015-10-20', '1010101.0000', '1010101.0000', '8-07', ''),
 (20, 'nueva', '1010', '071', 2, 2, 2, '2015-10-07', '2015-10-15', '2015-10-08', 10, '2015-10-22', '121212.0000', '1212.0000', '8-08', ''),
@@ -706,7 +715,7 @@ CREATE TABLE IF NOT EXISTS `cruge_authassignment` (
 --
 
 INSERT INTO `cruge_authassignment` (`userid`, `bizrule`, `data`, `itemname`) VALUES
-(3, NULL, 'N;', 'cargador');
+(3, NULL, 'N;', 'Cargador');
 
 -- --------------------------------------------------------
 
@@ -755,7 +764,9 @@ INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) 
 ('action_empresa_view', 0, '', NULL, 'N;'),
 ('action_nomina_admin', 0, '', NULL, 'N;'),
 ('action_nomina_create', 0, '', NULL, 'N;'),
+('action_nomina_create_cargo_sindicato', 0, '', NULL, 'N;'),
 ('action_nomina_delete', 0, '', NULL, 'N;'),
+('action_nomina_getvalue', 0, '', NULL, 'N;'),
 ('action_nomina_index', 0, '', NULL, 'N;'),
 ('action_nomina_update', 0, '', NULL, 'N;'),
 ('action_nomina_view', 0, '', NULL, 'N;'),
@@ -780,21 +791,30 @@ INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) 
 ('action_trabajador_sindicato_update', 0, '', NULL, 'N;'),
 ('action_trabajador_sindicato_view', 0, '', NULL, 'N;'),
 ('action_ui_editprofile', 0, '', NULL, 'N;'),
+('action_ui_fieldsadmincreate', 0, '', NULL, 'N;'),
+('action_ui_fieldsadminlist', 0, '', NULL, 'N;'),
+('action_ui_rbacajaxassignment', 0, '', NULL, 'N;'),
 ('action_ui_rbacajaxsetchilditem', 0, '', NULL, 'N;'),
 ('action_ui_rbacauthitemchilditems', 0, '', NULL, 'N;'),
 ('action_ui_rbacauthitemcreate', 0, '', NULL, 'N;'),
+('action_ui_rbacauthitemdelete', 0, '', NULL, 'N;'),
+('action_ui_rbacauthitemupdate', 0, '', NULL, 'N;'),
 ('action_ui_rbaclistroles', 0, '', NULL, 'N;'),
 ('action_ui_rbacusersassignments', 0, '', NULL, 'N;'),
+('action_ui_sessionadmin', 0, '', NULL, 'N;'),
+('action_ui_systemupdate', 0, '', NULL, 'N;'),
 ('action_ui_usermanagementadmin', 0, '', NULL, 'N;'),
+('action_ui_usermanagementupdate', 0, '', NULL, 'N;'),
 ('admin', 0, '', NULL, 'N;'),
-('cargador', 2, 'el que carga la data', '', 'N;'),
+('Cargador', 2, 'carga de datos', '', 'N;'),
 ('controller_clausuras', 0, '', NULL, 'N;'),
 ('controller_convencion', 0, '', NULL, 'N;'),
 ('controller_empresa', 0, '', NULL, 'N;'),
 ('controller_nomina', 0, '', NULL, 'N;'),
 ('controller_sindicato', 0, '', NULL, 'N;'),
 ('controller_site', 0, '', NULL, 'N;'),
-('controller_trabajador_sindicato', 0, '', NULL, 'N;');
+('controller_trabajador_sindicato', 0, '', NULL, 'N;'),
+('edit-advanced-profile-features', 0, 'C:\\wamp\\www\\convenciones_colectivas_resp\\protected\\modules\\cruge\\views\\ui\\usermanagementupdate.php linea 114', NULL, 'N;');
 
 -- --------------------------------------------------------
 
@@ -814,58 +834,61 @@ CREATE TABLE IF NOT EXISTS `cruge_authitemchild` (
 --
 
 INSERT INTO `cruge_authitemchild` (`parent`, `child`) VALUES
-('cargador', 'action_clausuras_admin'),
-('cargador', 'action_clausuras_create'),
-('cargador', 'action_clausuras_index'),
-('cargador', 'action_clausuras_update'),
-('cargador', 'action_clausuras_view'),
-('cargador', 'action_convencion_admin'),
-('cargador', 'action_convencion_cambiarpadre'),
-('cargador', 'action_convencion_create'),
-('cargador', 'action_convencion_index'),
-('cargador', 'action_convencion_ordenar'),
-('cargador', 'action_convencion_ordenar_convenciones'),
-('cargador', 'action_convencion_update'),
-('cargador', 'action_convencion_view'),
-('cargador', 'action_empresa_admin'),
-('cargador', 'action_empresa_autocomplete'),
-('cargador', 'action_empresa_create'),
-('cargador', 'action_empresa_index'),
-('cargador', 'action_empresa_llenarcampos'),
-('cargador', 'action_empresa_selectmunicipio'),
-('cargador', 'action_empresa_selectparroquia'),
-('cargador', 'action_empresa_update'),
-('cargador', 'action_empresa_view'),
-('cargador', 'action_nomina_admin'),
-('cargador', 'action_nomina_create'),
-('cargador', 'action_nomina_index'),
-('cargador', 'action_nomina_update'),
-('cargador', 'action_nomina_view'),
-('cargador', 'action_sindicato_admin'),
-('cargador', 'action_sindicato_create'),
-('cargador', 'action_sindicato_index'),
-('cargador', 'action_sindicato_selectmunicipio'),
-('cargador', 'action_sindicato_selectparroquia'),
-('cargador', 'action_sindicato_update'),
-('cargador', 'action_sindicato_view'),
-('cargador', 'action_site_contact'),
-('cargador', 'action_site_error'),
-('cargador', 'action_site_index'),
-('cargador', 'action_site_login'),
-('cargador', 'action_site_logout'),
-('cargador', 'action_trabajador_sindicato_admin'),
-('cargador', 'action_trabajador_sindicato_create'),
-('cargador', 'action_trabajador_sindicato_getvalue'),
-('cargador', 'action_trabajador_sindicato_index'),
-('cargador', 'action_trabajador_sindicato_update'),
-('cargador', 'action_trabajador_sindicato_view'),
-('cargador', 'controller_clausuras'),
-('cargador', 'controller_convencion'),
-('cargador', 'controller_empresa'),
-('cargador', 'controller_nomina'),
-('cargador', 'controller_sindicato'),
-('cargador', 'controller_site'),
-('cargador', 'controller_trabajador_sindicato');
+('Cargador', 'action_clausuras_admin'),
+('Cargador', 'action_clausuras_create'),
+('Cargador', 'action_clausuras_index'),
+('Cargador', 'action_clausuras_update'),
+('Cargador', 'action_clausuras_view'),
+('Cargador', 'action_convencion_admin'),
+('Cargador', 'action_convencion_cambiarpadre'),
+('Cargador', 'action_convencion_create'),
+('Cargador', 'action_convencion_index'),
+('Cargador', 'action_convencion_ordenar'),
+('Cargador', 'action_convencion_ordenar_convenciones'),
+('Cargador', 'action_convencion_update'),
+('Cargador', 'action_convencion_view'),
+('Cargador', 'action_empresa_admin'),
+('Cargador', 'action_empresa_autocomplete'),
+('Cargador', 'action_empresa_create'),
+('Cargador', 'action_empresa_index'),
+('Cargador', 'action_empresa_llenarcampos'),
+('Cargador', 'action_empresa_selectmunicipio'),
+('Cargador', 'action_empresa_selectparroquia'),
+('Cargador', 'action_empresa_update'),
+('Cargador', 'action_empresa_view'),
+('Cargador', 'action_nomina_admin'),
+('Cargador', 'action_nomina_create'),
+('Cargador', 'action_nomina_index'),
+('Cargador', 'action_nomina_update'),
+('Cargador', 'action_nomina_view'),
+('Cargador', 'action_sindicato_admin'),
+('Cargador', 'action_sindicato_create'),
+('Cargador', 'action_sindicato_index'),
+('Cargador', 'action_sindicato_selectmunicipio'),
+('Cargador', 'action_sindicato_selectparroquia'),
+('Cargador', 'action_sindicato_update'),
+('Cargador', 'action_sindicato_view'),
+('Cargador', 'action_site_contact'),
+('Cargador', 'action_site_error'),
+('Cargador', 'action_site_index'),
+('Cargador', 'action_site_login'),
+('Cargador', 'action_site_logout'),
+('Cargador', 'action_trabajador_sindicato_admin'),
+('Cargador', 'action_trabajador_sindicato_create'),
+('Cargador', 'action_trabajador_sindicato_delete'),
+('Cargador', 'action_trabajador_sindicato_getvalue'),
+('Cargador', 'action_trabajador_sindicato_index'),
+('Cargador', 'action_trabajador_sindicato_update'),
+('Cargador', 'action_trabajador_sindicato_view'),
+('Cargador', 'admin'),
+('Cargador', 'controller_clausuras'),
+('Cargador', 'controller_convencion'),
+('Cargador', 'controller_empresa'),
+('Cargador', 'controller_nomina'),
+('Cargador', 'controller_sindicato'),
+('Cargador', 'controller_site'),
+('Cargador', 'controller_trabajador_sindicato'),
+('Cargador', 'edit-advanced-profile-features');
 
 -- --------------------------------------------------------
 
@@ -924,7 +947,7 @@ CREATE TABLE IF NOT EXISTS `cruge_session` (
   `ipaddressout` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idsession`),
   KEY `crugesession_iduser` (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
 
 --
 -- Volcado de datos para la tabla `cruge_session`
@@ -937,7 +960,45 @@ INSERT INTO `cruge_session` (`idsession`, `iduser`, `created`, `expire`, `status
 (4, 3, 1447773603, 1447775403, 0, '127.0.0.1', 1, 1447773603, 1447773603, '127.0.0.1'),
 (5, 3, 1447773615, 1447775415, 0, '127.0.0.1', 1, 1447773615, 1447773615, '127.0.0.1'),
 (6, 1, 1447773647, 1447775447, 0, '127.0.0.1', 1, 1447773647, 1447773850, '127.0.0.1'),
-(7, 3, 1447773861, 1447775661, 0, '127.0.0.1', 1, 1447773861, 1447773881, '127.0.0.1');
+(7, 3, 1447773861, 1447775661, 0, '127.0.0.1', 1, 1447773861, 1447773881, '127.0.0.1'),
+(8, 1, 1447774240, 1447776040, 0, '127.0.0.1', 1, 1447774240, NULL, NULL),
+(9, 1, 1447776654, 1447788654, 0, '127.0.0.1', 1, 1447776654, NULL, NULL),
+(10, 3, 1447790857, 1447802857, 0, '127.0.0.1', 1, 1447790857, 1447790875, '127.0.0.1'),
+(11, 1, 1447790879, 1447802879, 0, '127.0.0.1', 1, 1447790879, 1447791293, '127.0.0.1'),
+(12, 3, 1447791310, 1447803310, 0, '127.0.0.1', 1, 1447791310, 1447791311, '127.0.0.1'),
+(13, 3, 1447791326, 1447803326, 0, '127.0.0.1', 1, 1447791326, 1447791327, '127.0.0.1'),
+(14, 1, 1447791330, 1447803330, 0, '127.0.0.1', 1, 1447791330, 1447791368, '127.0.0.1'),
+(15, 3, 1447791382, 1447803382, 0, '127.0.0.1', 1, 1447791382, 1447791382, '127.0.0.1'),
+(16, 1, 1447791386, 1447803386, 0, '127.0.0.1', 1, 1447791386, 1447791544, '127.0.0.1'),
+(17, 1, 1447791548, 1447803548, 0, '127.0.0.1', 1, 1447791548, 1447791550, '127.0.0.1'),
+(18, 1, 1447791560, 1447803560, 0, '127.0.0.1', 1, 1447791560, 1447791577, '127.0.0.1'),
+(19, 3, 1447791588, 1447803588, 0, '127.0.0.1', 1, 1447791588, 1447791600, '127.0.0.1'),
+(20, 1, 1447791603, 1447803603, 0, '127.0.0.1', 2, 1447791692, 1447791698, '127.0.0.1'),
+(21, 3, 1447791707, 1447803707, 0, '127.0.0.1', 1, 1447791707, 1447791809, '127.0.0.1'),
+(22, 3, 1447791817, 1447803817, 0, '127.0.0.1', 1, 1447791817, 1447791830, '127.0.0.1'),
+(23, 3, 1447791848, 1447803848, 0, '127.0.0.1', 1, 1447791848, 1447791873, '127.0.0.1'),
+(24, 3, 1447791910, 1447803910, 0, '127.0.0.1', 1, 1447791910, 1447792164, '127.0.0.1'),
+(25, 3, 1447792226, 1447804226, 0, '127.0.0.1', 1, 1447792226, 1447792230, '127.0.0.1'),
+(26, 1, 1447853398, 1447865398, 0, '127.0.0.1', 1, 1447853398, NULL, NULL),
+(27, 1, 1447865412, 1447877412, 0, '127.0.0.1', 1, 1447865412, NULL, NULL),
+(28, 1, 1447877431, 1447889431, 1, '127.0.0.1', 1, 1447877431, NULL, NULL),
+(29, 1, 1447944270, 1447956270, 0, '127.0.0.1', 1, 1447944270, NULL, NULL),
+(30, 1, 1447956361, 1447968361, 0, '127.0.0.1', 1, 1447956361, NULL, NULL),
+(31, 1, 1447968390, 1447980390, 1, '127.0.0.1', 1, 1447968390, NULL, NULL),
+(32, 1, 1447983157, 1447995157, 0, '127.0.0.1', 1, 1447983157, 1447983184, '127.0.0.1'),
+(33, 1, 1448025843, 1448037843, 0, '127.0.0.1', 1, 1448025843, NULL, NULL),
+(34, 1, 1448037879, 1448049879, 1, '127.0.0.1', 1, 1448037879, NULL, NULL),
+(35, 1, 1448286396, 1448298396, 0, '127.0.0.1', 1, 1448286396, NULL, NULL),
+(36, 1, 1448302344, 1448314344, 0, '127.0.0.1', 1, 1448302344, 1448304648, '127.0.0.1'),
+(37, 1, 1448304663, 1448316663, 0, '127.0.0.1', 1, 1448304663, 1448304690, '127.0.0.1'),
+(38, 3, 1448304695, 1448316695, 0, '127.0.0.1', 1, 1448304695, 1448304776, '127.0.0.1'),
+(39, 1, 1448304779, 1448316779, 0, '127.0.0.1', 1, 1448304779, 1448305028, '127.0.0.1'),
+(40, 3, 1448305034, 1448317034, 0, '127.0.0.1', 1, 1448305034, 1448305042, '127.0.0.1'),
+(41, 1, 1448305046, 1448317046, 0, '127.0.0.1', 1, 1448305046, 1448306716, '127.0.0.1'),
+(42, 3, 1448305078, 1448317078, 1, '127.0.0.1', 1, 1448305078, NULL, NULL),
+(43, 1, 1448306741, 1448318741, 0, '127.0.0.1', 1, 1448306741, 1448309665, '127.0.0.1'),
+(44, 1, 1448311340, 1448323340, 0, '127.0.0.1', 1, 1448311340, 1448311353, '127.0.0.1'),
+(45, 1, 1448370235, 1448382235, 0, '127.0.0.1', 1, 1448370235, 1448370938, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -971,7 +1032,7 @@ CREATE TABLE IF NOT EXISTS `cruge_system` (
 --
 
 INSERT INTO `cruge_system` (`idsystem`, `name`, `largename`, `sessionmaxdurationmins`, `sessionmaxsameipconnections`, `sessionreusesessions`, `sessionmaxsessionsperday`, `sessionmaxsessionsperuser`, `systemnonewsessions`, `systemdown`, `registerusingcaptcha`, `registerusingterms`, `terms`, `registerusingactivation`, `defaultroleforregistration`, `registerusingtermslabel`, `registrationonlogin`) VALUES
-(1, 'default', NULL, 30, 10, 1, -1, -1, 0, 0, 0, 0, '', 0, '', '', 1);
+(1, 'default', NULL, 200, 10, 1, -1, -1, 0, 0, 0, 0, '', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -992,16 +1053,16 @@ CREATE TABLE IF NOT EXISTS `cruge_user` (
   `totalsessioncounter` int(11) DEFAULT '0',
   `currentsessioncounter` int(11) DEFAULT '0',
   PRIMARY KEY (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `cruge_user`
 --
 
 INSERT INTO `cruge_user` (`iduser`, `regdate`, `actdate`, `logondate`, `username`, `email`, `password`, `authkey`, `state`, `totalsessioncounter`, `currentsessioncounter`) VALUES
-(1, NULL, NULL, 1447773647, 'admin', 'admin@tucorreo.com', 'admin', NULL, 1, 0, 0),
+(1, NULL, NULL, 1448370235, 'admin', 'admin@tucorreo.com', 'admin', NULL, 1, 0, 0),
 (2, NULL, NULL, NULL, 'invitado', 'invitado', 'nopassword', NULL, 1, 0, 0),
-(3, 1445615839, NULL, 1447773861, 'cargador1', 'walter86.79@gmail.com', '123456', 'e1c9786bfb0395fc34fb0f6c4284bea9', 1, 0, 0),
+(3, 1445615839, NULL, 1448305078, 'cargador1', 'walter86.79@gmail.com', '111111', 'e1c9786bfb0395fc34fb0f6c4284bea9', 1, 0, 0),
 (4, 1447162236, NULL, 1447162390, 'historico', 'walter86_79@hotmail.com', 'historico', 'f1d7660e9f66d67c634545fbc72a992a', 1, 0, 0);
 
 -- --------------------------------------------------------
@@ -1154,13 +1215,12 @@ CREATE TABLE IF NOT EXISTS `empresa` (
 --
 
 INSERT INTO `empresa` (`id`, `razon_social`, `rif`, `identificacion_laboral`, `seguro_social`, `actividad_economica`, `sector`, `capital_empresa`, `nro_sucursales`, `direccion`, `estado`, `municipio`, `parroquia`, `telefono`, `fax`, `correo`, `web`, `rnc`, `cod_convencion`) VALUES
-(3, 'nuevaempresa', 'V173898149', '10101011', '10101', 738, 2, '10000.00', 20, 'caracas', 6, 66, 209, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://kkk.com', '17389814', 8),
+(3, 'nuevaempresa4', 'V173898149', '10101011', '10101', 738, 2, '10000.00', 20, 'caracas', 6, 66, 209, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://kkk.com', '17389814', 8),
 (4, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 19, 'caracas', 3, 29, 82, '', '02124813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 10),
 (6, 'asociarladesde1', 'V173898149', '1234', '12333', 352, 2, '98291922.00', 7, 'caracas', 14, 236, 637, '1010', '1010', 'walter86_79@hotmail.com', 'walter.com', '173898148', 12),
 (7, 'probando otra empresa', 'V173898149', '123456-1', '123456', 133, 2, '150000000.00', 5, 'caracas', 24, 462, 1133, '02124813639', '02124813639', 'walter86_79@hotmail.com', 'soulip.com', '', 8),
 (8, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 2, 'caracas', 3, 29, 82, '02124813639', '02124813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 13),
 (9, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 11, 'caracas', 3, 29, 82, '02124813639-12121212', '121212', 'walter86_79@hotmail.com', 'walter.com', '17389814', 14),
-(10, 'probandoempresa', 'V289898123', '12134567', '123456', 237, 2, '200000.00', 200, 'caracas', 24, 462, 1133, '02124813639', '02124813639', 'walter86_79@hotmail.com', 'soulip.com', '17389814', 17),
 (11, 'probando identificacion laboral', 'J123456789', '000001-123', '1010', 275, 2, '10100000.00', 2, 'caracas', 24, 462, 1127, '02124813639-22121', '1212121', 'walter86_79@hotmail.com', 'walter.com', '17389814', 8),
 (12, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 100, 'caracas', 3, 29, 82, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 18),
 (13, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 2, 'caracas', 3, 29, 82, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 21),
@@ -1983,116 +2043,140 @@ CREATE TABLE IF NOT EXISTS `nomina` (
   `remuneracion_despues_contra_obrero` decimal(10,2) NOT NULL,
   `carga_familiar` int(11) NOT NULL,
   `cod_convencion` bigint(20) unsigned NOT NULL,
-  UNIQUE KEY `id` (`id`),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cedula` (`cedula`,`cod_convencion`),
   KEY `cod_convencion` (`cod_convencion`),
   KEY `nivel_educativo` (`nivel_educativo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=655 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=152 ;
 
 --
 -- Volcado de datos para la tabla `nomina`
 --
 
 INSERT INTO `nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES
-(51, 'Acosta Bello, Joel Antonio', '19667073', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(52, 'Aray Vitapaz, Brayan José', '19479129', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8),
-(53, 'Arias Marcano, Yelika Andreina', '14495920', 'V', 'Venezuela', 'Caracas', 'F', 32, 'C', '07', 0, 'Coord Calidad Y Procesos', 0, 1, 3, 0, 0, '5532.12', '0.00', '7191.76', '0.00', 1, 8),
-(54, 'Arias Rincón, Oscar José', '18412958', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '06', 0, 'Coord.De Seguridad Y Salud Laboral', 0, 0, 3, 0, 0, '3500.00', '0.00', '3500.00', '0.00', 2, 8),
-(55, 'Arzola Ron, Omaira De Jesús', '7127124', 'V', 'Venezuela', 'Valencia', 'F', 53, 'S', '05', 0, 'Operador 1', 0, 5, 5, 0, 0, '0.00', '111.64', '0.00', '145.13', 0, 8),
-(56, 'Betancourt Yanez, Dilcia Del Carmen', '9403674', 'V', 'Venezuela', 'San Juan De Los Morros', 'F', 44, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 6, 0, 0, '3418.33', '0.00', '4443.83', '0.00', 0, 8),
-(57, 'Cabrera Rodríguez, Resbel Antonio', '20950942', 'V', 'Venezuela', 'San Juan De Los Morros', 'M', 18, 'S', '05', 0, 'Operador 3', 0, 0, 2, 0, 0, '0.00', '59.35', '0.00', '106.46', 0, 8),
-(58, 'Campos Rodríguez, Regino', '6697264', 'V', 'Venezuela', 'Guarico', 'M', 49, 'S', '05', 0, 'Operador 2', 0, 4, 6, 0, 0, '0.00', '110.01', '0.00', '143.01', 2, 8),
-(59, 'Carrero Guzmán, Jairo Antonio', '20382854', 'V', 'Venezuela', 'Valencia', 'M', 20, 'S', '01', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(60, 'Correa Correa, Wilmer', '15684169', 'V', 'Venezuela', 'Caracas', 'M', 32, 'S', '05', 0, 'Chofer 2', 0, 4, 7, 0, 0, '0.00', '120.31', '0.00', '156.40', 0, 8),
-(61, 'Fernandes Rodríguez, José Alexander', '14303141', 'V', 'Venezuela', 'Guacara', 'M', 37, 'S', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
-(62, 'Figueredo Díaz, Abraham David', '9862027', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Lider De Producci?n 2', 0, 1, 5, 0, 0, '3200.00', '0.00', '4160.00', '0.00', 2, 8),
-(63, 'García Matute, Carlos Eduardo', '20081131', 'V', 'Venezuela', 'Valencia', 'M', 24, 'S', '05', 0, 'Lider Calidad 2', 0, 2, 7, 0, 0, '3389.10', '0.00', '4405.83', '0.00', 0, 8),
-(64, 'González César, Carlos Luis', '14819080', 'V', 'Venezuela', 'Valencia', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '109.64', 4, 8),
-(65, 'González Senoco, Omar Alexander', '12522371', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(66, 'Guerrero Flores, Oliver De Jesus', '19602230', 'V', 'Venezuela', 'Trujillo', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 0, 8),
-(67, 'Hernández Crespo, Wilmer Antonio', '17956886', 'V', 'Venezuela', 'Valencia', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 3, 8),
-(68, 'Hernandez Peña, Alixon Carolina', '12102386', 'V', 'Venezuela', 'Valencia', 'F', 38, 'C', '05', 0, 'Lider De Producci?n', 0, 2, 8, 0, 0, '3449.82', '0.00', '4484.77', '0.00', 2, 8),
-(69, 'Hernández Perozo, Iris Marbella', '13723399', 'V', 'Venezuela', 'Coro', 'F', 34, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 5, 0, 0, '3634.43', '0.00', '4724.76', '0.00', 0, 8),
-(70, 'Isambertt Díaz, Hendrikson Manuel', '14181858', 'V', 'Venezuela', 'Maracaibo', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(71, 'Leal Da Costa, José Jhon', '12481902', 'V', 'Venezuela', 'Caracas', 'M', 36, 'S', '05', 0, 'Coord.Mantenimiento 2', 0, 4, 9, 0, 0, '3995.55', '0.00', '5194.22', '0.00', 0, 8),
-(72, 'Llovera Acosta, Mayda Elena', '14186987', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Electrom?canico', 0, 1, 3, 0, 0, '3630.00', '0.00', '4719.00', '0.00', 1, 8),
-(73, 'Lozada Chinchilla, David Orlando', '22009154', 'V', 'Venezuela', 'Valencia', 'M', 19, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8),
-(74, 'Maldonado Aparicio, Natasha Vanessa', '14819405', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Coord.Pcp/Compras', 0, 7, 6, 0, 0, '4497.71', '0.00', '5847.02', '0.00', 0, 8),
-(75, 'Millano Olivera, Wuilmen Antonio', '15975376', 'V', 'Venezuela', 'Caracas', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 2, 8),
-(76, 'Mirabal Romero, Freddy Roger', '8847435', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Auxiliar De Alm?cen 3', 0, 1, 6, 0, 0, '0.00', '81.90', '0.00', '109.63', 2, 8),
-(77, 'Molina Plaza, Frank Gregrio', '18500489', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Electrom?canico 2', 0, 1, 2, 0, 0, '3000.00', '0.00', '3.90', '0.00', 1, 8),
-(78, 'Ochoa Rodriguez, José Gregorio', '8673908', 'V', 'Venezuela', 'Valencia', 'M', 53, 'S', '05', 0, 'Operador 2', 0, 4, 1, 0, 0, '0.00', '105.10', '0.00', '136.63', 0, 8),
-(79, 'Oliveros Granados, Jesus Rafael', '13618300', 'V', 'Venezuela', 'Maracay', 'M', 33, 'C', '07', 0, 'Jefe De Producci?n', 0, 1, 4, 0, 0, '6655.00', '0.00', '8651.50', '0.00', 0, 8),
-(80, 'Osabarrio Botello, Susana', '15529327', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '07', 0, 'Coord.De Recursos Humanos', 0, 1, 6, 0, 0, '5183.64', '0.00', '6738.73', '0.00', 0, 8),
-(81, 'Pacheco Rivero, Pedro Antonio', '23742497', 'V', 'Venezuela', 'Trujillo', 'M', 19, 'S', '05', 0, 'Operador 2', 0, 1, 3, 0, 0, '0.00', '88.54', '0.00', '115.10', 0, 8),
-(82, 'Peraza Arraez, Osmar Hernan', '17553105', 'V', 'Venezuela', 'Valencia', 'M', 27, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 6, 8),
-(83, 'Pérez, José Luis', '12310091', 'V', 'Venezuela', 'Valencia', 'M', 41, 'C', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(84, 'Pérez Escalona, Gustavo Adolfo', '8846297', 'V', 'Venezuela', 'Valencia', 'M', 47, 'S', '05', 0, 'Supervisor De Producci?n', 0, 1, 8, 0, 0, '5081.67', '0.00', '6606.17', '0.00', 3, 8),
-(85, 'Perez Pinto, Javier Alejandro', '17778944', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 1, 8),
-(86, 'Plasencia Salazar, José Federico', '22740182', 'V', 'Venezuela', 'Puerto Ordaz', 'M', 20, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(87, 'Primera Nieves, Pablo José', '13103016', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
-(88, 'Quezada Hernández, Alexander Rafael', '7124495', 'V', 'Venezuela', 'Valencia', 'M', 42, 'S', '06', 0, 'Coord Mantenimiento', 0, 1, 6, 0, 0, '6708.24', '0.00', '8720.71', '0.00', 2, 8),
-(89, 'Quintero Rodríguez, Jesús Alexander', '23426565', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 1, 8),
-(90, 'Quintero Zavarce, Zuleima Del Carmen', '9633381', 'V', 'Venezuela', 'Coro', 'F', 50, 'D', '05', 0, 'Aux.Serv.Generales 2', 0, 7, 10, 0, 0, '0.00', '94.35', '0.00', '122.66', 6, 8),
-(91, 'Requena, Auribeth Yadira', '13046909', 'V', 'Venezuela', 'Valencia', 'F', 39, 'S', '05', 0, 'Asistente De Operaciones', 0, 1, 5, 0, 0, '2782.77', '0.00', '3617.60', '0.00', 1, 8),
-(92, 'Rivas Rodríguez, José Javier', '19997004', 'V', 'Venezuela', 'Maracay', 'M', 25, 'S', '05', 0, 'Aux.Serv.Generales 2', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8),
-(93, 'Rodríguez, Yepzi Lisbeth', '10059762', 'V', 'Venezuela', 'Valencia', 'F', 41, 'C', '05', 0, 'Operador 2', 0, 4, 7, 0, 0, '0.00', '110.01', '0.00', '143.01', 3, 8),
-(94, 'Romero Bolívar, Carlos Javier', '24295242', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Auditor 2', 0, 1, 4, 0, 0, '0.00', '88.55', '0.00', '115.12', 0, 8),
-(95, 'Rondón Saavedra, Jorge Daniel', '20731635', 'V', 'Venezuela', 'Valencia', 'M', 18, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8),
-(96, 'Salom Herrera, Felipe Antonio', '15652960', 'V', 'Venezuela', 'Valencia', 'M', 31, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
-(97, 'Torrealba Acosta, Miguel Angel', '16401991', 'V', 'Venezuela', 'Valencia', 'M', 28, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8),
-(98, 'Tortolero Morloy, Carlos Eduardo', '18501659', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8),
-(99, 'Zarate Campos, Jonathan José', '17807331', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Coord.Producci?n', 0, 5, 6, 0, 0, '4672.14', '0.00', '6073.78', '0.00', 0, 8),
-(100, 'Zerpa Rodríguez, José Fernando', '12568645', 'V', 'Venezuela', 'Valencia', 'M', 35, 'C', '07', 0, 'Supervisor Materiales', 0, 2, 4, 0, 0, '8121.76', '0.00', '10558.29', '0.00', 1, 8),
-(605, 'Acosta Bello, Joel Antonio', '19667073', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 10),
-(606, 'Aray Vitapaz, Brayan José', '19479129', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 10),
-(607, 'Arias Marcano, Yelika Andreina', '14495920', 'V', 'Venezuela', 'Caracas', 'F', 32, 'C', '07', 0, 'Coord Calidad Y Procesos', 0, 1, 3, 0, 0, '5532.12', '0.00', '7191.76', '0.00', 1, 10),
-(608, 'Arias Rincón, Oscar José', '18412958', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '06', 0, 'Coord.De Seguridad Y Salud Laboral', 0, 0, 3, 0, 0, '3500.00', '0.00', '3500.00', '0.00', 2, 10),
-(609, 'Arzola Ron, Omaira De Jesús', '7127124', 'V', 'Venezuela', 'Valencia', 'F', 53, 'S', '05', 0, 'Operador 1', 0, 5, 5, 0, 0, '0.00', '111.64', '0.00', '145.13', 0, 10),
-(610, 'Betancourt Yanez, Dilcia Del Carmen', '9403674', 'V', 'Venezuela', 'San Juan De Los Morros', 'F', 44, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 6, 0, 0, '3418.33', '0.00', '4443.83', '0.00', 0, 10),
-(611, 'Cabrera Rodríguez, Resbel Antonio', '20950942', 'V', 'Venezuela', 'San Juan De Los Morros', 'M', 18, 'S', '05', 0, 'Operador 3', 0, 0, 2, 0, 0, '0.00', '59.35', '0.00', '106.46', 0, 10),
-(612, 'Campos Rodríguez, Regino', '6697264', 'V', 'Venezuela', 'Guarico', 'M', 49, 'S', '05', 0, 'Operador 2', 0, 4, 6, 0, 0, '0.00', '110.01', '0.00', '143.01', 2, 10),
-(613, 'Carrero Guzmán, Jairo Antonio', '20382854', 'V', 'Venezuela', 'Valencia', 'M', 20, 'S', '01', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 10),
-(614, 'Correa Correa, Wilmer', '15684169', 'V', 'Venezuela', 'Caracas', 'M', 32, 'S', '05', 0, 'Chofer 2', 0, 4, 7, 0, 0, '0.00', '120.31', '0.00', '156.40', 0, 10),
-(615, 'Fernandes Rodríguez, José Alexander', '14303141', 'V', 'Venezuela', 'Guacara', 'M', 37, 'S', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 10),
-(616, 'Figueredo Díaz, Abraham David', '9862027', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Lider De Producci?n 2', 0, 1, 5, 0, 0, '3200.00', '0.00', '4160.00', '0.00', 2, 10),
-(617, 'García Matute, Carlos Eduardo', '20081131', 'V', 'Venezuela', 'Valencia', 'M', 24, 'S', '05', 0, 'Lider Calidad 2', 0, 2, 7, 0, 0, '3389.10', '0.00', '4405.83', '0.00', 0, 10),
-(618, 'González César, Carlos Luis', '14819080', 'V', 'Venezuela', 'Valencia', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '109.64', 4, 10),
-(619, 'González Senoco, Omar Alexander', '12522371', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 10),
-(620, 'Guerrero Flores, Oliver De Jesus', '19602230', 'V', 'Venezuela', 'Trujillo', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 0, 10),
-(621, 'Hernández Crespo, Wilmer Antonio', '17956886', 'V', 'Venezuela', 'Valencia', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 3, 10),
-(622, 'Hernandez Peña, Alixon Carolina', '12102386', 'V', 'Venezuela', 'Valencia', 'F', 38, 'C', '05', 0, 'Lider De Producci?n', 0, 2, 8, 0, 0, '3449.82', '0.00', '4484.77', '0.00', 2, 10),
-(623, 'Hernández Perozo, Iris Marbella', '13723399', 'V', 'Venezuela', 'Coro', 'F', 34, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 5, 0, 0, '3634.43', '0.00', '4724.76', '0.00', 0, 10),
-(624, 'Isambertt Díaz, Hendrikson Manuel', '14181858', 'V', 'Venezuela', 'Maracaibo', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 10),
-(625, 'Leal Da Costa, José Jhon', '12481902', 'V', 'Venezuela', 'Caracas', 'M', 36, 'S', '05', 0, 'Coord.Mantenimiento 2', 0, 4, 9, 0, 0, '3995.55', '0.00', '5194.22', '0.00', 0, 10),
-(626, 'Llovera Acosta, Mayda Elena', '14186987', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Electrom?canico', 0, 1, 3, 0, 0, '3630.00', '0.00', '4719.00', '0.00', 1, 10),
-(627, 'Lozada Chinchilla, David Orlando', '22009154', 'V', 'Venezuela', 'Valencia', 'M', 19, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 10),
-(628, 'Maldonado Aparicio, Natasha Vanessa', '14819405', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Coord.Pcp/Compras', 0, 7, 6, 0, 0, '4497.71', '0.00', '5847.02', '0.00', 0, 10),
-(629, 'Millano Olivera, Wuilmen Antonio', '15975376', 'V', 'Venezuela', 'Caracas', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 2, 10),
-(630, 'Mirabal Romero, Freddy Roger', '8847435', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Auxiliar De Alm?cen 3', 0, 1, 6, 0, 0, '0.00', '81.90', '0.00', '109.63', 2, 10),
-(631, 'Molina Plaza, Frank Gregrio', '18500489', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Electrom?canico 2', 0, 1, 2, 0, 0, '3000.00', '0.00', '3.90', '0.00', 1, 10),
-(632, 'Ochoa Rodriguez, José Gregorio', '8673908', 'V', 'Venezuela', 'Valencia', 'M', 53, 'S', '05', 0, 'Operador 2', 0, 4, 1, 0, 0, '0.00', '105.10', '0.00', '136.63', 0, 10),
-(633, 'Oliveros Granados, Jesus Rafael', '13618300', 'V', 'Venezuela', 'Maracay', 'M', 33, 'C', '07', 0, 'Jefe De Producci?n', 0, 1, 4, 0, 0, '6655.00', '0.00', '8651.50', '0.00', 0, 10),
-(634, 'Osabarrio Botello, Susana', '15529327', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '07', 0, 'Coord.De Recursos Humanos', 0, 1, 6, 0, 0, '5183.64', '0.00', '6738.73', '0.00', 0, 10),
-(635, 'Pacheco Rivero, Pedro Antonio', '23742497', 'V', 'Venezuela', 'Trujillo', 'M', 19, 'S', '05', 0, 'Operador 2', 0, 1, 3, 0, 0, '0.00', '88.54', '0.00', '115.10', 0, 10),
-(636, 'Peraza Arraez, Osmar Hernan', '17553105', 'V', 'Venezuela', 'Valencia', 'M', 27, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 6, 10),
-(637, 'Pérez, José Luis', '12310091', 'V', 'Venezuela', 'Valencia', 'M', 41, 'C', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 10),
-(638, 'Pérez Escalona, Gustavo Adolfo', '8846297', 'V', 'Venezuela', 'Valencia', 'M', 47, 'S', '05', 0, 'Supervisor De Producci?n', 0, 1, 8, 0, 0, '5081.67', '0.00', '6606.17', '0.00', 3, 10),
-(639, 'Perez Pinto, Javier Alejandro', '17778944', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 1, 10),
-(640, 'Plasencia Salazar, José Federico', '22740182', 'V', 'Venezuela', 'Puerto Ordaz', 'M', 20, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 10),
-(641, 'Primera Nieves, Pablo José', '13103016', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 10),
-(642, 'Quezada Hernández, Alexander Rafael', '7124495', 'V', 'Venezuela', 'Valencia', 'M', 42, 'S', '06', 0, 'Coord Mantenimiento', 0, 1, 6, 0, 0, '6708.24', '0.00', '8720.71', '0.00', 2, 10),
-(643, 'Quintero Rodríguez, Jesús Alexander', '23426565', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 1, 10),
-(644, 'Quintero Zavarce, Zuleima Del Carmen', '9633381', 'V', 'Venezuela', 'Coro', 'F', 50, 'D', '05', 0, 'Aux.Serv.Generales 2', 0, 7, 10, 0, 0, '0.00', '94.35', '0.00', '122.66', 6, 10),
-(645, 'Requena, Auribeth Yadira', '13046909', 'V', 'Venezuela', 'Valencia', 'F', 39, 'S', '05', 0, 'Asistente De Operaciones', 0, 1, 5, 0, 0, '2782.77', '0.00', '3617.60', '0.00', 1, 10),
-(646, 'Rivas Rodríguez, José Javier', '19997004', 'V', 'Venezuela', 'Maracay', 'M', 25, 'S', '05', 0, 'Aux.Serv.Generales 2', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 10),
-(647, 'Rodríguez, Yepzi Lisbeth', '10059762', 'V', 'Venezuela', 'Valencia', 'F', 41, 'C', '05', 0, 'Operador 2', 0, 4, 7, 0, 0, '0.00', '110.01', '0.00', '143.01', 3, 10),
-(648, 'Romero Bolívar, Carlos Javier', '24295242', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Auditor 2', 0, 1, 4, 0, 0, '0.00', '88.55', '0.00', '115.12', 0, 10),
-(649, 'Rondón Saavedra, Jorge Daniel', '20731635', 'V', 'Venezuela', 'Valencia', 'M', 18, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 10),
-(650, 'Salom Herrera, Felipe Antonio', '15652960', 'V', 'Venezuela', 'Valencia', 'M', 31, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 10),
-(651, 'Torrealba Acosta, Miguel Angel', '16401991', 'V', 'Venezuela', 'Valencia', 'M', 28, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 10),
-(652, 'Tortolero Morloy, Carlos Eduardo', '18501659', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 10),
-(653, 'Zarate Campos, Jonathan José', '17807331', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Coord.Producci?n', 0, 5, 6, 0, 0, '4672.14', '0.00', '6073.78', '0.00', 0, 10),
-(654, 'Zerpa Rodríguez, José Fernando', '12568645', 'V', 'Venezuela', 'Valencia', 'M', 35, 'C', '07', 0, 'Supervisor Materiales', 0, 2, 4, 0, 0, '8121.76', '0.00', '10558.29', '0.00', 1, 10);
+(102, 'Acosta Bello, Joel Antonio', '19667073', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
+(103, 'Aray Vitapaz, Brayan José', '19479129', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8),
+(104, 'Arias Marcano, Yelika Andreina', '14495920', 'V', 'Venezuela', 'Caracas', 'F', 32, 'C', '07', 0, 'Coord Calidad Y Procesos', 0, 1, 3, 0, 0, '5532.12', '0.00', '7191.76', '0.00', 1, 8),
+(105, 'Arias Rincón, Oscar José', '18412958', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '06', 0, 'Coord.De Seguridad Y Salud Laboral', 0, 0, 3, 0, 0, '3500.00', '0.00', '3500.00', '0.00', 2, 8),
+(106, 'Arzola Ron, Omaira De Jesús', '7127124', 'V', 'Venezuela', 'Valencia', 'F', 53, 'S', '05', 0, 'Operador 1', 0, 5, 5, 0, 0, '0.00', '111.64', '0.00', '145.13', 0, 8),
+(107, 'Betancourt Yanez, Dilcia Del Carmen', '9403674', 'V', 'Venezuela', 'San Juan De Los Morros', 'F', 44, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 6, 0, 0, '3418.33', '0.00', '4443.83', '0.00', 0, 8),
+(108, 'Cabrera Rodríguez, Resbel Antonio', '20950942', 'V', 'Venezuela', 'San Juan De Los Morros', 'M', 18, 'S', '05', 0, 'Operador 3', 0, 0, 2, 0, 0, '0.00', '59.35', '0.00', '106.46', 0, 8),
+(109, 'Campos Rodríguez, Regino', '6697264', 'V', 'Venezuela', 'Guarico', 'M', 49, 'S', '05', 0, 'Operador 2', 0, 4, 6, 0, 0, '0.00', '110.01', '0.00', '143.01', 2, 8),
+(110, 'Carrero Guzmán, Jairo Antonio', '20382854', 'V', 'Venezuela', 'Valencia', 'M', 20, 'S', '01', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
+(111, 'Correa Correa, Wilmer', '15684169', 'V', 'Venezuela', 'Caracas', 'M', 32, 'S', '05', 0, 'Chofer 2', 0, 4, 7, 0, 0, '0.00', '120.31', '0.00', '156.40', 0, 8),
+(112, 'Fernandes Rodríguez, José Alexander', '14303141', 'V', 'Venezuela', 'Guacara', 'M', 37, 'S', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
+(113, 'Figueredo Díaz, Abraham David', '9862027', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Lider De Producci?n 2', 0, 1, 5, 0, 0, '3200.00', '0.00', '4160.00', '0.00', 2, 8),
+(114, 'García Matute, Carlos Eduardo', '20081131', 'V', 'Venezuela', 'Valencia', 'M', 24, 'S', '05', 0, 'Lider Calidad 2', 0, 2, 7, 0, 0, '3389.10', '0.00', '4405.83', '0.00', 0, 8),
+(115, 'González César, Carlos Luis', '14819080', 'V', 'Venezuela', 'Valencia', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '109.64', 4, 8),
+(116, 'González Senoco, Omar Alexander', '12522371', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
+(117, 'Guerrero Flores, Oliver De Jesus', '19602230', 'V', 'Venezuela', 'Trujillo', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 0, 8),
+(118, 'Hernández Crespo, Wilmer Antonio', '17956886', 'V', 'Venezuela', 'Valencia', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 3, 8),
+(119, 'Hernandez Peña, Alixon Carolina', '12102386', 'V', 'Venezuela', 'Valencia', 'F', 38, 'C', '05', 0, 'Lider De Producci?n', 0, 2, 8, 0, 0, '3449.82', '0.00', '4484.77', '0.00', 2, 8),
+(120, 'Hernández Perozo, Iris Marbella', '13723399', 'V', 'Venezuela', 'Coro', 'F', 34, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 5, 0, 0, '3634.43', '0.00', '4724.76', '0.00', 0, 8),
+(121, 'Isambertt Díaz, Hendrikson Manuel', '14181858', 'V', 'Venezuela', 'Maracaibo', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
+(122, 'Leal Da Costa, José Jhon', '12481902', 'V', 'Venezuela', 'Caracas', 'M', 36, 'S', '05', 0, 'Coord.Mantenimiento 2', 0, 4, 9, 0, 0, '3995.55', '0.00', '5194.22', '0.00', 0, 8),
+(123, 'Llovera Acosta, Mayda Elena', '14186987', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Electrom?canico', 0, 1, 3, 0, 0, '3630.00', '0.00', '4719.00', '0.00', 1, 8),
+(124, 'Lozada Chinchilla, David Orlando', '22009154', 'V', 'Venezuela', 'Valencia', 'M', 19, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8),
+(125, 'Maldonado Aparicio, Natasha Vanessa', '14819405', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Coord.Pcp/Compras', 0, 7, 6, 0, 0, '4497.71', '0.00', '5847.02', '0.00', 0, 8),
+(126, 'Millano Olivera, Wuilmen Antonio', '15975376', 'V', 'Venezuela', 'Caracas', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 2, 8),
+(127, 'Mirabal Romero, Freddy Roger', '8847435', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Auxiliar De Alm?cen 3', 0, 1, 6, 0, 0, '0.00', '81.90', '0.00', '109.63', 2, 8),
+(128, 'Molina Plaza, Frank Gregrio', '18500489', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Electrom?canico 2', 0, 1, 2, 0, 0, '3000.00', '0.00', '3.90', '0.00', 1, 8),
+(129, 'Ochoa Rodriguez, José Gregorio', '8673908', 'V', 'Venezuela', 'Valencia', 'M', 53, 'S', '05', 0, 'Operador 2', 0, 4, 1, 0, 0, '0.00', '105.10', '0.00', '136.63', 0, 8),
+(130, 'Oliveros Granados, Jesus Rafael', '13618300', 'V', 'Venezuela', 'Maracay', 'M', 33, 'C', '07', 0, 'Jefe De Producci?n', 0, 1, 4, 0, 0, '6655.00', '0.00', '8651.50', '0.00', 0, 8),
+(131, 'Osabarrio Botello, Susana', '15529327', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '07', 0, 'Coord.De Recursos Humanos', 0, 1, 6, 0, 0, '5183.64', '0.00', '6738.73', '0.00', 0, 8),
+(132, 'Pacheco Rivero, Pedro Antonio', '23742497', 'V', 'Venezuela', 'Trujillo', 'M', 19, 'S', '05', 0, 'Operador 2', 0, 1, 3, 0, 0, '0.00', '88.54', '0.00', '115.10', 0, 8),
+(133, 'Peraza Arraez, Osmar Hernan', '17553105', 'V', 'Venezuela', 'Valencia', 'M', 27, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 6, 8),
+(134, 'Pérez, José Luis', '12310091', 'V', 'Venezuela', 'Valencia', 'M', 41, 'C', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
+(135, 'Pérez Escalona, Gustavo Adolfo', '8846297', 'V', 'Venezuela', 'Valencia', 'M', 47, 'S', '05', 0, 'Supervisor De Producci?n', 0, 1, 8, 0, 0, '5081.67', '0.00', '6606.17', '0.00', 3, 8),
+(136, 'Perez Pinto, Javier Alejandro', '17778944', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 1, 8),
+(137, 'Plasencia Salazar, José Federico', '22740182', 'V', 'Venezuela', 'Puerto Ordaz', 'M', 20, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
+(138, 'Primera Nieves, Pablo José', '13103016', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
+(139, 'Quezada Hernández, Alexander Rafael', '7124495', 'V', 'Venezuela', 'Valencia', 'M', 42, 'S', '06', 0, 'Coord Mantenimiento', 0, 1, 6, 0, 0, '6708.24', '0.00', '8720.71', '0.00', 2, 8),
+(140, 'Quintero Rodríguez, Jesús Alexander', '23426565', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 1, 8),
+(141, 'Quintero Zavarce, Zuleima Del Carmen', '9633381', 'V', 'Venezuela', 'Coro', 'F', 50, 'D', '05', 0, 'Aux.Serv.Generales 2', 0, 7, 10, 0, 0, '0.00', '94.35', '0.00', '122.66', 6, 8),
+(142, 'Requena, Auribeth Yadira', '13046909', 'V', 'Venezuela', 'Valencia', 'F', 39, 'S', '05', 0, 'Asistente De Operaciones', 0, 1, 5, 0, 0, '2782.77', '0.00', '3617.60', '0.00', 1, 8),
+(143, 'Rivas Rodríguez, José Javier', '19997004', 'V', 'Venezuela', 'Maracay', 'M', 25, 'S', '05', 0, 'Aux.Serv.Generales 2', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8),
+(144, 'Rodríguez, Yepzi Lisbeth', '10059762', 'V', 'Venezuela', 'Valencia', 'F', 41, 'C', '05', 0, 'Operador 2', 0, 4, 7, 0, 0, '0.00', '110.01', '0.00', '143.01', 3, 8),
+(145, 'Romero Bolívar, Carlos Javier', '24295242', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Auditor 2', 0, 1, 4, 0, 0, '0.00', '88.55', '0.00', '115.12', 0, 8),
+(146, 'Rondón Saavedra, Jorge Daniel', '20731635', 'V', 'Venezuela', 'Valencia', 'M', 18, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8),
+(147, 'Salom Herrera, Felipe Antonio', '15652960', 'V', 'Venezuela', 'Valencia', 'M', 31, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
+(148, 'Torrealba Acosta, Miguel Angel', '16401991', 'V', 'Venezuela', 'Valencia', 'M', 28, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8),
+(149, 'Tortolero Morloy, Carlos Eduardo', '18501659', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8),
+(150, 'Zarate Campos, Jonathan José', '17807331', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Coord.Producci?n', 0, 5, 6, 0, 0, '4672.14', '0.00', '6073.78', '0.00', 0, 8),
+(151, 'Zerpa Rodríguez, José Fernando', '12568645', 'V', 'Venezuela', 'Valencia', 'M', 35, 'C', '07', 0, 'Supervisor Materiales', 0, 2, 4, 0, 0, '8121.76', '0.00', '10558.29', '0.00', 1, 8);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `nomina_tipo_sindicato`
+--
+
+CREATE TABLE IF NOT EXISTS `nomina_tipo_sindicato` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `tipo_sindicato` bigint(20) unsigned NOT NULL,
+  `id_nomina` bigint(20) unsigned NOT NULL,
+  `cod_convencion_nomina` bigint(20) unsigned NOT NULL,
+  UNIQUE KEY `id` (`id`),
+  KEY `tipo_sindicato` (`tipo_sindicato`,`id_nomina`,`cod_convencion_nomina`),
+  KEY `id_nomina` (`id_nomina`),
+  KEY `cod_convencion_nomina` (`cod_convencion_nomina`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=213 ;
+
+--
+-- Volcado de datos para la tabla `nomina_tipo_sindicato`
+--
+
+INSERT INTO `nomina_tipo_sindicato` (`id`, `tipo_sindicato`, `id_nomina`, `cod_convencion_nomina`) VALUES
+(163, 1, 102, 8),
+(164, 1, 103, 8),
+(165, 1, 104, 8),
+(166, 1, 105, 8),
+(167, 1, 106, 8),
+(168, 1, 107, 8),
+(169, 1, 108, 8),
+(170, 1, 109, 8),
+(171, 1, 110, 8),
+(172, 1, 111, 8),
+(173, 1, 112, 8),
+(174, 1, 113, 8),
+(175, 1, 114, 8),
+(176, 1, 115, 8),
+(177, 1, 116, 8),
+(178, 1, 117, 8),
+(179, 1, 118, 8),
+(180, 1, 119, 8),
+(181, 1, 120, 8),
+(182, 1, 121, 8),
+(183, 1, 122, 8),
+(184, 1, 123, 8),
+(185, 1, 124, 8),
+(186, 1, 125, 8),
+(187, 1, 126, 8),
+(188, 1, 127, 8),
+(189, 1, 128, 8),
+(190, 1, 129, 8),
+(191, 1, 130, 8),
+(192, 1, 131, 8),
+(193, 1, 132, 8),
+(194, 1, 133, 8),
+(195, 1, 134, 8),
+(196, 1, 135, 8),
+(197, 1, 136, 8),
+(198, 1, 137, 8),
+(199, 1, 138, 8),
+(200, 1, 139, 8),
+(201, 1, 140, 8),
+(202, 1, 141, 8),
+(203, 1, 142, 8),
+(204, 1, 143, 8),
+(205, 1, 144, 8),
+(206, 1, 145, 8),
+(207, 1, 146, 8),
+(208, 1, 147, 8),
+(209, 1, 148, 8),
+(210, 1, 149, 8),
+(211, 1, 150, 8),
+(212, 1, 151, 8);
 
 -- --------------------------------------------------------
 
@@ -4202,7 +4286,7 @@ CREATE TABLE IF NOT EXISTS `sindicato` (
 --
 
 INSERT INTO `sindicato` (`id`, `nombre`, `siglas`, `nro_boleta_inscripcion`, `folio_registro`, `tomo_registroo`, `rif`, `direccion`, `estado`, `municipio`, `parroquia`, `telefono`, `federacion_nacional`, `federacion_regional`, `sector`, `ambito`, `tipo_organizacion`, `fecha_registro`, `fecha_actualizacion`, `duracion_junta_directiva`, `fecha_inicio_vigencia`, `fecha_cese_vigencia`, `fecha_informe_finanzas`, `fecha_nomina_afiliado`, `fecha_ultimas_elecciones`, `cod_convencion`) VALUES
-(1, 'sindicato1', '1', '1234-12-12345', 1, '1', 'V173898148', 'caracas', 24, 462, 1119, '0212-4813637/0212-4813638', '2015-11-11', 'nose', 2, 2, 2, '2005-11-01', '2015-11-11', 9, '2015-10-15', '2015-10-31', '2015-10-14', '2015-12-31', '2007-03-21', 8),
+(1, 'sindicato12', '1', '1234-12-12345', 1, '1', 'V173898148', 'caracas', 24, 462, 1119, '0212-4813637/0212-4813638', '2015-11-11', 'nose', 2, 2, 2, '2005-11-01', '2015-11-11', 9, '2015-10-15', '2015-10-31', '2015-10-14', '2015-12-31', '2007-03-21', 8),
 (2, 'sindicato1', '1', '1234-12-12345', 12, '12', 'V173898148', 'caracas', 2, 26, 71, '0212-4813639/0212-4813639', 'nose', 'nose', 2, 2, 2, '2015-10-13', '2015-10-08', 111, '2015-09-30', '2015-10-02', '2015-10-21', '2015-10-28', '2015-10-07', 23),
 (3, 'sindicato4', '4', '1234-12-12345', 1, '1', 'V173898148', 'caracas', 14, 226, 614, '0212-4813639/0212-4813639', 'nose', 'nose', 1, 1, 2, '2015-10-28', '2015-10-21', 111, '2015-10-15', '2015-10-08', '2015-10-08', '2015-10-08', '2015-10-09', 25),
 (4, 'sindicato44', '44', '1234-12-12345', 32767, '123', 'V173898149', 'caracas', 2, 9, 29, '0212-4813639/0212-4813639', 'nose', 'nose', 2, 2, 1, '2015-09-30', '2015-10-07', 111, '2015-10-07', '2015-10-21', '2015-10-29', '2015-10-15', '2015-10-22', 25),
@@ -4234,6 +4318,40 @@ INSERT INTO `tipo_organizacion` (`id`, `descripcion`) VALUES
 (2, 'Federación'),
 (3, 'Confederación'),
 (4, 'Coalisión De Trabajadores');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_sindicato`
+--
+
+CREATE TABLE IF NOT EXISTS `tipo_sindicato` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre_cargo` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='tabla de tipos de cargo en los sindicatos' AUTO_INCREMENT=16 ;
+
+--
+-- Volcado de datos para la tabla `tipo_sindicato`
+--
+
+INSERT INTO `tipo_sindicato` (`id`, `nombre_cargo`) VALUES
+(1, 'Trabajadores amparados por la convención colectiva'),
+(2, 'Trabajadores Afiliados al Sindicato'),
+(3, 'Secretario general'),
+(4, 'Secretario ejecutivo'),
+(5, 'Secretario del Tesorero'),
+(6, 'Secretario de finanzas'),
+(7, 'Secretario de trabajo y Reclamos'),
+(8, 'Secretario de Cultura y Deporte'),
+(9, 'Secretario de Organización'),
+(10, 'Secretario de Actas y Correspondencia'),
+(11, 'Secretario de Salud Laboral'),
+(12, 'Secretario de vigilancia y Disciplina'),
+(13, 'Secretario Otro'),
+(14, 'Delegado sindical'),
+(15, 'Asesor');
 
 -- --------------------------------------------------------
 
@@ -4413,8 +4531,8 @@ ALTER TABLE `clausuras`
 -- Filtros para la tabla `convencion`
 --
 ALTER TABLE `convencion`
-  ADD CONSTRAINT `convencion_ibfk_2` FOREIGN KEY (`ambito`) REFERENCES `ambito` (`id`),
-  ADD CONSTRAINT `convencion_ibfk_1` FOREIGN KEY (`inspectoria`) REFERENCES `inspectoria` (`id`);
+  ADD CONSTRAINT `convencion_ibfk_1` FOREIGN KEY (`inspectoria`) REFERENCES `inspectoria` (`id`),
+  ADD CONSTRAINT `convencion_ibfk_2` FOREIGN KEY (`ambito`) REFERENCES `ambito` (`id`);
 
 --
 -- Filtros para la tabla `cruge_authassignment`
@@ -4434,38 +4552,46 @@ ALTER TABLE `cruge_authitemchild`
 -- Filtros para la tabla `cruge_fieldvalue`
 --
 ALTER TABLE `cruge_fieldvalue`
-  ADD CONSTRAINT `fk_cruge_fieldvalue_cruge_user1` FOREIGN KEY (`iduser`) REFERENCES `cruge_user` (`iduser`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_cruge_fieldvalue_cruge_field1` FOREIGN KEY (`idfield`) REFERENCES `cruge_field` (`idfield`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_cruge_fieldvalue_cruge_field1` FOREIGN KEY (`idfield`) REFERENCES `cruge_field` (`idfield`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_cruge_fieldvalue_cruge_user1` FOREIGN KEY (`iduser`) REFERENCES `cruge_user` (`iduser`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  ADD CONSTRAINT `empresa_ibfk_6` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
   ADD CONSTRAINT `empresa_ibfk_1` FOREIGN KEY (`actividad_economica`) REFERENCES `rama` (`id`),
   ADD CONSTRAINT `empresa_ibfk_2` FOREIGN KEY (`sector`) REFERENCES `sector` (`id`),
   ADD CONSTRAINT `empresa_ibfk_3` FOREIGN KEY (`estado`) REFERENCES `estados` (`id_estado`),
   ADD CONSTRAINT `empresa_ibfk_4` FOREIGN KEY (`municipio`) REFERENCES `municipios` (`id_municipio`),
-  ADD CONSTRAINT `empresa_ibfk_5` FOREIGN KEY (`parroquia`) REFERENCES `parroquias` (`id_parroquia`);
+  ADD CONSTRAINT `empresa_ibfk_5` FOREIGN KEY (`parroquia`) REFERENCES `parroquias` (`id_parroquia`),
+  ADD CONSTRAINT `empresa_ibfk_6` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
 
 --
 -- Filtros para la tabla `nomina`
 --
 ALTER TABLE `nomina`
-  ADD CONSTRAINT `nomina_ibfk_2` FOREIGN KEY (`nivel_educativo`) REFERENCES `nivel_educativo` (`cod_interno`),
-  ADD CONSTRAINT `nomina_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
+  ADD CONSTRAINT `nomina_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
+  ADD CONSTRAINT `nomina_ibfk_2` FOREIGN KEY (`nivel_educativo`) REFERENCES `nivel_educativo` (`cod_interno`);
+
+--
+-- Filtros para la tabla `nomina_tipo_sindicato`
+--
+ALTER TABLE `nomina_tipo_sindicato`
+  ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_4` FOREIGN KEY (`tipo_sindicato`) REFERENCES `tipo_sindicato` (`id`),
+  ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_5` FOREIGN KEY (`id_nomina`) REFERENCES `nomina` (`id`),
+  ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_6` FOREIGN KEY (`cod_convencion_nomina`) REFERENCES `nomina` (`cod_convencion`);
 
 --
 -- Filtros para la tabla `sindicato`
 --
 ALTER TABLE `sindicato`
-  ADD CONSTRAINT `sindicato_ibfk_7` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
   ADD CONSTRAINT `sindicato_ibfk_1` FOREIGN KEY (`estado`) REFERENCES `estados` (`id_estado`),
   ADD CONSTRAINT `sindicato_ibfk_2` FOREIGN KEY (`municipio`) REFERENCES `municipios` (`id_municipio`),
   ADD CONSTRAINT `sindicato_ibfk_3` FOREIGN KEY (`parroquia`) REFERENCES `parroquias` (`id_parroquia`),
   ADD CONSTRAINT `sindicato_ibfk_4` FOREIGN KEY (`sector`) REFERENCES `sector` (`id`),
   ADD CONSTRAINT `sindicato_ibfk_5` FOREIGN KEY (`ambito`) REFERENCES `ambito` (`id`),
-  ADD CONSTRAINT `sindicato_ibfk_6` FOREIGN KEY (`tipo_organizacion`) REFERENCES `tipo_organizacion` (`id`);
+  ADD CONSTRAINT `sindicato_ibfk_6` FOREIGN KEY (`tipo_organizacion`) REFERENCES `tipo_organizacion` (`id`),
+  ADD CONSTRAINT `sindicato_ibfk_7` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
