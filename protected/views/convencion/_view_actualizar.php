@@ -29,10 +29,10 @@ $aviso=0;
         <?php echo CHtml::encode($data->numero_expediente); ?>
 	</td>
         <td>
-	<?php echo CHtml::encode($data->inspectoria); ?>
+	<?php echo CHtml::encode($data->inspectoria0->inspectoria); ?>
 	</td>
         <td>
-	<?php echo CHtml::encode($data->fecha_auto_homo); ?>
+	<?php echo CHtml::encode($data->fecha_auto_homo=date('d-m-Y',strtotime($data->fecha_auto_homo))) ?>
 	</td>
         <td>
 	<?php echo CHtml::encode($data->cod_convencion); ?>

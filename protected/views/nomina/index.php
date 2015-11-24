@@ -2,13 +2,11 @@
 /* @var $this NominaController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Nominas',
-);
+
 
 $this->menu=array(
 	//array('label'=>'Crear Nomina', 'url'=>array('create')),
-	array('label'=>'Buscar Nomina', 'url'=>array('admin')),
+	array('label'=>'Buscar Nomina-Sindicato', 'url'=>array('admin')),
         //array('label'=>'Buscar Nomina', 'url'=>array('admin')),
 );
 ?>

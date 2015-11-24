@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Listar Nomina', 'url'=>array('index')),
 	//array('label'=>'Create Nomina', 'url'=>array('create')),
-	array('label'=>'Modificar Nomina', 'url'=>array('create', 'id'=>$model->id)),
+	//array('label'=>'Modificar Nomina', 'url'=>array('create', 'id'=>$model->id)),
 	//array('label'=>'Delete Nomina', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Buscar Nomina', 'url'=>array('admin')),
 );

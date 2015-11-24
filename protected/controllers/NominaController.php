@@ -14,8 +14,9 @@ class NominaController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'accessControl', // perform access control for CRUD operations
+			//'postOnly + delete', // we only allow deletion via POST request
+                    array('CrugeAccessControlFilter'),
 		);
 	}
 
@@ -32,7 +33,7 @@ class NominaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','create_cargo_sindicato','GetValue','llenar_check'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -165,13 +166,13 @@ class NominaController extends Controller
 
                             //  $newmodel->save();            
                        
-            Yii::app()->db->createCommand("insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('".$_POST['Nomina']['cod_convencion']."', '".$data[2]."')")->execute();
+            //Yii::app()->db->createCommand("insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('".$_POST['Nomina']['cod_convencion']."', '".$data[2]."')")->execute();
                              }
                        $row++;               
                    }
                    
                        $id_nomina=Yii::app()->db->getLastInsertID('Nomina'); 
-                       $id_trabajador=Yii::app()->db->getLastInsertID('Trabajador_sindicato'); 
+                   //    $id_trabajador=Yii::app()->db->getLastInsertID('Trabajador_sindicato'); 
                        $nombre_usuario=Yii::app()->user->Name;
                        $userid=       Yii::app()->user->id;
                        
@@ -180,8 +181,8 @@ class NominaController extends Controller
                         //          values ('User ".$nombre_usuario." ultimo id ".$id_nomina."','CREATE', 'Nomina','".$id_nomina."',now(),'".$userid."')";exit();
                         Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
                                   values ('User ".$nombre_usuario." created nomina ultimo id ".$id_nomina."','CREATE', 'Nomina','".$id_nomina."',now(),'".$userid."')")->execute();
-                         Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
-                                  values ('User ".$nombre_usuario. " create trabajador ultimo id". $id_trabajador."','CREATE', 'trabajador_nomina','".$id_trabajador."',now(),'".$userid."')")->execute();
+                    //     Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                      //            values ('User ".$nombre_usuario. " create trabajador ultimo id". $id_trabajador."','CREATE', 'trabajador_nomina','".$id_trabajador."',now(),'".$userid."')")->execute();
                         
                    $transaction->commit();
                    
@@ -209,7 +210,7 @@ class NominaController extends Controller
 //				$this->redirect(array('view','id'=>$model->id));
 		}
                 if($bandera==1)
-                $this->redirect(array('Trabajador_sindicato/create','convencion'=>$_POST['Nomina']['cod_convencion']));
+                $this->redirect(array('nomina/create_cargo_sindicato','convencion'=>$_POST['Nomina']['cod_convencion']));
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -249,7 +250,7 @@ class NominaController extends Controller
                      `codigo_ocupacion`='".$data['codigo_ocupacion']."',
                      `tiempo_serv_establecimiento_anios`='".$data['tiempo_serv_establecimiento_anios']."',
                      `tiempo_serv_establecimiento_meses`='".$data['tiempo_serv_establecimiento_meses']."',
-                     `tiempo_ejerciciendo_prefesion_anios`='".$data['tiempo_ejerciciendo_prefesion_anios']."',
+                     `tiempo_ejerciendo_profesion_anios`='".$data['tiempo_ejerciendo_profesion_anios']."',
                      `tiempo_ejerciendo_profesion_meses`='".$data['tiempo_ejerciendo_profesion_meses']."',
                      `remuneracion_antes_contra_empleado`='".$data['remuneracion_antes_contra_empleado']."',
                      `remuneracion_antes_contra_obrero`='".$data['remuneracion_antes_contra_obrero']."',
@@ -279,13 +280,28 @@ class NominaController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
+	public function actionDelete($id,$convencion)
 	{
-		$this->loadModel($id)->delete();
-
+		//$this->loadModel($id)->delete();
+           
+                  try{
+                $transaction = Yii::app()->db->beginTransaction();
+                $sql="delete from nomina_tipo_sindicato where cod_convencion_nomina='".$convencion."'";
+                $borrar1=Yii::app()->db->createCommand($sql)->execute();
+                if($borrar1){
+                $sql="delete from nomina where cod_convencion='".$convencion."'";
+                $borrar1=Yii::app()->db->createCommand($sql)->execute();
+                $transaction->commit();
+                }
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+                }catch(CDbException $error){
+                    
+                    $transaction->rollback();
+                  //  echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos.</div>"; //for ajax
+                   echo "<div class='flash-error'>No se puede borrar Nomina, Consulte Al Administrador. Error:".$error."</div>"; //for ajax
+                   }               
 	}
 
 	/**
@@ -341,6 +357,240 @@ class NominaController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        
+        
+        public function Actioncreate_cargo_sindicato(){
+            
+               
+                 $dataProvider= new CActiveDataProvider('nomina',array(
+                'criteria'=>array(
+                'select'=>" id, cedula,cod_convencion",
+                'condition'=>"cod_convencion='".$_GET['convencion']."'"
+                ),
+                     
+                'pagination'=>array(
+                'pageSize'=>20000,
+                ),
+                )
+                );
+                 
+                 
+                $valor=Yii::app()->db->createCommand('select * from nomina_tipo_sindicato where cod_convencion_nomina="'.$_GET['convencion'].'"')->queryAll(); 
+                $nomina=Yii::app()->db->createCommand('select * from nomina  where cod_convencion="'.$_GET['convencion'].'"')->queryAll(); 
+               
+                $this->render('create_cargo_sindicato',array(
+			'dataProvider'=>$dataProvider, 
+		));
+            
+            
+        }
+        
+        
+        public function actionGetValue(){
+ 
+     
+         //trabajadores beneficiados   
+        if(!empty($_POST['theIds'])){    
+            $arr=$_POST['theIds'];
+        
+        $pp=  funciones::llenar_check(1,$arr, $_POST['status'],$_POST['convencion']);
+         
+        }
+       
+        //////////////*******************trabajadores_sindicato
+        if(!empty($_POST['theIds1'])){    
+        
+            $arr1=$_POST['theIds1'];
+        
+            
+            
+        //$arr1 = explode(',', $_POST['theIds1']);
+        //almacenar en dos arreglos
+       $pp=  funciones::llenar_check(2,$arr1, $_POST['status'],$_POST['convencion']);
+        
+        }
+        
+       //////////////*******************Secretario General
+        if(!empty($_POST['theIds2'])){    
+            $arr2=$_POST['theIds2'];
+        
+            
+        //$arr2= explode(',', $_POST['theIds2']);
+         $pp=  funciones::llenar_check(3,$arr2, $_POST['status'], $_POST['convencion']);
+        
+        }
+        
+           //****************************secretario Ejecutivo
+        if(!empty($_POST['theIds3'])){
+        
+
+            $arr3=$_POST['theIds3'];
+        
+
+
+        //$arr3 = explode(',', $_POST['theIds3']);
+        $pp=  funciones::llenar_check(4,$arr3, $_POST['status'], $_POST['convencion']);
+        }
+         
+        
+            //secretario tesorero
+        if(!empty($_POST['theIds4'])){    
+        
+            $arr4=$_POST['theIds4'];
+        
+        //$arr4 = explode(',', $_POST['theIds4']);
+        $pp=  funciones::llenar_check(5,$arr4, $_POST['status'], $_POST['convencion']);
+        }
+        
+            //secretario finanzas
+        if(!empty($_POST['theIds5'])){    
+        
+            $arr5=$_POST['theIds5'];
+          
+        //$arr5 = explode(',', $_POST['theIds5']);
+        $pp=  funciones::llenar_check(6,$arr5, $_POST['status'], $_POST['convencion']);
+        }
+        
+        //secretario trabajo
+        if(!empty($_POST['theIds6'])){    
+        
+            $arr6=$_POST['theIds6'];
+        
+
+        //$arr6 = explode(',', $_POST['theIds6']);
+        $pp=  funciones::llenar_check(7,$arr6, $_POST['status'], $_POST['convencion']);
+        }
+        
+           //secretario deporte
+        if(!empty($_POST['theIds7'])){    
+            $arr7=$_POST['theIds7'];
+        
+            
+        //$arr7 = explode(',', $_POST['theIds7']);
+        $pp=  funciones::llenar_check(8,$arr7, $_POST['status'], $_POST['convencion']);
+        
+        }
+        
+        
+           //secretario organizacion
+        if(!empty($_POST['theIds8'])){    
+        //$arr8 = explode(',', $_POST['theIds8']);
+            $arr8=$_POST['theIds8'];
+        
+            
+            
+        $pp=  funciones::llenar_check(9,$arr8, $_POST['status'], $_POST['convencion']);
+        }
+        
+        
+           //secretario actas y correspondencias
+        if(!empty($_POST['theIds9'])){    
+        //$arr9 = explode(',', $_POST['theIds9']);
+        
+            $arr9=$_POST['theIds9'];
+        
+            
+        $pp=  funciones::llenar_check(10,$arr9, $_POST['status'], $_POST['convencion']);
+        }
+        
+        //secretario salud laboral
+        if(!empty($_POST['theIds10'])){    
+        
+            $arr10=$_POST['theIds10'];
+         
+        $pp=  funciones::llenar_check(11,$arr10, $_POST['status'], $_POST['convencion']);
+        }
+        
+        
+        //secretario vigilancia
+        if(!empty($_POST['theIds11'])){    
+        
+            $arr11=$_POST['theIds11'];
+         
+            
+            
+         $pp=  funciones::llenar_check(12,$arr11, $_POST['status'], $_POST['convencion']);
+        
+        }
+       
+        
+        //secretario otro
+        if(!empty($_POST['theIds12'])){    
+         
+        
+            $arr12=$_POST['theIds12'];
+        
+            //almacenar en dos arreglos
+       $pp=  funciones::llenar_check(13,$arr12, $_POST['status'], $_POST['convencion']);
+        }
+        
+        
+        //delegado sindical
+        if(!empty($_POST['theIds13'])){    
+       
+            $arr13=$_POST['theIds13'];
+       
+         $pp=  funciones::llenar_check(14,$arr13, $_POST['status'], $_POST['convencion']);
+        
+        }
+        
+        
+       
+    }
+        
+    public function llenar_check($caso,$ids, $estatus,$convencion){
+            
+          
+       if($estatus==1){
+           if(count($arr)>1){
+               for($i=0;$i<count($arr);$i++){
+                    $sql="insert into nomina_tipo_sindicato ('id_nomina','tipo_sindicato','cod_convencion_nomina') values ('".$arr[$i]."','".$caso."','".$convencion."')";  
+                     Yii::app()->db->createCommand($sql)->execute();
+               }
+           }else{
+                $sql="insert into nomina_tipo_sindicato ('id_nomina','tipo_sindicato','cod_convencion_nomina') values ('".$arr."','".$caso."','".$convencion."')";  
+                     Yii::app()->db->createCommand($sql)->execute();
+           }
+        
+       } 
+        
+        else{
+           
+         if(count($arr)>1){
+             
+             for($i=0;$i<count($arr);$i++){
+                    $sql="update set nomina_tipo_sindicato tipo_sindicato ='".$caso."' where id_nomina='".$arr[$i]."' and cod_convencion_nomina='".$convencion."'";  
+                     Yii::app()->db->createCommand($sql)->execute();
+               }
+             }else{
+           $sql="update nomina_tipo_sindicato set tipo_sindicato='".$caso."' where id_nomina='".$arr."' and cod_convencion_nomina='".$convencion."'";
+       //            Yii::app()->db->createCommand($sql)->execute();
+         }
+           
+           
+       }
+        
+        return 1; 
+        }    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
     

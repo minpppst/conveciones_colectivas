@@ -27,13 +27,15 @@
  * @property string $remuneracion_despues_contra_obrero
  * @property integer $carga_familiar
  * @property string $cod_convencion
+ //* @property string $tipo
  *
  * The followings are the available model relations:
  * @property Convencion $codConvencion
  */
 class Nomina extends CActiveRecord
 {
-	/**
+    public $tipo;
+    /**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return Nomina the static model class
@@ -43,6 +45,9 @@ class Nomina extends CActiveRecord
 		return parent::model($className);
 	}
 
+        
+         
+        
 	/**
 	 * @return string the associated database table name
 	 */
@@ -165,6 +170,22 @@ class Nomina extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+        	
+        public function getUserLevel($id,$posicion,$convencion) {
+        
+            
+            $sql="select id from nomina_tipo_sindicato where id_nomina='".$id."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$posicion."'"; 
+            $resultado=Yii::app()->db->createCommand($sql)->execute();
+            if ($resultado) {
+        return 1;
+    }
+    return null;
+        }
+ 
+            
+        
         
         
         

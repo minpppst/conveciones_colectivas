@@ -47,6 +47,12 @@ or <b>=</b>).
 		'nro_boleta_inscripcion',
 		'folio_registro',
 		'tomo_registroo',
+            array(
+                  'name'=>'cod_convencion',
+                     'value'=>'$data->codConvencion->nombre',
+                     'filter'=>Sindicato::getListcod_convencion(),
+                     
+                 ),
 		/*
 		'rif',
 		'direccion',
@@ -71,6 +77,13 @@ or <b>=</b>).
 		*/
 		array(
 			'class'=>'CButtonColumn',
+                        'buttons' => array(
+                        'delete' => array(
+                        'label'=>'Borrar',
+                        'visible' => '!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin',
+                     ),
+                
+                ),
 		),
 	),
 )); ?>

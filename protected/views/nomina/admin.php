@@ -3,13 +3,12 @@
 /* @var $model Nomina */
 
 $this->breadcrumbs=array(
-	'Nominas'=>array('index'),
-	'Manage',
+	
 );
 
 $this->menu=array(
-	array('label'=>'List Nomina', 'url'=>array('index')),
-	array('label'=>'Create Nomina', 'url'=>array('create')),
+	array('label'=>'Listar Nomina', 'url'=>array('index')),
+	//array('label'=>'Crear Nomina', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,14 +25,16 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Nominas</h1>
-
+<h1>Buscar Nominas</h1>
+<?php 
+ $alert = '¿Esta Seguro De Borrar La Nomina y Dejar La Convencion Sin Nomina?';
+?>
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+Puedes Colocar Operadores de comparación (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>)
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Busqueda Avazanda','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -46,11 +47,18 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
+            
 		'nombres',
-		'apellidos',
 		'nacionalidad',
 		'pais_origen',
 		'lugar_nacimiento',
+            array(
+                'header'=>'Convencion',
+                'name'=>'cod_convencion',
+                'value'=>'$data->codConvencion->nombre',
+                'htmlOptions'=>array('style'=>'text-align: center', 'with'=>'80px'),
+                'filter'=>Chtml::listData(Convencion::model()->findAll(), 'id','nombre'),
+                ),
 		/*
 		'sexo',
 		'edad',
@@ -70,8 +78,39 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'carga_familiar',
 		'cod_convencion',
 		*/
-		array(
-			'class'=>'CButtonColumn',
+//		array(
+//			'class'=>'CButtonColumn',
+//		),
+            array(
+                  'class'=>'CButtonColumn',
+                  'template'=>'{view}{asociar}{nomina}{delete}',
+                  'htmlOptions'=>array('style'=>'width:75px'),
+                  'buttons'=>array(
+                   'asociar'=>array(
+                        'label'=>'Mostrar Nomina Y Cargo Sindicato',
+                            'url'=> 'Yii::app()->controller->createUrl("nomina/create_cargo_sindicato",array("convencion"=>$data->cod_convencion))',
+                              'imageUrl'=>Yii::app()->request->baseUrl.'/images/iconos/lapiz.png',
+                   ),
+                  'nomina'=>array(
+                    'label'=>'Modificar Empleado',
+                        'url'=> 'Yii::app()->controller->createUrl("nomina/update",array("id"=>$data->cedula,"convencion"=>$data->cod_convencion))',
+                          'imageUrl'=>Yii::app()->request->baseUrl.'/images/iconos/lapiz1.png',
+                            ),
+                   'view' => array(
+                         'label'=>'Ver Nomina',
+                            'url'=> 'Yii::app()->controller->createUrl("nomina/view",array("id"=>$data->id))',
+
+                            
+            
+                                ),
+                       'delete' => array(
+                        'label'=>'Borrar Nomina-Sindicato',
+                        'visible' => '!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin',
+                        'url'=> 'Yii::app()->controller->createUrl("nomina/delete",array("id"=>$data->cedula,"convencion"=>$data->cod_convencion))',
+                        //'options'=> array('confirm'=>$alert),
+                           ),
+                                ),
 		),
+            
 	),
 )); ?>

@@ -21,10 +21,7 @@
 		<?php echo $form->textField($model,'nombres',array('size'=>60,'maxlength'=>100)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'apellidos'); ?>
-		<?php echo $form->textField($model,'apellidos',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->label($model,'nacionalidad'); ?>

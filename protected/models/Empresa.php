@@ -26,7 +26,7 @@
  *
  * The followings are the available model relations:
  * @property Rama $actividadEconomica
- * @property ConvencionVieja $codConvencion
+ * @property Convencion $codConvencion
  * @property Sector $sector0
  * @property Estados $estado0
  * @property Municipios $municipio0
@@ -140,7 +140,7 @@ class Empresa extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'actividadEconomica' => array(self::BELONGS_TO, 'Rama', 'actividad_economica'),
-			'codConvencion' => array(self::BELONGS_TO, 'ConvencionVieja', 'cod_convencion'),
+			'codConvencion' => array(self::BELONGS_TO, 'Convencion', 'cod_convencion'),
 			'sector0' => array(self::BELONGS_TO, 'Sector', 'sector'),
 			'estado0' => array(self::BELONGS_TO, 'Estados', 'estado'),
 			'municipio0' => array(self::BELONGS_TO, 'Municipios', 'municipio'),
@@ -153,6 +153,12 @@ class Empresa extends CActiveRecord
              {
              return CHtml::listData(Rama::model()->findAll(array('order'=>'rama')),'id','rama');
              }
+             public static function getListcod_convencion()
+             {
+             return CHtml::listData(Convencion::model()->findAll(array('order'=>'nombre')),'id','nombre');
+             }
+             
+             
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */

@@ -77,8 +77,22 @@ or <b>=</b>).
 		'cod_convencion',
 		'referencia',
 		*/
-		array(
-			'class'=>'CButtonColumn',
-		),
+            array(
+            'class'   => 'CButtonColumn',
+            'template'=>'{view}{update}{delete}',
+            
+            'buttons' => array(
+             'delete' => array(
+                 'label'=>'Borrar',
+                'visible' => '!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin',
+             ),
+                
+                ),
+                
+                ),
+            
+            
+            
+		
 	),
 )); ?>

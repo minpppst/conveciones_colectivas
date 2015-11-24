@@ -4,7 +4,7 @@ class funciones {
         // Método estático para no tener que crear una instancia
         
         
-public static function llenar_check($caso,$ids,$accion){
+public static function llenar_check1($caso,$ids,$accion){
             
             if($caso==1){
                $columna="trabajadores_amparados_conve_col";
@@ -91,7 +91,109 @@ public static function llenar_check($caso,$ids,$accion){
          return 1; 
         }
         
+        
+        
+        
+        public static function llenar_check($caso,$arr, $estatus,$convencion){
+                
+            $transaction = Yii::app()->db->beginTransaction(); 
+       try{
+        
+           
+         
+       
+       if($estatus==1){
+          
+           
+           
+           
+           
+           
+           if(strpos($arr,",")){
+               $arr=explode(',',$arr);
+               
+               for($i=0;$i<count($arr);$i++){
+                   $sql="select id from nomina_tipo_sindicato where id_nomina='".$arr[$i]."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
+                   $resultado=Yii::app()->db->createCommand($sql)->execute();
+                   
+                   if($resultado==0){
+                   $sql="insert into nomina_tipo_sindicato (id_nomina,tipo_sindicato,cod_convencion_nomina) values ('".$arr[$i]."','".$caso."','".$convencion."')";  
+                     Yii::app()->db->createCommand($sql)->execute();
+                   }else{
+                     $sql="update nomina_tipo_sindicato set  tipo_sindicato='".$caso."' where id_nomina='".$arr[$i]."' and  cod_convencion_nomina='".$convencion."'";  
+                     Yii::app()->db->createCommand($sql)->execute();
+                   }
+                     
+                   }
+           }else{
+               $sql="select id from nomina_tipo_sindicato where id_nomina='".$arr."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
+                   $resultado=Yii::app()->db->createCommand($sql)->execute();
+                  
+                 if($resultado==0){
+                $sql="insert into nomina_tipo_sindicato (id_nomina,tipo_sindicato,cod_convencion_nomina) values ('".$arr."','".$caso."','".$convencion."')";  
+                Yii::app()->db->createCommand($sql)->execute();
+                 }else{
+                $sql="update nomina_tipo_sindicato set  tipo_sindicato='".$caso."' where id_nomina='".$arr."' and  cod_convencion_nomina='".$convencion."'";  
+                     Yii::app()->db->createCommand($sql)->execute();
+                     
+                 }
+           }
+        
+       } 
+        
+        else{
+           
+        if(strpos($arr,",")){
+               $arr=explode(',',$arr);
+               
+               for($i=0;$i<count($arr);$i++){
+                   $sql="select id from nomina_tipo_sindicato where id_nomina='".$arr[$i]."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
+                   $resultado=Yii::app()->db->createCommand($sql)->execute();
+                   
+                   if($resultado!=0){
+                   $sql="delete from nomina_tipo_sindicato  where id_nomina='".$arr[$i]."' and  cod_convencion_nomina='".$convencion."'"; 
+                     Yii::app()->db->createCommand($sql)->execute();
+                   }
+                     
+                   }
+           }else{
+               $sql="select id from nomina_tipo_sindicato where id_nomina='".$arr."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
+                   $resultado=Yii::app()->db->createCommand($sql)->execute();
+                  
+                 if($resultado!=0){
+                $sql="delete from nomina_tipo_sindicato  where id_nomina='".$arr[$i]."' and  cod_convencion_nomina='".$convencion."'"; 
+                     Yii::app()->db->createCommand($sql)->execute();
+                 }
+           }
+           
+           
+       }
+       $transaction->commit();
+       
+        }catch(CDbException $error){
+                    
+                    $transaction->rollback();
+                  //  echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos.</div>"; //for ajax
+                   echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos. Error:".$error."</div>"; //for ajax
+                   }     
+        
+        return 1; 
+        }
+        
+        
+        
+        
+       public function valor($campo,$posicion){
+            return 1;
+        }
+        
+        
 }
+
+
+
+
+
 
 
 ?>

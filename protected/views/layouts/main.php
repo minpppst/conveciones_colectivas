@@ -44,7 +44,7 @@
                                     'url'=>array('/Sindicato/index'),
                                     'visible'=>!Yii::app()->user->isGuest),
                              array ('label'=>'Nominas',
-                                    'url'=>array('/trabajador_sindicato/index'),
+                                    'url'=>array('/nomina/index'),
                                     'visible'=>!Yii::app()->user->isGuest),
                             
                             

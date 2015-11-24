@@ -46,11 +46,18 @@ or <b>=</b>)
 		'rif',
 		'identificacion_laboral',
 		'seguro_social',
+            
 		array(
                  'name'=>'actividad_economica',
                  'value'=>'$data->actividadEconomica->rama',  //Con esto se mostrará la descripción de la categoría en vez del id_categoria
                  'filter'=>  Empresa::getListrama(),    //Esto ya es un agregado, muestra un combobox con todas las categorias para poder filtrarlas, si no lo ponemos usa el id_categoria por defecto
                  //Debemos de crear una función estática en el modelo Categorias que se llame getListCategorias(), esto es totalmente opcional
+                 ),
+                 array(
+                  'name'=>'cod_convencion',
+                     'value'=>'$data->codConvencion->nombre',
+                     'filter'=>Empresa::getListcod_convencion(),
+                     
                  ),
 		/*
 		'sector',
@@ -68,7 +75,16 @@ or <b>=</b>)
 		'cod_convencion',
 		*/
 		array(
-			'class'=>'CButtonColumn',
+                    'class'=>'CButtonColumn',
+                    'template'=>'{view}{update}{delete}',
+            
+                    'buttons' => array(
+                     'delete' => array(
+                         'label'=>'Borrar',
+                        'visible' => '!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin',
+                     ),
+                
+                ),
 		),
 	),
 )); ?>

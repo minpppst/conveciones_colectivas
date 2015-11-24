@@ -37,6 +37,7 @@
  * @property Municipios $municipio0
  * @property Parroquias $parroquia0
  * @property Sector $sector0
+ * @property Convencion $codConvencion
  * @property TipoOrganizacion $tipoOrganizacion
  */
 class Sindicato extends CActiveRecord
@@ -144,6 +145,7 @@ class Sindicato extends CActiveRecord
 			'parroquia0' => array(self::BELONGS_TO, 'Parroquias', 'parroquia'),
 			'sector0' => array(self::BELONGS_TO, 'Sector', 'sector'),
 			'tipoOrganizacion' => array(self::BELONGS_TO, 'Tipo_organizacion', 'tipo_organizacion'),
+                        'codConvencion' => array(self::BELONGS_TO, 'Convencion', 'cod_convencion'),
 		);
 	}
 
@@ -224,4 +226,9 @@ class Sindicato extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+         public static function getListcod_convencion()
+             {
+             return CHtml::listData(Convencion::model()->findAll(array('order'=>'nombre')),'id','nombre');
+             }
 }
