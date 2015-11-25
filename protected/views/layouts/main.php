@@ -47,10 +47,15 @@
                                     'url'=>array('/nomina/index'),
                                     'visible'=>!Yii::app()->user->isGuest),
                             
+                              array('label'=>'Reportes'
+					, 'url'=>'#'
+					, 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin),
                             
 				array('label'=>'Administrar Usuarios'
 					, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
 					, 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin),
+                                        
+                              
                             
                                 array('label'=>'Iniciar Sessión'
 					, 'url'=>Yii::app()->user->ui->loginUrl

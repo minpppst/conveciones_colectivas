@@ -78,7 +78,20 @@
         
         
     </div>
-     
+    
+   
+    
+    
+    <div class="row">
+        <br>
+        Formato de Carga de 
+       <?php $src= Yii::app()->request->baseUrl;
+ $url2 = $src."/archivos/nomina.xls";
+ echo"<tr><td style='border:4px solid;border-color: black;text-align: center;'>".
+ CHtml::link('Nomina', $url2)." (Recuerde Guardar en Formato CSV al Subir)</td></tr>";
+        ?>
+        
+    </div> 
     
     
     <div class="row">

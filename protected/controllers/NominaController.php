@@ -90,28 +90,30 @@ class NominaController extends Controller
                    $row = 0;
                    while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
                        //que hace el row
-                       if($row>4){
+                       if($row>3){
                              $newmodel=new Nomina();       
-                             //print_r($data); exit();
-                             if(!empty($data[3]) && ($data[3]=='x' || $data[3]=='X')){
-                                 $data[3]='V';
+                             //echo ($data[23]); exit();
+                             
+                             if(!empty($data[3])  && ($data[3]=='x' || $data[3]=='X') && empty($data[23]) ){
+                                  $data[3]='V';
                              }else{
-                                 if(!empty($data[4]) && ($data[4]=='x' || $data[4]=='X')){
+                                 if(!empty($data[4]) && ($data[4]=='x' || $data[4]=='X') && empty($data[23])){
                                  $data[3]='E';
                              }else{
+                                 if(empty($data[23])){
                                  echo "<script type='text/javascript'>
                                         alert('Error, Nacionalidad No Cumple Los Parametros');
                                         history.back(-1);
                                         </script>"; 
                                         $transaction->rollback();
                                         
-                                        exit(); 
+                                 exit(); }
                              }
                              
                                  }
                             
-                             if($data[9]!='S' && $data[9]!='C' && $data[9]!='D' && $data[9]!='V'){
-                                 
+                             if($data[9]!='S' && $data[9]!='C' && $data[9]!='D' && $data[9]!='V' && empty($data[23])){
+                                
                                   echo "<script type='text/javascript'>
                                         alert('Error, Estado Civil No Cumple Los Parametros');
                                         history.back(-1);
@@ -119,13 +121,14 @@ class NominaController extends Controller
                                         $transaction->rollback();
                                         
                                         exit();
+                                 
                              }
                              
                              //verificando si existe el codigo de nivel educativo
                              
                              $resultado_sql= Yii::app()->db->createCommand("SELECT id as resultado from nivel_educativo where cod_interno='0".$data[10]."'")->queryRow();
                             
-                             if($resultado_sql['resultado']<1){
+                             if($resultado_sql['resultado']<1 && empty($data[23])){
                            
                              echo "<script type='text/javascript'>
                                         alert('Error, Codigo De Nivel Educativo No Existe');
@@ -137,7 +140,7 @@ class NominaController extends Controller
                              
                              
                              
-                                 
+                                 if(empty($data[23])){
                       $model_nomina=new Nomina; 
                               $model_nomina->nombres=utf8_encode($data[1]); 
                               $model_nomina->cedula=$data[2];       
@@ -160,6 +163,8 @@ class NominaController extends Controller
                               $model_nomina->remuneracion_despues_contra_empleado=$data[20];
                               $model_nomina->remuneracion_despues_contra_obrero=$data[21];
                               $model_nomina->carga_familiar=$data[22];
+                              
+                              
                               $model_nomina->cod_convencion=$_POST['Nomina']['cod_convencion'];
                               if(!empty($_POST['Nomina']['id_empresa']))
                               $model_nomina->id_empresa=$_POST['Nomina']['id_empresa'];
@@ -183,9 +188,20 @@ class NominaController extends Controller
                               
                              
                             //  $newmodel->save();            
-                       
+                                 }//si no es consultor
+                                 else{
+                                     //insertar consultor
+                                    
+                                     $sql="insert into consultor (nombres,cedula,cod_convencion,cod_empresa,cod_sindicato) values
+                                             ('".$data[1]."','".$data[2]."','".$_POST['Nomina']['cod_convencion']."','".$_POST['Nomina']['id_empresa']."','".$_POST['Nomina']['id_sindicato']."')";
+                                     $consultor= Yii::app()->db->createCommand($sql)->execute();
+                                    if(!$consultor){
+                                         $transaction->rollback();
+                                    }
+                                     
+                                 }
             //Yii::app()->db->createCommand("insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('".$_POST['Nomina']['cod_convencion']."', '".$data[2]."')")->execute();
-                             }
+                             } // aqui
                        $row++;               
                    }
                    
