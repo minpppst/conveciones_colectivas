@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 24-11-2015 a las 13:16:05
+-- Tiempo de generación: 25-11-2015 a las 19:17:38
 -- Versión del servidor: 5.5.20
 -- Versión de PHP: 5.3.10
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `activerecordlog` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `description` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
+  `description` text,
   `action` varchar(20) CHARACTER SET latin1 DEFAULT NULL,
   `model` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
   `idModel` int(10) unsigned DEFAULT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `activerecordlog` (
   `creationdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `userid` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=60 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=387 ;
 
 --
 -- Volcado de datos para la tabla `activerecordlog`
@@ -96,7 +96,335 @@ INSERT INTO `activerecordlog` (`id`, `description`, `action`, `model`, `idModel`
 (56, 'User admin created nomina ultimo id 50', 'CREATE', 'Nomina', 50, NULL, '2015-11-23 16:07:17', '1'),
 (57, 'User admin created nomina ultimo id 101', 'CREATE', 'Nomina', 101, NULL, '2015-11-23 18:31:07', '1'),
 (58, 'User admin changed razon_social for Empresa[3].', 'CHANGE', 'Empresa', 3, 'razon_social', '2015-11-23 18:56:29', '1'),
-(59, 'User admin created nomina ultimo id 151', 'CREATE', 'Nomina', 151, NULL, '2015-11-23 20:13:51', '1');
+(59, 'User admin created nomina ultimo id 151', 'CREATE', 'Nomina', 151, NULL, '2015-11-23 20:13:51', '1'),
+(60, 'User admin created nomina ultimo id 202', 'CREATE', 'Nomina', 202, NULL, '2015-11-24 14:46:46', '1'),
+(61, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201', 'insert', 'nomina_tipo_sindicato', 153, NULL, '2015-11-24 14:47:14', '1'),
+(62, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201', 'insert', 'nomina_tipo_sindicato', 153, NULL, '2015-11-24 14:47:14', '1'),
+(63, 'User admin update nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201', 'update', 'nomina_tipo_sindicato', 153, NULL, '2015-11-24 14:47:39', '1'),
+(64, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201', 'insert', 'nomina_tipo_sindicato', 153, NULL, '2015-11-24 14:47:39', '1'),
+(65, 'User admin update nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion 8 set tipo en 1', 'update', 'nomina_tipo_sindicato', 153, NULL, '2015-11-24 14:51:29', '1'),
+(66, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 153, NULL, '2015-11-24 14:51:29', '1'),
+(67, 'User admin update nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion 8 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 14:54:24', '1'),
+(68, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 14:54:24', '1'),
+(69, 'User admin update nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion 8 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 14:54:47', '1'),
+(70, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 14:54:47', '1'),
+(71, 'User admin update nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion 8 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 14:56:03', '1'),
+(72, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 14:56:03', '1'),
+(73, 'User admin insert nomina_tipo_sindicato where id_nomina is  153 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 153, NULL, '2015-11-24 14:56:03', '1'),
+(74, 'User admin insert nomina_tipo_sindicato where id_nomina is  154 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 154, NULL, '2015-11-24 14:56:03', '1'),
+(75, 'User admin insert nomina_tipo_sindicato where id_nomina is  155 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 155, NULL, '2015-11-24 14:56:04', '1'),
+(76, 'User admin insert nomina_tipo_sindicato where id_nomina is  156 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 156, NULL, '2015-11-24 14:56:04', '1'),
+(77, 'User admin insert nomina_tipo_sindicato where id_nomina is  157 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 157, NULL, '2015-11-24 14:56:04', '1'),
+(78, 'User admin insert nomina_tipo_sindicato where id_nomina is  158 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 158, NULL, '2015-11-24 14:56:04', '1'),
+(79, 'User admin insert nomina_tipo_sindicato where id_nomina is  159 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 159, NULL, '2015-11-24 14:56:04', '1'),
+(80, 'User admin insert nomina_tipo_sindicato where id_nomina is  160 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 160, NULL, '2015-11-24 14:56:04', '1'),
+(81, 'User admin insert nomina_tipo_sindicato where id_nomina is  161 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 161, NULL, '2015-11-24 14:56:04', '1'),
+(82, 'User admin insert nomina_tipo_sindicato where id_nomina is  162 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 162, NULL, '2015-11-24 14:56:04', '1'),
+(83, 'User admin insert nomina_tipo_sindicato where id_nomina is  163 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 163, NULL, '2015-11-24 14:56:04', '1'),
+(84, 'User admin insert nomina_tipo_sindicato where id_nomina is  164 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 164, NULL, '2015-11-24 14:56:04', '1'),
+(85, 'User admin delete nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion is 8', 'delete', 'nomina_tipo_sindicato', 153, NULL, '2015-11-24 14:57:38', '1'),
+(86, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 14:59:14', '1'),
+(87, 'User admin insert nomina_tipo_sindicato where id_nomina is  153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 14:59:15', '1'),
+(88, 'User admin delete nomina y nomina tipo_sindicato where convencion is 10', 'delete', 'Nomina', 10, NULL, '2015-11-24 15:19:32', '1'),
+(89, 'User admin delete nomina y nomina tipo_sindicato where convencion is 8', 'delete', 'Nomina-nomina_tipo_sindicato', 8, NULL, '2015-11-24 15:20:55', '1'),
+(90, 'User admin created nomina ultimo id 252', 'CREATE', 'Nomina', 252, NULL, '2015-11-24 15:21:43', '1'),
+(91, 'User admin insert nomina_tipo_sindicato where id_nomina is  203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 15:23:47', '1'),
+(92, 'User admin insert nomina_tipo_sindicato where id_nomina is  203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 15:23:47', '1'),
+(93, 'User admin insert nomina_tipo_sindicato where id_nomina is  203 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 203, NULL, '2015-11-24 15:23:47', '1'),
+(94, 'User admin insert nomina_tipo_sindicato where id_nomina is  204 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 204, NULL, '2015-11-24 15:23:47', '1'),
+(95, 'User admin insert nomina_tipo_sindicato where id_nomina is  205 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 205, NULL, '2015-11-24 15:23:48', '1'),
+(96, 'User admin insert nomina_tipo_sindicato where id_nomina is  206 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 206, NULL, '2015-11-24 15:23:48', '1'),
+(97, 'User admin insert nomina_tipo_sindicato where id_nomina is  207 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 207, NULL, '2015-11-24 15:23:48', '1'),
+(98, 'User admin insert nomina_tipo_sindicato where id_nomina is  209 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 209, NULL, '2015-11-24 15:23:48', '1'),
+(99, 'User admin insert nomina_tipo_sindicato where id_nomina is  210 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 210, NULL, '2015-11-24 15:23:48', '1'),
+(100, 'User admin insert nomina_tipo_sindicato where id_nomina is  211 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 211, NULL, '2015-11-24 15:23:48', '1'),
+(101, 'User admin insert nomina_tipo_sindicato where id_nomina is  212 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 212, NULL, '2015-11-24 15:23:48', '1'),
+(102, 'User admin insert nomina_tipo_sindicato where id_nomina is  213 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 213, NULL, '2015-11-24 15:23:48', '1'),
+(103, 'User admin insert nomina_tipo_sindicato where id_nomina is  214 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 214, NULL, '2015-11-24 15:23:48', '1'),
+(104, 'User admin insert nomina_tipo_sindicato where id_nomina is  215 y convencion is 8', 'insert', 'nomina_tipo_sindicato', 215, NULL, '2015-11-24 15:23:48', '1'),
+(105, 'User admin delete nomina y nomina tipo_sindicato where convencion is 8', 'delete', 'Nomina-nomina_tipo_sindicato', 8, NULL, '2015-11-24 15:27:34', '1'),
+(106, 'User admin created nomina ultimo id 303', 'CREATE', 'Nomina', 303, NULL, '2015-11-24 16:21:18', '1'),
+(107, 'User admin insert nomina_tipo_sindicato where id_nomina is  254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:22:00', '1'),
+(108, 'User admin insert nomina_tipo_sindicato where id_nomina is  254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303, y convencion is 8', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 16:22:00', '1'),
+(109, 'User admin created nomina ultimo id 353', 'CREATE', 'Nomina', 353, NULL, '2015-11-24 16:31:14', '1'),
+(110, 'User admin insert nomina_tipo_sindicato where id_nomina is  304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353, y convencion is 7', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:36:51', '1'),
+(111, 'User admin insert nomina_tipo_sindicato where id_nomina is  304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353, y convencion is 7', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 16:36:51', '1'),
+(112, 'User admin insert nomina_tipo_sindicato where id_nomina is  304 y convencion is 7', 'insert', 'nomina_tipo_sindicato', 304, NULL, '2015-11-24 16:36:51', '1'),
+(113, 'User admin insert nomina_tipo_sindicato where id_nomina is  306 y convencion is 7', 'insert', 'nomina_tipo_sindicato', 306, NULL, '2015-11-24 16:36:51', '1'),
+(114, 'User admin insert nomina_tipo_sindicato where id_nomina is  307 y convencion is 7', 'insert', 'nomina_tipo_sindicato', 307, NULL, '2015-11-24 16:36:52', '1'),
+(115, 'User admin insert nomina_tipo_sindicato where id_nomina is  308 y convencion is 7', 'insert', 'nomina_tipo_sindicato', 308, NULL, '2015-11-24 16:36:52', '1'),
+(116, 'User admin update nomina_tipo_sindicato where id_nomina is  306 y convencion 7 set tipo en 1', 'update', 'nomina_tipo_sindicato', 306, NULL, '2015-11-24 16:39:17', '1'),
+(117, 'User admin update nomina_tipo_sindicato where id_nomina is  307 y convencion 7 set tipo en 2', 'update', 'nomina_tipo_sindicato', 307, NULL, '2015-11-24 16:39:17', '1'),
+(118, 'User admin update nomina_tipo_sindicato where id_nomina is  304,305,306,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353, y convencion 7 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:42:26', '1'),
+(119, 'User admin insert nomina_tipo_sindicato where id_nomina is  304,305,306,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353, y convencion is 7', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 16:42:27', '1'),
+(120, 'User admin update nomina_tipo_sindicato where id_nomina is  313,314,315, y convencion 7 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:43:20', '1'),
+(121, 'User admin update nomina_tipo_sindicato where id_nomina is  313,314,315, y convencion 7 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:44:07', '1'),
+(122, 'User admin update nomina_tipo_sindicato where id_nomina is  312,313,314, y convencion 7 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:44:37', '1'),
+(123, 'User admin update nomina_tipo_sindicato where id_nomina is  313,314,315,316, y convencion 7 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:45:01', '1'),
+(124, 'User admin update nomina_tipo_sindicato where id_nomina is  312,313,314,315, y convencion 7 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:45:56', '1'),
+(125, 'User admin created nomina ultimo id 403', 'CREATE', 'Nomina', 403, NULL, '2015-11-24 16:52:50', '1'),
+(126, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 16:57:24', '1'),
+(127, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:16:05', '1'),
+(128, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:16:05', '1'),
+(129, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:16:05', '1'),
+(130, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:16:05', '1'),
+(131, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:16:05', '1'),
+(132, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:16:06', '1'),
+(133, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:16:06', '1'),
+(134, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:16:27', '1'),
+(135, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:16:28', '1'),
+(136, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:16:28', '1'),
+(137, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:16:28', '1'),
+(138, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:16:28', '1'),
+(139, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:16:28', '1'),
+(140, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:16:28', '1'),
+(141, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:16:28', '1'),
+(142, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:16:28', '1'),
+(143, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:16:28', '1'),
+(144, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:16:29', '1'),
+(145, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:16:29', '1'),
+(146, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:16:29', '1'),
+(147, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:16:29', '1'),
+(148, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:19:24', '1'),
+(149, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:19:25', '1'),
+(150, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:19:25', '1'),
+(151, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:19:25', '1'),
+(152, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:19:25', '1'),
+(153, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:19:25', '1'),
+(154, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:19:25', '1'),
+(155, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:19:25', '1'),
+(156, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:19:26', '1'),
+(157, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:19:26', '1'),
+(158, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:19:26', '1'),
+(159, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:19:26', '1'),
+(160, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:19:26', '1'),
+(161, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:19:26', '1'),
+(162, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:20:37', '1'),
+(163, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:20:37', '1'),
+(164, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:20:37', '1'),
+(165, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:20:37', '1'),
+(166, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:20:37', '1'),
+(167, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:20:37', '1'),
+(168, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:20:38', '1'),
+(169, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:20:38', '1'),
+(170, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:20:38', '1'),
+(171, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:20:38', '1'),
+(172, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:20:38', '1'),
+(173, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:20:38', '1'),
+(174, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:20:38', '1'),
+(175, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:20:38', '1'),
+(176, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:22:25', '1'),
+(177, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:22:26', '1'),
+(178, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:22:26', '1'),
+(179, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:22:26', '1'),
+(180, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:22:26', '1'),
+(181, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:22:26', '1'),
+(182, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:22:26', '1'),
+(183, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:22:26', '1'),
+(184, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:22:26', '1'),
+(185, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:22:26', '1'),
+(186, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:22:27', '1'),
+(187, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:22:27', '1'),
+(188, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:22:27', '1'),
+(189, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:22:27', '1'),
+(190, 'User admin update nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:27:46', '1'),
+(191, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:27:47', '1'),
+(192, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:27:47', '1'),
+(193, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:27:47', '1'),
+(194, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:27:47', '1'),
+(195, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:27:47', '1'),
+(196, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:27:47', '1'),
+(197, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:27:47', '1'),
+(198, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:27:47', '1'),
+(199, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:27:47', '1'),
+(200, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:27:47', '1'),
+(201, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:27:48', '1'),
+(202, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:27:48', '1'),
+(203, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:27:48', '1'),
+(204, 'User admin update nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:28:09', '1'),
+(205, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:28:09', '1'),
+(206, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:28:09', '1'),
+(207, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:28:09', '1'),
+(208, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:28:09', '1'),
+(209, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:28:10', '1'),
+(210, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:28:10', '1'),
+(211, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:28:10', '1'),
+(212, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:28:10', '1'),
+(213, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:28:10', '1'),
+(214, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:28:10', '1'),
+(215, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:28:10', '1'),
+(216, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:28:10', '1'),
+(217, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:28:10', '1'),
+(218, 'User admin update nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:28:45', '1'),
+(219, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:28:46', '1'),
+(220, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:28:46', '1'),
+(221, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:28:46', '1'),
+(222, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:28:46', '1'),
+(223, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:28:46', '1'),
+(224, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:28:46', '1'),
+(225, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:28:46', '1'),
+(226, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:28:46', '1'),
+(227, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:28:46', '1'),
+(228, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:28:47', '1'),
+(229, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:28:47', '1'),
+(230, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:28:47', '1'),
+(231, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:28:47', '1'),
+(232, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:30:21', '1'),
+(233, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:30:21', '1'),
+(234, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:30:22', '1'),
+(235, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:30:22', '1'),
+(236, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:30:22', '1'),
+(237, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:30:22', '1'),
+(238, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:30:22', '1'),
+(239, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:30:22', '1'),
+(240, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:30:22', '1'),
+(241, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:30:22', '1'),
+(242, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:30:23', '1'),
+(243, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:30:23', '1'),
+(244, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:30:23', '1'),
+(245, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:30:23', '1'),
+(246, 'User admin update nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:32:31', '1'),
+(247, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:32:31', '1'),
+(248, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:32:31', '1'),
+(249, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:32:31', '1'),
+(250, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:32:31', '1'),
+(251, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:32:31', '1'),
+(252, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:32:32', '1'),
+(253, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:32:32', '1'),
+(254, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:32:32', '1'),
+(255, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:32:32', '1'),
+(256, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:32:32', '1'),
+(257, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:32:32', '1'),
+(258, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:32:32', '1'),
+(259, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:32:32', '1'),
+(260, 'User admin update nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:36:01', '1'),
+(261, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:36:02', '1'),
+(262, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:36:02', '1'),
+(263, 'User admin insert nomina_tipo_sindicato where id_nomina is  355 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:36:02', '1'),
+(264, 'User admin insert nomina_tipo_sindicato where id_nomina is  356 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 356, NULL, '2015-11-24 18:36:02', '1'),
+(265, 'User admin insert nomina_tipo_sindicato where id_nomina is  357 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 357, NULL, '2015-11-24 18:36:02', '1'),
+(266, 'User admin insert nomina_tipo_sindicato where id_nomina is  358 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 358, NULL, '2015-11-24 18:36:02', '1'),
+(267, 'User admin insert nomina_tipo_sindicato where id_nomina is  359 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 359, NULL, '2015-11-24 18:36:03', '1'),
+(268, 'User admin insert nomina_tipo_sindicato where id_nomina is  360 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 360, NULL, '2015-11-24 18:36:03', '1'),
+(269, 'User admin insert nomina_tipo_sindicato where id_nomina is  361 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 361, NULL, '2015-11-24 18:36:03', '1'),
+(270, 'User admin insert nomina_tipo_sindicato where id_nomina is  362 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 362, NULL, '2015-11-24 18:36:03', '1');
+INSERT INTO `activerecordlog` (`id`, `description`, `action`, `model`, `idModel`, `field`, `creationdate`, `userid`) VALUES
+(271, 'User admin insert nomina_tipo_sindicato where id_nomina is  363 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 363, NULL, '2015-11-24 18:36:03', '1'),
+(272, 'User admin insert nomina_tipo_sindicato where id_nomina is  364 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 364, NULL, '2015-11-24 18:36:03', '1'),
+(273, 'User admin insert nomina_tipo_sindicato where id_nomina is  365 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 365, NULL, '2015-11-24 18:36:03', '1'),
+(274, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:38:07', '1'),
+(275, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:38:08', '1'),
+(276, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:38:08', '1'),
+(277, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:38:59', '1'),
+(278, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:38:59', '1'),
+(279, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:39:00', '1'),
+(280, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:39:00', '1'),
+(281, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:39:45', '1'),
+(282, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:39:45', '1'),
+(283, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:39:45', '1'),
+(284, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:39:45', '1'),
+(285, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:39:45', '1'),
+(286, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:40:04', '1'),
+(287, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:40:04', '1'),
+(288, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:40:04', '1'),
+(289, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:40:04', '1'),
+(290, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:40:04', '1'),
+(291, 'User admin update nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:40:57', '1'),
+(292, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:40:57', '1'),
+(293, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:40:57', '1'),
+(294, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:40:58', '1'),
+(295, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:40:58', '1'),
+(296, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:41:51', '1'),
+(297, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:41:51', '1'),
+(298, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:42:09', '1'),
+(299, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:42:09', '1'),
+(300, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:42:09', '1'),
+(301, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:44:28', '1'),
+(302, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:44:28', '1'),
+(303, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:44:28', '1'),
+(304, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:44:28', '1'),
+(305, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:49:33', '1'),
+(306, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:51:54', '1'),
+(307, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 2', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:51:54', '1'),
+(308, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 3', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:51:54', '1'),
+(309, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 4', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:51:55', '1'),
+(310, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 5', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:51:55', '1'),
+(311, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:51:55', '1'),
+(312, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:52:50', '1'),
+(313, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:53:08', '1'),
+(314, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:53:08', '1'),
+(315, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 1', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:53:30', '1'),
+(316, 'User admin update nomina_tipo_sindicato where id_nomina is  354 y convencion 3 set tipo en 2', 'update', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:53:31', '1'),
+(317, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:53:31', '1'),
+(318, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:53:31', '1'),
+(319, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:53:52', '1'),
+(320, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 18:53:52', '1'),
+(321, 'User admin delete nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'delete', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 18:54:23', '1'),
+(322, 'User admin insert nomina_tipo_sindicato where id_nomina is  354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:57:08', '1'),
+(323, 'User admin delete nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'delete', 'nomina_tipo_sindicato', 355, NULL, '2015-11-24 18:57:17', '1'),
+(324, 'User admin insert nomina_tipo_sindicato where id_nomina is  355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 18:57:39', '1'),
+(325, 'User admin delete nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'delete', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 19:00:39', '1'),
+(326, 'User admin insert nomina_tipo_sindicato where id_nomina is  354 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 354, NULL, '2015-11-24 19:01:04', '1'),
+(327, 'User admin delete nomina y nomina tipo_sindicato where convencion is 3', 'delete', 'Nomina-nomina_tipo_sindicato', 3, NULL, '2015-11-24 19:04:05', '1'),
+(328, 'User admin delete nomina y nomina tipo_sindicato where convencion is 3', 'delete', 'Nomina-nomina_tipo_sindicato', 3, NULL, '2015-11-24 19:04:35', '1'),
+(329, 'User admin delete nomina y nomina tipo_sindicato where convencion is 3', 'delete', 'Nomina-nomina_tipo_sindicato', 3, NULL, '2015-11-24 19:05:23', '1'),
+(330, 'User admin delete nomina y nomina tipo_sindicato where convencion is 3', 'delete', 'Nomina-nomina_tipo_sindicato', 3, NULL, '2015-11-24 19:06:30', '1'),
+(331, 'User admin created nomina ultimo id 453', 'CREATE', 'Nomina', 453, NULL, '2015-11-24 19:56:14', '1'),
+(332, 'User admin insert nomina_tipo_sindicato where id_nomina is  404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 19:56:23', '1'),
+(333, 'User admin created nomina ultimo id 505', 'CREATE', 'Nomina', 505, NULL, '2015-11-24 20:26:40', '1'),
+(334, 'User admin insert nomina_tipo_sindicato where id_nomina is  456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 20:34:21', '1'),
+(335, 'User admin insert nomina_tipo_sindicato where id_nomina is  456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 20:34:21', '1'),
+(336, 'User admin insert nomina_tipo_sindicato where id_nomina is  456 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 456, NULL, '2015-11-24 20:34:21', '1'),
+(337, 'User admin insert nomina_tipo_sindicato where id_nomina is  457 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 457, NULL, '2015-11-24 20:34:21', '1'),
+(338, 'User admin insert nomina_tipo_sindicato where id_nomina is  458 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 458, NULL, '2015-11-24 20:34:21', '1'),
+(339, 'User admin insert nomina_tipo_sindicato where id_nomina is  459 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 459, NULL, '2015-11-24 20:34:21', '1'),
+(340, 'User admin insert nomina_tipo_sindicato where id_nomina is  460 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 460, NULL, '2015-11-24 20:34:21', '1'),
+(341, 'User admin insert nomina_tipo_sindicato where id_nomina is  461 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 461, NULL, '2015-11-24 20:34:21', '1'),
+(342, 'User admin created Convencion[32].', 'CREATE', 'Convencion', 32, '', '2015-11-24 20:36:48', '1'),
+(343, 'User admin created Empresa[22].', 'CREATE', 'Empresa', 22, '', '2015-11-24 20:38:07', '1'),
+(344, 'User admin created nomina ultimo id 561', 'CREATE', 'Nomina', 561, NULL, '2015-11-24 21:05:54', '1'),
+(345, 'User admin insert nomina_tipo_sindicato where id_nomina is  512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561, y convencion is 22', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 21:06:06', '1'),
+(346, 'User admin insert nomina_tipo_sindicato where id_nomina is  512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561, y convencion is 22', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 21:06:07', '1'),
+(347, 'User admin created nomina ultimo id 611', 'CREATE', 'Nomina', 611, NULL, '2015-11-24 23:31:46', '1'),
+(348, 'User admin insert nomina_tipo_sindicato where id_nomina is  562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 23:31:57', '1'),
+(349, 'User admin insert nomina_tipo_sindicato where id_nomina is  562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 23:31:58', '1'),
+(350, 'User admin created nomina ultimo id 662', 'CREATE', 'Nomina', 662, NULL, '2015-11-24 23:36:28', '1'),
+(351, 'User admin insert nomina_tipo_sindicato where id_nomina is  613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662, y convencion is 22', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 23:36:37', '1'),
+(352, 'User admin insert nomina_tipo_sindicato where id_nomina is  613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662, y convencion is 22', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 23:36:37', '1'),
+(353, 'User admin update nomina  id 1', 'update', 'Nomina', 613, NULL, '2015-11-24 23:44:59', '1'),
+(354, 'User admin update nomina  id 1', 'update', 'Nomina', 613, NULL, '2015-11-24 23:45:05', '1'),
+(355, 'User admin update nomina_tipo_sindicato where id_nomina is  613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662, y convencion 22 set tipo en 1', 'update', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 23:45:30', '1'),
+(356, 'User admin update nomina_tipo_sindicato where id_nomina is  614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662, y convencion 22 set tipo en 2', 'update', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 23:45:30', '1'),
+(357, 'User admin delete nomina_tipo_sindicato where id_nomina is  613 y convencion is 22', 'delete', 'nomina_tipo_sindicato', 613, NULL, '2015-11-24 23:45:53', '1'),
+(358, 'User admin created nomina ultimo id 712', 'CREATE', 'Nomina', 712, NULL, '2015-11-24 23:46:51', '1'),
+(359, 'User admin insert nomina_tipo_sindicato where id_nomina is  663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 23:47:02', '1'),
+(360, 'User admin insert nomina_tipo_sindicato where id_nomina is  663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 23:47:02', '1'),
+(361, 'User admin delete nomina y nomina tipo_sindicato where convencion is 22', 'delete', 'Nomina-nomina_tipo_sindicato', 22, NULL, '2015-11-24 23:47:18', '1'),
+(362, 'User admin created nomina ultimo id 762', 'CREATE', 'Nomina', 762, NULL, '2015-11-24 23:47:41', '1'),
+(363, 'User admin insert nomina_tipo_sindicato where id_nomina is  713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762, y convencion is 22', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-24 23:48:01', '1'),
+(364, 'User admin insert nomina_tipo_sindicato where id_nomina is  713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762, y convencion is 22', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-24 23:48:01', '1'),
+(365, 'User admin created Empresa[23].', 'CREATE', 'Empresa', 23, '', '2015-11-25 00:03:43', '1'),
+(366, 'User admin created Convencion[33].', 'CREATE', 'Convencion', 33, '', '2015-11-25 00:52:40', '1'),
+(367, 'User admin created Empresa[24].', 'CREATE', 'Empresa', 24, '', '2015-11-25 00:53:59', '1'),
+(368, 'User admin created nomina ultimo id 812', 'CREATE', 'Nomina', 812, NULL, '2015-11-25 00:55:37', '1'),
+(369, 'User admin insert nomina_tipo_sindicato where id_nomina is  763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812, y convencion is 24', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-25 00:55:49', '1'),
+(370, 'User admin insert nomina_tipo_sindicato where id_nomina is  763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812, y convencion is 24', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-25 00:55:50', '1'),
+(371, 'User cargador1 changed duracion_meses for Convencion[8].', 'CHANGE', 'Convencion', 8, 'duracion_meses', '2015-11-25 01:07:30', '3'),
+(372, 'User cargador1 changed rnc for Empresa[3].', 'CHANGE', 'Empresa', 3, 'rnc', '2015-11-25 01:07:42', '3'),
+(373, 'User cargador1 delete nomina_tipo_sindicato where id_nomina is  663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712, y convencion is 3', 'delete', 'nomina_tipo_sindicato', 663, NULL, '2015-11-25 01:09:35', '3'),
+(374, 'User cargador1 delete nomina_tipo_sindicato where id_nomina is  663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712, y convencion is 3', 'delete', 'nomina_tipo_sindicato', 663, NULL, '2015-11-25 01:09:35', '3'),
+(375, 'User cargador1 insert nomina_tipo_sindicato where id_nomina is  663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-25 01:09:46', '3'),
+(376, 'User cargador1 insert nomina_tipo_sindicato where id_nomina is  663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-25 01:09:46', '3'),
+(377, 'User admin created nomina ultimo id 825', 'CREATE', 'Nomina', 825, NULL, '2015-11-25 16:19:46', '1'),
+(378, 'User admin insert nomina_tipo_sindicato where id_nomina is  825 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 825, NULL, '2015-11-25 16:20:31', '1'),
+(379, 'User admin insert nomina_tipo_sindicato where id_nomina is  825 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 825, NULL, '2015-11-25 16:20:31', '1'),
+(380, 'User admin delete nomina y nomina tipo_sindicato where convencion is 3', 'delete', 'Nomina-nomina_tipo_sindicato', 3, NULL, '2015-11-25 16:43:05', '1'),
+(381, 'User admin created nomina ultimo id 1', 'CREATE', 'Nomina', 1, NULL, '2015-11-25 16:50:24', '1'),
+(382, 'User admin insert nomina_tipo_sindicato where id_nomina is  829 y convencion is 3', 'insert', 'nomina_tipo_sindicato', 829, NULL, '2015-11-25 16:50:33', '1'),
+(383, 'User admin created Convencion[34].', 'CREATE', 'Convencion', 34, '', '2015-11-25 18:47:21', '1'),
+(384, 'User admin created nomina ultimo id 2', 'CREATE', 'Nomina', 2, NULL, '2015-11-25 19:09:18', '1'),
+(385, 'User admin insert nomina_tipo_sindicato where id_nomina is  830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-25 19:09:32', '1'),
+(386, 'User admin insert nomina_tipo_sindicato where id_nomina is  830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-25 19:09:32', '1');
 
 -- --------------------------------------------------------
 
@@ -587,6 +915,33 @@ CREATE TABLE IF NOT EXISTS `clausuras` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `consultor`
+--
+
+CREATE TABLE IF NOT EXISTS `consultor` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `nombres` varchar(200) NOT NULL,
+  `cedula` int(11) NOT NULL,
+  `cod_convencion` bigint(20) unsigned NOT NULL,
+  `cod_empresa` bigint(20) unsigned NOT NULL,
+  `cod_sindicato` bigint(20) unsigned NOT NULL,
+  UNIQUE KEY `id` (`id`),
+  KEY `cod_convencion` (`cod_convencion`,`cod_empresa`,`cod_sindicato`),
+  KEY `cod_empresa` (`cod_empresa`),
+  KEY `cod_sindicato` (`cod_sindicato`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Volcado de datos para la tabla `consultor`
+--
+
+INSERT INTO `consultor` (`id`, `nombres`, `cedula`, `cod_convencion`, `cod_empresa`, `cod_sindicato`) VALUES
+(1, 'cnosultor', 123123, 8, 3, 6),
+(2, 'walter jimenez', 17389814, 8, 3, 6);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `contacto_empresa`
 --
 
@@ -629,14 +984,14 @@ CREATE TABLE IF NOT EXISTS `convencion` (
   KEY `ambito` (`ambito`),
   KEY `cod_convencion` (`cod_convencion`),
   KEY `referencia` (`referencia`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
 
 --
 -- Volcado de datos para la tabla `convencion`
 --
 
 INSERT INTO `convencion` (`id`, `nombre`, `numero_expediente`, `inspectoria`, `sector`, `ambito`, `edicion`, `fecha_deposito`, `fecha_inicio`, `fecha_venc`, `duracion_meses`, `fecha_auto_homo`, `costo_contrato`, `costo_contrato_sin_prestaciones`, `cod_convencion`, `referencia`) VALUES
-(8, 'nueva', '121231231', '080', 2, 1, 1, '2015-10-16', '2015-10-28', '2016-10-06', 11, '2017-10-31', '10101010.0000', '1010101.0000', '8-02', ''),
+(8, 'nueva', '121231231', '080', 2, 1, 1, '2015-10-16', '2015-10-28', '2016-10-06', 113, '2017-10-31', '10101010.0000', '1010101.0000', '8-02', ''),
 (9, 'nueva', '11', '080', 2, 2, 2, '2015-10-14', '2015-10-14', '2015-10-14', 10, '2015-10-14', '121212.0000', '1212.0000', '8-06', ''),
 (10, 'nueva', '2', '080', 2, 2, 2, '2015-10-14', '2015-10-13', '2015-10-13', 10, '2015-10-23', '100000.0000', '100000.0000', '8-01', ''),
 (11, 'dede0', '11', '001', 2, 2, 2, '2015-10-14', '2015-10-07', '2015-10-07', 10, '2015-10-22', '121212.0000', '1010101.0000', '11-01', ''),
@@ -657,7 +1012,10 @@ INSERT INTO `convencion` (`id`, `nombre`, `numero_expediente`, `inspectoria`, `s
 (28, 'probando5', '1010', '005', 1, 2, 2, '2015-11-18', '2015-11-26', '2015-11-28', 10, '2015-11-27', '21200020120120.0000', '2120020020.0000', '28-01', ''),
 (29, 'convencion1', '1010', '002', 1, 1, 1, '2015-11-04', '2015-11-04', '2015-11-04', 10, '2015-11-04', '122121212121212.0000', '121212121212.0000', '29-01', ''),
 (30, 'probando bitacora', '101010101', '007', 1, 1, 1, '2015-11-10', '2015-11-10', '2015-11-11', 10, '2015-11-18', '1020000.0000', '1200222.0000', '30-01', ''),
-(31, 'historico', '111111', '053', 1, 1, 1, '2015-11-10', '2015-11-10', '2015-11-17', 10, '2015-11-17', '2032323.0000', '23232323.0000', '31-01', '');
+(31, 'historico', '111111', '053', 1, 1, 1, '2015-11-10', '2015-11-10', '2015-11-17', 10, '2015-11-17', '2032323.0000', '23232323.0000', '31-01', ''),
+(32, 'll', '1', '002', 2, 2, 1, '2015-09-28', '2015-11-01', '2015-11-23', 2, '2015-12-04', '1022222222.0000', '12222222.0000', '32-01', ''),
+(33, 'll', '1010', '002', 1, 2, 2, '2015-11-18', '2015-11-20', '2015-11-19', 10, '2015-12-03', '1022222222.0000', '1200222.0000', '32-02', ''),
+(34, 'nueva_convencion', '10', '001', 2, 2, 2, '2015-10-26', '2015-10-28', '2015-10-30', 10, '2015-12-01', '10.0000', '10.0000', '34-01', '');
 
 -- --------------------------------------------------------
 
@@ -858,6 +1216,8 @@ INSERT INTO `cruge_authitemchild` (`parent`, `child`) VALUES
 ('Cargador', 'action_empresa_view'),
 ('Cargador', 'action_nomina_admin'),
 ('Cargador', 'action_nomina_create'),
+('Cargador', 'action_nomina_create_cargo_sindicato'),
+('Cargador', 'action_nomina_getvalue'),
 ('Cargador', 'action_nomina_index'),
 ('Cargador', 'action_nomina_update'),
 ('Cargador', 'action_nomina_view'),
@@ -947,7 +1307,7 @@ CREATE TABLE IF NOT EXISTS `cruge_session` (
   `ipaddressout` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idsession`),
   KEY `crugesession_iduser` (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
 
 --
 -- Volcado de datos para la tabla `cruge_session`
@@ -998,7 +1358,17 @@ INSERT INTO `cruge_session` (`idsession`, `iduser`, `created`, `expire`, `status
 (42, 3, 1448305078, 1448317078, 1, '127.0.0.1', 1, 1448305078, NULL, NULL),
 (43, 1, 1448306741, 1448318741, 0, '127.0.0.1', 1, 1448306741, 1448309665, '127.0.0.1'),
 (44, 1, 1448311340, 1448323340, 0, '127.0.0.1', 1, 1448311340, 1448311353, '127.0.0.1'),
-(45, 1, 1448370235, 1448382235, 0, '127.0.0.1', 1, 1448370235, 1448370938, '127.0.0.1');
+(45, 1, 1448370235, 1448382235, 0, '127.0.0.1', 1, 1448370235, 1448370938, '127.0.0.1'),
+(46, 1, 1448371836, 1448383836, 0, '127.0.0.1', 1, 1448371836, NULL, NULL),
+(47, 1, 1448383864, 1448395864, 0, '127.0.0.1', 1, 1448383864, NULL, NULL),
+(48, 1, 1448395873, 1448407873, 1, '127.0.0.1', 1, 1448395873, NULL, NULL),
+(49, 1, 1448407893, 1448419893, 0, '127.0.0.1', 1, 1448407893, 1448413604, '127.0.0.1'),
+(50, 3, 1448413617, 1448425617, 0, '127.0.0.1', 1, 1448413617, 1448413691, '127.0.0.1'),
+(51, 3, 1448413700, 1448425700, 0, '127.0.0.1', 1, 1448413700, 1448413712, '127.0.0.1'),
+(52, 1, 1448413718, 1448425718, 0, '127.0.0.1', 1, 1448413718, 1448413747, '127.0.0.1'),
+(53, 3, 1448413757, 1448425757, 0, '127.0.0.1', 1, 1448413757, 1448413793, '127.0.0.1'),
+(54, 1, 1448457207, 1448469207, 0, '127.0.0.1', 1, 1448457207, NULL, NULL),
+(55, 1, 1448469656, 1448481656, 1, '127.0.0.1', 1, 1448469656, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1060,9 +1430,9 @@ CREATE TABLE IF NOT EXISTS `cruge_user` (
 --
 
 INSERT INTO `cruge_user` (`iduser`, `regdate`, `actdate`, `logondate`, `username`, `email`, `password`, `authkey`, `state`, `totalsessioncounter`, `currentsessioncounter`) VALUES
-(1, NULL, NULL, 1448370235, 'admin', 'admin@tucorreo.com', 'admin', NULL, 1, 0, 0),
+(1, NULL, NULL, 1448469656, 'admin', 'admin@tucorreo.com', 'admin', NULL, 1, 0, 0),
 (2, NULL, NULL, NULL, 'invitado', 'invitado', 'nopassword', NULL, 1, 0, 0),
-(3, 1445615839, NULL, 1448305078, 'cargador1', 'walter86.79@gmail.com', '111111', 'e1c9786bfb0395fc34fb0f6c4284bea9', 1, 0, 0),
+(3, 1445615839, NULL, 1448413758, 'cargador1', 'walter86.79@gmail.com', '111111', 'e1c9786bfb0395fc34fb0f6c4284bea9', 1, 0, 0),
 (4, 1447162236, NULL, 1447162390, 'historico', 'walter86_79@hotmail.com', 'historico', 'f1d7660e9f66d67c634545fbc72a992a', 1, 0, 0);
 
 -- --------------------------------------------------------
@@ -1208,14 +1578,14 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   KEY `sector` (`sector`),
   KEY `sector_2` (`sector`),
   KEY `actividad_economica` (`actividad_economica`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
 INSERT INTO `empresa` (`id`, `razon_social`, `rif`, `identificacion_laboral`, `seguro_social`, `actividad_economica`, `sector`, `capital_empresa`, `nro_sucursales`, `direccion`, `estado`, `municipio`, `parroquia`, `telefono`, `fax`, `correo`, `web`, `rnc`, `cod_convencion`) VALUES
-(3, 'nuevaempresa4', 'V173898149', '10101011', '10101', 738, 2, '10000.00', 20, 'caracas', 6, 66, 209, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://kkk.com', '17389814', 8),
+(3, 'nuevaempresa4', 'V173898149', '10101011', '10101', 738, 2, '10000.00', 20, 'caracas', 6, 66, 209, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://kkk.com', '17389814j', 8),
 (4, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 19, 'caracas', 3, 29, 82, '', '02124813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 10),
 (6, 'asociarladesde1', 'V173898149', '1234', '12333', 352, 2, '98291922.00', 7, 'caracas', 14, 236, 637, '1010', '1010', 'walter86_79@hotmail.com', 'walter.com', '173898148', 12),
 (7, 'probando otra empresa', 'V173898149', '123456-1', '123456', 133, 2, '150000000.00', 5, 'caracas', 24, 462, 1133, '02124813639', '02124813639', 'walter86_79@hotmail.com', 'soulip.com', '', 8),
@@ -1231,7 +1601,10 @@ INSERT INTO `empresa` (`id`, `razon_social`, `rif`, `identificacion_laboral`, `s
 (18, 'sindsicato4', 'V173898149', '123456-12', '1010', 319, 2, '98291922.00', 19, 'caracas', 2, 9, 28, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 26),
 (19, 'local', 'V173981489', '123456-44', '1010', 352, 2, '1000101010.00', 333, 'caracas', 24, 462, 1130, '0212-4813639', '0212-4813639', 'walter86@hotmail.com', 'http://programacion.com', '', 27),
 (20, 'nose', 'V173898149', '123456-12', '2', 24, 2, '20202020202.00', 5, 'caracas', 24, 462, 1123, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://programacion.com', '123', 28),
-(21, 'empresa1', 'V173898149', '123456-1', '1010', 178, 2, '10202102010.00', 10, 'caracas, no se, no se 1220222', 24, 462, 1119, '0212-4813639-0424-1397303', '0212-3992277', 'walter86_79@hotmail.com', 'http://kkk.com', '', 29);
+(21, 'empresa1', 'V173898149', '123456-1', '1010', 178, 2, '10202102010.00', 10, 'caracas, no se, no se 1220222', 24, 462, 1119, '0212-4813639-0424-1397303', '0212-3992277', 'walter86_79@hotmail.com', 'http://kkk.com', '', 29),
+(22, 'empresa real1', 'V173898149', '123466-1', '1010', 18, 2, '10101010101.00', 20, 'caracas', 24, 462, 1118, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://probando.com', 'nose', 32),
+(23, 'empresa2 de ll', 'V173898149', '123446-1', '1010', 18, 1, '90939933.00', 10, 'caracas', 24, 462, 1123, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://loco.com', 'nose', 32),
+(24, 'empresa real1 con referencia2', 'V173898149', '123466-1', '1010', 18, 2, '10101010101.00', 2, 'caracas', 24, 462, 1118, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://probanco.com', 'nose', 33);
 
 -- --------------------------------------------------------
 
@@ -2021,6 +2394,7 @@ INSERT INTO `nivel_educativo` (`id`, `cod_interno`, `descripcion_nivel`) VALUES
 
 CREATE TABLE IF NOT EXISTS `nomina` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_empresa` bigint(20) unsigned NOT NULL,
   `nombres` varchar(200) CHARACTER SET latin1 NOT NULL COMMENT 'nombres y apellidos',
   `cedula` varchar(10) CHARACTER SET latin1 NOT NULL,
   `nacionalidad` char(1) CHARACTER SET latin1 NOT NULL COMMENT 'V=venezolano, E=Extranjero',
@@ -2043,67 +2417,70 @@ CREATE TABLE IF NOT EXISTS `nomina` (
   `remuneracion_despues_contra_obrero` decimal(10,2) NOT NULL,
   `carga_familiar` int(11) NOT NULL,
   `cod_convencion` bigint(20) unsigned NOT NULL,
+  `id_sindicato` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cedula` (`cedula`,`cod_convencion`),
   KEY `cod_convencion` (`cod_convencion`),
-  KEY `nivel_educativo` (`nivel_educativo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=152 ;
+  KEY `nivel_educativo` (`nivel_educativo`),
+  KEY `cod_empresa` (`id_empresa`),
+  KEY `id_sindicato` (`id_sindicato`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=880 ;
 
 --
 -- Volcado de datos para la tabla `nomina`
 --
 
-INSERT INTO `nomina` (`id`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`) VALUES
-(102, 'Acosta Bello, Joel Antonio', '19667073', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(103, 'Aray Vitapaz, Brayan José', '19479129', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8),
-(104, 'Arias Marcano, Yelika Andreina', '14495920', 'V', 'Venezuela', 'Caracas', 'F', 32, 'C', '07', 0, 'Coord Calidad Y Procesos', 0, 1, 3, 0, 0, '5532.12', '0.00', '7191.76', '0.00', 1, 8),
-(105, 'Arias Rincón, Oscar José', '18412958', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '06', 0, 'Coord.De Seguridad Y Salud Laboral', 0, 0, 3, 0, 0, '3500.00', '0.00', '3500.00', '0.00', 2, 8),
-(106, 'Arzola Ron, Omaira De Jesús', '7127124', 'V', 'Venezuela', 'Valencia', 'F', 53, 'S', '05', 0, 'Operador 1', 0, 5, 5, 0, 0, '0.00', '111.64', '0.00', '145.13', 0, 8),
-(107, 'Betancourt Yanez, Dilcia Del Carmen', '9403674', 'V', 'Venezuela', 'San Juan De Los Morros', 'F', 44, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 6, 0, 0, '3418.33', '0.00', '4443.83', '0.00', 0, 8),
-(108, 'Cabrera Rodríguez, Resbel Antonio', '20950942', 'V', 'Venezuela', 'San Juan De Los Morros', 'M', 18, 'S', '05', 0, 'Operador 3', 0, 0, 2, 0, 0, '0.00', '59.35', '0.00', '106.46', 0, 8),
-(109, 'Campos Rodríguez, Regino', '6697264', 'V', 'Venezuela', 'Guarico', 'M', 49, 'S', '05', 0, 'Operador 2', 0, 4, 6, 0, 0, '0.00', '110.01', '0.00', '143.01', 2, 8),
-(110, 'Carrero Guzmán, Jairo Antonio', '20382854', 'V', 'Venezuela', 'Valencia', 'M', 20, 'S', '01', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(111, 'Correa Correa, Wilmer', '15684169', 'V', 'Venezuela', 'Caracas', 'M', 32, 'S', '05', 0, 'Chofer 2', 0, 4, 7, 0, 0, '0.00', '120.31', '0.00', '156.40', 0, 8),
-(112, 'Fernandes Rodríguez, José Alexander', '14303141', 'V', 'Venezuela', 'Guacara', 'M', 37, 'S', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
-(113, 'Figueredo Díaz, Abraham David', '9862027', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Lider De Producci?n 2', 0, 1, 5, 0, 0, '3200.00', '0.00', '4160.00', '0.00', 2, 8),
-(114, 'García Matute, Carlos Eduardo', '20081131', 'V', 'Venezuela', 'Valencia', 'M', 24, 'S', '05', 0, 'Lider Calidad 2', 0, 2, 7, 0, 0, '3389.10', '0.00', '4405.83', '0.00', 0, 8),
-(115, 'González César, Carlos Luis', '14819080', 'V', 'Venezuela', 'Valencia', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '109.64', 4, 8),
-(116, 'González Senoco, Omar Alexander', '12522371', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(117, 'Guerrero Flores, Oliver De Jesus', '19602230', 'V', 'Venezuela', 'Trujillo', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 0, 8),
-(118, 'Hernández Crespo, Wilmer Antonio', '17956886', 'V', 'Venezuela', 'Valencia', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 3, 8),
-(119, 'Hernandez Peña, Alixon Carolina', '12102386', 'V', 'Venezuela', 'Valencia', 'F', 38, 'C', '05', 0, 'Lider De Producci?n', 0, 2, 8, 0, 0, '3449.82', '0.00', '4484.77', '0.00', 2, 8),
-(120, 'Hernández Perozo, Iris Marbella', '13723399', 'V', 'Venezuela', 'Coro', 'F', 34, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 5, 0, 0, '3634.43', '0.00', '4724.76', '0.00', 0, 8),
-(121, 'Isambertt Díaz, Hendrikson Manuel', '14181858', 'V', 'Venezuela', 'Maracaibo', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(122, 'Leal Da Costa, José Jhon', '12481902', 'V', 'Venezuela', 'Caracas', 'M', 36, 'S', '05', 0, 'Coord.Mantenimiento 2', 0, 4, 9, 0, 0, '3995.55', '0.00', '5194.22', '0.00', 0, 8),
-(123, 'Llovera Acosta, Mayda Elena', '14186987', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Electrom?canico', 0, 1, 3, 0, 0, '3630.00', '0.00', '4719.00', '0.00', 1, 8),
-(124, 'Lozada Chinchilla, David Orlando', '22009154', 'V', 'Venezuela', 'Valencia', 'M', 19, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8),
-(125, 'Maldonado Aparicio, Natasha Vanessa', '14819405', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Coord.Pcp/Compras', 0, 7, 6, 0, 0, '4497.71', '0.00', '5847.02', '0.00', 0, 8),
-(126, 'Millano Olivera, Wuilmen Antonio', '15975376', 'V', 'Venezuela', 'Caracas', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 2, 8),
-(127, 'Mirabal Romero, Freddy Roger', '8847435', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Auxiliar De Alm?cen 3', 0, 1, 6, 0, 0, '0.00', '81.90', '0.00', '109.63', 2, 8),
-(128, 'Molina Plaza, Frank Gregrio', '18500489', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Electrom?canico 2', 0, 1, 2, 0, 0, '3000.00', '0.00', '3.90', '0.00', 1, 8),
-(129, 'Ochoa Rodriguez, José Gregorio', '8673908', 'V', 'Venezuela', 'Valencia', 'M', 53, 'S', '05', 0, 'Operador 2', 0, 4, 1, 0, 0, '0.00', '105.10', '0.00', '136.63', 0, 8),
-(130, 'Oliveros Granados, Jesus Rafael', '13618300', 'V', 'Venezuela', 'Maracay', 'M', 33, 'C', '07', 0, 'Jefe De Producci?n', 0, 1, 4, 0, 0, '6655.00', '0.00', '8651.50', '0.00', 0, 8),
-(131, 'Osabarrio Botello, Susana', '15529327', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '07', 0, 'Coord.De Recursos Humanos', 0, 1, 6, 0, 0, '5183.64', '0.00', '6738.73', '0.00', 0, 8),
-(132, 'Pacheco Rivero, Pedro Antonio', '23742497', 'V', 'Venezuela', 'Trujillo', 'M', 19, 'S', '05', 0, 'Operador 2', 0, 1, 3, 0, 0, '0.00', '88.54', '0.00', '115.10', 0, 8),
-(133, 'Peraza Arraez, Osmar Hernan', '17553105', 'V', 'Venezuela', 'Valencia', 'M', 27, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 6, 8),
-(134, 'Pérez, José Luis', '12310091', 'V', 'Venezuela', 'Valencia', 'M', 41, 'C', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(135, 'Pérez Escalona, Gustavo Adolfo', '8846297', 'V', 'Venezuela', 'Valencia', 'M', 47, 'S', '05', 0, 'Supervisor De Producci?n', 0, 1, 8, 0, 0, '5081.67', '0.00', '6606.17', '0.00', 3, 8),
-(136, 'Perez Pinto, Javier Alejandro', '17778944', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 1, 8),
-(137, 'Plasencia Salazar, José Federico', '22740182', 'V', 'Venezuela', 'Puerto Ordaz', 'M', 20, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8),
-(138, 'Primera Nieves, Pablo José', '13103016', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
-(139, 'Quezada Hernández, Alexander Rafael', '7124495', 'V', 'Venezuela', 'Valencia', 'M', 42, 'S', '06', 0, 'Coord Mantenimiento', 0, 1, 6, 0, 0, '6708.24', '0.00', '8720.71', '0.00', 2, 8),
-(140, 'Quintero Rodríguez, Jesús Alexander', '23426565', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 1, 8),
-(141, 'Quintero Zavarce, Zuleima Del Carmen', '9633381', 'V', 'Venezuela', 'Coro', 'F', 50, 'D', '05', 0, 'Aux.Serv.Generales 2', 0, 7, 10, 0, 0, '0.00', '94.35', '0.00', '122.66', 6, 8),
-(142, 'Requena, Auribeth Yadira', '13046909', 'V', 'Venezuela', 'Valencia', 'F', 39, 'S', '05', 0, 'Asistente De Operaciones', 0, 1, 5, 0, 0, '2782.77', '0.00', '3617.60', '0.00', 1, 8),
-(143, 'Rivas Rodríguez, José Javier', '19997004', 'V', 'Venezuela', 'Maracay', 'M', 25, 'S', '05', 0, 'Aux.Serv.Generales 2', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8),
-(144, 'Rodríguez, Yepzi Lisbeth', '10059762', 'V', 'Venezuela', 'Valencia', 'F', 41, 'C', '05', 0, 'Operador 2', 0, 4, 7, 0, 0, '0.00', '110.01', '0.00', '143.01', 3, 8),
-(145, 'Romero Bolívar, Carlos Javier', '24295242', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Auditor 2', 0, 1, 4, 0, 0, '0.00', '88.55', '0.00', '115.12', 0, 8),
-(146, 'Rondón Saavedra, Jorge Daniel', '20731635', 'V', 'Venezuela', 'Valencia', 'M', 18, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8),
-(147, 'Salom Herrera, Felipe Antonio', '15652960', 'V', 'Venezuela', 'Valencia', 'M', 31, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8),
-(148, 'Torrealba Acosta, Miguel Angel', '16401991', 'V', 'Venezuela', 'Valencia', 'M', 28, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8),
-(149, 'Tortolero Morloy, Carlos Eduardo', '18501659', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8),
-(150, 'Zarate Campos, Jonathan José', '17807331', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Coord.Producci?n', 0, 5, 6, 0, 0, '4672.14', '0.00', '6073.78', '0.00', 0, 8),
-(151, 'Zerpa Rodríguez, José Fernando', '12568645', 'V', 'Venezuela', 'Valencia', 'M', 35, 'C', '07', 0, 'Supervisor Materiales', 0, 2, 4, 0, 0, '8121.76', '0.00', '10558.29', '0.00', 1, 8);
+INSERT INTO `nomina` (`id`, `id_empresa`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`, `id_sindicato`) VALUES
+(830, 3, 'Acosta Bello, Joel Antonio', '19667073', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
+(831, 3, 'Aray Vitapaz, Brayan José', '19479129', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8, 6),
+(832, 3, 'Arias Marcano, Yelika Andreina', '14495920', 'V', 'Venezuela', 'Caracas', 'F', 32, 'C', '07', 0, 'Coord Calidad Y Procesos', 0, 1, 3, 0, 0, '5532.12', '0.00', '7191.76', '0.00', 1, 8, 6),
+(833, 3, 'Arias Rincón, Oscar José', '18412958', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '06', 0, 'Coord.De Seguridad Y Salud Laboral', 0, 0, 3, 0, 0, '3500.00', '0.00', '3500.00', '0.00', 2, 8, 6),
+(834, 3, 'Arzola Ron, Omaira De Jesús', '7127124', 'V', 'Venezuela', 'Valencia', 'F', 53, 'S', '05', 0, 'Operador 1', 0, 5, 5, 0, 0, '0.00', '111.64', '0.00', '145.13', 0, 8, 6),
+(835, 3, 'Betancourt Yanez, Dilcia Del Carmen', '9403674', 'V', 'Venezuela', 'San Juan De Los Morros', 'F', 44, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 6, 0, 0, '3418.33', '0.00', '4443.83', '0.00', 0, 8, 6),
+(836, 3, 'Cabrera Rodríguez, Resbel Antonio', '20950942', 'V', 'Venezuela', 'San Juan De Los Morros', 'M', 18, 'S', '05', 0, 'Operador 3', 0, 0, 2, 0, 0, '0.00', '59.35', '0.00', '106.46', 0, 8, 6),
+(837, 3, 'Campos Rodríguez, Regino', '6697264', 'V', 'Venezuela', 'Guarico', 'M', 49, 'S', '05', 0, 'Operador 2', 0, 4, 6, 0, 0, '0.00', '110.01', '0.00', '143.01', 2, 8, 6),
+(838, 3, 'Carrero Guzmán, Jairo Antonio', '20382854', 'V', 'Venezuela', 'Valencia', 'M', 20, 'S', '01', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
+(839, 3, 'Correa Correa, Wilmer', '15684169', 'V', 'Venezuela', 'Caracas', 'M', 32, 'S', '05', 0, 'Chofer 2', 0, 4, 7, 0, 0, '0.00', '120.31', '0.00', '156.40', 0, 8, 6),
+(840, 3, 'Fernandes Rodríguez, José Alexander', '14303141', 'V', 'Venezuela', 'Guacara', 'M', 37, 'S', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8, 6),
+(841, 3, 'Figueredo Díaz, Abraham David', '9862027', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Lider De Producci?n 2', 0, 1, 5, 0, 0, '3200.00', '0.00', '4160.00', '0.00', 2, 8, 6),
+(842, 3, 'García Matute, Carlos Eduardo', '20081131', 'V', 'Venezuela', 'Valencia', 'M', 24, 'S', '05', 0, 'Lider Calidad 2', 0, 2, 7, 0, 0, '3389.10', '0.00', '4405.83', '0.00', 0, 8, 6),
+(843, 3, 'González César, Carlos Luis', '14819080', 'V', 'Venezuela', 'Valencia', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '109.64', 4, 8, 6),
+(844, 3, 'González Senoco, Omar Alexander', '12522371', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
+(845, 3, 'Guerrero Flores, Oliver De Jesus', '19602230', 'V', 'Venezuela', 'Trujillo', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 0, 8, 6),
+(846, 3, 'Hernández Crespo, Wilmer Antonio', '17956886', 'V', 'Venezuela', 'Valencia', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 3, 8, 6),
+(847, 3, 'Hernandez Peña, Alixon Carolina', '12102386', 'V', 'Venezuela', 'Valencia', 'F', 38, 'C', '05', 0, 'Lider De Producci?n', 0, 2, 8, 0, 0, '3449.82', '0.00', '4484.77', '0.00', 2, 8, 6),
+(848, 3, 'Hernández Perozo, Iris Marbella', '13723399', 'V', 'Venezuela', 'Coro', 'F', 34, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 5, 0, 0, '3634.43', '0.00', '4724.76', '0.00', 0, 8, 6),
+(849, 3, 'Isambertt Díaz, Hendrikson Manuel', '14181858', 'V', 'Venezuela', 'Maracaibo', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
+(850, 3, 'Leal Da Costa, José Jhon', '12481902', 'V', 'Venezuela', 'Caracas', 'M', 36, 'S', '05', 0, 'Coord.Mantenimiento 2', 0, 4, 9, 0, 0, '3995.55', '0.00', '5194.22', '0.00', 0, 8, 6),
+(851, 3, 'Llovera Acosta, Mayda Elena', '14186987', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Electrom?canico', 0, 1, 3, 0, 0, '3630.00', '0.00', '4719.00', '0.00', 1, 8, 6),
+(852, 3, 'Lozada Chinchilla, David Orlando', '22009154', 'V', 'Venezuela', 'Valencia', 'M', 19, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8, 6),
+(853, 3, 'Maldonado Aparicio, Natasha Vanessa', '14819405', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Coord.Pcp/Compras', 0, 7, 6, 0, 0, '4497.71', '0.00', '5847.02', '0.00', 0, 8, 6),
+(854, 3, 'Millano Olivera, Wuilmen Antonio', '15975376', 'V', 'Venezuela', 'Caracas', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 2, 8, 6),
+(855, 3, 'Mirabal Romero, Freddy Roger', '8847435', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Auxiliar De Alm?cen 3', 0, 1, 6, 0, 0, '0.00', '81.90', '0.00', '109.63', 2, 8, 6),
+(856, 3, 'Molina Plaza, Frank Gregrio', '18500489', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Electrom?canico 2', 0, 1, 2, 0, 0, '3000.00', '0.00', '3.90', '0.00', 1, 8, 6),
+(857, 3, 'Ochoa Rodriguez, José Gregorio', '8673908', 'V', 'Venezuela', 'Valencia', 'M', 53, 'S', '05', 0, 'Operador 2', 0, 4, 1, 0, 0, '0.00', '105.10', '0.00', '136.63', 0, 8, 6),
+(858, 3, 'Oliveros Granados, Jesus Rafael', '13618300', 'V', 'Venezuela', 'Maracay', 'M', 33, 'C', '07', 0, 'Jefe De Producci?n', 0, 1, 4, 0, 0, '6655.00', '0.00', '8651.50', '0.00', 0, 8, 6),
+(859, 3, 'Osabarrio Botello, Susana', '15529327', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '07', 0, 'Coord.De Recursos Humanos', 0, 1, 6, 0, 0, '5183.64', '0.00', '6738.73', '0.00', 0, 8, 6),
+(860, 3, 'Pacheco Rivero, Pedro Antonio', '23742497', 'V', 'Venezuela', 'Trujillo', 'M', 19, 'S', '05', 0, 'Operador 2', 0, 1, 3, 0, 0, '0.00', '88.54', '0.00', '115.10', 0, 8, 6),
+(861, 3, 'Peraza Arraez, Osmar Hernan', '17553105', 'V', 'Venezuela', 'Valencia', 'M', 27, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 6, 8, 6),
+(862, 3, 'Pérez, José Luis', '12310091', 'V', 'Venezuela', 'Valencia', 'M', 41, 'C', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
+(863, 3, 'Pérez Escalona, Gustavo Adolfo', '8846297', 'V', 'Venezuela', 'Valencia', 'M', 47, 'S', '05', 0, 'Supervisor De Producci?n', 0, 1, 8, 0, 0, '5081.67', '0.00', '6606.17', '0.00', 3, 8, 6),
+(864, 3, 'Perez Pinto, Javier Alejandro', '17778944', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 1, 8, 6),
+(865, 3, 'Plasencia Salazar, José Federico', '22740182', 'V', 'Venezuela', 'Puerto Ordaz', 'M', 20, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
+(866, 3, 'Primera Nieves, Pablo José', '13103016', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8, 6),
+(867, 3, 'Quezada Hernández, Alexander Rafael', '7124495', 'V', 'Venezuela', 'Valencia', 'M', 42, 'S', '06', 0, 'Coord Mantenimiento', 0, 1, 6, 0, 0, '6708.24', '0.00', '8720.71', '0.00', 2, 8, 6),
+(868, 3, 'Quintero Rodríguez, Jesús Alexander', '23426565', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 1, 8, 6),
+(869, 3, 'Quintero Zavarce, Zuleima Del Carmen', '9633381', 'V', 'Venezuela', 'Coro', 'F', 50, 'D', '05', 0, 'Aux.Serv.Generales 2', 0, 7, 10, 0, 0, '0.00', '94.35', '0.00', '122.66', 6, 8, 6),
+(870, 3, 'Requena, Auribeth Yadira', '13046909', 'V', 'Venezuela', 'Valencia', 'F', 39, 'S', '05', 0, 'Asistente De Operaciones', 0, 1, 5, 0, 0, '2782.77', '0.00', '3617.60', '0.00', 1, 8, 6),
+(871, 3, 'Rivas Rodríguez, José Javier', '19997004', 'V', 'Venezuela', 'Maracay', 'M', 25, 'S', '05', 0, 'Aux.Serv.Generales 2', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8, 6),
+(872, 3, 'Rodríguez, Yepzi Lisbeth', '10059762', 'V', 'Venezuela', 'Valencia', 'F', 41, 'C', '05', 0, 'Operador 2', 0, 4, 7, 0, 0, '0.00', '110.01', '0.00', '143.01', 3, 8, 6),
+(873, 3, 'Romero Bolívar, Carlos Javier', '24295242', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Auditor 2', 0, 1, 4, 0, 0, '0.00', '88.55', '0.00', '115.12', 0, 8, 6),
+(874, 3, 'Rondón Saavedra, Jorge Daniel', '20731635', 'V', 'Venezuela', 'Valencia', 'M', 18, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8, 6),
+(875, 3, 'Salom Herrera, Felipe Antonio', '15652960', 'V', 'Venezuela', 'Valencia', 'M', 31, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8, 6),
+(876, 3, 'Torrealba Acosta, Miguel Angel', '16401991', 'V', 'Venezuela', 'Valencia', 'M', 28, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8, 6),
+(877, 3, 'Tortolero Morloy, Carlos Eduardo', '18501659', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8, 6),
+(878, 3, 'Zarate Campos, Jonathan José', '17807331', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Coord.Producci?n', 0, 5, 6, 0, 0, '4672.14', '0.00', '6073.78', '0.00', 0, 8, 6),
+(879, 3, 'Zerpa Rodríguez, José Fernando', '12568645', 'V', 'Venezuela', 'Valencia', 'M', 35, 'C', '07', 0, 'Supervisor Materiales', 0, 2, 4, 0, 0, '8121.76', '0.00', '10558.29', '0.00', 1, 8, 6);
 
 -- --------------------------------------------------------
 
@@ -2115,68 +2492,118 @@ CREATE TABLE IF NOT EXISTS `nomina_tipo_sindicato` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `tipo_sindicato` bigint(20) unsigned NOT NULL,
   `id_nomina` bigint(20) unsigned NOT NULL,
-  `cod_convencion_nomina` bigint(20) unsigned NOT NULL,
+  `cod_convencion_nomina` bigint(20) unsigned NOT NULL COMMENT 'es el id_empresa',
   UNIQUE KEY `id` (`id`),
   KEY `tipo_sindicato` (`tipo_sindicato`,`id_nomina`,`cod_convencion_nomina`),
   KEY `id_nomina` (`id_nomina`),
   KEY `cod_convencion_nomina` (`cod_convencion_nomina`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=213 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=101 ;
 
 --
 -- Volcado de datos para la tabla `nomina_tipo_sindicato`
 --
 
 INSERT INTO `nomina_tipo_sindicato` (`id`, `tipo_sindicato`, `id_nomina`, `cod_convencion_nomina`) VALUES
-(163, 1, 102, 8),
-(164, 1, 103, 8),
-(165, 1, 104, 8),
-(166, 1, 105, 8),
-(167, 1, 106, 8),
-(168, 1, 107, 8),
-(169, 1, 108, 8),
-(170, 1, 109, 8),
-(171, 1, 110, 8),
-(172, 1, 111, 8),
-(173, 1, 112, 8),
-(174, 1, 113, 8),
-(175, 1, 114, 8),
-(176, 1, 115, 8),
-(177, 1, 116, 8),
-(178, 1, 117, 8),
-(179, 1, 118, 8),
-(180, 1, 119, 8),
-(181, 1, 120, 8),
-(182, 1, 121, 8),
-(183, 1, 122, 8),
-(184, 1, 123, 8),
-(185, 1, 124, 8),
-(186, 1, 125, 8),
-(187, 1, 126, 8),
-(188, 1, 127, 8),
-(189, 1, 128, 8),
-(190, 1, 129, 8),
-(191, 1, 130, 8),
-(192, 1, 131, 8),
-(193, 1, 132, 8),
-(194, 1, 133, 8),
-(195, 1, 134, 8),
-(196, 1, 135, 8),
-(197, 1, 136, 8),
-(198, 1, 137, 8),
-(199, 1, 138, 8),
-(200, 1, 139, 8),
-(201, 1, 140, 8),
-(202, 1, 141, 8),
-(203, 1, 142, 8),
-(204, 1, 143, 8),
-(205, 1, 144, 8),
-(206, 1, 145, 8),
-(207, 1, 146, 8),
-(208, 1, 147, 8),
-(209, 1, 148, 8),
-(210, 1, 149, 8),
-(211, 1, 150, 8),
-(212, 1, 151, 8);
+(1, 1, 830, 3),
+(2, 1, 831, 3),
+(3, 1, 832, 3),
+(4, 1, 833, 3),
+(5, 1, 834, 3),
+(6, 1, 835, 3),
+(7, 1, 836, 3),
+(8, 1, 837, 3),
+(9, 1, 838, 3),
+(10, 1, 839, 3),
+(11, 1, 840, 3),
+(12, 1, 841, 3),
+(13, 1, 842, 3),
+(14, 1, 843, 3),
+(15, 1, 844, 3),
+(16, 1, 845, 3),
+(17, 1, 846, 3),
+(18, 1, 847, 3),
+(19, 1, 848, 3),
+(20, 1, 849, 3),
+(21, 1, 850, 3),
+(22, 1, 851, 3),
+(23, 1, 852, 3),
+(24, 1, 853, 3),
+(25, 1, 854, 3),
+(26, 1, 855, 3),
+(27, 1, 856, 3),
+(28, 1, 857, 3),
+(29, 1, 858, 3),
+(30, 1, 859, 3),
+(31, 1, 860, 3),
+(32, 1, 861, 3),
+(33, 1, 862, 3),
+(34, 1, 863, 3),
+(35, 1, 864, 3),
+(36, 1, 865, 3),
+(37, 1, 866, 3),
+(38, 1, 867, 3),
+(39, 1, 868, 3),
+(40, 1, 869, 3),
+(41, 1, 870, 3),
+(42, 1, 871, 3),
+(43, 1, 872, 3),
+(44, 1, 873, 3),
+(45, 1, 874, 3),
+(46, 1, 875, 3),
+(47, 1, 876, 3),
+(48, 1, 877, 3),
+(49, 1, 878, 3),
+(50, 1, 879, 3),
+(51, 2, 830, 3),
+(52, 2, 831, 3),
+(53, 2, 832, 3),
+(54, 2, 833, 3),
+(55, 2, 834, 3),
+(56, 2, 835, 3),
+(57, 2, 836, 3),
+(58, 2, 837, 3),
+(59, 2, 838, 3),
+(60, 2, 839, 3),
+(61, 2, 840, 3),
+(62, 2, 841, 3),
+(63, 2, 842, 3),
+(64, 2, 843, 3),
+(65, 2, 844, 3),
+(66, 2, 845, 3),
+(67, 2, 846, 3),
+(68, 2, 847, 3),
+(69, 2, 848, 3),
+(70, 2, 849, 3),
+(71, 2, 850, 3),
+(72, 2, 851, 3),
+(73, 2, 852, 3),
+(74, 2, 853, 3),
+(75, 2, 854, 3),
+(76, 2, 855, 3),
+(77, 2, 856, 3),
+(78, 2, 857, 3),
+(79, 2, 858, 3),
+(80, 2, 859, 3),
+(81, 2, 860, 3),
+(82, 2, 861, 3),
+(83, 2, 862, 3),
+(84, 2, 863, 3),
+(85, 2, 864, 3),
+(86, 2, 865, 3),
+(87, 2, 866, 3),
+(88, 2, 867, 3),
+(89, 2, 868, 3),
+(90, 2, 869, 3),
+(91, 2, 870, 3),
+(92, 2, 871, 3),
+(93, 2, 872, 3),
+(94, 2, 873, 3),
+(95, 2, 874, 3),
+(96, 2, 875, 3),
+(97, 2, 876, 3),
+(98, 2, 877, 3),
+(99, 2, 878, 3),
+(100, 2, 879, 3);
 
 -- --------------------------------------------------------
 
@@ -4279,23 +4706,22 @@ CREATE TABLE IF NOT EXISTS `sindicato` (
   KEY `ambito` (`ambito`),
   KEY `tipo_organizacion` (`tipo_organizacion`),
   KEY `cod_convencion` (`cod_convencion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 --
 -- Volcado de datos para la tabla `sindicato`
 --
 
 INSERT INTO `sindicato` (`id`, `nombre`, `siglas`, `nro_boleta_inscripcion`, `folio_registro`, `tomo_registroo`, `rif`, `direccion`, `estado`, `municipio`, `parroquia`, `telefono`, `federacion_nacional`, `federacion_regional`, `sector`, `ambito`, `tipo_organizacion`, `fecha_registro`, `fecha_actualizacion`, `duracion_junta_directiva`, `fecha_inicio_vigencia`, `fecha_cese_vigencia`, `fecha_informe_finanzas`, `fecha_nomina_afiliado`, `fecha_ultimas_elecciones`, `cod_convencion`) VALUES
-(1, 'sindicato12', '1', '1234-12-12345', 1, '1', 'V173898148', 'caracas', 24, 462, 1119, '0212-4813637/0212-4813638', '2015-11-11', 'nose', 2, 2, 2, '2005-11-01', '2015-11-11', 9, '2015-10-15', '2015-10-31', '2015-10-14', '2015-12-31', '2007-03-21', 8),
-(2, 'sindicato1', '1', '1234-12-12345', 12, '12', 'V173898148', 'caracas', 2, 26, 71, '0212-4813639/0212-4813639', 'nose', 'nose', 2, 2, 2, '2015-10-13', '2015-10-08', 111, '2015-09-30', '2015-10-02', '2015-10-21', '2015-10-28', '2015-10-07', 23),
-(3, 'sindicato4', '4', '1234-12-12345', 1, '1', 'V173898148', 'caracas', 14, 226, 614, '0212-4813639/0212-4813639', 'nose', 'nose', 1, 1, 2, '2015-10-28', '2015-10-21', 111, '2015-10-15', '2015-10-08', '2015-10-08', '2015-10-08', '2015-10-09', 25),
-(4, 'sindicato44', '44', '1234-12-12345', 32767, '123', 'V173898149', 'caracas', 2, 9, 29, '0212-4813639/0212-4813639', 'nose', 'nose', 2, 2, 1, '2015-09-30', '2015-10-07', 111, '2015-10-07', '2015-10-21', '2015-10-29', '2015-10-15', '2015-10-22', 25),
 (5, 'sindicato4', '4', '1234-12-12345', 1, '1', 'V173898148', 'caracas', 14, 234, 633, '0212-4813639', 'nose', 'nose', 1, 1, 2, '2015-10-13', '2015-10-08', 111, '2015-10-14', '2015-10-14', '2015-10-07', '2015-10-22', '2015-10-28', 26),
 (6, 'sindicato unico de trabajadores', 'SUT', '0202-02-12345', 12, '12', 'V173898149', 'caracas', 24, 462, 1119, '0212-4813639', 'nose', 'nose', 1, 2, 1, '2015-10-23', '2015-10-23', 10, '2015-10-01', '2015-10-23', '0000-00-00', '2015-10-28', '2015-10-28', 8),
 (7, 'sindicato1', '1', '1234-12-12345', 2, '23', '', 'caracas', 2, 11, 31, '0212-4813639', 'nose', 'nose', 2, 2, 2, '2015-10-27', '2015-10-30', 9, '2015-10-27', '2015-10-27', '0000-00-00', '2015-10-27', '2015-10-27', 10),
 (8, 'probando sindicatp', 'ps', '1234-12-12345', 2, '2', 'v173898149', 'caracas', 24, 462, 1123, '0212-4813639', 'nose', 'nose', 2, 2, 2, '2015-11-11', '2015-11-04', 10, '2015-11-27', '2015-11-30', '0000-00-00', '2015-11-30', '2015-11-30', 27),
 (9, 'sindicato unico de trabajadores', 'SUT', '1234-12-12345', 2, '2', 'V-173898149', 'caracas', 6, 68, 226, '0212-4813639', 'nose', 'nose', 2, 1, 2, '2015-11-17', '2015-11-19', 10, '2015-11-18', '2015-11-30', '0000-00-00', '2015-11-25', '2015-11-18', 28),
-(10, 'unico de trabajadores', 'ut', '1234-12-12345', 2, '2', '', 'caracas, no se, no se', 24, 462, 1119, '0212-3336677', 'no se', ' no se', 1, 2, 1, '2015-11-01', '2015-11-01', 10, '2015-11-04', '2015-11-30', '0000-00-00', '2015-11-25', '2015-11-25', 29);
+(10, 'unico de trabajadores', 'ut', '1234-12-12345', 2, '2', '', 'caracas, no se, no se', 24, 462, 1119, '0212-3336677', 'no se', ' no se', 1, 2, 1, '2015-11-01', '2015-11-01', 10, '2015-11-04', '2015-11-30', '0000-00-00', '2015-11-25', '2015-11-25', 29),
+(16, 'sindicato 5', 's5', '1234-11-11111', 2, 'nose', '', 'caracas', 24, 462, 1118, '0212-4813639', 'no se', 'no se', 1, 1, 1, '0000-00-00', '0000-00-00', 10, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 8),
+(17, 'sindicato 6', 's6', '1234-11-11111', 12, 'aweqwe', '', 'caracas', 24, 462, 1117, '0212-4813639', 'nose', 'nose', 1, 1, 2, '0000-00-00', '0000-00-00', 10, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 8),
+(18, 'sindicato 6', 's6', '1234-11-11111', 12, '12', '', 'caracas', 24, 462, 1118, '0212-4813639', 'no se', 'no se', 1, 1, 1, '0000-00-00', '0000-00-00', 20, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 8);
 
 -- --------------------------------------------------------
 
@@ -4528,6 +4954,13 @@ ALTER TABLE `clausuras`
   ADD CONSTRAINT `clausuras_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
 
 --
+-- Filtros para la tabla `consultor`
+--
+ALTER TABLE `consultor`
+  ADD CONSTRAINT `consultor_ibfk_2` FOREIGN KEY (`cod_sindicato`) REFERENCES `sindicato` (`id`),
+  ADD CONSTRAINT `consultor_ibfk_1` FOREIGN KEY (`cod_empresa`) REFERENCES `empresa` (`id`);
+
+--
 -- Filtros para la tabla `convencion`
 --
 ALTER TABLE `convencion`
@@ -4570,8 +5003,10 @@ ALTER TABLE `empresa`
 -- Filtros para la tabla `nomina`
 --
 ALTER TABLE `nomina`
-  ADD CONSTRAINT `nomina_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
-  ADD CONSTRAINT `nomina_ibfk_2` FOREIGN KEY (`nivel_educativo`) REFERENCES `nivel_educativo` (`cod_interno`);
+  ADD CONSTRAINT `nomina_ibfk_6` FOREIGN KEY (`id_sindicato`) REFERENCES `sindicato` (`id`),
+  ADD CONSTRAINT `nomina_ibfk_2` FOREIGN KEY (`nivel_educativo`) REFERENCES `nivel_educativo` (`cod_interno`),
+  ADD CONSTRAINT `nomina_ibfk_4` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id`),
+  ADD CONSTRAINT `nomina_ibfk_5` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
 
 --
 -- Filtros para la tabla `nomina_tipo_sindicato`
@@ -4579,7 +5014,7 @@ ALTER TABLE `nomina`
 ALTER TABLE `nomina_tipo_sindicato`
   ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_4` FOREIGN KEY (`tipo_sindicato`) REFERENCES `tipo_sindicato` (`id`),
   ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_5` FOREIGN KEY (`id_nomina`) REFERENCES `nomina` (`id`),
-  ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_6` FOREIGN KEY (`cod_convencion_nomina`) REFERENCES `nomina` (`cod_convencion`);
+  ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_7` FOREIGN KEY (`cod_convencion_nomina`) REFERENCES `empresa` (`id`);
 
 --
 -- Filtros para la tabla `sindicato`
