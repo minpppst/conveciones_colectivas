@@ -37,13 +37,54 @@
 	                'duplicate' => 'Duplicate file!',
 	                'denied' => 'Invalid file type',             
 	            ));
+                    
+                    
 	        ?>
 	  <?php echo $form->error($model,'csvfile'); ?>
 	 </div>
+    <div class="row">
+        <?php echo $form->labelEx($model,'id_empresa'); ?>
+        
+	<?php           $list = Empresa::model()->findALL(array('condition'=>"cod_convencion=$_GET[convencion]"));
+                        $niveles=CHtml::listData($list,'id','razon_social');  
+                        echo $form->dropDownList($model,'id_empresa',
+                        $niveles,
+                        array('prompt'=>'Seleccione una Empresa')
+                        ); 
+        
+        ?>
+        
+      <?php echo $form->error($model,'id_empresa'); ?>
+        
+        
+                  
+                  
+        
+    </div>
+    <div class="row">
+        
+         <?php echo $form->labelEx($model,'id_sindicato'); ?>
+        
+	<?php            $list = Sindicato::model()->findALL(array('condition'=>"cod_convencion=$_GET[convencion]"));
+                        $niveles=CHtml::listData($list,'id','nombre');  
+                        echo $form->dropDownList($model,'id_sindicato',
+                        $niveles,
+                        array('prompt'=>'Seleccione un Sindicato')
+                        ); 
+        
+        ?>
+        
+      <?php echo $form->error($model,'id_sindicato'); ?>
+        
+        
+    </div>
+     
+    
     
     <div class="row">
         
 		<?php echo $form->hiddenField($model,'cod_convencion',array('size'=>60,'maxlength'=>50, 'value'=>$_GET['convencion'])); ?>
+               
 	
         
         

@@ -421,7 +421,6 @@
 	<div class="row">
             
 		<?php echo $form->labelEx($model,'fecha_informe_finanzas'); 
-                
                 if ($model->fecha_informe_finanzas!='') {
                  $model->fecha_informe_finanzas=date('d-m-Y',strtotime($model->fecha_informe_finanzas));}
 
@@ -535,6 +534,8 @@
 		
                 <?php if(isset($_GET['convencion'])){ ?>
                 <?php echo $form->HiddenField($model,'cod_convencion',array('size'=>50,'maxlength'=>50, 'value'=>$_GET['convencion'])); }?>
+                    
+                   
 		
 	</div>
 

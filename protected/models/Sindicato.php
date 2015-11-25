@@ -68,7 +68,8 @@ class Sindicato extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, siglas, nro_boleta_inscripcion, folio_registro, tomo_registroo, direccion, estado, municipio, parroquia, federacion_nacional, federacion_regional, sector, ambito, tipo_organizacion, fecha_registro, fecha_actualizacion, duracion_junta_directiva, fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones, cod_convencion', 'required'),
+			
+                        array('nombre, siglas, nro_boleta_inscripcion, folio_registro, tomo_registroo, direccion, estado, municipio, parroquia, federacion_nacional, federacion_regional, sector, ambito, tipo_organizacion, fecha_registro, fecha_actualizacion, duracion_junta_directiva, fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones, cod_convencion', 'required'),
 			array('folio_registro, estado, municipio, parroquia, ambito, tipo_organizacion, duracion_junta_directiva', 'numerical', 'integerOnly'=>true),
 			array('nombre, tomo_registroo, direccion, federacion_nacional, federacion_regional', 'length', 'max'=>255),
 			array('siglas, rif, cod_convencion', 'length', 'max'=>20),
@@ -78,8 +79,9 @@ class Sindicato extends CActiveRecord
                         array('telefono','validartelefonoreal'),
                         array('telefono','validartelefono'),
                         array('nro_boleta_inscripcion','validarboleta'),
-                        array('fecha_cese_vigencia','compare','compareAttribute'=>'fecha_inicio_vigencia','operator'=>'>=','message'=>'Fecha de Cese de Vigencia debe ser superior a Fecha de Inicio Vigencia'),
-                        array('fecha_registro, fecha_actualizacion,fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones','formatear_fechas'),
+                        array('fecha_registro, fecha_informe_finanzas, fecha_actualizacion,fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones','formatear_fechas'),
+                        //array('fecha_cese_vigencia','compare','compareAttribute'=>'fecha_inicio_vigencia','operator'=>'>=','message'=>'Fecha de Cese de Vigencia debe ser superior a Fecha de Inicio Vigencia'),
+                        array('fecha_cese_vigencia','validar_fecha'),
                         
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -114,7 +116,12 @@ class Sindicato extends CActiveRecord
             
         }
         
-        
+        public function validar_fecha(){
+          
+            if(strtotime($this->fecha_cese_vigencia)< strtotime($this->fecha_inicio_vigencia)){
+                $this->addError('fecha_cese_vigencia', 'Error, Fecha Cese de Vigencia debe ser mayor a Fecha Inicio Vigencia ');
+            }
+        }
         public function formatear_fechas(){
                    
             

@@ -161,9 +161,27 @@ class NominaController extends Controller
                               $model_nomina->remuneracion_despues_contra_obrero=$data[21];
                               $model_nomina->carga_familiar=$data[22];
                               $model_nomina->cod_convencion=$_POST['Nomina']['cod_convencion'];
+                              if(!empty($_POST['Nomina']['id_empresa']))
+                              $model_nomina->id_empresa=$_POST['Nomina']['id_empresa'];
+                              else{
+                                   echo "<script type='text/javascript'>
+                         alert('Error, Seleccione la Empresa Asociada A la Nomina');
+                         history.go(-1);
+                         </script>"; exit();
+                              }
+                             if(!empty($_POST['Nomina']['id_sindicato']))
+                              $model_nomina->id_sindicato=$_POST['Nomina']['id_sindicato'];
+                              else{
+                                   echo "<script type='text/javascript'>
+                         alert('Error, Falta el codigo de Sindicato');
+                         history.go(-1);
+                         </script>"; exit();
+                              }
+                              
+                               
                               $llenar = Yii::app()->db->createCommand()->insert($model_nomina->tableName(),$model_nomina->attributes);
                               
-
+                             
                             //  $newmodel->save();            
                        
             //Yii::app()->db->createCommand("insert into trabajador_sindicato(`nomina_sindicato`,`trabajador`) values ('".$_POST['Nomina']['cod_convencion']."', '".$data[2]."')")->execute();
@@ -172,30 +190,23 @@ class NominaController extends Controller
                    }
                    
                        $id_nomina=Yii::app()->db->getLastInsertID('Nomina'); 
-                   //    $id_trabajador=Yii::app()->db->getLastInsertID('Trabajador_sindicato'); 
                        $nombre_usuario=Yii::app()->user->Name;
-                       $userid=       Yii::app()->user->id;
+                       $userid=Yii::app()->user->id;
                        
-                       
-                      // echo "insert into activerecordlog(`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
-                        //          values ('User ".$nombre_usuario." ultimo id ".$id_nomina."','CREATE', 'Nomina','".$id_nomina."',now(),'".$userid."')";exit();
                         Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
                                   values ('User ".$nombre_usuario." created nomina ultimo id ".$id_nomina."','CREATE', 'Nomina','".$id_nomina."',now(),'".$userid."')")->execute();
-                    //     Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
-                      //            values ('User ".$nombre_usuario. " create trabajador ultimo id". $id_trabajador."','CREATE', 'trabajador_nomina','".$id_trabajador."',now(),'".$userid."')")->execute();
+                  
                         
-                   $transaction->commit();
+                            $transaction->commit();
                    
-                   $bandera=1;
-                       
-                        
-                        echo "<script type='text/javascript'>
+                            $bandera=1;
+                         echo "<script type='text/javascript'>
                          alert('Se Ha Guardado Con exito La Nomina');
                          </script>";
                    }catch(CDbException $error){
                     
                     $transaction->rollback();
-                  //  echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos.</div>"; //for ajax
+                
                    echo "<div class='flash-error'>No se puede insertar nomina, alguno de los registros estan Repetidos. Error:".$error."</div>"; //for ajax
                    }                    
                }                            
@@ -210,7 +221,7 @@ class NominaController extends Controller
 //				$this->redirect(array('view','id'=>$model->id));
 		}
                 if($bandera==1)
-                $this->redirect(array('nomina/create_cargo_sindicato','convencion'=>$_POST['Nomina']['cod_convencion']));
+                $this->redirect(array('nomina/create_cargo_sindicato','convencion'=>$_POST['Nomina']['id_empresa'],'id_sindicato'=>$_POST['Nomina']['id_sindicato']));
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -223,14 +234,11 @@ class NominaController extends Controller
 	 */
 	public function actionUpdate($id,$convencion)
 	{
-		//$model=$this->loadModel($id);
+		
                 $model=Nomina::model()->findByAttributes(array('cedula'=>$_GET['id'],'cod_convencion'=>$_GET['convencion']));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Nomina']))
+                    if(isset($_POST['Nomina']))
 		{
 			$data=$_POST['Nomina'];
                      //   echo $data['nombres']; exit();
@@ -259,14 +267,14 @@ class NominaController extends Controller
                      `carga_familiar`='".$data['carga_familiar']."',
                      `cod_convencion`='".$data['cod_convencion']."'
                      where id='".$data['id']."'")->execute();    
-                    
-                    
-                    
-                      //  $model->attributes=$_POST['Nomina'];
-                        
-                                //$model->attributes=
-                        //print_r($model->attributes); exit();
-			if($llenar)
+                       
+                       $nombre_usuario=Yii::app()->user->Name;
+                       $userid=Yii::app()->user->id;
+                       
+                        Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                        values ('User ".$nombre_usuario." update nomina  id ".$userid."','update', 'Nomina','".$data['id']."',now(),'".$userid."')")->execute();
+                                
+                                if($llenar)
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
@@ -286,11 +294,19 @@ class NominaController extends Controller
            
                   try{
                 $transaction = Yii::app()->db->beginTransaction();
+              echo  $sql="select id from nomina_tipo_sindicato where cod_convencion_nomina='".$convencion."'";
+                $existe=Yii::app()->db->createCommand($sql)->execute();
+                if($existe!=0)
                 $sql="delete from nomina_tipo_sindicato where cod_convencion_nomina='".$convencion."'";
                 $borrar1=Yii::app()->db->createCommand($sql)->execute();
-                if($borrar1){
-                $sql="delete from nomina where cod_convencion='".$convencion."'";
+                if($borrar1 || $existe==0){
+                $sql="delete from nomina where id_empresa='".$convencion."'";
                 $borrar1=Yii::app()->db->createCommand($sql)->execute();
+                $nombre_usuario=Yii::app()->user->Name;
+                $userid=Yii::app()->user->id;
+                       
+                Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                values ('User ".$nombre_usuario." delete nomina y nomina tipo_sindicato where convencion is ".$convencion."','delete', 'Nomina-nomina_tipo_sindicato','".$convencion."',now(),'".$userid."')")->execute();
                 $transaction->commit();
                 }
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -365,8 +381,8 @@ class NominaController extends Controller
                
                  $dataProvider= new CActiveDataProvider('nomina',array(
                 'criteria'=>array(
-                'select'=>" id, cedula,cod_convencion",
-                'condition'=>"cod_convencion='".$_GET['convencion']."'"
+                'select'=>" id, cedula,cod_convencion, id_empresa",
+                'condition'=>"id_empresa='".$_GET['convencion']."'"
                 ),
                      
                 'pagination'=>array(
@@ -375,10 +391,7 @@ class NominaController extends Controller
                 )
                 );
                  
-                 
-                $valor=Yii::app()->db->createCommand('select * from nomina_tipo_sindicato where cod_convencion_nomina="'.$_GET['convencion'].'"')->queryAll(); 
-                $nomina=Yii::app()->db->createCommand('select * from nomina  where cod_convencion="'.$_GET['convencion'].'"')->queryAll(); 
-               
+                
                 $this->render('create_cargo_sindicato',array(
 			'dataProvider'=>$dataProvider, 
 		));
@@ -538,42 +551,6 @@ class NominaController extends Controller
         
        
     }
-        
-    public function llenar_check($caso,$ids, $estatus,$convencion){
-            
-          
-       if($estatus==1){
-           if(count($arr)>1){
-               for($i=0;$i<count($arr);$i++){
-                    $sql="insert into nomina_tipo_sindicato ('id_nomina','tipo_sindicato','cod_convencion_nomina') values ('".$arr[$i]."','".$caso."','".$convencion."')";  
-                     Yii::app()->db->createCommand($sql)->execute();
-               }
-           }else{
-                $sql="insert into nomina_tipo_sindicato ('id_nomina','tipo_sindicato','cod_convencion_nomina') values ('".$arr."','".$caso."','".$convencion."')";  
-                     Yii::app()->db->createCommand($sql)->execute();
-           }
-        
-       } 
-        
-        else{
-           
-         if(count($arr)>1){
-             
-             for($i=0;$i<count($arr);$i++){
-                    $sql="update set nomina_tipo_sindicato tipo_sindicato ='".$caso."' where id_nomina='".$arr[$i]."' and cod_convencion_nomina='".$convencion."'";  
-                     Yii::app()->db->createCommand($sql)->execute();
-               }
-             }else{
-           $sql="update nomina_tipo_sindicato set tipo_sindicato='".$caso."' where id_nomina='".$arr."' and cod_convencion_nomina='".$convencion."'";
-       //            Yii::app()->db->createCommand($sql)->execute();
-         }
-           
-           
-       }
-        
-        return 1; 
-        }    
-        
         
         
         

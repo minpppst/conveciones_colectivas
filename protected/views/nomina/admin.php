@@ -1,4 +1,4 @@
-<?php
+    <?php
 /* @var $this NominaController */
 /* @var $model Nomina */
 
@@ -88,7 +88,7 @@ or <b>=</b>)
                   'buttons'=>array(
                    'asociar'=>array(
                         'label'=>'Mostrar Nomina Y Cargo Sindicato',
-                            'url'=> 'Yii::app()->controller->createUrl("nomina/create_cargo_sindicato",array("convencion"=>$data->cod_convencion))',
+                            'url'=> 'Yii::app()->controller->createUrl("nomina/create_cargo_sindicato",array("convencion"=>$data->id_empresa))',
                               'imageUrl'=>Yii::app()->request->baseUrl.'/images/iconos/lapiz.png',
                    ),
                   'nomina'=>array(
@@ -106,7 +106,7 @@ or <b>=</b>)
                        'delete' => array(
                         'label'=>'Borrar Nomina-Sindicato',
                         'visible' => '!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin',
-                        'url'=> 'Yii::app()->controller->createUrl("nomina/delete",array("id"=>$data->cedula,"convencion"=>$data->cod_convencion))',
+                        'url'=> 'Yii::app()->controller->createUrl("nomina/delete",array("id"=>$data->cedula,"convencion"=>$data->id_empresa))',
                         //'options'=> array('confirm'=>$alert),
                            ),
                                 ),

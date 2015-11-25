@@ -95,46 +95,62 @@ public static function llenar_check1($caso,$ids,$accion){
         
         
         public static function llenar_check($caso,$arr, $estatus,$convencion){
-                
+               
             $transaction = Yii::app()->db->beginTransaction(); 
        try{
         
-           
-         
-       
        if($estatus==1){
-          
-           
-           
-           
-           
-           
+           $cadena="";
+           $cadena1="";
            if(strpos($arr,",")){
                $arr=explode(',',$arr);
-               
+               $nombre_usuario=Yii::app()->user->Name;
+               $userid=Yii::app()->user->id;
                for($i=0;$i<count($arr);$i++){
-                   $sql="select id from nomina_tipo_sindicato where id_nomina='".$arr[$i]."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
+                  echo $sql="select id from nomina_tipo_sindicato where id_nomina='".$arr[$i]."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
                    $resultado=Yii::app()->db->createCommand($sql)->execute();
                    
                    if($resultado==0){
-                   $sql="insert into nomina_tipo_sindicato (id_nomina,tipo_sindicato,cod_convencion_nomina) values ('".$arr[$i]."','".$caso."','".$convencion."')";  
-                     Yii::app()->db->createCommand($sql)->execute();
+                    $sql="insert into nomina_tipo_sindicato (id_nomina,tipo_sindicato,cod_convencion_nomina) values ('".$arr[$i]."','".$caso."','".$convencion."')";   
+                    Yii::app()->db->createCommand($sql)->execute();
+                    $cadena.=$arr[$i].",";
+                    if($i+1==count($arr)){
+                    Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                    values ('User ".$nombre_usuario." insert nomina_tipo_sindicato where id_nomina is  ".$cadena." y convencion is ".$convencion."','insert', 'nomina_tipo_sindicato','".$caso."',now(),'".$userid."')")->execute();  
+                    }
+                    
                    }else{
-                     $sql="update nomina_tipo_sindicato set  tipo_sindicato='".$caso."' where id_nomina='".$arr[$i]."' and  cod_convencion_nomina='".$convencion."'";  
+                    echo $sql="update nomina_tipo_sindicato set  tipo_sindicato='".$caso."' where id_nomina='".$arr[$i]."' and  cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'";  
                      Yii::app()->db->createCommand($sql)->execute();
+                     $cadena1.=$arr[$i].",";
+                     if($i+1==count($arr)){
+                    Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                        values ('User ".$nombre_usuario." update nomina_tipo_sindicato where id_nomina is  ".$cadena1." y convencion ".$convencion." set tipo en ".$caso."','update', 'nomina_tipo_sindicato','".$caso."',now(),'".$userid."')")->execute();  
+                    }
+                     
                    }
+                   
+                   
+                       
+                       
                      
                    }
            }else{
-               $sql="select id from nomina_tipo_sindicato where id_nomina='".$arr."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
-                   $resultado=Yii::app()->db->createCommand($sql)->execute();
-                  
-                 if($resultado==0){
+               $nombre_usuario=Yii::app()->user->Name;
+               $userid=Yii::app()->user->id;
+             echo  $sql="select id from nomina_tipo_sindicato where id_nomina='".$arr."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
+               $resultado=Yii::app()->db->createCommand($sql)->execute();
+                if($resultado==0){
                 $sql="insert into nomina_tipo_sindicato (id_nomina,tipo_sindicato,cod_convencion_nomina) values ('".$arr."','".$caso."','".$convencion."')";  
                 Yii::app()->db->createCommand($sql)->execute();
-                 }else{
-                $sql="update nomina_tipo_sindicato set  tipo_sindicato='".$caso."' where id_nomina='".$arr."' and  cod_convencion_nomina='".$convencion."'";  
+                Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                values ('User ".$nombre_usuario." insert nomina_tipo_sindicato where id_nomina is  ".$arr." y convencion is ".$convencion."','insert', 'nomina_tipo_sindicato','".$arr."-".$caso."',now(),'".$userid."')")->execute();  
+                
+                }else{
+                $sql="update nomina_tipo_sindicato set  tipo_sindicato='".$caso."' where id_nomina='".$arr."' and  cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
                      Yii::app()->db->createCommand($sql)->execute();
+                     Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                        values ('User ".$nombre_usuario." update nomina_tipo_sindicato where id_nomina is  ".$arr." y convencion ".$convencion." set tipo en ".$caso."','update', 'nomina_tipo_sindicato','".$arr."-".$caso."',now(),'".$userid."')")->execute();  
                      
                  }
            }
@@ -142,8 +158,11 @@ public static function llenar_check1($caso,$ids,$accion){
        } 
         
         else{
-           
-        if(strpos($arr,",")){
+           $cadena="";
+           $cadena1="";
+            $nombre_usuario=Yii::app()->user->Name;
+               $userid=Yii::app()->user->id;
+               if(strpos($arr,",")){
                $arr=explode(',',$arr);
                
                for($i=0;$i<count($arr);$i++){
@@ -151,8 +170,15 @@ public static function llenar_check1($caso,$ids,$accion){
                    $resultado=Yii::app()->db->createCommand($sql)->execute();
                    
                    if($resultado!=0){
-                   $sql="delete from nomina_tipo_sindicato  where id_nomina='".$arr[$i]."' and  cod_convencion_nomina='".$convencion."'"; 
-                     Yii::app()->db->createCommand($sql)->execute();
+                   
+                   $sql="delete from nomina_tipo_sindicato  where id_nomina='".$arr[$i]."' and  cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
+                   Yii::app()->db->createCommand($sql)->execute();
+                   $cadena.=$arr[$i].",";
+                   if($i+1==count($arr)){
+                   Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                    values ('User ".$nombre_usuario." delete nomina_tipo_sindicato where id_nomina is  ".$cadena." y convencion is ".$convencion."','delete', 'nomina_tipo_sindicato','".$cadena."-".$caso."',now(),'".$userid."')")->execute();  
+                   }
+                   
                    }
                      
                    }
@@ -161,8 +187,13 @@ public static function llenar_check1($caso,$ids,$accion){
                    $resultado=Yii::app()->db->createCommand($sql)->execute();
                   
                  if($resultado!=0){
-                $sql="delete from nomina_tipo_sindicato  where id_nomina='".$arr[$i]."' and  cod_convencion_nomina='".$convencion."'"; 
-                     Yii::app()->db->createCommand($sql)->execute();
+                $sql="delete from nomina_tipo_sindicato  where id_nomina='".$arr."' and  cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$caso."'"; 
+                Yii::app()->db->createCommand($sql)->execute();
+                Yii::app()->db->createCommand("insert into activerecordlog (`description`, `action`, `model`, `idModel`, `creationdate`, `userid`)
+                values ('User ".$nombre_usuario." delete nomina_tipo_sindicato where id_nomina is  ".$arr." y convencion is ".$convencion."','delete', 'nomina_tipo_sindicato','".$arr."-".$caso."',now(),'".$userid."')")->execute();  
+                   
+                     
+                     
                  }
            }
            

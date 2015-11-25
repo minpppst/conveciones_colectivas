@@ -31,6 +31,8 @@
  *
  * The followings are the available model relations:
  * @property Convencion $codConvencion
+ * @property Empresa $id_empresa
+ * @property Sindicato $id_sindicato
  */
 class Nomina extends CActiveRecord
 {
@@ -72,7 +74,7 @@ class Nomina extends CActiveRecord
                                 'wrongType'=>'Only csv allowed.',
                                 'tooLarge'=>'File too large! 5MB is the limit'),
                         
-			array('nombres,cedula nacionalidad, pais_origen, lugar_nacimiento, sexo, edad, estado_civil, nivel_educativo, grado_anio_aprobado, oficio_dentro_establecimiento, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciendo_profesion_anios, tiempo_ejerciendo_profesion_meses, remuneracion_antes_contra_empleado, remuneracion_antes_contra_obrero, remuneracion_despues_contra_empleado, remuneracion_despues_contra_obrero, carga_familiar, cod_convencion', 'required'),
+			array('nombres,cedula nacionalidad, pais_origen, lugar_nacimiento, sexo, edad, estado_civil, nivel_educativo, grado_anio_aprobado, oficio_dentro_establecimiento, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciendo_profesion_anios, tiempo_ejerciendo_profesion_meses, remuneracion_antes_contra_empleado, remuneracion_antes_contra_obrero, remuneracion_despues_contra_empleado, remuneracion_despues_contra_obrero, carga_familiar, cod_convencion, id_empresa, id_sindicato', 'required'),
 			array('edad, grado_anio_aprobado, codigo_ocupacion, tiempo_serv_establecimiento_anios, tiempo_serv_establecimiento_meses, tiempo_ejerciendo_profesion_anios, tiempo_ejerciendo_profesion_meses, carga_familiar', 'numerical', 'integerOnly'=>true),
 			array('nombres, pais_origen, lugar_nacimiento', 'length', 'max'=>100),
 			array('nacionalidad, sexo, estado_civil', 'length', 'max'=>1),
@@ -95,6 +97,8 @@ class Nomina extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'codConvencion' => array(self::BELONGS_TO, 'Convencion', 'cod_convencion'),
+                        'id_empresa' => array(self::BELONGS_TO, 'Empresa', 'id'),
+                        'id_sindicato' => array(self::BELONGS_TO, 'Sindicato', 'id'),
 		);
 	}
 
@@ -128,6 +132,8 @@ class Nomina extends CActiveRecord
 			'carga_familiar' => 'Carga Familiar',
                         'csvfile'=>'Subir Archivo CSV',
 			'cod_convencion' => 'Cod Convencion',
+                        'id_empresa' => 'Codigo Empresa',
+                        'id_sindicato' => 'Codigo Sindicato',
 		);
 	}
 
@@ -165,6 +171,8 @@ class Nomina extends CActiveRecord
 		$criteria->compare('remuneracion_despues_contra_obrero',$this->remuneracion_despues_contra_obrero,true);
 		$criteria->compare('carga_familiar',$this->carga_familiar);
 		$criteria->compare('cod_convencion',$this->cod_convencion,true);
+                $criteria->compare('id_empresa',$this->id_empresa,true);
+                $criteria->compare('id_sindicato',$this->id_sindicato,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -176,7 +184,7 @@ class Nomina extends CActiveRecord
         public function getUserLevel($id,$posicion,$convencion) {
         
             
-            $sql="select id from nomina_tipo_sindicato where id_nomina='".$id."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$posicion."'"; 
+           $sql="select id from nomina_tipo_sindicato where id_nomina='".$id."' and cod_convencion_nomina='".$convencion."' and tipo_sindicato='".$posicion."'"; 
             $resultado=Yii::app()->db->createCommand($sql)->execute();
             if ($resultado) {
         return 1;

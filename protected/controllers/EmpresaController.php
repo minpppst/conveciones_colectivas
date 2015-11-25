@@ -111,9 +111,9 @@ class EmpresaController extends Controller
                         $model->telefono=$_POST['telefono'][0]."/".$_POST['telefono'][1];
 			if($model->save()){
                              if($sindi==1){
-                            $this->redirect(array('sindicato/create','convencion'=>$model->cod_convencion));
+                            $this->redirect(array('sindicato/create','convencion'=>$model->cod_convencion, 'id_empresa'=>$model->id));
                              }else{
-                            $this->redirect(array('sindicato/create','convencion'=>$model->cod_convencion));
+                            $this->redirect(array('sindicato/create','convencion'=>$model->cod_convencion, 'id_empresa'=>$model->id));
                              }
                         }
 		}

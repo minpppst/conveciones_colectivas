@@ -75,11 +75,10 @@ class SindicatoController extends Controller
                   $resultado= Yii::app()->db->createCommand("SELECT cod_convencion as referencia
                         FROM convencion AS p
                         where id =".$_GET['convencion'])->queryRow();
-                  //echo $resultado['referencia']; exit();
+                 
                         $codi=explode("-",$resultado['referencia']);
                         
-                       // $resultado_sql= Yii::app()->db->createCommand("SELECT substring(min(cod_convencion),-2) as resultado from convencion where SUBSTRING_INDEX(cod_convencion, '-', 1)=$codi[0]")->queryRow();
-                        // ya tengo al padre ahora vamos a sacar una empresa que tenga al padre asociado
+                      
                         $resultado_sql= Yii::app()->db->createCommand("SELECT id as resultado from sindicato where SUBSTRING_INDEX(cod_convencion, '-', 1)=$codi[0]")->queryRow();
                         if($resultado_sql['resultado']>0){
                         $model=$this->loadModel($resultado_sql['resultado']);
@@ -98,8 +97,10 @@ class SindicatoController extends Controller
 		{
 			$model->attributes=$_POST['Sindicato'];
                         $model->telefono=$_POST['telefono'][0]."/".$_POST['telefono'][1];
-			if($model->save())
-				$this->redirect(array('Nomina/create','convencion'=>$model->cod_convencion));
+			if($model->save()){
+                               if($_GET['nueva']!=1)
+                             $this->redirect(array('Nomina/create','convencion'=>$model->cod_convencion, 'id_sindicato'=>$model->id));
+                        }
 		}
                 
                  if($bandera==0){
