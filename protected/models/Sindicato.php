@@ -167,7 +167,7 @@ class Sindicato extends CActiveRecord
 			'siglas' => 'Siglas',
 			'nro_boleta_inscripcion' => 'Nro. Boleta Inscripcion',
 			'folio_registro' => 'Folio Registro',
-			'tomo_registroo' => 'Tomo Registroo',
+			'tomo_registroo' => 'Tomo Registro',
 			'rif' => 'Rif',
 			'direccion' => 'Direccion',
 			'estado' => 'Estado',
