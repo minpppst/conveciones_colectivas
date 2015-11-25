@@ -54,6 +54,9 @@
 				array('label'=>'Administrar Usuarios'
 					, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
 					, 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin),
+                                    array('label'=>'Respaldos BD'
+					, 'url'=>'index.php?r=backup/default/index'
+					, 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin),
                                         
                               
                             
