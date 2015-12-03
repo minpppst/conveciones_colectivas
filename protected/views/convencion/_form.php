@@ -64,7 +64,7 @@ $(document).ready(function(){
                     
                 }?>
             
-                <?php echo $form->textField($model,'numero_expediente',array('size'=>20,'maxlength'=>20));?>
+                <?php echo $form->textField($model,'numero_expediente',array('size'=>20,'maxlength'=>20, 'placeholder'=>'000-0000-00-0000'));?>
 		<?php echo $form->error($model,'numero_expediente'); ?>
 	</div>
 
@@ -72,7 +72,7 @@ $(document).ready(function(){
 		<?php echo $form->labelEx($model,'inspectoria'); ?>
 		
 		 <?php echo $form->dropDownList($model,'inspectoria',
-                        CHtml::listData(Inspectoria::model()->findAll(array('order'=>'inspectoria ASC')),'id','inspectoria'),
+                        CHtml::listData(Inspectoria::model()->findAll(array('order'=>'inspectoria ASC', 'select'=>'id, concat(inspectoria, " - ",id) as inspectoria')),'id','inspectoria'),
                         array(
                     'ajax' => array(
                     'type' => 'POST',
@@ -272,6 +272,12 @@ $(document).ready(function(){
 		<?php echo $form->error($model,'fecha_auto_homo'); ?>
 	</div>
 
+        <div class="row">
+		<?php echo $form->labelEx($model,'nro_clausuras'); ?>
+		<?php echo $form->textField($model,'nro_clausuras'); ?>
+		<?php echo $form->error($model,'nro_clausuras'); ?>
+	</div>
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'costo_contrato'); ?>
 		<?php echo $form->textField($model,'costo_contrato',array('size'=>20,'maxlength'=>20)); ?>

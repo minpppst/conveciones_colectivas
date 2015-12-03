@@ -78,6 +78,23 @@ $aviso=0;
          <b><p style="color: red;">!Registro Incompleto¡. No Tiene Asociada Nomina (Para Asociar <a href=index.php?r=nomina/create&convencion=<?php echo $data->id; ?>>Aqui</a>)</p>
 	<br/>
         <?php
+             } else{
+                 
+            $connection = Yii::app()->db;
+            $sql = "select count(id) as resultado from clausuras where cod_convencion='".$data->id."'";
+            $command = $connection->createCommand($sql);
+            $dataReader = $command->query();
+            //print_r($dataReader);
+            $rows = $dataReader->readAll();
+             if($rows[0]['resultado']==0){ 
+                $aviso=1;
+                
+                 ?>
+         <b><p style="color: red;">!Registro Incompleto¡. No Tiene Asociada Clausuras (Para Asociar <a href=index.php?r=clausuras/create&convencion=<?php echo $data->id; ?>>Aqui</a>)</p>
+	<br/>
+        <?php 
+             }
+                 
              }
         
         
@@ -162,6 +179,13 @@ $aviso=0;
                         'url'=>array('nomina/create&convencion='.$data->id.'&nueva=1'),
                     
                 ),
+           
+           array(
+                        'label'=>CHtml::image(Yii::app()->request->baseUrl."/images/iconos/agregar_clausura.png").' Agregar Clausuras',
+                        'url'=>array('clausuras/create&convencion='.$data->id.'&nueva=1'),
+                    
+                ),
+           
         ),
         'encodeLabel' => false,
 ));

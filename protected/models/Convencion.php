@@ -16,6 +16,7 @@
  * @property string $fecha_venc
  * @property integer $duracion_meses
  * @property string $fecha_auto_homo
+ * @property integer $nro_clausuras
  * @property string $costo_contrato
  * @property string $costo_contrato_sin_prestaciones
  * @property string $cod_convencion
@@ -58,7 +59,7 @@ class Convencion extends CActiveRecord
                            $codigo="";
                             return array(
                         array('costo_contrato, costo_contrato_sin_prestaciones',  'validarambito'), 
-			array('nombre, numero_expediente, inspectoria, sector, ambito, edicion, fecha_deposito, fecha_inicio, fecha_venc, duracion_meses, fecha_auto_homo,'.$codigo.' cod_convencion', 'required'),
+			array('nombre, numero_expediente, inspectoria, sector, ambito,nro_clausuras  fecha_deposito, fecha_inicio, fecha_venc, duracion_meses, fecha_auto_homo,'.$codigo.' cod_convencion', 'required'),
 			array('sector, ambito, edicion, duracion_meses', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>255),
 			array('numero_expediente, costo_contrato, costo_contrato_sin_prestaciones', 'length', 'max'=>20),
@@ -67,6 +68,7 @@ class Convencion extends CActiveRecord
 			array('referencia', 'length', 'max'=>15), 
                         array('cod_convencion', 'unique', 'attributeName'=>'cod_convencion'), 
                         array('fecha_deposito, fecha_inicio, fecha_venc, fecha_auto_homo','formatear_fechas'),
+                        array('numero_expediente', 'expediente'),
                         // The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, nombre, numero_expediente, inspectoria, sector, ambito, edicion, fecha_deposito, fecha_inicio, fecha_venc, duracion_meses, fecha_auto_homo, costo_contrato, costo_contrato_sin_prestaciones, cod_convencion, referencia', 'safe', 'on'=>'search'),
@@ -86,6 +88,14 @@ class Convencion extends CActiveRecord
                                 
                                 }    
                             }
+                            
+                             public function expediente(){
+                                 if(!empty($this->numero_expediente)){
+            if(!preg_match("/^([0-9]{3})(-)([0-9]{4})(-)([0-9]{2})(-)([0-9]{4})$/",$this->numero_expediente)){
+                $this->addError('numero_expediente', 'El Nro. de Expediente no tiene el formato correcto, ejemplo: 000-0000-00-0000');
+            }
+                             }//fin de si esta vacio el campo
+            }//fin de validar expediente
                             
                             
                             public function formatear_fechas(){
@@ -150,7 +160,8 @@ class Convencion extends CActiveRecord
 			'fecha_venc' => 'Fecha De Venc.',
 			'duracion_meses' => 'Duracion En Meses',
 			'fecha_auto_homo' => 'Fecha Homologación',
-			'costo_contrato' => 'Costo Del Contrato',
+                        'nro_clausuras' => 'Nro Clausuras',
+			'costo_contrato' => 'Costo Del Contrato Total',
 			'costo_contrato_sin_prestaciones' => 'Costo Del Contrato Sin Prestaciones',
 			'cod_convencion' => 'Cod Convencion',
 			'referencia' => 'Referencia',
@@ -185,6 +196,7 @@ class Convencion extends CActiveRecord
 		$criteria->compare('costo_contrato_sin_prestaciones',$this->costo_contrato_sin_prestaciones,true);
 		$criteria->compare('cod_convencion',$this->cod_convencion,true);
 		$criteria->compare('referencia',$this->referencia,true);
+                $criteria->compare('nro_clausuras',$this->nro_clausuras,true);
                 $criteria->with[]='inspectoria0';
                 $criteria->addSearchCondition('inspectoria0.id',$this->inspectoria,true); 
 

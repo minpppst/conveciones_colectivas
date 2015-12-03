@@ -310,7 +310,7 @@ class NominaController extends Controller
            
                   try{
                 $transaction = Yii::app()->db->beginTransaction();
-              echo  $sql="select id from nomina_tipo_sindicato where cod_convencion_nomina='".$convencion."'";
+                $sql="select id from nomina_tipo_sindicato where cod_convencion_nomina='".$convencion."'";
                 $existe=Yii::app()->db->createCommand($sql)->execute();
                 if($existe!=0)
                 $sql="delete from nomina_tipo_sindicato where cod_convencion_nomina='".$convencion."'";

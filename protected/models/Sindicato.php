@@ -69,7 +69,7 @@ class Sindicato extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			
-                        array('nombre, siglas, nro_boleta_inscripcion, folio_registro, tomo_registroo, direccion, estado, municipio, parroquia, federacion_nacional, federacion_regional, sector, ambito, tipo_organizacion, fecha_registro, fecha_actualizacion, duracion_junta_directiva, fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones, cod_convencion', 'required'),
+                        array('nombre, siglas,  direccion, estado, municipio, parroquia,  sector, ambito, tipo_organizacion, fecha_registro, fecha_actualizacion, duracion_junta_directiva, fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones, cod_convencion', 'required'),
 			array('folio_registro, estado, municipio, parroquia, ambito, tipo_organizacion, duracion_junta_directiva', 'numerical', 'integerOnly'=>true),
 			array('nombre, tomo_registroo, direccion, federacion_nacional, federacion_regional', 'length', 'max'=>255),
 			array('siglas, rif, cod_convencion', 'length', 'max'=>20),
@@ -79,6 +79,7 @@ class Sindicato extends CActiveRecord
                         array('telefono','validartelefonoreal'),
                         array('telefono','validartelefono'),
                         array('nro_boleta_inscripcion','validarboleta'),
+                        array('rif', 'validarif'),
                         array('fecha_registro, fecha_informe_finanzas, fecha_actualizacion,fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones','formatear_fechas'),
                         //array('fecha_cese_vigencia','compare','compareAttribute'=>'fecha_inicio_vigencia','operator'=>'>=','message'=>'Fecha de Cese de Vigencia debe ser superior a Fecha de Inicio Vigencia'),
                         array('fecha_cese_vigencia','validar_fecha'),
@@ -122,6 +123,18 @@ class Sindicato extends CActiveRecord
                 $this->addError('fecha_cese_vigencia', 'Error, Fecha Cese de Vigencia debe ser mayor a Fecha Inicio Vigencia ');
             }
         }
+        
+         public function validarif() {
+            	$rif = substr($this->rif, 0);
+                    if(!empty($this->rif)){
+                if (0 === preg_match("/^([JPGV]{1}[0-9]{8})(-)([0-9]{1})$/", $rif) )
+                {
+            $this->addError('rif', 'El Rif No Tiene El Formato Correcto, ejemplo: V12345678-9');
+                }
+                    }
+                
+                }
+        
         public function formatear_fechas(){
                    
             
@@ -238,4 +251,14 @@ class Sindicato extends CActiveRecord
              {
              return CHtml::listData(Convencion::model()->findAll(array('order'=>'nombre')),'id','nombre');
              }
+             
+             
+               public function behaviors()
+                {
+                    return array(
+                        // Classname => path to Class
+                        'ActiveRecordLogableBehavior'=>
+                            'application.behaviors.ActiveRecordLogableBehavior',
+                    );
+                }
 }

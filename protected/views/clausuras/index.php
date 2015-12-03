@@ -2,17 +2,18 @@
 /* @var $this ClausurasController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Clausurases',
-);
+
 
 $this->menu=array(
-	array('label'=>'Create Clausuras', 'url'=>array('create')),
-	array('label'=>'Manage Clausuras', 'url'=>array('admin')),
+	
+	array('label'=>'Buscar Clausuras', 'url'=>array('admin')),
+        array('label'=>'Tipo Clausuras', 'url'=>array('tipoclausura/index')),
+        array('label'=>'Sub Tipo Clausuras', 'url'=>array('subtipo/index')),
+        array('label'=>'Campos Sub-Tipo', 'url'=>array('variableSubtipoClausura/index')),
 );
 ?>
 
-<h1>Clausurases</h1>
+<h1>Clausuras</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

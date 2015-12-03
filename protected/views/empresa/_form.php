@@ -32,7 +32,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'rif'); ?>
-		<?php echo $form->textField($model,'rif',array('size'=>20,'maxlength'=>20, 'placeholder'=>'Eje: V123456789')); ?>
+		<?php echo $form->textField($model,'rif',array('size'=>20,'maxlength'=>20, 'placeholder'=>'Eje: V12345678-9')); ?>
 		<?php echo $form->error($model,'rif'); ?>
 	</div>
 
@@ -186,7 +186,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'direccion'); ?>
-		<?php echo $form->textField($model,'direccion',array('size'=>60,'maxlength'=>255, 'placeholder'=>'Urb. Calle, Edif./Casa')); ?>
+		<?php echo $form->textField($model,'direccion',array('size'=>60,'maxlength'=>400, 'placeholder'=>'Urb. Calle, Edif./Casa')); ?>
 		<?php echo $form->error($model,'direccion'); ?>
 	</div>
 

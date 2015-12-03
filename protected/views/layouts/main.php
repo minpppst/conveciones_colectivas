@@ -47,6 +47,10 @@
                                     'url'=>array('/nomina/index'),
                                     'visible'=>!Yii::app()->user->isGuest),
                             
+                               array('label'=>'Clausuras'
+					, 'url'=>array('Clausuras/index'),
+					 'visible'=>!Yii::app()->user->isGuest),
+                             
                               array('label'=>'Reportes'
 					, 'url'=>'#'
 					, 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->isSuperAdmin),

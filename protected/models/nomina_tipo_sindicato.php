@@ -97,4 +97,14 @@ class nomina_tipo_sindicato extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+          public function behaviors()
+                {
+                    return array(
+                        // Classname => path to Class
+                        'ActiveRecordLogableBehavior'=>
+                            'application.behaviors.ActiveRecordLogableBehavior',
+                    );
+                }
 }

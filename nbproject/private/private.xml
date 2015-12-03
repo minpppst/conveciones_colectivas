@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/models/Clausuras.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/EmpresaController.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/models/Empresa.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/clausuras/_form.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/controllers/ClausurasController.php</file>
+            <file>file:/C:/wamp/www/convenciones_colectivas_resp/protected/views/empresa/_form.php</file>
+        </group>
     </open-files>
 </project-private>

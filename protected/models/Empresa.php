@@ -101,9 +101,9 @@ class Empresa extends CActiveRecord
            public function validarif() {
             	$rif = substr($this->rif, 0);
                 
-                if (0 === preg_match("/^[A-Z]\d{9}$/", $rif) )
+                if (0 === preg_match("/^([JPGV]{1}[0-9]{8})(-)([0-9]{1})$/", $rif) )
                 {
-            $this->addError('rif', 'El Rif No Tiene El Formato Correcto, ejemplo: V123456789');
+            $this->addError('rif', 'El Rif No Tiene El Formato Correcto, ejemplo: V12345678-9');
                 }
                 }
                 

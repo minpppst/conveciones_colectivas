@@ -2,14 +2,9 @@
 /* @var $this ClausurasController */
 /* @var $model Clausuras */
 
-$this->breadcrumbs=array(
-	'Clausurases'=>array('index'),
-	'Manage',
-);
-
 $this->menu=array(
-	array('label'=>'List Clausuras', 'url'=>array('index')),
-	array('label'=>'Create Clausuras', 'url'=>array('create')),
+	array('label'=>'Listar Clausuras', 'url'=>array('index')),
+	
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,14 +21,14 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Clausurases</h1>
+<h1>Buscar Clausuras</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+Puedes Colocar Operadores de comparación.  (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>) 
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -46,9 +41,32 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'numero_clausura',
-		'descripcion_clausura',
 		'cod_convencion',
+                array(
+                 'name'=>'cod_convencion',
+                 'value'=>'$data->codConvencion->nombre',  //Con esto se mostrará la descripción de la categoría en vez del id_categoria
+                 'filter'=> Clausuras::getListconvencion_clau(),    //Esto ya es un agregado, muestra un combobox con todas las categorias para poder filtrarlas, si no lo ponemos usa el id_categoria por defecto
+                 //Debemos de crear una función estática en el modelo Categorias que se llame getListCategorias(), esto es totalmente opcional
+                 ),
+		'nro_clausura',
+		'tipo_clausura',
+                 array(
+                 'name'=>'tipo_clausura',
+                 'value'=>'$data->tipoClausura->nombre_tipo_clausura',  //Con esto se mostrará la descripción de la categoría en vez del id_categoria
+                 'filter'=> Clausuras::getListtipo_clau(),    //Esto ya es un agregado, muestra un combobox con todas las categorias para poder filtrarlas, si no lo ponemos usa el id_categoria por defecto
+                 //Debemos de crear una función estática en el modelo Categorias que se llame getListCategorias(), esto es totalmente opcional
+                 ),
+		'sub_tipo',
+                array(
+                 'name'=>'sub_tipo',
+                 'value'=>'$data->subTipo->nombre_sub_tipo_clausura',  //Con esto se mostrará la descripción de la categoría en vez del id_categoria
+                 'filter'=> Clausuras::getListsubtipo_clau(),    //Esto ya es un agregado, muestra un combobox con todas las categorias para poder filtrarlas, si no lo ponemos usa el id_categoria por defecto
+                 //Debemos de crear una función estática en el modelo Categorias que se llame getListCategorias(), esto es totalmente opcional
+                 ),
+		//'id_variable',
+		
+		'valor',
+		
 		array(
 			'class'=>'CButtonColumn',
 		),

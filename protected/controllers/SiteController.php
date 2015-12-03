@@ -75,7 +75,8 @@ public function accessRules()
                         $criteria->compare('id', $rif['convencion'], true, 'OR');
                           
                         }else{
-                            $criteria->compare('nombre', $q, true, 'OR');
+                           // $criteria->condition('nombre', $q, true, 'OR');
+                            $criteria->condition="nombre LIKE  '%$q%'";
                             
                         }
                             

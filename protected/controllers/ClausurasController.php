@@ -14,8 +14,9 @@ class ClausurasController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'accessControl', // perform access control for CRUD operations
+			//'postOnly + delete', // we only allow deletion via POST request
+                     array('CrugeAccessControlFilter'),
 		);
 	}
 
@@ -28,7 +29,7 @@ class ClausurasController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','subtipo','cargar_campos','editar_campos'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -66,13 +67,66 @@ class ClausurasController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Clausuras']))
-		{
-			$model->attributes=$_POST['Clausuras'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
+                
+               
+		if(isset($_POST['Clausuras']) )
+		{    
+                 
+                 
+                    $mensaje1=1;
+                    if(!empty($_POST['Clausuras']['sub_tipo'])){
+                    $sql="select id, upper(nombre_variable) as nombre_variable from variable_subtipo_clausura where id_subtipo='".$_POST['Clausuras']['sub_tipo']."'";
+                    $resultado=YII::app()->db->createCommand($sql)->queryAll();
+                    
+                    try{
+                    $transaction = Yii::app()->db->beginTransaction();
+                   
+                    foreach($resultado as $valor){
+                        
+                         //Verificando que no exista en la misma convencion clausuras con distinto numero e iguales caracteristicas
+                        $verificar="select id from clausuras where cod_convencion='".$_POST['Clausuras']['cod_convencion']."' and nro_clausura='".$_POST['Clausuras']['nro_clausura']."' and tipo_clausura='".$_POST['Clausuras']['tipo_clausura']."' and sub_tipo='".$_POST['Clausuras']['sub_tipo']."' and id_variable='".$valor['id']."'";
+                        $verificando=YII::app()->db->createCommand($verificar)->queryAll();
+                       
+                        if(count($verificando)>0){
+                             Yii::app()->user->setFlash('error',"¡Error Al Registrar Clausura!, Ya Existe Una Clausura Con Estas Caracteristicas");
+                        $mensaje1=1;
+                             
+                        }else{
+                     $model=new Clausuras;
+                     if(isset($_POST[str_replace(' ', '', $valor['nombre_variable'])])){
+                     $model->attributes=$_POST['Clausuras'];
+                     
+                     $model->id_variable=$valor['id'];
+                     $model->valor=$_POST[str_replace(' ', '', $valor['nombre_variable'])];
+                     
+                     $model->save();
+                      $mensaje1=0; 
+                   
+                     $transaction->commit();
+                     }//si existe la variable se toma su valor e id de la variable en caso que no exista no se guardará
+                     }//fin de verificar
+                     
+                     } 
+                    }  catch(CDbException $error){
+                       
+                       //  Yii::app()->user->setFlash('error',$error);
+                          Yii::app()->user->setFlash('error',"¡Error Al Registrar Clausura!, Verificar Si Ya Existe");
+                          $mensaje1=1;
+                          $transaction->rollback();
+                    }
+                    if($mensaje1==0)
+                     Yii::app()->user->setFlash('success',"¡Datos grabados correctamente!");
+                     
+                   
+			//$model->attributes=$_POST['Clausuras'];
+			//if($model->save())
+			//	$this->redirect(array('view','id'=>$model->id));
+                }//fin del post sub
+                else{
+                    $model->attributes=$_POST['Clausuras'];
+                    $model->validate();
+                }
+                }
 
 		$this->render('create',array(
 			'model'=>$model,
@@ -86,19 +140,84 @@ class ClausurasController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+                
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+               
 		if(isset($_POST['Clausuras']))
 		{
-			$model->attributes=$_POST['Clausuras'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('update',array(
+                    if(!empty($_POST['Clausuras']['sub_tipo'])){
+                    //por motivos de programacion es mas facil borrar y volver a insertar el campo
+                    $verificar="select id from clausuras where cod_convencion='".$_POST['Clausuras']['cod_convencion']."' and nro_clausura='".$model->nro_clausura."' and tipo_clausura='".$model->tipo_clausura."' and sub_tipo='".$model->sub_tipo."'";
+                    $verificando=YII::app()->db->createCommand($verificar)->queryAll();
+                     $transaction = Yii::app()->db->beginTransaction();
+                    try{
+                    
+                   
+                    foreach($verificando as $valor2){
+                    $this->loadModel($valor2['id'])->delete();
+                     }//fin del segundo foreach
+                    $sql="select id, upper(nombre_variable) as nombre_variable from variable_subtipo_clausura where id_subtipo='".$_POST['Clausuras']['sub_tipo']."'";
+                    $resultado=YII::app()->db->createCommand($sql)->queryAll();
+                    
+                    foreach($resultado as $valor){
+                   $model=new Clausuras;
+                    
+                    //$model=$this->loadModel($valor2['id']);
+                    $verificar="select id from clausuras where cod_convencion='".$_POST['Clausuras']['cod_convencion']."'  and tipo_clausura='".$_POST['Clausuras']['tipo_clausura']."' and sub_tipo='".$_POST['Clausuras']['sub_tipo']."' and id_variable='".$valor['id']."'";
+                    $verificando=YII::app()->db->createCommand($verificar)->queryAll();
+                       
+                        if(count($verificando)>0){
+                             Yii::app()->user->setFlash('error',"¡Error Al Editar Clausura!, Ya Existe Una Clausura Con Estas Caracteristicas");
+                        $mensaje1=1;
+                             
+                        }else{
+                            //para editar necesitar recorrer la tabla clausuras para obtener los id correspondientes de la ediccion
+                            
+                            
+                            
+                     if(isset($_POST[str_replace(' ', '', $valor['nombre_variable'])])){
+                   
+                     $model->attributes=$_POST['Clausuras'];
+                     $model->id_variable=$valor['id'];
+                     $model->valor=$_POST[str_replace(' ', '', $valor['nombre_variable'])];
+                     
+                     //$model->validate();
+                     $model->save();
+                     
+                     }//si existe la variable se toma su valor e id de la variable en caso que no exista no se guardará
+                     }//fin de verificar
+                   
+                    }//fion del primer foreach
+                    
+                     $transaction->commit();
+                   
+                    }//del del try
+                     catch(CDbException $error){
+                       
+                       //  Yii::app()->user->setFlash('error',$error);
+                          Yii::app()->user->setFlash('error',"¡Error Al Registrar Clausura!, Verificar Si Ya Existe");
+                          $mensaje1=1;
+                         $transaction->rollback();
+                    }
+                    
+               
+                 
+		 $this->redirect(array('index'));
+                
+                }//fin del if de sub
+                else{
+                    
+                     $model->attributes=$_POST['Clausuras'];
+                    $model->validate();
+                    
+                }
+                     }
+                
+                
+                $this->render('update',array(
 			'model'=>$model,
 		));
 	}
@@ -109,8 +228,19 @@ class ClausurasController extends Controller
 	 * @param integer $id the ID of the model to be deleted
 	 */
 	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
+                
+	{       
+                    $clausuras="select  cod_convencion, nro_clausura from clausuras where id='".$id."'";
+                    $verificando1=YII::app()->db->createCommand($clausuras)->queryAll();
+                    
+                    $verificar2="select id from clausuras where cod_convencion='".$verificando1[0]['cod_convencion']."' and nro_clausura='".$verificando1[0]['nro_clausura']."'";
+                    $verificando3=YII::app()->db->createCommand($verificar2)->queryAll();
+                    foreach($verificando3 as $valor){
+                       $this->loadModel($valor['id'])->delete();
+                    }
+                    
+                
+		
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -122,7 +252,12 @@ class ClausurasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Clausuras');
+            
+                $criteria= new CDbCriteria;
+                //$criteria->select = 'AVG(t.column1) as cc';
+                $criteria->group = 'cod_convencion, nro_clausura,tipo_clausura,sub_tipo';
+                $dataProvider=new CActiveDataProvider('Clausuras',array( 'criteria'=>$criteria,));
+                
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -170,4 +305,142 @@ class ClausurasController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        
+         public function actionsubtipo(){
+            
+           $id_tipo= $_POST['Clausuras']['tipo_clausura']; 
+           $lista= SubTipo::model()->findAll('id_tipo_clausura= :tipo',array(':tipo'=>$id_tipo));
+            $lista=CHtml::listData($lista,'id','nombre_sub_tipo_clausura');
+           echo CHtml::tag('option',array('value'=>''),'Seleccione un Sub-Tipo Clausura...',true);
+            foreach ($lista as $valor =>$subtipo){
+                echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($subtipo),true);
+            }
+            
+        }
+        
+        
+        public function actioncargar_campos(){
+           $sub_tipo=$_GET['sub_tipo'];
+           $sql="select a.id, id_subtipo, tipo_campo, upper(nombre_variable) as nombre_variable, tamanio, upper(nomenclatura) as nomenclatura, tipo from variable_subtipo_clausura as a, tipos_campos as b where a.tipo_campo=b.id and a.id_subtipo='".$sub_tipo."'";
+           $resultado=YII::app()->db->createCommand($sql)->queryAll();
+           if(isset($_GET['sub_tipo']) && !empty($_GET['sub_tipo'])){
+            echo "<fieldset>
+                       	<legend><label  class='required'>Llenar Variables</label></legend>";
+           foreach ($resultado as $valor){
+               if($valor['tipo']=='entero' or $valor['tipo']=='texto'){
+                  
+               echo "<div class='row'>
+                   <label  class='required'>".$valor['nombre_variable']."' <span class='required'>*</span></label>
+                   <input type='text' name='".str_replace(' ', '', $valor['nombre_variable'])."' id='".str_replace(' ', '', $valor['nombre_variable'])."' size='".$valor['tamanio']."'
+                    /> ".$valor['nomenclatura']."
+                   </div>";
+               
+               echo "<div class='row'>
+                   <input type='hidden' id='id_variable' name='id_variable_".str_replace(' ', '', $valor['nombre_variable'])."' value='".$valor['id']."' />
+                    </div>";
+               
+               }
+               
+               if($valor['tipo']=='booleano'){
+                   
+                   echo "<div class='row'>
+                   <label  class='required'>".$valor['nombre_variable']."<span class='required'>*</span></label>
+                   <input type='checkbox' name='".str_replace(' ', '', $valor['nombre_variable'])."', id='".str_replace(' ', '', $valor['nombre_variable'])."' value='true'>
+                    ".$valor['nomenclatura']."
+                    </div>";
+                    echo "<div class='row'>
+                   <input type='hidden' id='id_variable' name='id_variable_".str_replace(' ', '', $valor['nombre_variable'])."' value='".$valor['id']."' />
+                    </div>"; 
+                    }
+               
+               /*if($valor['tipo']=='text'){
+                   
+               echo "<div class='row'>
+                   <label  class='required'>".$valor['nomenclatura']."' <span class='required'>*</span></label>
+                   <input type='text' name='".trim($valor['nombre_variable'])."' id='".trim($valor['nombre_variable'])."' size='".$valor['tamanio']."'
+                    />
+                   </div>";
+               
+               echo "<div class='row'>
+                   <input type='hidden' id='id_variable' name='id_variable_".trim($valor['nombre_variable'])." value='".$valor['id']."' />
+                    </div>"; 
+                   
+               }*/
+               
+           }
+           echo "</fieldset>";
+           
+           }else{
+               
+           }
+           
+        }
+        
+        
+        
+        
+        
+        
+         public function actioneditar_campos(){
+           $sub_tipo=$_GET['sub_tipo'];
+           $sql="select a.id, id_subtipo, tipo_campo, upper(nombre_variable) as nombre_variable, tamanio, upper(nomenclatura) as nomenclatura, tipo from variable_subtipo_clausura as a, tipos_campos as b where a.tipo_campo=b.id and a.id_subtipo='".$sub_tipo."'";
+           $resultado=YII::app()->db->createCommand($sql)->queryAll();
+           if(isset($_GET['sub_tipo']) && !empty($_GET['sub_tipo'])){
+            echo "<fieldset>
+                       	<legend><label  class='required'>Llenar Variables</label></legend>";
+           foreach ($resultado as $valor){
+               $sql="SELECT valor, id_variable FROM clausuras WHERE id_variable='".$valor['id']."' and cod_convencion='".$_GET['convencion']."'";
+               $resultado_valor=YII::app()->db->createCommand($sql)->queryAll(); 
+              
+               if($valor['tipo']=='entero' or $valor['tipo']=='texto'){
+              
+               
+               echo "<div class='row'>
+                   <label  class='required'>".$valor['nombre_variable']."' <span class='required'>*</span></label>
+               <input type='text' name='".str_replace(' ', '', $valor['nombre_variable'])."' id='".str_replace(' ', '', $valor['nombre_variable'])."' size='".$valor['tamanio']."' value='".(isset($resultado_valor[0]['valor']) || !empty($resultado_valor[0]['valor']) ? $resultado_valor[0]['valor'] : '')."'
+                    /> ".$valor['nomenclatura']."
+                   </div>";
+               
+               echo "<div class='row'>
+                   <input type='hidden' id='id_variable' name='id_variable_".str_replace(' ', '', $valor['nombre_variable'])."' value='".$valor['id']."' />
+                    </div>";
+               
+               }
+               
+               if($valor['tipo']=='booleano'){
+                  
+                   echo "<div class='row'>
+                   <label  class='required'>".$valor['nombre_variable']."<span class='required'>*</span></label>
+                   <input type='checkbox' 
+                   name='".str_replace(' ', '', $valor['nombre_variable'])."' 
+                   id='".str_replace(' ', '', $valor['nombre_variable'])."' 
+                   value= 'true'
+                   ".(isset($resultado_valor[0]['valor']) || !empty($resultado_valor[0]['valor']) ? 'checked' : '')."
+                    /> ".$valor['nomenclatura']."
+                    </div>";
+                   
+                   
+                    echo "<div class='row'>
+                   <input type='hidden' 
+                   id='id_variable' name='id_variable_".str_replace(' ', '', $valor['nombre_variable'])."' value='".$valor['id']."' />
+                    </div>"; 
+                    }
+               }
+           echo "</fieldset>";
+           
+           }else{
+               
+           }
+           
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }
