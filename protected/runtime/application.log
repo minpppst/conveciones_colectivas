@@ -9126,3 +9126,46 @@ HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=backup/de
 REQUEST_URI=/convenciones_colectivas_resp/index.php
 HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=site/index
 ---
+2015/12/04 13:05:53 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/12/04 13:40:35 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/12/07 13:26:55 [error] [php] PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ (trying to connect via tcp://localhost:3306) (C:\wamp\www\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 C:\wamp\www\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(2309): CrugeSession->getDbConnection()
+#6 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeSession.php(193): model()
+#8 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeSession.php(90): model()
+#9 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeFactory.php(46): loadModel()
+#10 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeUserManager.php(412): CrugeFactory->getICrugeSession()
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeWebUser.php(451): CrugeUserManager->loadSession()
+#12 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeWebUser.php(229): CrugeWebUser->getICrugeSession()
+#13 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeWebUser.php(242): CrugeWebUser->getId()
+#14 C:\wamp\www\yii\framework\web\auth\CWebUser.php(194): CrugeWebUser->getIsGuest()
+#15 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeWebUser.php(45): CrugeWebUser->init()
+#16 C:\wamp\www\yii\framework\base\CModule.php(387): CrugeWebUser->init()
+#17 C:\wamp\www\yii\framework\base\CModule.php(103): CWebApplication->getComponent()
+#18 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php(73): CWebApplication->__get()
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CWebApplication->run()
+REQUEST_URI=/convenciones_colectivas_resp/
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeSession.php (193)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\models\data\CrugeSession.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeFactory.php (46)
+2015/12/07 13:27:49 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---

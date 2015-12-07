@@ -85,7 +85,7 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyleft &copy; <?php echo date('Y'); ?> Por MINPPTRASS.<br/>
+		Copyleft &copy; <?php echo date('Y'); ?> Por MINPPPST.<br/>
 		
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
