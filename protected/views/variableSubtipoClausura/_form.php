@@ -19,7 +19,7 @@
 		<?php echo $form->labelEx($model,'id_subtipo'); 
 		echo $form->dropDownList($model, 'id_subtipo', CHtml::listData(SubTipo::model()->findAll(
                         array(
-                            'order' => 'nombre_sub_tipo_clausura ASC')), 'id', 'nombre_sub_tipo_clausura'), 
+                            'order' => 'id ASC')), 'id', 'nombre_sub_tipo_clausura'), 
                         array(
                             'prompt' => 'Seleccione un Sub Tipo de Clausura...',
                         )

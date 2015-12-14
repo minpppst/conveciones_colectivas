@@ -40,7 +40,7 @@ $this->menu=array(
 		array('name'=>'ambito',
                 'value'=>$model->ambito0->nombre_ambito,),
 		array('name'=>'tipo_organizacion',
-                'value'=>$model->tipoOrganizacion->descripcion,),
+                'value'=>$model->tipo_Organizacion->descripcion,),
                 
 		//'fecha_registro',
                 array('name'=>'fecha_registro',

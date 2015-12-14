@@ -61,7 +61,7 @@ class Convencion extends CActiveRecord
                         array('costo_contrato, costo_contrato_sin_prestaciones',  'validarambito'), 
 			array('nombre, numero_expediente, inspectoria, sector, ambito,nro_clausuras  fecha_deposito, fecha_inicio, fecha_venc, duracion_meses, fecha_auto_homo,'.$codigo.' cod_convencion', 'required'),
 			array('sector, ambito, edicion, duracion_meses', 'numerical', 'integerOnly'=>true),
-			array('nombre', 'length', 'max'=>255),
+			array('nombre', 'length', 'max'=>700),
 			array('numero_expediente, costo_contrato, costo_contrato_sin_prestaciones', 'length', 'max'=>20),
 			array('inspectoria', 'length', 'max'=>5),
 			array('cod_convencion', 'length', 'max'=>11),
@@ -91,8 +91,8 @@ class Convencion extends CActiveRecord
                             
                              public function expediente(){
                                  if(!empty($this->numero_expediente)){
-            if(!preg_match("/^([0-9]{3})(-)([0-9]{4})(-)([0-9]{2})(-)([0-9]{4})$/",$this->numero_expediente)){
-                $this->addError('numero_expediente', 'El Nro. de Expediente no tiene el formato correcto, ejemplo: 000-0000-00-0000');
+            if(!preg_match("/^([0-9]{3})(-)([0-9]{4})(-)([0-9]{2})(-)([0-9]{5})$/",$this->numero_expediente)){
+                $this->addError('numero_expediente', 'El Nro. de Expediente no tiene el formato correcto, ejemplo: 000-0000-00-00000');
             }
                              }//fin de si esta vacio el campo
             }//fin de validar expediente

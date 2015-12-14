@@ -99,7 +99,7 @@ class EmpresaController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Empresa']))
+		if(isset($_POST['Empresa']) && isset($_POST['yt0']))
 		{
                 if(isset($_POST['empresarelacional']))
                     $sindi=$_POST['empresarelacional'];
@@ -138,7 +138,7 @@ class EmpresaController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Empresa']) && isset($_POST['telefono']))
+		if(isset($_POST['Empresa']) && isset($_POST['telefono']) && isset($_POST['yt0']))
 		{
                     
                         

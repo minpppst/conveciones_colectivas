@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-11-2015 a las 19:17:38
+-- Tiempo de generación: 14-12-2015 a las 13:38:11
 -- Versión del servidor: 5.5.20
 -- Versión de PHP: 5.3.10
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `convenciones_colectivas`
+-- Base de datos: `convenciones_colectivas_prueba`
 --
 
 -- --------------------------------------------------------
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `activerecordlog` (
   `creationdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `userid` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=387 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=772 ;
 
 --
 -- Volcado de datos para la tabla `activerecordlog`
@@ -424,7 +424,383 @@ INSERT INTO `activerecordlog` (`id`, `description`, `action`, `model`, `idModel`
 (383, 'User admin created Convencion[34].', 'CREATE', 'Convencion', 34, '', '2015-11-25 18:47:21', '1'),
 (384, 'User admin created nomina ultimo id 2', 'CREATE', 'Nomina', 2, NULL, '2015-11-25 19:09:18', '1'),
 (385, 'User admin insert nomina_tipo_sindicato where id_nomina is  830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-11-25 19:09:32', '1'),
-(386, 'User admin insert nomina_tipo_sindicato where id_nomina is  830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-25 19:09:32', '1');
+(386, 'User admin insert nomina_tipo_sindicato where id_nomina is  830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879, y convencion is 3', 'insert', 'nomina_tipo_sindicato', 2, NULL, '2015-11-25 19:09:32', '1'),
+(387, 'User admin created Convencion[35].', 'CREATE', 'Convencion', 35, '', '2015-11-26 19:48:10', '1'),
+(388, 'User admin created Empresa[25].', 'CREATE', 'Empresa', 25, '', '2015-11-26 20:37:54', '1'),
+(389, 'User admin created nomina ultimo id 3', 'CREATE', 'Nomina', 3, NULL, '2015-11-26 21:41:01', '1'),
+(390, 'User admin created Convencion[36].', 'CREATE', 'Convencion', 36, '', '2015-11-27 15:22:35', '1'),
+(391, 'User admin created Empresa[26].', 'CREATE', 'Empresa', 26, '', '2015-11-27 16:31:41', '1'),
+(393, 'User admin created resumen_clausuras id 10', 'CREATE', 'ResumenClausuras', 10, NULL, '2015-11-30 21:06:39', '1'),
+(394, 'User admin created resumen_clausuras id 5', 'CREATE', 'ResumenClausuras', 5, NULL, '2015-11-30 21:08:55', '1'),
+(395, 'User admin created nomina ultimo id 4', 'CREATE', 'Nomina', 4, NULL, '2015-11-30 21:29:39', '1'),
+(396, 'User admin insert nomina_tipo_sindicato where id_nomina is  881 y convencion is 21', 'insert', 'nomina_tipo_sindicato', 881, NULL, '2015-11-30 21:29:46', '1'),
+(405, 'User admin created resumen_clausuras id 16', 'CREATE', 'ResumenClausuras', 16, NULL, '2015-12-01 13:41:26', '1'),
+(406, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:26', '1'),
+(407, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:26', '1'),
+(408, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:26', '1'),
+(409, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:26', '1'),
+(410, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:46', '1'),
+(411, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:46', '1'),
+(412, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:46', '1'),
+(413, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:46', '1'),
+(414, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:41:46', '1'),
+(415, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:43:39', '1'),
+(416, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:43:39', '1'),
+(417, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:43:39', '1'),
+(418, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:43:39', '1'),
+(419, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:43:39', '1'),
+(420, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:10', '1'),
+(421, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:10', '1'),
+(422, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:10', '1'),
+(423, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:10', '1'),
+(424, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:10', '1'),
+(425, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:26', '1'),
+(426, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:26', '1'),
+(427, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:26', '1'),
+(428, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:26', '1'),
+(429, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:44:26', '1'),
+(430, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:45:03', '1'),
+(431, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:45:03', '1'),
+(432, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:45:03', '1'),
+(433, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:45:03', '1'),
+(434, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:45:03', '1'),
+(435, 'User admin created resumen_clausuras id 17', 'CREATE', 'ResumenClausuras', 17, NULL, '2015-12-01 13:59:01', '1'),
+(436, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:59:01', '1'),
+(437, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:59:01', '1'),
+(438, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:59:01', '1'),
+(439, 'User admin created resumen_clausuras id 0', 'CREATE', 'ResumenClausuras', 0, NULL, '2015-12-01 13:59:01', '1'),
+(440, 'User admin delete resumen_clausuras where convencion is 8', 'delete', 'ResumenClausuras', 8, NULL, '2015-12-01 15:25:21', '1'),
+(441, 'User admin created resumen_clausuras id 18', 'CREATE', 'ResumenClausuras', 18, NULL, '2015-12-01 15:37:22', '1'),
+(442, 'User admin created resumen_clausuras id 19', 'CREATE', 'ResumenClausuras', 19, NULL, '2015-12-01 15:37:22', '1'),
+(443, 'User admin created resumen_clausuras id 20', 'CREATE', 'ResumenClausuras', 20, NULL, '2015-12-01 15:37:22', '1'),
+(444, 'User admin created resumen_clausuras id 21', 'CREATE', 'ResumenClausuras', 21, NULL, '2015-12-01 15:37:22', '1'),
+(445, 'User admin created resumen_clausuras id 22', 'CREATE', 'ResumenClausuras', 22, NULL, '2015-12-01 15:37:22', '1'),
+(446, 'User admin update resumen_clausuras id 0 la cantidad de 11', 'UPDATE', 'ResumenClausuras', 0, NULL, '2015-12-01 15:40:32', '1'),
+(447, 'User admin update resumen_clausuras id 0 la cantidad de 13', 'UPDATE', 'ResumenClausuras', 0, NULL, '2015-12-01 15:40:32', '1'),
+(448, 'User admin update resumen_clausuras id 0 la cantidad de 14', 'UPDATE', 'ResumenClausuras', 0, NULL, '2015-12-01 15:40:32', '1'),
+(449, 'User admin update resumen_clausuras id 0 la cantidad de 16', 'UPDATE', 'ResumenClausuras', 0, NULL, '2015-12-01 15:40:32', '1'),
+(450, 'User admin update resumen_clausuras id 0 la cantidad de 17', 'UPDATE', 'ResumenClausuras', 0, NULL, '2015-12-01 15:40:32', '1'),
+(451, 'User admin update resumen_clausuras convencion 8 la cantidad de 20', 'UPDATE', 'ResumenClausuras', 1, NULL, '2015-12-01 15:44:41', '1'),
+(452, 'User admin update resumen_clausuras convencion 8 la cantidad de 13', 'UPDATE', 'ResumenClausuras', 2, NULL, '2015-12-01 15:44:41', '1'),
+(453, 'User admin update resumen_clausuras convencion 8 la cantidad de 14', 'UPDATE', 'ResumenClausuras', 3, NULL, '2015-12-01 15:44:41', '1'),
+(454, 'User admin update resumen_clausuras convencion 8 la cantidad de 16', 'UPDATE', 'ResumenClausuras', 4, NULL, '2015-12-01 15:44:41', '1'),
+(455, 'User admin update resumen_clausuras convencion 8 la cantidad de 17', 'UPDATE', 'ResumenClausuras', 5, NULL, '2015-12-01 15:44:41', '1'),
+(456, 'User admin deleted Clausuras[82].', 'DELETE', 'Clausuras', 82, '', '2015-12-02 22:01:35', '1'),
+(457, 'User admin created Clausuras[83].', 'CREATE', 'Clausuras', 83, '', '2015-12-02 22:04:05', '1'),
+(458, 'User admin deleted Clausuras[83].', 'DELETE', 'Clausuras', 83, '', '2015-12-03 02:09:01', '1'),
+(460, 'User admin created Clausuras[85].', 'CREATE', 'Clausuras', 85, '', '2015-12-03 02:11:42', '1'),
+(461, 'User admin deleted Clausuras[85].', 'DELETE', 'Clausuras', 85, '', '2015-12-03 02:14:29', '1'),
+(462, 'User admin created Clausuras[86].', 'CREATE', 'Clausuras', 86, '', '2015-12-03 02:14:29', '1'),
+(463, 'User admin created Clausuras[87].', 'CREATE', 'Clausuras', 87, '', '2015-12-03 02:15:10', '1'),
+(464, 'User admin deleted Clausuras[86].', 'DELETE', 'Clausuras', 86, '', '2015-12-03 02:15:32', '1'),
+(465, 'User admin created Clausuras[88].', 'CREATE', 'Clausuras', 88, '', '2015-12-03 13:18:01', '1'),
+(466, 'User admin deleted Clausuras[87].', 'DELETE', 'Clausuras', 87, '', '2015-12-03 13:21:51', '1'),
+(467, 'User admin deleted Clausuras[88].', 'DELETE', 'Clausuras', 88, '', '2015-12-03 13:21:51', '1'),
+(468, 'User admin created Clausuras[89].', 'CREATE', 'Clausuras', 89, '', '2015-12-03 13:21:51', '1'),
+(469, 'User admin created Clausuras[90].', 'CREATE', 'Clausuras', 90, '', '2015-12-03 13:21:51', '1'),
+(470, 'User admin created Clausuras[91].', 'CREATE', 'Clausuras', 91, '', '2015-12-03 13:24:07', '1'),
+(471, 'User admin deleted Clausuras[89].', 'DELETE', 'Clausuras', 89, '', '2015-12-03 13:27:44', '1'),
+(472, 'User admin deleted Clausuras[90].', 'DELETE', 'Clausuras', 90, '', '2015-12-03 13:27:44', '1'),
+(473, 'User admin created Clausuras[92].', 'CREATE', 'Clausuras', 92, '', '2015-12-03 13:27:44', '1'),
+(474, 'User admin deleted Clausuras[92].', 'DELETE', 'Clausuras', 92, '', '2015-12-03 13:27:52', '1'),
+(475, 'User admin created Clausuras[93].', 'CREATE', 'Clausuras', 93, '', '2015-12-03 13:27:53', '1'),
+(476, 'User admin created Clausuras[94].', 'CREATE', 'Clausuras', 94, '', '2015-12-03 13:27:53', '1'),
+(477, 'User admin deleted Clausuras[91].', 'DELETE', 'Clausuras', 91, '', '2015-12-03 13:28:08', '1'),
+(478, 'User admin created Clausuras[95].', 'CREATE', 'Clausuras', 95, '', '2015-12-03 13:28:37', '1'),
+(479, 'User admin deleted Clausuras[93].', 'DELETE', 'Clausuras', 93, '', '2015-12-03 13:40:10', '1'),
+(480, 'User admin deleted Clausuras[94].', 'DELETE', 'Clausuras', 94, '', '2015-12-03 13:40:10', '1'),
+(481, 'User admin created Clausuras[96].', 'CREATE', 'Clausuras', 96, '', '2015-12-03 13:40:10', '1'),
+(482, 'User admin created SubTipo[3].', 'CREATE', 'SubTipo', 3, '', '2015-12-03 14:59:06', '1'),
+(483, 'User admin created VariableSubtipoClausura[4].', 'CREATE', 'VariableSubtipoClausura', 4, '', '2015-12-03 15:00:01', '1'),
+(484, 'User admin created Clausuras[97].', 'CREATE', 'Clausuras', 97, '', '2015-12-03 15:00:27', '1'),
+(485, 'User admin deleted Clausuras[97].', 'DELETE', 'Clausuras', 97, '', '2015-12-03 15:00:44', '1'),
+(486, 'User cargador1 deleted VariableSubtipoClausura[2].', 'DELETE', 'VariableSubtipoClausura', 2, '', '2015-12-03 15:35:35', '3'),
+(487, 'User cargador1 created Convencion[37].', 'CREATE', 'Convencion', 37, '', '2015-12-03 15:39:28', '3'),
+(488, 'User cargador1 created Empresa[27].', 'CREATE', 'Empresa', 27, '', '2015-12-03 15:40:43', '3'),
+(489, 'User cargador1 created Sindicato[19].', 'CREATE', 'Sindicato', 19, '', '2015-12-03 15:51:56', '3'),
+(490, 'User cargador1 created nomina ultimo id 939', 'CREATE', 'Nomina', 939, NULL, '2015-12-03 16:08:10', '3'),
+(491, 'User cargador1 created Clausuras[97].', 'CREATE', 'Clausuras', 97, '', '2015-12-03 16:08:44', '3'),
+(492, 'User cargador1 created Clausuras[98].', 'CREATE', 'Clausuras', 98, '', '2015-12-03 16:08:54', '3'),
+(493, 'User admin created SubTipo[4].', 'CREATE', 'SubTipo', 4, '', '2015-12-08 13:31:49', '1'),
+(494, 'User admin created VariableSubtipoClausura[5].', 'CREATE', 'VariableSubtipoClausura', 5, '', '2015-12-08 13:32:34', '1'),
+(495, 'User admin created VariableSubtipoClausura[6].', 'CREATE', 'VariableSubtipoClausura', 6, '', '2015-12-08 13:33:11', '1'),
+(496, 'User admin created Clausuras[99].', 'CREATE', 'Clausuras', 99, '', '2015-12-08 13:33:34', '1'),
+(497, 'User admin created Clausuras[100].', 'CREATE', 'Clausuras', 100, '', '2015-12-08 13:33:34', '1'),
+(498, 'User admin deleted Clausuras[99].', 'DELETE', 'Clausuras', 99, '', '2015-12-08 13:39:20', '1'),
+(499, 'User admin deleted Clausuras[100].', 'DELETE', 'Clausuras', 100, '', '2015-12-08 13:39:20', '1'),
+(500, 'User admin deleted VariableSubtipoClausura[5].', 'DELETE', 'VariableSubtipoClausura', 5, '', '2015-12-08 13:40:03', '1'),
+(501, 'User admin deleted VariableSubtipoClausura[6].', 'DELETE', 'VariableSubtipoClausura', 6, '', '2015-12-08 13:40:07', '1'),
+(502, 'User admin created VariableSubtipoClausura[7].', 'CREATE', 'VariableSubtipoClausura', 7, '', '2015-12-08 13:45:21', '1'),
+(503, 'User admin created VariableSubtipoClausura[8].', 'CREATE', 'VariableSubtipoClausura', 8, '', '2015-12-08 13:45:42', '1'),
+(504, 'User admin created Clausuras[101].', 'CREATE', 'Clausuras', 101, '', '2015-12-08 13:46:02', '1'),
+(505, 'User admin created Clausuras[102].', 'CREATE', 'Clausuras', 102, '', '2015-12-08 13:46:02', '1'),
+(506, 'User admin deleted Clausuras[101].', 'DELETE', 'Clausuras', 101, '', '2015-12-08 13:49:01', '1'),
+(507, 'User admin deleted Clausuras[102].', 'DELETE', 'Clausuras', 102, '', '2015-12-08 13:49:01', '1'),
+(508, 'User admin created Clausuras[103].', 'CREATE', 'Clausuras', 103, '', '2015-12-08 13:49:56', '1'),
+(509, 'User admin created Clausuras[104].', 'CREATE', 'Clausuras', 104, '', '2015-12-08 13:49:56', '1'),
+(510, 'User admin deleted Clausuras[103].', 'DELETE', 'Clausuras', 103, '', '2015-12-08 13:51:43', '1'),
+(511, 'User admin deleted Clausuras[104].', 'DELETE', 'Clausuras', 104, '', '2015-12-08 13:51:43', '1'),
+(512, 'User admin created Clausuras[105].', 'CREATE', 'Clausuras', 105, '', '2015-12-08 13:51:59', '1'),
+(513, 'User admin created Clausuras[106].', 'CREATE', 'Clausuras', 106, '', '2015-12-08 13:51:59', '1'),
+(514, 'User admin created SubTipo[5].', 'CREATE', 'SubTipo', 5, '', '2015-12-08 16:02:13', '1'),
+(515, 'User admin created SubTipo[6].', 'CREATE', 'SubTipo', 6, '', '2015-12-08 16:02:51', '1'),
+(516, 'User admin deleted Clausuras[96].', 'DELETE', 'Clausuras', 96, '', '2015-12-08 16:04:24', '1'),
+(517, 'User admin deleted Clausuras[95].', 'DELETE', 'Clausuras', 95, '', '2015-12-08 16:04:27', '1'),
+(518, 'User admin deleted Clausuras[105].', 'DELETE', 'Clausuras', 105, '', '2015-12-08 16:04:31', '1'),
+(519, 'User admin deleted Clausuras[106].', 'DELETE', 'Clausuras', 106, '', '2015-12-08 16:04:31', '1'),
+(520, 'User admin deleted Clausuras[98].', 'DELETE', 'Clausuras', 98, '', '2015-12-08 16:04:34', '1'),
+(521, 'User admin deleted Clausuras[97].', 'DELETE', 'Clausuras', 97, '', '2015-12-08 16:04:37', '1'),
+(522, 'User admin deleted VariableSubtipoClausura[1].', 'DELETE', 'VariableSubtipoClausura', 1, '', '2015-12-08 16:05:10', '1'),
+(523, 'User admin deleted VariableSubtipoClausura[3].', 'DELETE', 'VariableSubtipoClausura', 3, '', '2015-12-08 16:05:13', '1'),
+(524, 'User admin deleted VariableSubtipoClausura[4].', 'DELETE', 'VariableSubtipoClausura', 4, '', '2015-12-08 16:05:17', '1'),
+(525, 'User admin deleted VariableSubtipoClausura[7].', 'DELETE', 'VariableSubtipoClausura', 7, '', '2015-12-08 16:05:20', '1'),
+(526, 'User admin deleted VariableSubtipoClausura[8].', 'DELETE', 'VariableSubtipoClausura', 8, '', '2015-12-08 16:05:22', '1'),
+(527, 'User admin deleted SubTipo[1].', 'DELETE', 'SubTipo', 1, '', '2015-12-08 16:05:39', '1'),
+(528, 'User admin deleted SubTipo[2].', 'DELETE', 'SubTipo', 2, '', '2015-12-08 16:05:42', '1'),
+(529, 'User admin deleted SubTipo[3].', 'DELETE', 'SubTipo', 3, '', '2015-12-08 16:05:46', '1'),
+(530, 'User admin deleted SubTipo[4].', 'DELETE', 'SubTipo', 4, '', '2015-12-08 16:05:51', '1'),
+(531, 'User admin created SubTipo[7].', 'CREATE', 'SubTipo', 7, '', '2015-12-08 16:06:20', '1'),
+(532, 'User admin created SubTipo[8].', 'CREATE', 'SubTipo', 8, '', '2015-12-08 16:06:39', '1'),
+(533, 'User admin created SubTipo[9].', 'CREATE', 'SubTipo', 9, '', '2015-12-08 16:07:02', '1'),
+(534, 'User admin created SubTipo[10].', 'CREATE', 'SubTipo', 10, '', '2015-12-08 16:07:35', '1'),
+(535, 'User admin created SubTipo[11].', 'CREATE', 'SubTipo', 11, '', '2015-12-08 16:08:10', '1'),
+(536, 'User admin created SubTipo[12].', 'CREATE', 'SubTipo', 12, '', '2015-12-08 16:08:24', '1'),
+(537, 'User admin created SubTipo[13].', 'CREATE', 'SubTipo', 13, '', '2015-12-08 16:09:02', '1'),
+(538, 'User admin created SubTipo[14].', 'CREATE', 'SubTipo', 14, '', '2015-12-08 16:09:27', '1'),
+(539, 'User admin created SubTipo[15].', 'CREATE', 'SubTipo', 15, '', '2015-12-08 16:11:50', '1'),
+(540, 'User admin created SubTipo[16].', 'CREATE', 'SubTipo', 16, '', '2015-12-08 16:12:42', '1'),
+(541, 'User admin created SubTipo[17].', 'CREATE', 'SubTipo', 17, '', '2015-12-08 16:13:02', '1'),
+(542, 'User admin created SubTipo[18].', 'CREATE', 'SubTipo', 18, '', '2015-12-08 16:13:29', '1'),
+(543, 'User admin created SubTipo[19].', 'CREATE', 'SubTipo', 19, '', '2015-12-08 16:13:45', '1'),
+(544, 'User admin created SubTipo[20].', 'CREATE', 'SubTipo', 20, '', '2015-12-08 16:14:29', '1'),
+(545, 'User admin created SubTipo[21].', 'CREATE', 'SubTipo', 21, '', '2015-12-08 16:14:45', '1'),
+(546, 'User admin created SubTipo[22].', 'CREATE', 'SubTipo', 22, '', '2015-12-08 16:15:01', '1'),
+(547, 'User admin created SubTipo[23].', 'CREATE', 'SubTipo', 23, '', '2015-12-08 16:15:13', '1'),
+(548, 'User admin created SubTipo[24].', 'CREATE', 'SubTipo', 24, '', '2015-12-08 16:15:35', '1'),
+(549, 'User admin created SubTipo[25].', 'CREATE', 'SubTipo', 25, '', '2015-12-08 16:16:22', '1'),
+(550, 'User admin created SubTipo[26].', 'CREATE', 'SubTipo', 26, '', '2015-12-08 16:16:45', '1'),
+(551, 'User admin created SubTipo[27].', 'CREATE', 'SubTipo', 27, '', '2015-12-08 16:17:01', '1'),
+(552, 'User admin created SubTipo[28].', 'CREATE', 'SubTipo', 28, '', '2015-12-08 16:17:23', '1'),
+(553, 'User admin created SubTipo[29].', 'CREATE', 'SubTipo', 29, '', '2015-12-08 16:17:38', '1'),
+(554, 'User admin created SubTipo[30].', 'CREATE', 'SubTipo', 30, '', '2015-12-08 16:17:55', '1'),
+(555, 'User admin created SubTipo[31].', 'CREATE', 'SubTipo', 31, '', '2015-12-08 16:18:28', '1'),
+(556, 'User admin created SubTipo[32].', 'CREATE', 'SubTipo', 32, '', '2015-12-08 16:18:49', '1'),
+(557, 'User admin created SubTipo[33].', 'CREATE', 'SubTipo', 33, '', '2015-12-08 16:19:14', '1'),
+(558, 'User admin created SubTipo[34].', 'CREATE', 'SubTipo', 34, '', '2015-12-08 16:20:44', '1'),
+(559, 'User admin created SubTipo[35].', 'CREATE', 'SubTipo', 35, '', '2015-12-08 16:21:13', '1'),
+(560, 'User admin created SubTipo[36].', 'CREATE', 'SubTipo', 36, '', '2015-12-08 16:21:25', '1'),
+(561, 'User admin created SubTipo[37].', 'CREATE', 'SubTipo', 37, '', '2015-12-08 16:21:40', '1'),
+(562, 'User admin created SubTipo[38].', 'CREATE', 'SubTipo', 38, '', '2015-12-08 16:22:54', '1'),
+(563, 'User admin created SubTipo[39].', 'CREATE', 'SubTipo', 39, '', '2015-12-08 16:23:11', '1'),
+(564, 'User admin created SubTipo[40].', 'CREATE', 'SubTipo', 40, '', '2015-12-08 16:23:28', '1'),
+(565, 'User admin created SubTipo[41].', 'CREATE', 'SubTipo', 41, '', '2015-12-08 16:23:39', '1'),
+(566, 'User admin created SubTipo[42].', 'CREATE', 'SubTipo', 42, '', '2015-12-08 16:23:58', '1'),
+(567, 'User admin created SubTipo[43].', 'CREATE', 'SubTipo', 43, '', '2015-12-08 16:24:13', '1'),
+(568, 'User admin created SubTipo[44].', 'CREATE', 'SubTipo', 44, '', '2015-12-08 16:25:05', '1'),
+(569, 'User admin created SubTipo[45].', 'CREATE', 'SubTipo', 45, '', '2015-12-08 16:25:34', '1'),
+(570, 'User admin created SubTipo[46].', 'CREATE', 'SubTipo', 46, '', '2015-12-08 16:25:45', '1'),
+(571, 'User admin created SubTipo[47].', 'CREATE', 'SubTipo', 47, '', '2015-12-08 16:25:58', '1'),
+(572, 'User admin created SubTipo[48].', 'CREATE', 'SubTipo', 48, '', '2015-12-08 16:26:39', '1'),
+(573, 'User admin created SubTipo[49].', 'CREATE', 'SubTipo', 49, '', '2015-12-08 16:27:07', '1'),
+(574, 'User admin created SubTipo[50].', 'CREATE', 'SubTipo', 50, '', '2015-12-08 16:27:22', '1'),
+(575, 'User admin created SubTipo[51].', 'CREATE', 'SubTipo', 51, '', '2015-12-08 16:27:39', '1'),
+(576, 'User admin created SubTipo[52].', 'CREATE', 'SubTipo', 52, '', '2015-12-08 16:30:14', '1'),
+(577, 'User admin created SubTipo[53].', 'CREATE', 'SubTipo', 53, '', '2015-12-08 16:30:26', '1'),
+(578, 'User admin created SubTipo[54].', 'CREATE', 'SubTipo', 54, '', '2015-12-08 16:30:37', '1'),
+(579, 'User admin created SubTipo[55].', 'CREATE', 'SubTipo', 55, '', '2015-12-08 16:32:22', '1'),
+(580, 'User admin created SubTipo[56].', 'CREATE', 'SubTipo', 56, '', '2015-12-08 16:32:46', '1'),
+(581, 'User admin created SubTipo[57].', 'CREATE', 'SubTipo', 57, '', '2015-12-08 16:33:08', '1'),
+(582, 'User admin created SubTipo[58].', 'CREATE', 'SubTipo', 58, '', '2015-12-08 16:33:30', '1'),
+(583, 'User admin created SubTipo[59].', 'CREATE', 'SubTipo', 59, '', '2015-12-08 16:33:50', '1'),
+(584, 'User admin created SubTipo[60].', 'CREATE', 'SubTipo', 60, '', '2015-12-08 16:34:05', '1'),
+(585, 'User admin created SubTipo[61].', 'CREATE', 'SubTipo', 61, '', '2015-12-08 16:34:15', '1'),
+(586, 'User admin created SubTipo[62].', 'CREATE', 'SubTipo', 62, '', '2015-12-08 16:34:26', '1'),
+(587, 'User admin created SubTipo[63].', 'CREATE', 'SubTipo', 63, '', '2015-12-08 16:34:38', '1'),
+(588, 'User admin created SubTipo[64].', 'CREATE', 'SubTipo', 64, '', '2015-12-08 16:35:03', '1'),
+(589, 'User admin created TipoClausura[6].', 'CREATE', 'TipoClausura', 6, '', '2015-12-08 16:36:31', '1'),
+(590, 'User admin created SubTipo[65].', 'CREATE', 'SubTipo', 65, '', '2015-12-08 16:36:53', '1'),
+(591, 'User admin created SubTipo[66].', 'CREATE', 'SubTipo', 66, '', '2015-12-08 16:37:06', '1'),
+(592, 'User admin created SubTipo[67].', 'CREATE', 'SubTipo', 67, '', '2015-12-08 16:37:18', '1'),
+(593, 'User admin created SubTipo[68].', 'CREATE', 'SubTipo', 68, '', '2015-12-08 16:37:35', '1'),
+(594, 'User admin created SubTipo[69].', 'CREATE', 'SubTipo', 69, '', '2015-12-08 16:38:13', '1'),
+(595, 'User admin created SubTipo[70].', 'CREATE', 'SubTipo', 70, '', '2015-12-08 16:38:32', '1'),
+(596, 'User admin created SubTipo[71].', 'CREATE', 'SubTipo', 71, '', '2015-12-08 16:38:53', '1'),
+(597, 'User admin created SubTipo[72].', 'CREATE', 'SubTipo', 72, '', '2015-12-08 16:39:19', '1'),
+(598, 'User admin created SubTipo[73].', 'CREATE', 'SubTipo', 73, '', '2015-12-08 16:39:50', '1'),
+(599, 'User admin created SubTipo[74].', 'CREATE', 'SubTipo', 74, '', '2015-12-08 16:40:00', '1'),
+(600, 'User admin created SubTipo[75].', 'CREATE', 'SubTipo', 75, '', '2015-12-08 16:40:14', '1'),
+(601, 'User admin created SubTipo[76].', 'CREATE', 'SubTipo', 76, '', '2015-12-08 16:40:22', '1'),
+(602, 'User admin created SubTipo[77].', 'CREATE', 'SubTipo', 77, '', '2015-12-08 16:40:33', '1'),
+(603, 'User admin created SubTipo[78].', 'CREATE', 'SubTipo', 78, '', '2015-12-08 16:40:48', '1'),
+(604, 'User admin created SubTipo[79].', 'CREATE', 'SubTipo', 79, '', '2015-12-08 16:41:07', '1'),
+(605, 'User admin created SubTipo[80].', 'CREATE', 'SubTipo', 80, '', '2015-12-08 16:41:41', '1'),
+(606, 'User admin created SubTipo[81].', 'CREATE', 'SubTipo', 81, '', '2015-12-08 16:41:55', '1'),
+(607, 'User admin created SubTipo[82].', 'CREATE', 'SubTipo', 82, '', '2015-12-08 16:42:08', '1'),
+(608, 'User admin created TipoClausura[7].', 'CREATE', 'TipoClausura', 7, '', '2015-12-08 16:43:06', '1'),
+(609, 'User admin created SubTipo[83].', 'CREATE', 'SubTipo', 83, '', '2015-12-08 16:43:37', '1'),
+(610, 'User admin created SubTipo[84].', 'CREATE', 'SubTipo', 84, '', '2015-12-08 16:43:49', '1'),
+(611, 'User admin created VariableSubtipoClausura[1].', 'CREATE', 'VariableSubtipoClausura', 1, '', '2015-12-09 13:54:12', '1'),
+(612, 'User admin created VariableSubtipoClausura[2].', 'CREATE', 'VariableSubtipoClausura', 2, '', '2015-12-09 13:57:42', '1'),
+(613, 'User admin created VariableSubtipoClausura[3].', 'CREATE', 'VariableSubtipoClausura', 3, '', '2015-12-09 13:58:32', '1'),
+(614, 'User admin created VariableSubtipoClausura[4].', 'CREATE', 'VariableSubtipoClausura', 4, '', '2015-12-09 13:59:59', '1'),
+(615, 'User admin created VariableSubtipoClausura[5].', 'CREATE', 'VariableSubtipoClausura', 5, '', '2015-12-09 14:01:50', '1'),
+(616, 'User admin created VariableSubtipoClausura[6].', 'CREATE', 'VariableSubtipoClausura', 6, '', '2015-12-09 14:04:36', '1'),
+(617, 'User admin created VariableSubtipoClausura[7].', 'CREATE', 'VariableSubtipoClausura', 7, '', '2015-12-09 14:05:38', '1'),
+(618, 'User admin created VariableSubtipoClausura[8].', 'CREATE', 'VariableSubtipoClausura', 8, '', '2015-12-09 14:16:03', '1'),
+(619, 'User admin created VariableSubtipoClausura[9].', 'CREATE', 'VariableSubtipoClausura', 9, '', '2015-12-09 14:20:33', '1'),
+(620, 'User admin created VariableSubtipoClausura[10].', 'CREATE', 'VariableSubtipoClausura', 10, '', '2015-12-09 14:21:49', '1'),
+(621, 'User admin created VariableSubtipoClausura[11].', 'CREATE', 'VariableSubtipoClausura', 11, '', '2015-12-09 14:28:41', '1');
+INSERT INTO `activerecordlog` (`id`, `description`, `action`, `model`, `idModel`, `field`, `creationdate`, `userid`) VALUES
+(622, 'User admin created VariableSubtipoClausura[12].', 'CREATE', 'VariableSubtipoClausura', 12, '', '2015-12-09 14:30:18', '1'),
+(623, 'User admin created VariableSubtipoClausura[13].', 'CREATE', 'VariableSubtipoClausura', 13, '', '2015-12-09 14:34:24', '1'),
+(624, 'User admin created VariableSubtipoClausura[14].', 'CREATE', 'VariableSubtipoClausura', 14, '', '2015-12-09 14:37:58', '1'),
+(625, 'User admin created VariableSubtipoClausura[15].', 'CREATE', 'VariableSubtipoClausura', 15, '', '2015-12-09 14:39:40', '1'),
+(626, 'User admin created VariableSubtipoClausura[16].', 'CREATE', 'VariableSubtipoClausura', 16, '', '2015-12-09 14:43:13', '1'),
+(627, 'User admin created VariableSubtipoClausura[17].', 'CREATE', 'VariableSubtipoClausura', 17, '', '2015-12-09 14:43:48', '1'),
+(628, 'User admin created VariableSubtipoClausura[18].', 'CREATE', 'VariableSubtipoClausura', 18, '', '2015-12-09 14:44:59', '1'),
+(629, 'User admin created VariableSubtipoClausura[19].', 'CREATE', 'VariableSubtipoClausura', 19, '', '2015-12-09 14:50:24', '1'),
+(630, 'User admin created VariableSubtipoClausura[20].', 'CREATE', 'VariableSubtipoClausura', 20, '', '2015-12-09 14:51:24', '1'),
+(631, 'User admin created VariableSubtipoClausura[21].', 'CREATE', 'VariableSubtipoClausura', 21, '', '2015-12-09 14:51:59', '1'),
+(632, 'User admin created VariableSubtipoClausura[22].', 'CREATE', 'VariableSubtipoClausura', 22, '', '2015-12-09 15:00:20', '1'),
+(633, 'User admin created VariableSubtipoClausura[23].', 'CREATE', 'VariableSubtipoClausura', 23, '', '2015-12-09 15:02:12', '1'),
+(634, 'User admin created VariableSubtipoClausura[24].', 'CREATE', 'VariableSubtipoClausura', 24, '', '2015-12-09 15:04:05', '1'),
+(635, 'User admin created VariableSubtipoClausura[25].', 'CREATE', 'VariableSubtipoClausura', 25, '', '2015-12-09 15:05:36', '1'),
+(636, 'User admin created VariableSubtipoClausura[26].', 'CREATE', 'VariableSubtipoClausura', 26, '', '2015-12-09 15:10:21', '1'),
+(637, 'User admin created VariableSubtipoClausura[27].', 'CREATE', 'VariableSubtipoClausura', 27, '', '2015-12-09 15:12:55', '1'),
+(638, 'User admin created SubTipo[85].', 'CREATE', 'SubTipo', 85, '', '2015-12-09 15:14:26', '1'),
+(639, 'User admin created VariableSubtipoClausura[28].', 'CREATE', 'VariableSubtipoClausura', 28, '', '2015-12-09 15:15:23', '1'),
+(640, 'User admin created VariableSubtipoClausura[29].', 'CREATE', 'VariableSubtipoClausura', 29, '', '2015-12-09 15:16:07', '1'),
+(641, 'User admin created VariableSubtipoClausura[30].', 'CREATE', 'VariableSubtipoClausura', 30, '', '2015-12-09 15:20:13', '1'),
+(642, 'User admin created VariableSubtipoClausura[31].', 'CREATE', 'VariableSubtipoClausura', 31, '', '2015-12-09 15:24:54', '1'),
+(643, 'User admin created VariableSubtipoClausura[32].', 'CREATE', 'VariableSubtipoClausura', 32, '', '2015-12-09 15:26:13', '1'),
+(644, 'User admin created VariableSubtipoClausura[33].', 'CREATE', 'VariableSubtipoClausura', 33, '', '2015-12-09 15:27:09', '1'),
+(645, 'User admin created VariableSubtipoClausura[34].', 'CREATE', 'VariableSubtipoClausura', 34, '', '2015-12-09 15:27:54', '1'),
+(646, 'User admin created VariableSubtipoClausura[35].', 'CREATE', 'VariableSubtipoClausura', 35, '', '2015-12-09 15:28:24', '1'),
+(647, 'User admin created VariableSubtipoClausura[36].', 'CREATE', 'VariableSubtipoClausura', 36, '', '2015-12-09 15:28:55', '1'),
+(648, 'User admin created VariableSubtipoClausura[37].', 'CREATE', 'VariableSubtipoClausura', 37, '', '2015-12-09 15:29:33', '1'),
+(649, 'User admin created VariableSubtipoClausura[38].', 'CREATE', 'VariableSubtipoClausura', 38, '', '2015-12-09 15:30:22', '1'),
+(650, 'User admin created VariableSubtipoClausura[39].', 'CREATE', 'VariableSubtipoClausura', 39, '', '2015-12-09 15:30:47', '1'),
+(651, 'User admin created VariableSubtipoClausura[40].', 'CREATE', 'VariableSubtipoClausura', 40, '', '2015-12-09 15:32:07', '1'),
+(652, 'User admin created VariableSubtipoClausura[41].', 'CREATE', 'VariableSubtipoClausura', 41, '', '2015-12-09 15:33:03', '1'),
+(653, 'User admin created VariableSubtipoClausura[42].', 'CREATE', 'VariableSubtipoClausura', 42, '', '2015-12-09 15:33:55', '1'),
+(654, 'User admin created VariableSubtipoClausura[43].', 'CREATE', 'VariableSubtipoClausura', 43, '', '2015-12-09 15:36:01', '1'),
+(655, 'User admin created VariableSubtipoClausura[44].', 'CREATE', 'VariableSubtipoClausura', 44, '', '2015-12-09 15:36:42', '1'),
+(656, 'User admin created VariableSubtipoClausura[45].', 'CREATE', 'VariableSubtipoClausura', 45, '', '2015-12-09 15:37:40', '1'),
+(657, 'User admin created VariableSubtipoClausura[46].', 'CREATE', 'VariableSubtipoClausura', 46, '', '2015-12-09 15:38:23', '1'),
+(658, 'User admin created VariableSubtipoClausura[47].', 'CREATE', 'VariableSubtipoClausura', 47, '', '2015-12-09 15:38:54', '1'),
+(659, 'User admin created VariableSubtipoClausura[48].', 'CREATE', 'VariableSubtipoClausura', 48, '', '2015-12-09 15:39:37', '1'),
+(660, 'User admin created VariableSubtipoClausura[49].', 'CREATE', 'VariableSubtipoClausura', 49, '', '2015-12-09 15:40:34', '1'),
+(661, 'User admin created VariableSubtipoClausura[50].', 'CREATE', 'VariableSubtipoClausura', 50, '', '2015-12-09 15:41:18', '1'),
+(662, 'User admin created VariableSubtipoClausura[51].', 'CREATE', 'VariableSubtipoClausura', 51, '', '2015-12-09 15:42:19', '1'),
+(663, 'User admin created VariableSubtipoClausura[52].', 'CREATE', 'VariableSubtipoClausura', 52, '', '2015-12-09 15:45:21', '1'),
+(664, 'User admin created VariableSubtipoClausura[53].', 'CREATE', 'VariableSubtipoClausura', 53, '', '2015-12-09 15:46:30', '1'),
+(665, 'User admin created VariableSubtipoClausura[54].', 'CREATE', 'VariableSubtipoClausura', 54, '', '2015-12-09 15:47:02', '1'),
+(666, 'User admin created VariableSubtipoClausura[55].', 'CREATE', 'VariableSubtipoClausura', 55, '', '2015-12-09 15:48:05', '1'),
+(667, 'User admin created VariableSubtipoClausura[56].', 'CREATE', 'VariableSubtipoClausura', 56, '', '2015-12-09 15:49:19', '1'),
+(668, 'User admin created VariableSubtipoClausura[57].', 'CREATE', 'VariableSubtipoClausura', 57, '', '2015-12-09 15:49:44', '1'),
+(669, 'User admin created VariableSubtipoClausura[58].', 'CREATE', 'VariableSubtipoClausura', 58, '', '2015-12-09 15:50:12', '1'),
+(670, 'User admin created VariableSubtipoClausura[59].', 'CREATE', 'VariableSubtipoClausura', 59, '', '2015-12-09 15:50:36', '1'),
+(671, 'User admin created VariableSubtipoClausura[60].', 'CREATE', 'VariableSubtipoClausura', 60, '', '2015-12-09 15:50:57', '1'),
+(672, 'User admin created VariableSubtipoClausura[61].', 'CREATE', 'VariableSubtipoClausura', 61, '', '2015-12-09 15:52:07', '1'),
+(673, 'User admin created VariableSubtipoClausura[62].', 'CREATE', 'VariableSubtipoClausura', 62, '', '2015-12-09 15:52:52', '1'),
+(674, 'User admin deleted VariableSubtipoClausura[61].', 'DELETE', 'VariableSubtipoClausura', 61, '', '2015-12-09 15:54:01', '1'),
+(675, 'User admin created VariableSubtipoClausura[63].', 'CREATE', 'VariableSubtipoClausura', 63, '', '2015-12-09 15:54:45', '1'),
+(676, 'User admin created VariableSubtipoClausura[64].', 'CREATE', 'VariableSubtipoClausura', 64, '', '2015-12-09 15:55:16', '1'),
+(677, 'User admin created VariableSubtipoClausura[65].', 'CREATE', 'VariableSubtipoClausura', 65, '', '2015-12-09 15:55:52', '1'),
+(678, 'User admin created VariableSubtipoClausura[66].', 'CREATE', 'VariableSubtipoClausura', 66, '', '2015-12-09 15:56:17', '1'),
+(679, 'User admin created VariableSubtipoClausura[67].', 'CREATE', 'VariableSubtipoClausura', 67, '', '2015-12-09 15:56:46', '1'),
+(680, 'User admin created VariableSubtipoClausura[68].', 'CREATE', 'VariableSubtipoClausura', 68, '', '2015-12-09 15:58:09', '1'),
+(681, 'User admin created Clausuras[1].', 'CREATE', 'Clausuras', 1, '', '2015-12-09 15:58:46', '1'),
+(682, 'User admin deleted Clausuras[1].', 'DELETE', 'Clausuras', 1, '', '2015-12-09 15:59:06', '1'),
+(683, 'User admin created VariableSubtipoClausura[69].', 'CREATE', 'VariableSubtipoClausura', 69, '', '2015-12-09 16:00:07', '1'),
+(684, 'User admin created VariableSubtipoClausura[70].', 'CREATE', 'VariableSubtipoClausura', 70, '', '2015-12-09 16:00:23', '1'),
+(685, 'User admin created VariableSubtipoClausura[71].', 'CREATE', 'VariableSubtipoClausura', 71, '', '2015-12-09 16:00:47', '1'),
+(686, 'User admin created VariableSubtipoClausura[72].', 'CREATE', 'VariableSubtipoClausura', 72, '', '2015-12-09 16:01:07', '1'),
+(687, 'User admin created VariableSubtipoClausura[73].', 'CREATE', 'VariableSubtipoClausura', 73, '', '2015-12-09 16:01:33', '1'),
+(688, 'User admin created VariableSubtipoClausura[74].', 'CREATE', 'VariableSubtipoClausura', 74, '', '2015-12-09 16:01:50', '1'),
+(689, 'User admin created VariableSubtipoClausura[75].', 'CREATE', 'VariableSubtipoClausura', 75, '', '2015-12-09 16:02:12', '1'),
+(690, 'User admin created VariableSubtipoClausura[76].', 'CREATE', 'VariableSubtipoClausura', 76, '', '2015-12-09 16:02:32', '1'),
+(691, 'User admin created VariableSubtipoClausura[77].', 'CREATE', 'VariableSubtipoClausura', 77, '', '2015-12-09 16:02:47', '1'),
+(692, 'User admin created VariableSubtipoClausura[78].', 'CREATE', 'VariableSubtipoClausura', 78, '', '2015-12-09 16:03:29', '1'),
+(693, 'User admin created VariableSubtipoClausura[79].', 'CREATE', 'VariableSubtipoClausura', 79, '', '2015-12-09 16:03:45', '1'),
+(694, 'User admin created Clausuras[2].', 'CREATE', 'Clausuras', 2, '', '2015-12-09 16:04:03', '1'),
+(695, 'User admin changed nombre_sub_tipo_clausura for SubTipo[31].', 'CHANGE', 'SubTipo', 31, 'nombre_sub_tipo_clausura', '2015-12-09 16:11:23', '1'),
+(696, 'User admin changed nombre_sub_tipo_clausura for SubTipo[32].', 'CHANGE', 'SubTipo', 32, 'nombre_sub_tipo_clausura', '2015-12-09 16:11:44', '1'),
+(697, 'User cargador1 created Convencion[1].', 'CREATE', 'Convencion', 1, '', '2015-12-09 16:51:48', '3'),
+(698, 'User cargador1 created Convencion[2].', 'CREATE', 'Convencion', 2, '', '2015-12-09 18:52:52', '3'),
+(699, 'User cargador1 created Empresa[28].', 'CREATE', 'Empresa', 28, '', '2015-12-09 19:09:34', '3'),
+(700, 'User admin created Empresa[29].', 'CREATE', 'Empresa', 29, '', '2015-12-09 19:20:52', '1'),
+(701, 'User admin changed rif for Empresa[29].', 'CHANGE', 'Empresa', 29, 'rif', '2015-12-09 19:22:17', '1'),
+(702, 'User admin changed rif for Empresa[29].', 'CHANGE', 'Empresa', 29, 'rif', '2015-12-09 19:22:41', '1'),
+(703, 'User cargador1 changed rif for Empresa[29].', 'CHANGE', 'Empresa', 29, 'rif', '2015-12-09 19:32:31', '3'),
+(704, 'User cargador1 changed rif for Empresa[29].', 'CHANGE', 'Empresa', 29, 'rif', '2015-12-09 19:37:16', '3'),
+(705, 'User cargador1 changed razon_social for Empresa[29].', 'CHANGE', 'Empresa', 29, 'razon_social', '2015-12-09 19:41:35', '3'),
+(706, 'User cargador1 changed rif for Empresa[29].', 'CHANGE', 'Empresa', 29, 'rif', '2015-12-09 19:41:35', '3'),
+(707, 'User cargador1 changed identificacion_laboral for Empresa[29].', 'CHANGE', 'Empresa', 29, 'identificacion_laboral', '2015-12-09 19:41:35', '3'),
+(708, 'User cargador1 changed seguro_social for Empresa[29].', 'CHANGE', 'Empresa', 29, 'seguro_social', '2015-12-09 19:41:35', '3'),
+(709, 'User cargador1 changed actividad_economica for Empresa[29].', 'CHANGE', 'Empresa', 29, 'actividad_economica', '2015-12-09 19:41:36', '3'),
+(710, 'User cargador1 changed capital_empresa for Empresa[29].', 'CHANGE', 'Empresa', 29, 'capital_empresa', '2015-12-09 19:41:36', '3'),
+(711, 'User cargador1 changed nro_sucursales for Empresa[29].', 'CHANGE', 'Empresa', 29, 'nro_sucursales', '2015-12-09 19:41:36', '3'),
+(712, 'User cargador1 changed direccion for Empresa[29].', 'CHANGE', 'Empresa', 29, 'direccion', '2015-12-09 19:41:36', '3'),
+(713, 'User cargador1 changed estado for Empresa[29].', 'CHANGE', 'Empresa', 29, 'estado', '2015-12-09 19:41:36', '3'),
+(714, 'User cargador1 changed municipio for Empresa[29].', 'CHANGE', 'Empresa', 29, 'municipio', '2015-12-09 19:41:36', '3'),
+(715, 'User cargador1 changed parroquia for Empresa[29].', 'CHANGE', 'Empresa', 29, 'parroquia', '2015-12-09 19:41:36', '3'),
+(716, 'User cargador1 changed telefono for Empresa[29].', 'CHANGE', 'Empresa', 29, 'telefono', '2015-12-09 19:41:36', '3'),
+(717, 'User cargador1 created Convencion[1].', 'CREATE', 'Convencion', 1, '', '2015-12-09 20:16:08', '3'),
+(718, 'User cargador1 created Empresa[30].', 'CREATE', 'Empresa', 30, '', '2015-12-09 20:19:28', '3'),
+(719, 'User cargador1 created Sindicato[20].', 'CREATE', 'Sindicato', 20, '', '2015-12-09 20:49:52', '3'),
+(720, 'User cargador1 created Sindicato[21].', 'CREATE', 'Sindicato', 21, '', '2015-12-09 20:56:03', '3'),
+(721, 'User admin created Sindicato[22].', 'CREATE', 'Sindicato', 22, '', '2015-12-09 21:27:12', '1'),
+(722, 'User admin changed folio_registro for Sindicato[22].', 'CHANGE', 'Sindicato', 22, 'folio_registro', '2015-12-09 21:34:56', '1'),
+(723, 'User admin changed fecha_actualizacion for Sindicato[22].', 'CHANGE', 'Sindicato', 22, 'fecha_actualizacion', '2015-12-09 21:34:56', '1'),
+(724, 'User admin changed fecha_informe_finanzas for Sindicato[22].', 'CHANGE', 'Sindicato', 22, 'fecha_informe_finanzas', '2015-12-09 21:34:56', '1'),
+(725, 'User admin changed fecha_nomina_afiliado for Sindicato[22].', 'CHANGE', 'Sindicato', 22, 'fecha_nomina_afiliado', '2015-12-09 21:34:56', '1'),
+(726, 'User admin changed fecha_ultimas_elecciones for Sindicato[22].', 'CHANGE', 'Sindicato', 22, 'fecha_ultimas_elecciones', '2015-12-09 21:34:56', '1'),
+(727, 'User admin created Sindicato[23].', 'CREATE', 'Sindicato', 23, '', '2015-12-09 21:36:08', '1'),
+(728, 'User admin created Sindicato[24].', 'CREATE', 'Sindicato', 24, '', '2015-12-09 21:36:57', '1'),
+(729, 'User admin created Sindicato[25].', 'CREATE', 'Sindicato', 25, '', '2015-12-09 21:44:24', '1'),
+(730, 'User admin created Sindicato[26].', 'CREATE', 'Sindicato', 26, '', '2015-12-09 21:44:25', '1'),
+(731, 'User admin created Sindicato[27].', 'CREATE', 'Sindicato', 27, '', '2015-12-09 21:45:24', '1'),
+(732, 'User admin created Sindicato[28].', 'CREATE', 'Sindicato', 28, '', '2015-12-10 01:01:18', '1'),
+(733, 'User admin created Sindicato[29].', 'CREATE', 'Sindicato', 29, '', '2015-12-10 01:02:32', '1'),
+(734, 'User admin created Sindicato[30].', 'CREATE', 'Sindicato', 30, '', '2015-12-10 01:06:20', '1'),
+(735, 'User admin created Sindicato[31].', 'CREATE', 'Sindicato', 31, '', '2015-12-10 01:06:56', '1'),
+(736, 'User admin created Sindicato[32].', 'CREATE', 'Sindicato', 32, '', '2015-12-10 01:20:58', '1'),
+(737, 'User admin created Sindicato[33].', 'CREATE', 'Sindicato', 33, '', '2015-12-10 01:22:38', '1'),
+(738, 'User admin created Sindicato[34].', 'CREATE', 'Sindicato', 34, '', '2015-12-10 01:23:58', '1'),
+(739, 'User admin created Sindicato[35].', 'CREATE', 'Sindicato', 35, '', '2015-12-10 01:25:04', '1'),
+(740, 'User admin created Sindicato[36].', 'CREATE', 'Sindicato', 36, '', '2015-12-10 01:25:53', '1'),
+(741, 'User admin created Sindicato[37].', 'CREATE', 'Sindicato', 37, '', '2015-12-10 01:27:25', '1'),
+(742, 'User admin created Sindicato[38].', 'CREATE', 'Sindicato', 38, '', '2015-12-10 01:30:05', '1'),
+(743, 'User admin created Sindicato[39].', 'CREATE', 'Sindicato', 39, '', '2015-12-10 01:30:46', '1'),
+(744, 'User admin created Sindicato[40].', 'CREATE', 'Sindicato', 40, '', '2015-12-10 01:35:27', '1'),
+(745, 'User admin created Sindicato[41].', 'CREATE', 'Sindicato', 41, '', '2015-12-10 01:35:39', '1'),
+(746, 'User admin created Sindicato[42].', 'CREATE', 'Sindicato', 42, '', '2015-12-10 01:38:32', '1'),
+(747, 'User admin created Sindicato[43].', 'CREATE', 'Sindicato', 43, '', '2015-12-10 01:38:54', '1'),
+(748, 'User admin created Sindicato[44].', 'CREATE', 'Sindicato', 44, '', '2015-12-10 01:39:08', '1'),
+(749, 'User admin created Sindicato[45].', 'CREATE', 'Sindicato', 45, '', '2015-12-10 01:40:57', '1'),
+(750, 'User admin created Sindicato[46].', 'CREATE', 'Sindicato', 46, '', '2015-12-10 01:54:44', '1'),
+(751, 'User admin created Sindicato[49].', 'CREATE', 'Sindicato', 49, '', '2015-12-10 01:55:38', '1'),
+(752, 'User admin created Sindicato[50].', 'CREATE', 'Sindicato', 50, '', '2015-12-10 01:56:17', '1'),
+(753, 'User admin created Sindicato[51].', 'CREATE', 'Sindicato', 51, '', '2015-12-10 01:58:10', '1'),
+(754, 'User admin created Sindicato[52].', 'CREATE', 'Sindicato', 52, '', '2015-12-10 02:10:11', '1'),
+(755, 'User admin created Sindicato[53].', 'CREATE', 'Sindicato', 53, '', '2015-12-10 02:10:44', '1'),
+(756, 'User admin created Sindicato[54].', 'CREATE', 'Sindicato', 54, '', '2015-12-10 02:14:47', '1'),
+(757, 'User admin created Sindicato[55].', 'CREATE', 'Sindicato', 55, '', '2015-12-10 02:15:20', '1'),
+(758, 'User cargador1 created Sindicato[1].', 'CREATE', 'Sindicato', 1, '', '2015-12-10 14:52:16', '3'),
+(759, 'User cargador1 created nomina ultimo id 13', 'CREATE', 'Nomina', 13, NULL, '2015-12-10 15:38:47', '3'),
+(760, 'User cargador1 insert nomina_tipo_sindicato where id_nomina is  1,2,3,4,5,6,7,8,9,10,11,12,13, y convencion is 30', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-12-10 15:44:44', '3'),
+(761, 'User cargador1 created Clausuras[1].', 'CREATE', 'Clausuras', 1, '', '2015-12-10 15:57:55', '3'),
+(762, 'User admin created VariableSubtipoClausura[80].', 'CREATE', 'VariableSubtipoClausura', 80, '', '2015-12-10 16:03:29', '1'),
+(763, 'User cargador1 created Clausuras[2].', 'CREATE', 'Clausuras', 2, '', '2015-12-10 16:05:15', '3'),
+(764, 'User cargador1 created Clausuras[3].', 'CREATE', 'Clausuras', 3, '', '2015-12-10 16:05:15', '3'),
+(765, 'User cargador1 created nomina ultimo id 68', 'CREATE', 'Nomina', 68, NULL, '2015-12-10 20:24:53', '3'),
+(766, 'User cargador1 insert nomina_tipo_sindicato where id_nomina is  14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68, y convencion is 30', 'insert', 'nomina_tipo_sindicato', 1, NULL, '2015-12-10 20:25:49', '3'),
+(767, 'User cargador1 created Clausuras[4].', 'CREATE', 'Clausuras', 4, '', '2015-12-11 19:01:27', '3'),
+(768, 'User cargador1 created Clausuras[5].', 'CREATE', 'Clausuras', 5, '', '2015-12-11 19:02:29', '3'),
+(769, 'User cargador1 created Clausuras[6].', 'CREATE', 'Clausuras', 6, '', '2015-12-11 19:07:39', '3'),
+(770, 'User cargador1 created Clausuras[7].', 'CREATE', 'Clausuras', 7, '', '2015-12-11 19:11:25', '3'),
+(771, 'User cargador1 created Clausuras[8].', 'CREATE', 'Clausuras', 8, '', '2015-12-11 19:35:33', '3');
 
 -- --------------------------------------------------------
 
@@ -434,7 +810,7 @@ INSERT INTO `activerecordlog` (`id`, `description`, `action`, `model`, `idModel`
 
 CREATE TABLE IF NOT EXISTS `ambito` (
   `id` int(11) NOT NULL,
-  `nombre_ambito` varchar(25) CHARACTER SET latin1 NOT NULL,
+  `nombre_ambito` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -908,9 +1284,32 @@ INSERT INTO `clase` (`id`, `codigo_seccion`, `codigo_division`, `codigo_grupo`, 
 CREATE TABLE IF NOT EXISTS `clausuras` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `cod_convencion` bigint(20) unsigned NOT NULL,
-  UNIQUE KEY `id` (`id`),
-  KEY `cod_convencion` (`cod_convencion`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `nro_clausura` int(11) NOT NULL,
+  `tipo_clausura` bigint(20) unsigned NOT NULL,
+  `sub_tipo` bigint(20) unsigned NOT NULL,
+  `id_variable` bigint(20) unsigned NOT NULL,
+  `valor` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cod_convencion_2` (`cod_convencion`,`nro_clausura`,`tipo_clausura`,`sub_tipo`,`id_variable`,`valor`),
+  KEY `cod_convencion` (`cod_convencion`),
+  KEY `tipo_clausura` (`tipo_clausura`),
+  KEY `sub_tipo` (`sub_tipo`),
+  KEY `id_variable` (`id_variable`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Volcado de datos para la tabla `clausuras`
+--
+
+INSERT INTO `clausuras` (`id`, `cod_convencion`, `nro_clausura`, `tipo_clausura`, `sub_tipo`, `id_variable`, `valor`) VALUES
+(1, 1, 8, 1, 13, 9, '2000.00'),
+(6, 1, 21, 2, 60, 56, 'true'),
+(2, 1, 28, 2, 47, 45, 'true'),
+(3, 1, 28, 2, 47, 80, '400.00'),
+(7, 1, 29, 2, 64, 60, 'true'),
+(8, 1, 32, 2, 61, 57, 'true'),
+(4, 1, 33, 1, 7, 3, '1500.00'),
+(5, 1, 33, 1, 8, 4, '1000.00');
 
 -- --------------------------------------------------------
 
@@ -929,15 +1328,7 @@ CREATE TABLE IF NOT EXISTS `consultor` (
   KEY `cod_convencion` (`cod_convencion`,`cod_empresa`,`cod_sindicato`),
   KEY `cod_empresa` (`cod_empresa`),
   KEY `cod_sindicato` (`cod_sindicato`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Volcado de datos para la tabla `consultor`
---
-
-INSERT INTO `consultor` (`id`, `nombres`, `cedula`, `cod_convencion`, `cod_empresa`, `cod_sindicato`) VALUES
-(1, 'cnosultor', 123123, 8, 3, 6),
-(2, 'walter jimenez', 17389814, 8, 3, 6);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -963,8 +1354,8 @@ CREATE TABLE IF NOT EXISTS `contacto_empresa` (
 
 CREATE TABLE IF NOT EXISTS `convencion` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `numero_expediente` varchar(20) CHARACTER SET latin1 NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `numero_expediente` varchar(20) NOT NULL,
   `inspectoria` varchar(5) CHARACTER SET latin1 NOT NULL,
   `sector` int(11) NOT NULL,
   `ambito` int(11) NOT NULL,
@@ -974,48 +1365,26 @@ CREATE TABLE IF NOT EXISTS `convencion` (
   `fecha_venc` date NOT NULL,
   `duracion_meses` int(11) NOT NULL,
   `fecha_auto_homo` date NOT NULL,
+  `nro_clausuras` int(11) NOT NULL,
   `costo_contrato` decimal(20,4) NOT NULL,
   `costo_contrato_sin_prestaciones` decimal(20,4) NOT NULL,
-  `cod_convencion` varchar(11) CHARACTER SET latin1 NOT NULL,
-  `referencia` varchar(15) CHARACTER SET latin1 NOT NULL COMMENT 'Orden (padre,hija)',
+  `cod_convencion` varchar(11) NOT NULL,
+  `referencia` varchar(15) NOT NULL COMMENT 'Orden (padre,hija)',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `numero_expediente` (`numero_expediente`),
   KEY `inspectoria` (`inspectoria`),
   KEY `ambito` (`ambito`),
   KEY `cod_convencion` (`cod_convencion`),
   KEY `referencia` (`referencia`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `convencion`
 --
 
-INSERT INTO `convencion` (`id`, `nombre`, `numero_expediente`, `inspectoria`, `sector`, `ambito`, `edicion`, `fecha_deposito`, `fecha_inicio`, `fecha_venc`, `duracion_meses`, `fecha_auto_homo`, `costo_contrato`, `costo_contrato_sin_prestaciones`, `cod_convencion`, `referencia`) VALUES
-(8, 'nueva', '121231231', '080', 2, 1, 1, '2015-10-16', '2015-10-28', '2016-10-06', 113, '2017-10-31', '10101010.0000', '1010101.0000', '8-02', ''),
-(9, 'nueva', '11', '080', 2, 2, 2, '2015-10-14', '2015-10-14', '2015-10-14', 10, '2015-10-14', '121212.0000', '1212.0000', '8-06', ''),
-(10, 'nueva', '2', '080', 2, 2, 2, '2015-10-14', '2015-10-13', '2015-10-13', 10, '2015-10-23', '100000.0000', '100000.0000', '8-01', ''),
-(11, 'dede0', '11', '001', 2, 2, 2, '2015-10-14', '2015-10-07', '2015-10-07', 10, '2015-10-22', '121212.0000', '1010101.0000', '11-01', ''),
-(12, 'desde1', '4', '001', 1, 1, 2, '2015-10-14', '2015-10-14', '2015-10-14', 10, '2015-10-14', '121212.0000', '1212.0000', '12-01', ''),
-(13, 'nueva', '2', '080', 1, 1, 1010, '2015-10-15', '2015-10-15', '2015-10-15', 10, '2015-10-15', '259999.0000', '24999.0000', '8-04', ''),
-(14, 'nueva', '199', '080', 1, 1, 2, '2015-10-15', '2015-10-15', '2015-10-15', 10, '2015-10-29', '121212.0000', '1212.0000', '8-05', ''),
-(15, 'desde1', '1919', '001', 2, 1, 2, '2015-10-15', '2015-10-15', '2015-10-15', 10, '2015-10-15', '18888.0000', '81882.0000', '12-02', ''),
-(18, 'nueva', '33333', '080', 1, 2, 12, '2015-10-21', '2015-10-15', '2015-10-08', 5, '2015-10-21', '10101010101010.0000', '10101010101.0000', '8-03', ''),
-(19, 'nueva', '9999999', '001', 2, 3, 1, '2015-10-06', '2015-10-21', '2015-10-14', 10, '2015-10-20', '1010101.0000', '1010101.0000', '8-07', ''),
-(20, 'nueva', '1010', '071', 2, 2, 2, '2015-10-07', '2015-10-15', '2015-10-08', 10, '2015-10-22', '121212.0000', '1212.0000', '8-08', ''),
-(21, 'nueva', '1010101', '069', 2, 2, 2, '2015-10-21', '2015-10-21', '2015-10-14', 5, '2015-10-21', '1000000.0000', '1010101.0000', '8-09', ''),
-(22, 'sindicato2', '92902912', '002', 2, 2, 2, '2015-10-01', '2015-10-29', '2015-10-28', 5, '2015-10-23', '121212.0000', '1212.0000', '22-01', ''),
-(23, 'nueva', '898989', '080', 1, 2, 1, '2015-10-13', '2015-10-20', '2015-10-22', 12, '2015-09-30', '1000000.0000', '1010101.0000', '8-10', ''),
-(24, 'sindicato3', '10101010101', '001', 2, 2, 2, '2015-10-21', '2015-10-14', '2015-10-22', 10, '2015-10-21', '1000000.0000', '1212.0000', '24-01', ''),
-(25, 'sindicato4', '80808080', '001', 1, 1, 2, '2015-10-21', '2015-10-14', '2015-10-16', 10, '2015-10-21', '1000000.0000', '1010101.0000', '25-01', ''),
-(26, 'sindicato4', '1010101', '001', 1, 1, 2, '2015-10-07', '2015-10-13', '2015-10-16', 5, '2015-10-28', '121212.0000', '1212.0000', '25-02', ''),
-(27, 'nuev222', '021212', '004', 1, 2, 1010, '2015-11-11', '2015-11-10', '2015-11-18', 4, '2015-11-12', '30030434.0000', '1211212.0000', '27-01', ''),
-(28, 'probando5', '1010', '005', 1, 2, 2, '2015-11-18', '2015-11-26', '2015-11-28', 10, '2015-11-27', '21200020120120.0000', '2120020020.0000', '28-01', ''),
-(29, 'convencion1', '1010', '002', 1, 1, 1, '2015-11-04', '2015-11-04', '2015-11-04', 10, '2015-11-04', '122121212121212.0000', '121212121212.0000', '29-01', ''),
-(30, 'probando bitacora', '101010101', '007', 1, 1, 1, '2015-11-10', '2015-11-10', '2015-11-11', 10, '2015-11-18', '1020000.0000', '1200222.0000', '30-01', ''),
-(31, 'historico', '111111', '053', 1, 1, 1, '2015-11-10', '2015-11-10', '2015-11-17', 10, '2015-11-17', '2032323.0000', '23232323.0000', '31-01', ''),
-(32, 'll', '1', '002', 2, 2, 1, '2015-09-28', '2015-11-01', '2015-11-23', 2, '2015-12-04', '1022222222.0000', '12222222.0000', '32-01', ''),
-(33, 'll', '1010', '002', 1, 2, 2, '2015-11-18', '2015-11-20', '2015-11-19', 10, '2015-12-03', '1022222222.0000', '1200222.0000', '32-02', ''),
-(34, 'nueva_convencion', '10', '001', 2, 2, 2, '2015-10-26', '2015-10-28', '2015-10-30', 10, '2015-12-01', '10.0000', '10.0000', '34-01', '');
+INSERT INTO `convencion` (`id`, `nombre`, `numero_expediente`, `inspectoria`, `sector`, `ambito`, `edicion`, `fecha_deposito`, `fecha_inicio`, `fecha_venc`, `duracion_meses`, `fecha_auto_homo`, `nro_clausuras`, `costo_contrato`, `costo_contrato_sin_prestaciones`, `cod_convencion`, `referencia`) VALUES
+(1, 'tableros electricos industriales c.a. taelinca', '005-2013-04-00043', '005', 2, 4, 3, '2015-06-17', '2014-03-01', '2016-03-01', 24, '2015-07-07', 80, '59192401.0000', '40491770.0000', '1-01', '');
 
 -- --------------------------------------------------------
 
@@ -1073,7 +1442,8 @@ CREATE TABLE IF NOT EXISTS `cruge_authassignment` (
 --
 
 INSERT INTO `cruge_authassignment` (`userid`, `bizrule`, `data`, `itemname`) VALUES
-(3, NULL, 'N;', 'Cargador');
+(3, NULL, 'N;', 'Cargador'),
+(5, NULL, 'N;', 'Cargador');
 
 -- --------------------------------------------------------
 
@@ -1096,9 +1466,12 @@ CREATE TABLE IF NOT EXISTS `cruge_authitem` (
 
 INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 ('action_clausuras_admin', 0, '', NULL, 'N;'),
+('action_clausuras_cargar_campos', 0, '', NULL, 'N;'),
 ('action_clausuras_create', 0, '', NULL, 'N;'),
 ('action_clausuras_delete', 0, '', NULL, 'N;'),
+('action_clausuras_editar_campos', 0, '', NULL, 'N;'),
 ('action_clausuras_index', 0, '', NULL, 'N;'),
+('action_clausuras_subtipo', 0, '', NULL, 'N;'),
 ('action_clausuras_update', 0, '', NULL, 'N;'),
 ('action_clausuras_view', 0, '', NULL, 'N;'),
 ('action_convencion_admin', 0, '', NULL, 'N;'),
@@ -1128,6 +1501,13 @@ INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) 
 ('action_nomina_index', 0, '', NULL, 'N;'),
 ('action_nomina_update', 0, '', NULL, 'N;'),
 ('action_nomina_view', 0, '', NULL, 'N;'),
+('action_resumenclausuras_admin', 0, '', NULL, 'N;'),
+('action_resumenclausuras_create', 0, '', NULL, 'N;'),
+('action_resumenclausuras_delete', 0, '', NULL, 'N;'),
+('action_resumenclausuras_guardar_resumen', 0, '', NULL, 'N;'),
+('action_resumenclausuras_index', 0, '', NULL, 'N;'),
+('action_resumenclausuras_update', 0, '', NULL, 'N;'),
+('action_resumenclausuras_view', 0, '', NULL, 'N;'),
 ('action_sindicato_admin', 0, '', NULL, 'N;'),
 ('action_sindicato_create', 0, '', NULL, 'N;'),
 ('action_sindicato_delete', 0, '', NULL, 'N;'),
@@ -1141,6 +1521,18 @@ INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) 
 ('action_site_index', 0, '', NULL, 'N;'),
 ('action_site_login', 0, '', NULL, 'N;'),
 ('action_site_logout', 0, '', NULL, 'N;'),
+('action_subtipo_admin', 0, '', NULL, 'N;'),
+('action_subtipo_create', 0, '', NULL, 'N;'),
+('action_subtipo_delete', 0, '', NULL, 'N;'),
+('action_subtipo_index', 0, '', NULL, 'N;'),
+('action_subtipo_update', 0, '', NULL, 'N;'),
+('action_subtipo_view', 0, '', NULL, 'N;'),
+('action_tipoclausura_admin', 0, '', NULL, 'N;'),
+('action_tipoclausura_create', 0, '', NULL, 'N;'),
+('action_tipoclausura_delete', 0, '', NULL, 'N;'),
+('action_tipoclausura_index', 0, '', NULL, 'N;'),
+('action_tipoclausura_update', 0, '', NULL, 'N;'),
+('action_tipoclausura_view', 0, '', NULL, 'N;'),
 ('action_trabajador_sindicato_admin', 0, '', NULL, 'N;'),
 ('action_trabajador_sindicato_create', 0, '', NULL, 'N;'),
 ('action_trabajador_sindicato_delete', 0, '', NULL, 'N;'),
@@ -1162,16 +1554,27 @@ INSERT INTO `cruge_authitem` (`name`, `type`, `description`, `bizrule`, `data`) 
 ('action_ui_sessionadmin', 0, '', NULL, 'N;'),
 ('action_ui_systemupdate', 0, '', NULL, 'N;'),
 ('action_ui_usermanagementadmin', 0, '', NULL, 'N;'),
+('action_ui_usermanagementcreate', 0, '', NULL, 'N;'),
 ('action_ui_usermanagementupdate', 0, '', NULL, 'N;'),
+('action_variablesubtipoclausura_admin', 0, '', NULL, 'N;'),
+('action_variablesubtipoclausura_create', 0, '', NULL, 'N;'),
+('action_variablesubtipoclausura_delete', 0, '', NULL, 'N;'),
+('action_variablesubtipoclausura_index', 0, '', NULL, 'N;'),
+('action_variablesubtipoclausura_update', 0, '', NULL, 'N;'),
+('action_variablesubtipoclausura_view', 0, '', NULL, 'N;'),
 ('admin', 0, '', NULL, 'N;'),
 ('Cargador', 2, 'carga de datos', '', 'N;'),
 ('controller_clausuras', 0, '', NULL, 'N;'),
 ('controller_convencion', 0, '', NULL, 'N;'),
 ('controller_empresa', 0, '', NULL, 'N;'),
 ('controller_nomina', 0, '', NULL, 'N;'),
+('controller_resumenclausuras', 0, '', NULL, 'N;'),
 ('controller_sindicato', 0, '', NULL, 'N;'),
 ('controller_site', 0, '', NULL, 'N;'),
+('controller_subtipo', 0, '', NULL, 'N;'),
+('controller_tipoclausura', 0, '', NULL, 'N;'),
 ('controller_trabajador_sindicato', 0, '', NULL, 'N;'),
+('controller_variablesubtipoclausura', 0, '', NULL, 'N;'),
 ('edit-advanced-profile-features', 0, 'C:\\wamp\\www\\convenciones_colectivas_resp\\protected\\modules\\cruge\\views\\ui\\usermanagementupdate.php linea 114', NULL, 'N;');
 
 -- --------------------------------------------------------
@@ -1193,8 +1596,11 @@ CREATE TABLE IF NOT EXISTS `cruge_authitemchild` (
 
 INSERT INTO `cruge_authitemchild` (`parent`, `child`) VALUES
 ('Cargador', 'action_clausuras_admin'),
+('Cargador', 'action_clausuras_cargar_campos'),
 ('Cargador', 'action_clausuras_create'),
+('Cargador', 'action_clausuras_editar_campos'),
 ('Cargador', 'action_clausuras_index'),
+('Cargador', 'action_clausuras_subtipo'),
 ('Cargador', 'action_clausuras_update'),
 ('Cargador', 'action_clausuras_view'),
 ('Cargador', 'action_convencion_admin'),
@@ -1221,6 +1627,13 @@ INSERT INTO `cruge_authitemchild` (`parent`, `child`) VALUES
 ('Cargador', 'action_nomina_index'),
 ('Cargador', 'action_nomina_update'),
 ('Cargador', 'action_nomina_view'),
+('Cargador', 'action_resumenclausuras_admin'),
+('Cargador', 'action_resumenclausuras_create'),
+('Cargador', 'action_resumenclausuras_delete'),
+('Cargador', 'action_resumenclausuras_guardar_resumen'),
+('Cargador', 'action_resumenclausuras_index'),
+('Cargador', 'action_resumenclausuras_update'),
+('Cargador', 'action_resumenclausuras_view'),
 ('Cargador', 'action_sindicato_admin'),
 ('Cargador', 'action_sindicato_create'),
 ('Cargador', 'action_sindicato_index'),
@@ -1233,6 +1646,18 @@ INSERT INTO `cruge_authitemchild` (`parent`, `child`) VALUES
 ('Cargador', 'action_site_index'),
 ('Cargador', 'action_site_login'),
 ('Cargador', 'action_site_logout'),
+('Cargador', 'action_subtipo_admin'),
+('Cargador', 'action_subtipo_create'),
+('Cargador', 'action_subtipo_delete'),
+('Cargador', 'action_subtipo_index'),
+('Cargador', 'action_subtipo_update'),
+('Cargador', 'action_subtipo_view'),
+('Cargador', 'action_tipoclausura_admin'),
+('Cargador', 'action_tipoclausura_create'),
+('Cargador', 'action_tipoclausura_delete'),
+('Cargador', 'action_tipoclausura_index'),
+('Cargador', 'action_tipoclausura_update'),
+('Cargador', 'action_tipoclausura_view'),
 ('Cargador', 'action_trabajador_sindicato_admin'),
 ('Cargador', 'action_trabajador_sindicato_create'),
 ('Cargador', 'action_trabajador_sindicato_delete'),
@@ -1240,6 +1665,12 @@ INSERT INTO `cruge_authitemchild` (`parent`, `child`) VALUES
 ('Cargador', 'action_trabajador_sindicato_index'),
 ('Cargador', 'action_trabajador_sindicato_update'),
 ('Cargador', 'action_trabajador_sindicato_view'),
+('Cargador', 'action_variablesubtipoclausura_admin'),
+('Cargador', 'action_variablesubtipoclausura_create'),
+('Cargador', 'action_variablesubtipoclausura_delete'),
+('Cargador', 'action_variablesubtipoclausura_index'),
+('Cargador', 'action_variablesubtipoclausura_update'),
+('Cargador', 'action_variablesubtipoclausura_view'),
 ('Cargador', 'admin'),
 ('Cargador', 'controller_clausuras'),
 ('Cargador', 'controller_convencion'),
@@ -1307,7 +1738,7 @@ CREATE TABLE IF NOT EXISTS `cruge_session` (
   `ipaddressout` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idsession`),
   KEY `crugesession_iduser` (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=97 ;
 
 --
 -- Volcado de datos para la tabla `cruge_session`
@@ -1368,7 +1799,48 @@ INSERT INTO `cruge_session` (`idsession`, `iduser`, `created`, `expire`, `status
 (52, 1, 1448413718, 1448425718, 0, '127.0.0.1', 1, 1448413718, 1448413747, '127.0.0.1'),
 (53, 3, 1448413757, 1448425757, 0, '127.0.0.1', 1, 1448413757, 1448413793, '127.0.0.1'),
 (54, 1, 1448457207, 1448469207, 0, '127.0.0.1', 1, 1448457207, NULL, NULL),
-(55, 1, 1448469656, 1448481656, 1, '127.0.0.1', 1, 1448469656, NULL, NULL);
+(55, 1, 1448469656, 1448481656, 1, '127.0.0.1', 1, 1448469656, NULL, NULL),
+(56, 1, 1448482633, 1448494633, 0, '127.0.0.1', 1, 1448482633, 1448483996, '127.0.0.1'),
+(57, 3, 1448484004, 1448496004, 0, '127.0.0.1', 1, 1448484004, 1448484007, '127.0.0.1'),
+(58, 1, 1448484546, 1448496546, 0, '127.0.0.1', 1, 1448484546, 1448484689, '127.0.0.1'),
+(59, 1, 1448484693, 1448496693, 0, '127.0.0.1', 1, 1448484693, 1448484735, '127.0.0.1'),
+(60, 5, 1448484742, 1448496742, 1, '127.0.0.1', 1, 1448484742, NULL, NULL),
+(61, 1, 1448546350, 1448558350, 1, '127.0.0.1', 1, 1448546350, NULL, NULL),
+(62, 1, 1448565552, 1448577552, 1, '127.0.0.1', 1, 1448565552, NULL, NULL),
+(63, 1, 1448635976, 1448647976, 0, '127.0.0.1', 1, 1448635976, NULL, NULL),
+(64, 1, 1448649963, 1448661963, 0, '127.0.0.1', 2, 1448655331, NULL, NULL),
+(65, 1, 1448662387, 1448674387, 1, '127.0.0.1', 1, 1448662387, NULL, NULL),
+(66, 1, 1448891154, 1448903154, 0, '127.0.0.1', 1, 1448891154, NULL, NULL),
+(67, 1, 1448907150, 1448919150, 0, '127.0.0.1', 4, 1448918928, NULL, NULL),
+(68, 1, 1448919192, 1448931192, 0, '127.0.0.1', 1, 1448919192, 1448919203, '127.0.0.1'),
+(69, 1, 1448975483, 1448987483, 0, '127.0.0.1', 1, 1448975483, NULL, NULL),
+(70, 1, 1448987615, 1448999615, 0, '127.0.0.1', 1, 1448987615, NULL, NULL),
+(71, 1, 1448999901, 1449011901, 1, '127.0.0.1', 1, 1448999901, NULL, NULL),
+(72, 1, 1449062217, 1449074217, 0, '127.0.0.1', 1, 1449062217, NULL, NULL),
+(73, 1, 1449074227, 1449086227, 0, '127.0.0.1', 1, 1449074227, NULL, NULL),
+(74, 1, 1449086247, 1449098247, 0, '127.0.0.1', 1, 1449086247, 1449092625, '127.0.0.1'),
+(75, 3, 1449092631, 1449104631, 0, '127.0.0.1', 1, 1449092631, 1449092642, '127.0.0.1'),
+(76, 1, 1449092996, 1449104996, 0, '127.0.0.1', 2, 1449104678, NULL, NULL),
+(77, 1, 1449105661, 1449117661, 0, '127.0.0.1', 1, 1449105661, 1449108945, '127.0.0.1'),
+(78, 1, 1449148522, 1449160522, 0, '10.46.5.126', 2, 1449155804, 1449156123, '10.46.5.126'),
+(79, 1, 1449156186, 1449168186, 1, '127.0.0.1', 1, 1449156186, NULL, NULL),
+(80, 3, 1449156864, 1449168864, 1, '127.0.0.1', 1, 1449156864, NULL, NULL),
+(81, 1, 1449234360, 1449246360, 0, '127.0.0.1', 1, 1449234360, 1449234369, '127.0.0.1'),
+(82, 1, 1449236438, 1449248438, 1, '127.0.0.1', 1, 1449236438, NULL, NULL),
+(83, 1, 1449581468, 1449593468, 1, '127.0.0.1', 2, 1449590500, NULL, NULL),
+(84, 1, 1449668132, 1449680132, 0, '10.46.2.103', 3, 1449678895, 1449678898, '10.46.2.103'),
+(85, 3, 1449679038, 1449691038, 0, '10.46.2.103', 2, 1449686793, NULL, NULL),
+(86, 1, 1449684601, 1449696601, 0, '127.0.0.1', 2, 1449688417, NULL, NULL),
+(87, 3, 1449691545, 1449703545, 0, '10.46.2.103', 1, 1449691545, 1449694779, '10.46.2.103'),
+(88, 1, 1449696816, 1449708816, 0, '127.0.0.1', 2, 1449706359, NULL, NULL),
+(89, 1, 1449709240, 1449721240, 1, '127.0.0.1', 1, 1449709240, NULL, NULL),
+(90, 1, 1449753463, 1449765463, 0, '10.46.3.7', 3, 1449763299, 1449763434, '10.46.3.7'),
+(91, 3, 1449757162, 1449769162, 0, '10.46.3.7', 2, 1449758731, 1449763284, '10.46.3.7'),
+(92, 3, 1449763442, 1449775442, 0, '10.46.3.7', 1, 1449763442, NULL, NULL),
+(93, 1, 1449771954, 1449783954, 1, '127.0.0.1', 1, 1449771954, NULL, NULL),
+(94, 3, 1449776601, 1449788601, 1, '10.46.3.7', 1, 1449776601, NULL, NULL),
+(95, 3, 1449860257, 1449872257, 0, '10.46.3.7', 1, 1449860257, 1449866140, '10.46.3.7'),
+(96, 1, 1450100022, 1450112022, 1, '127.0.0.1', 1, 1450100022, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1423,17 +1895,18 @@ CREATE TABLE IF NOT EXISTS `cruge_user` (
   `totalsessioncounter` int(11) DEFAULT '0',
   `currentsessioncounter` int(11) DEFAULT '0',
   PRIMARY KEY (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `cruge_user`
 --
 
 INSERT INTO `cruge_user` (`iduser`, `regdate`, `actdate`, `logondate`, `username`, `email`, `password`, `authkey`, `state`, `totalsessioncounter`, `currentsessioncounter`) VALUES
-(1, NULL, NULL, 1448469656, 'admin', 'admin@tucorreo.com', 'admin', NULL, 1, 0, 0),
+(1, NULL, NULL, 1450100022, 'admin', 'admin@tucorreo.com', 'admin', NULL, 1, 0, 0),
 (2, NULL, NULL, NULL, 'invitado', 'invitado', 'nopassword', NULL, 1, 0, 0),
-(3, 1445615839, NULL, 1448413758, 'cargador1', 'walter86.79@gmail.com', '111111', 'e1c9786bfb0395fc34fb0f6c4284bea9', 1, 0, 0),
-(4, 1447162236, NULL, 1447162390, 'historico', 'walter86_79@hotmail.com', 'historico', 'f1d7660e9f66d67c634545fbc72a992a', 1, 0, 0);
+(3, 1445615839, NULL, 1449860257, 'cargador1', 'walter86.79@gmail.com', '111111', 'e1c9786bfb0395fc34fb0f6c4284bea9', 1, 0, 0),
+(4, 1447162236, NULL, 1447162390, 'historico', 'walter86_79@hotmail.com', 'historico', 'f1d7660e9f66d67c634545fbc72a992a', 1, 0, 0),
+(5, 1448484722, NULL, 1448484742, 'estadistica', 'estadistica@mintra.com', '111111', '2a6a03306eeb644ca3a775db75db77bb', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1552,23 +2025,23 @@ INSERT INTO `division` (`id`, `cod_seccion`, `cod_division`, `division`) VALUES
 
 CREATE TABLE IF NOT EXISTS `empresa` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `razon_social` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `rif` varchar(20) CHARACTER SET latin1 NOT NULL,
-  `identificacion_laboral` varchar(10) CHARACTER SET latin1 NOT NULL,
-  `seguro_social` varchar(10) CHARACTER SET latin1 NOT NULL,
+  `razon_social` varchar(255) NOT NULL,
+  `rif` varchar(20) NOT NULL,
+  `identificacion_laboral` varchar(10) NOT NULL,
+  `seguro_social` varchar(10) NOT NULL,
   `actividad_economica` bigint(20) unsigned NOT NULL,
   `sector` int(11) unsigned NOT NULL,
   `capital_empresa` decimal(20,2) NOT NULL,
   `nro_sucursales` smallint(6) NOT NULL,
-  `direccion` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `direccion` text NOT NULL,
   `estado` int(11) NOT NULL,
   `municipio` int(11) NOT NULL,
   `parroquia` int(11) NOT NULL,
-  `telefono` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `fax` varchar(20) CHARACTER SET latin1 NOT NULL,
-  `correo` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `web` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `rnc` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `telefono` varchar(100) NOT NULL,
+  `fax` varchar(20) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `web` varchar(50) NOT NULL,
+  `rnc` varchar(100) NOT NULL,
   `cod_convencion` bigint(20) unsigned NOT NULL,
   UNIQUE KEY `id` (`id`),
   KEY `cod_interno` (`cod_convencion`),
@@ -1578,33 +2051,14 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   KEY `sector` (`sector`),
   KEY `sector_2` (`sector`),
   KEY `actividad_economica` (`actividad_economica`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
 INSERT INTO `empresa` (`id`, `razon_social`, `rif`, `identificacion_laboral`, `seguro_social`, `actividad_economica`, `sector`, `capital_empresa`, `nro_sucursales`, `direccion`, `estado`, `municipio`, `parroquia`, `telefono`, `fax`, `correo`, `web`, `rnc`, `cod_convencion`) VALUES
-(3, 'nuevaempresa4', 'V173898149', '10101011', '10101', 738, 2, '10000.00', 20, 'caracas', 6, 66, 209, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://kkk.com', '17389814j', 8),
-(4, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 19, 'caracas', 3, 29, 82, '', '02124813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 10),
-(6, 'asociarladesde1', 'V173898149', '1234', '12333', 352, 2, '98291922.00', 7, 'caracas', 14, 236, 637, '1010', '1010', 'walter86_79@hotmail.com', 'walter.com', '173898148', 12),
-(7, 'probando otra empresa', 'V173898149', '123456-1', '123456', 133, 2, '150000000.00', 5, 'caracas', 24, 462, 1133, '02124813639', '02124813639', 'walter86_79@hotmail.com', 'soulip.com', '', 8),
-(8, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 2, 'caracas', 3, 29, 82, '02124813639', '02124813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 13),
-(9, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 11, 'caracas', 3, 29, 82, '02124813639-12121212', '121212', 'walter86_79@hotmail.com', 'walter.com', '17389814', 14),
-(11, 'probando identificacion laboral', 'J123456789', '000001-123', '1010', 275, 2, '10100000.00', 2, 'caracas', 24, 462, 1127, '02124813639-22121', '1212121', 'walter86_79@hotmail.com', 'walter.com', '17389814', 8),
-(12, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 100, 'caracas', 3, 29, 82, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 18),
-(13, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 2, 'caracas', 3, 29, 82, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 21),
-(14, 'sindicato2', 'V173898149', '123456-1', '1010', 330, 1, '10000.00', 19, 'caracas', 6, 69, 227, '0212-4813639-0212-4813639', '02124813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 22),
-(15, 'nuevaempresa', 'V173898149', '1010101', '10101', 738, 2, '10000.00', 20, 'caracas', 3, 29, 82, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 23),
-(16, 'asociarladesde1', 'V173898149', '123456-1', '1010', 427, 2, '150000000.00', 2, 'caracas', 2, 14, 38, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 24),
-(17, 'sindsicato4', 'V173898149', '123456-12', '1010', 319, 2, '98291922.00', 7, 'caracas', 2, 9, 28, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 25),
-(18, 'sindsicato4', 'V173898149', '123456-12', '1010', 319, 2, '98291922.00', 19, 'caracas', 2, 9, 28, '0212-4813639-0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'walter.com', '17389814', 26),
-(19, 'local', 'V173981489', '123456-44', '1010', 352, 2, '1000101010.00', 333, 'caracas', 24, 462, 1130, '0212-4813639', '0212-4813639', 'walter86@hotmail.com', 'http://programacion.com', '', 27),
-(20, 'nose', 'V173898149', '123456-12', '2', 24, 2, '20202020202.00', 5, 'caracas', 24, 462, 1123, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://programacion.com', '123', 28),
-(21, 'empresa1', 'V173898149', '123456-1', '1010', 178, 2, '10202102010.00', 10, 'caracas, no se, no se 1220222', 24, 462, 1119, '0212-4813639-0424-1397303', '0212-3992277', 'walter86_79@hotmail.com', 'http://kkk.com', '', 29),
-(22, 'empresa real1', 'V173898149', '123466-1', '1010', 18, 2, '10101010101.00', 20, 'caracas', 24, 462, 1118, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://probando.com', 'nose', 32),
-(23, 'empresa2 de ll', 'V173898149', '123446-1', '1010', 18, 1, '90939933.00', 10, 'caracas', 24, 462, 1123, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://loco.com', 'nose', 32),
-(24, 'empresa real1 con referencia2', 'V173898149', '123466-1', '1010', 18, 2, '10101010101.00', 2, 'caracas', 24, 462, 1118, '0212-4813639', '0212-4813639', 'walter86_79@hotmail.com', 'http://probanco.com', 'nose', 33);
+(30, 'tableros industriales c.a.', 'J08505758-7', '2365671', 'L13502157', 306, 2, '250.00', 1, 'calle 19 entre carretera 4y5 zona industrial 1', 12, 146, 464, '0251-2370612', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -1918,7 +2372,7 @@ INSERT INTO `grupo` (`id`, `cod_seccion`, `cod_division`, `codigo_grupo`, `grupo
 
 CREATE TABLE IF NOT EXISTS `inspectoria` (
   `id` varchar(5) CHARACTER SET latin1 NOT NULL,
-  `inspectoria` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `inspectoria` varchar(100) NOT NULL,
   `id_estado` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_estado` (`id_estado`)
@@ -2368,7 +2822,7 @@ INSERT INTO `municipios` (`id_municipio`, `id_estado`, `municipio`) VALUES
 CREATE TABLE IF NOT EXISTS `nivel_educativo` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `cod_interno` varchar(2) CHARACTER SET latin1 NOT NULL,
-  `descripcion_nivel` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `descripcion_nivel` varchar(100) NOT NULL,
   PRIMARY KEY (`cod_interno`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
@@ -2395,17 +2849,17 @@ INSERT INTO `nivel_educativo` (`id`, `cod_interno`, `descripcion_nivel`) VALUES
 CREATE TABLE IF NOT EXISTS `nomina` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `id_empresa` bigint(20) unsigned NOT NULL,
-  `nombres` varchar(200) CHARACTER SET latin1 NOT NULL COMMENT 'nombres y apellidos',
-  `cedula` varchar(10) CHARACTER SET latin1 NOT NULL,
-  `nacionalidad` char(1) CHARACTER SET latin1 NOT NULL COMMENT 'V=venezolano, E=Extranjero',
-  `pais_origen` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `lugar_nacimiento` varchar(100) CHARACTER SET latin1 NOT NULL COMMENT 'ciudad',
-  `sexo` char(1) CHARACTER SET latin1 NOT NULL COMMENT 'F(femenino) M(masculino)',
+  `nombres` varchar(200) NOT NULL COMMENT 'nombres y apellidos',
+  `cedula` varchar(10) NOT NULL,
+  `nacionalidad` char(1) NOT NULL COMMENT 'V=venezolano, E=Extranjero',
+  `pais_origen` varchar(100) NOT NULL,
+  `lugar_nacimiento` varchar(100) NOT NULL COMMENT 'ciudad',
+  `sexo` char(1) NOT NULL COMMENT 'F(femenino) M(masculino)',
   `edad` int(11) NOT NULL COMMENT 'años',
-  `estado_civil` char(1) CHARACTER SET latin1 NOT NULL COMMENT 'S(soltero)C(casado),D(divorciado)V(viudo)',
+  `estado_civil` char(1) NOT NULL COMMENT 'S(soltero)C(casado),D(divorciado)V(viudo)',
   `nivel_educativo` varchar(2) CHARACTER SET latin1 NOT NULL COMMENT '01(no sabe) 02(ninguno)03(inicial-preescolar)04(primaria-1-6)05(secundaria-1-5)06(tecnico superior) 07 (universitario)',
   `grado_anio_aprobado` int(11) NOT NULL COMMENT 'años',
-  `oficio_dentro_establecimiento` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `oficio_dentro_establecimiento` varchar(255) NOT NULL,
   `codigo_ocupacion` int(11) NOT NULL,
   `tiempo_serv_establecimiento_anios` int(11) NOT NULL,
   `tiempo_serv_establecimiento_meses` int(11) NOT NULL,
@@ -2424,63 +2878,81 @@ CREATE TABLE IF NOT EXISTS `nomina` (
   KEY `nivel_educativo` (`nivel_educativo`),
   KEY `cod_empresa` (`id_empresa`),
   KEY `id_sindicato` (`id_sindicato`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=880 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
 
 --
 -- Volcado de datos para la tabla `nomina`
 --
 
 INSERT INTO `nomina` (`id`, `id_empresa`, `nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`, `id_sindicato`) VALUES
-(830, 3, 'Acosta Bello, Joel Antonio', '19667073', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
-(831, 3, 'Aray Vitapaz, Brayan José', '19479129', 'V', 'Venezuela', 'Valencia', 'M', 22, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8, 6),
-(832, 3, 'Arias Marcano, Yelika Andreina', '14495920', 'V', 'Venezuela', 'Caracas', 'F', 32, 'C', '07', 0, 'Coord Calidad Y Procesos', 0, 1, 3, 0, 0, '5532.12', '0.00', '7191.76', '0.00', 1, 8, 6),
-(833, 3, 'Arias Rincón, Oscar José', '18412958', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '06', 0, 'Coord.De Seguridad Y Salud Laboral', 0, 0, 3, 0, 0, '3500.00', '0.00', '3500.00', '0.00', 2, 8, 6),
-(834, 3, 'Arzola Ron, Omaira De Jesús', '7127124', 'V', 'Venezuela', 'Valencia', 'F', 53, 'S', '05', 0, 'Operador 1', 0, 5, 5, 0, 0, '0.00', '111.64', '0.00', '145.13', 0, 8, 6),
-(835, 3, 'Betancourt Yanez, Dilcia Del Carmen', '9403674', 'V', 'Venezuela', 'San Juan De Los Morros', 'F', 44, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 6, 0, 0, '3418.33', '0.00', '4443.83', '0.00', 0, 8, 6),
-(836, 3, 'Cabrera Rodríguez, Resbel Antonio', '20950942', 'V', 'Venezuela', 'San Juan De Los Morros', 'M', 18, 'S', '05', 0, 'Operador 3', 0, 0, 2, 0, 0, '0.00', '59.35', '0.00', '106.46', 0, 8, 6),
-(837, 3, 'Campos Rodríguez, Regino', '6697264', 'V', 'Venezuela', 'Guarico', 'M', 49, 'S', '05', 0, 'Operador 2', 0, 4, 6, 0, 0, '0.00', '110.01', '0.00', '143.01', 2, 8, 6),
-(838, 3, 'Carrero Guzmán, Jairo Antonio', '20382854', 'V', 'Venezuela', 'Valencia', 'M', 20, 'S', '01', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
-(839, 3, 'Correa Correa, Wilmer', '15684169', 'V', 'Venezuela', 'Caracas', 'M', 32, 'S', '05', 0, 'Chofer 2', 0, 4, 7, 0, 0, '0.00', '120.31', '0.00', '156.40', 0, 8, 6),
-(840, 3, 'Fernandes Rodríguez, José Alexander', '14303141', 'V', 'Venezuela', 'Guacara', 'M', 37, 'S', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8, 6),
-(841, 3, 'Figueredo Díaz, Abraham David', '9862027', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Lider De Producci?n 2', 0, 1, 5, 0, 0, '3200.00', '0.00', '4160.00', '0.00', 2, 8, 6),
-(842, 3, 'García Matute, Carlos Eduardo', '20081131', 'V', 'Venezuela', 'Valencia', 'M', 24, 'S', '05', 0, 'Lider Calidad 2', 0, 2, 7, 0, 0, '3389.10', '0.00', '4405.83', '0.00', 0, 8, 6),
-(843, 3, 'González César, Carlos Luis', '14819080', 'V', 'Venezuela', 'Valencia', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '109.64', 4, 8, 6),
-(844, 3, 'González Senoco, Omar Alexander', '12522371', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
-(845, 3, 'Guerrero Flores, Oliver De Jesus', '19602230', 'V', 'Venezuela', 'Trujillo', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 0, 8, 6),
-(846, 3, 'Hernández Crespo, Wilmer Antonio', '17956886', 'V', 'Venezuela', 'Valencia', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 3, 8, 6),
-(847, 3, 'Hernandez Peña, Alixon Carolina', '12102386', 'V', 'Venezuela', 'Valencia', 'F', 38, 'C', '05', 0, 'Lider De Producci?n', 0, 2, 8, 0, 0, '3449.82', '0.00', '4484.77', '0.00', 2, 8, 6),
-(848, 3, 'Hernández Perozo, Iris Marbella', '13723399', 'V', 'Venezuela', 'Coro', 'F', 34, 'S', '05', 0, 'Lider Calidad 2', 0, 4, 5, 0, 0, '3634.43', '0.00', '4724.76', '0.00', 0, 8, 6),
-(849, 3, 'Isambertt Díaz, Hendrikson Manuel', '14181858', 'V', 'Venezuela', 'Maracaibo', 'M', 33, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
-(850, 3, 'Leal Da Costa, José Jhon', '12481902', 'V', 'Venezuela', 'Caracas', 'M', 36, 'S', '05', 0, 'Coord.Mantenimiento 2', 0, 4, 9, 0, 0, '3995.55', '0.00', '5194.22', '0.00', 0, 8, 6),
-(851, 3, 'Llovera Acosta, Mayda Elena', '14186987', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Electrom?canico', 0, 1, 3, 0, 0, '3630.00', '0.00', '4719.00', '0.00', 1, 8, 6),
-(852, 3, 'Lozada Chinchilla, David Orlando', '22009154', 'V', 'Venezuela', 'Valencia', 'M', 19, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8, 6),
-(853, 3, 'Maldonado Aparicio, Natasha Vanessa', '14819405', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '06', 0, 'Coord.Pcp/Compras', 0, 7, 6, 0, 0, '4497.71', '0.00', '5847.02', '0.00', 0, 8, 6),
-(854, 3, 'Millano Olivera, Wuilmen Antonio', '15975376', 'V', 'Venezuela', 'Caracas', 'M', 29, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 2, 8, 6),
-(855, 3, 'Mirabal Romero, Freddy Roger', '8847435', 'V', 'Venezuela', 'Valencia', 'M', 46, 'S', '05', 0, 'Auxiliar De Alm?cen 3', 0, 1, 6, 0, 0, '0.00', '81.90', '0.00', '109.63', 2, 8, 6),
-(856, 3, 'Molina Plaza, Frank Gregrio', '18500489', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Electrom?canico 2', 0, 1, 2, 0, 0, '3000.00', '0.00', '3.90', '0.00', 1, 8, 6),
-(857, 3, 'Ochoa Rodriguez, José Gregorio', '8673908', 'V', 'Venezuela', 'Valencia', 'M', 53, 'S', '05', 0, 'Operador 2', 0, 4, 1, 0, 0, '0.00', '105.10', '0.00', '136.63', 0, 8, 6),
-(858, 3, 'Oliveros Granados, Jesus Rafael', '13618300', 'V', 'Venezuela', 'Maracay', 'M', 33, 'C', '07', 0, 'Jefe De Producci?n', 0, 1, 4, 0, 0, '6655.00', '0.00', '8651.50', '0.00', 0, 8, 6),
-(859, 3, 'Osabarrio Botello, Susana', '15529327', 'V', 'Venezuela', 'Valencia', 'F', 32, 'S', '07', 0, 'Coord.De Recursos Humanos', 0, 1, 6, 0, 0, '5183.64', '0.00', '6738.73', '0.00', 0, 8, 6),
-(860, 3, 'Pacheco Rivero, Pedro Antonio', '23742497', 'V', 'Venezuela', 'Trujillo', 'M', 19, 'S', '05', 0, 'Operador 2', 0, 1, 3, 0, 0, '0.00', '88.54', '0.00', '115.10', 0, 8, 6),
-(861, 3, 'Peraza Arraez, Osmar Hernan', '17553105', 'V', 'Venezuela', 'Valencia', 'M', 27, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 6, 8, 6),
-(862, 3, 'Pérez, José Luis', '12310091', 'V', 'Venezuela', 'Valencia', 'M', 41, 'C', '05', 0, 'Aux.Serv.Generales 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
-(863, 3, 'Pérez Escalona, Gustavo Adolfo', '8846297', 'V', 'Venezuela', 'Valencia', 'M', 47, 'S', '05', 0, 'Supervisor De Producci?n', 0, 1, 8, 0, 0, '5081.67', '0.00', '6606.17', '0.00', 3, 8, 6),
-(864, 3, 'Perez Pinto, Javier Alejandro', '17778944', 'V', 'Venezuela', 'Valencia', 'M', 26, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.46', 1, 8, 6),
-(865, 3, 'Plasencia Salazar, José Federico', '22740182', 'V', 'Venezuela', 'Puerto Ordaz', 'M', 20, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 0, 8, 6),
-(866, 3, 'Primera Nieves, Pablo José', '13103016', 'V', 'Venezuela', 'Valencia', 'M', 36, 'S', '05', 0, 'Operador 3', 0, 1, 1, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8, 6),
-(867, 3, 'Quezada Hernández, Alexander Rafael', '7124495', 'V', 'Venezuela', 'Valencia', 'M', 42, 'S', '06', 0, 'Coord Mantenimiento', 0, 1, 6, 0, 0, '6708.24', '0.00', '8720.71', '0.00', 2, 8, 6),
-(868, 3, 'Quintero Rodríguez, Jesús Alexander', '23426565', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Operador 3', 0, 0, 3, 0, 0, '0.00', '81.90', '0.00', '81.90', 1, 8, 6),
-(869, 3, 'Quintero Zavarce, Zuleima Del Carmen', '9633381', 'V', 'Venezuela', 'Coro', 'F', 50, 'D', '05', 0, 'Aux.Serv.Generales 2', 0, 7, 10, 0, 0, '0.00', '94.35', '0.00', '122.66', 6, 8, 6),
-(870, 3, 'Requena, Auribeth Yadira', '13046909', 'V', 'Venezuela', 'Valencia', 'F', 39, 'S', '05', 0, 'Asistente De Operaciones', 0, 1, 5, 0, 0, '2782.77', '0.00', '3617.60', '0.00', 1, 8, 6),
-(871, 3, 'Rivas Rodríguez, José Javier', '19997004', 'V', 'Venezuela', 'Maracay', 'M', 25, 'S', '05', 0, 'Aux.Serv.Generales 2', 0, 1, 4, 0, 0, '0.00', '81.89', '0.00', '106.46', 0, 8, 6),
-(872, 3, 'Rodríguez, Yepzi Lisbeth', '10059762', 'V', 'Venezuela', 'Valencia', 'F', 41, 'C', '05', 0, 'Operador 2', 0, 4, 7, 0, 0, '0.00', '110.01', '0.00', '143.01', 3, 8, 6),
-(873, 3, 'Romero Bolívar, Carlos Javier', '24295242', 'V', 'Venezuela', 'Valencia', 'M', 21, 'S', '05', 0, 'Auditor 2', 0, 1, 4, 0, 0, '0.00', '88.55', '0.00', '115.12', 0, 8, 6),
-(874, 3, 'Rondón Saavedra, Jorge Daniel', '20731635', 'V', 'Venezuela', 'Valencia', 'M', 18, 'S', '05', 0, 'Aprendiz Ince', 0, 0, 11, 0, 0, '1323.86', '0.00', '1323.86', '0.00', 0, 8, 6),
-(875, 3, 'Salom Herrera, Felipe Antonio', '15652960', 'V', 'Venezuela', 'Valencia', 'M', 31, 'S', '05', 0, 'Operador 3', 0, 1, 3, 0, 0, '0.00', '81.90', '0.00', '106.47', 1, 8, 6),
-(876, 3, 'Torrealba Acosta, Miguel Angel', '16401991', 'V', 'Venezuela', 'Valencia', 'M', 28, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8, 6),
-(877, 3, 'Tortolero Morloy, Carlos Eduardo', '18501659', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Operador 3', 0, 1, 2, 0, 0, '0.00', '81.90', '0.00', '106.47', 2, 8, 6),
-(878, 3, 'Zarate Campos, Jonathan José', '17807331', 'V', 'Venezuela', 'Valencia', 'M', 25, 'S', '05', 0, 'Coord.Producci?n', 0, 5, 6, 0, 0, '4672.14', '0.00', '6073.78', '0.00', 0, 8, 6),
-(879, 3, 'Zerpa Rodríguez, José Fernando', '12568645', 'V', 'Venezuela', 'Valencia', 'M', 35, 'C', '07', 0, 'Supervisor Materiales', 0, 2, 4, 0, 0, '8121.76', '0.00', '10558.29', '0.00', 1, 8, 6);
+(1, 30, 'RODRIGUEZ LUCENA OTTO', '7357824', 'V', 'VENEZUELA', 'LARA', 'H', 53, 'S', '07', 1, 'COORD. DE VENTAS Y SERVICIOS', 0, 18, 11, 28, 0, '18.97', '0.00', '24.67', '0.00', 0, 1, 1),
+(2, 30, 'RODRIGUEZ A. ELOIZA', '11883983', 'V', 'VENEZUELA', 'LARA', 'M', 41, 'S', '07', 5, 'JEFE DE ADMINISTRACION', 0, 14, 1, 14, 0, '18.97', '0.00', '24.67', '0.00', 1, 1, 1),
+(3, 30, 'GONZALEZ REINA DEL C.', '6811341', 'V', 'VENEZUELA', 'CARACAS', 'M', 51, 'S', '07', 5, 'JEFE DE RECURSOSO HUMANOS', 0, 6, 6, 24, 0, '19.13', '0.00', '24.86', '0.00', 2, 1, 1),
+(4, 30, 'GONZALEZ WILMER', '11791787', 'V', 'VENEZUELA', 'LARA', 'H', 41, 'S', '04', 6, 'JEFE DE ALMACEN', 0, 6, 9, 19, 0, '14.38', '0.00', '18.70', '0.00', 3, 1, 1),
+(5, 30, 'LUCENA MIGDALY', '11428751', 'V', 'VENEZUELA', 'LARA', 'M', 42, 'S', '07', 4, 'ASIST. ADM  TRIBUTOS', 0, 6, 7, 20, 0, '9.65', '0.00', '12.54', '0.00', 2, 1, 1),
+(6, 30, 'ESPINOZA C. BELINDA', '18105631', 'V', 'VENEZUELA', 'LARA', 'M', 28, 'S', '07', 2, 'ASIST. ADM CUENTAS POR COBRAR', 0, 6, 10, 11, 0, '9.57', '0.00', '12.45', '0.00', 2, 1, 1),
+(7, 30, 'MARTINEZ HENRY', '9618143', 'V', 'VENEZUELA', 'FALCON', 'H', 52, 'S', '04', 1, 'JEFE DE MANTENIMIENTO', 0, 13, 4, 33, 0, '14.38', '0.00', '18.70', '0.00', 0, 1, 1),
+(8, 30, 'GONZALEZ RUTH', '12432574', 'V', 'VENEZUELA', 'LARA', 'M', 41, 'S', '04', 3, 'ASISTENTE DE ADM DE COMPRAS', 0, 4, 8, 24, 0, '9.57', '0.00', '12.45', '0.00', 3, 1, 1),
+(9, 30, 'SUAREZ KELLY', '14826029', 'V', 'VENEZUELA', 'LARA', 'M', 34, 'C', '07', 5, 'ASISTENTE DE RECURSOS HUMANOS', 0, 4, 6, 8, 0, '8.28', '0.00', '10.76', '0.00', 2, 1, 1),
+(10, 30, 'PARRA SANDRA', '9622623', 'V', 'VENEZUELA', 'LARA', 'M', 45, 'S', '04', 5, 'ASISTENTE DE PLANTA', 0, 3, 4, 3, 0, '7.29', '0.00', '9.47', '0.00', 0, 1, 1),
+(11, 30, 'DAZA YIXYS', '9622564', 'V', 'VENEZUELA', 'LARA', 'M', 45, 'S', '07', 5, 'GERENTE GENERAL', 0, 3, 4, 25, 0, '31.58', '0.00', '41.05', '0.00', 0, 1, 1),
+(12, 30, 'VALERA LEVIN', '14066444', 'V', 'VENEZUELA', 'LARA', 'H', 34, 'S', '06', 3, 'COORDINADOR HIGIENE Y SEGURIDAD IND', 0, 2, 4, 8, 0, '11.76', '0.00', '15.29', '0.00', 2, 1, 1),
+(13, 30, 'GALLARDO KARELYS', '14750646', 'V', 'VENEZUELA', 'LARA', 'M', 33, 'S', '07', 5, 'ASISTENTE CUENTAS POR PAGAR', 0, 0, 7, 7, 0, '8.21', '0.00', '10.67', '0.00', 2, 1, 1),
+(14, 30, 'MIRANDA SIRA HERNAN', '12.022.289', 'V', 'VENEZUELA', 'LARA', 'H', 40, 'S', '05', 5, 'OPERADOR DE MAQUINA', 0, 11, 0, 11, 0, '0.00', '8.39', '0.00', '10.91', 1, 1, 1),
+(15, 30, 'FRIAS VASQUEZ JUAN B.', '10.773.688', 'V', 'VENEZUELA', 'LARA', 'H', 47, 'S', '04', 6, 'CHOFER', 0, 5, 10, 24, 0, '0.00', '9.78', '0.00', '12.71', 4, 1, 1),
+(16, 30, 'GONZALEZ C. HERIBERTO', '10.841.750', 'V', 'VENEZUELA', 'LARA', 'H', 47, 'S', '05', 5, 'COORDINADOR DE PINTURA', 0, 11, 0, 11, 0, '0.00', '12.39', '0.00', '16.11', 0, 1, 1),
+(17, 30, 'NELO LISBETH ISABEL', '11.599.752', 'V', 'VENEZUELA', 'LARA', 'M', 42, 'S', '05', 4, 'ENSAMBLADORA', 0, 13, 0, 13, 0, '0.00', '8.56', '0.00', '11.13', 2, 1, 1),
+(18, 30, 'PEÑA MORALES ALI E.', '12.025.603', 'V', 'VENEZUELA', 'LARA', 'H', 40, 'C', '05', 4, 'OPERARIO ESPECIALIZADO SOLDADURA', 0, 8, 11, 10, 0, '0.00', '10.03', '0.00', '13.04', 3, 1, 1),
+(19, 30, 'MUSET V JOAN JOSE', '16.641.477', 'V', 'VENEZUELA', 'LARA', 'H', 32, 'S', '05', 5, 'ENSAMBLADOR', 0, 6, 10, 6, 0, '0.00', '8.07', '0.00', '10.49', 1, 1, 1),
+(20, 30, 'OLIVEROS WILLIANS JOSE', '16.137.274', 'V', 'VENEZUELA', 'LARA', 'H', 34, 'S', '05', 5, 'OPERADOR MAQUINA TALLER', 0, 5, 10, 5, 0, '0.00', '8.00', '0.00', '10.40', 0, 1, 1),
+(21, 30, 'PEREZ JOSE GREGORIO', '13.268.249', 'V', 'VENEZUELA', 'LARA', 'H', 37, 'S', '05', 3, 'COORDINADOR DE ENSAMBLAJE', 0, 11, 0, 11, 0, '0.00', '12.39', '0.00', '16.11', 4, 1, 1),
+(22, 30, 'RODRIGUEZ DOUGLAS', '9.540.883', 'V', 'VENEZUELA', 'LARA', 'H', 51, 'S', '05', 5, 'COORDINADOR DE TALLER', 0, 23, 0, 23, 0, '0.00', '13.96', '0.00', '18.15', 3, 1, 1),
+(23, 30, 'ALVAREZ OROZCO JEAN', '17.726.324', 'V', 'VENEZUELA', 'LARA', 'H', 29, 'S', '05', 5, 'AYUDANTE DE DESPACHO', 0, 6, 0, 6, 0, '0.00', '8.00', '0.00', '10.40', 3, 1, 1),
+(24, 30, 'SIRA PEDRO RAMON', '4.342.172', 'V', 'VENEZUELA', 'LARA', 'H', 58, 'S', '04', 6, 'COORDINADOR DE SOLDADURA', 0, 21, 0, 21, 0, '0.00', '13.55', '0.00', '17.62', 0, 1, 1),
+(25, 30, 'LINAREZ MENDOZA BEXI', '21.246.141', 'V', 'VENEZUELA', 'LARA', 'H', 34, 'S', '04', 6, 'OPERADOR DE MAQUINA', 0, 6, 0, 6, 0, '0.00', '8.00', '0.00', '10.40', 2, 1, 1),
+(26, 30, 'ESCOBAR G. EXNER', '7.367.802', 'V', 'VENEZUELA', 'LARA', 'H', 52, 'S', '04', 6, 'AYUDANTE DETORNERIA', 0, 11, 0, 11, 0, '0.00', '8.39', '0.00', '10.91', 2, 1, 1),
+(27, 30, 'PINEDA MIGUEL ANGEL', '13.510.820', 'V', 'VENEZUELA', 'LARA', 'H', 37, 'S', '05', 3, 'AYUDANTE DE DESPACHO', 0, 11, 7, 11, 0, '0.00', '8.39', '0.00', '10.91', 2, 1, 1),
+(28, 30, 'DAZA JUAN FERMIN', '11.877.338', 'V', 'VENEZUELA', 'LARA', 'H', 45, 'S', '05', 3, 'OPERADOR DE MAQUINA DE TALLER', 0, 14, 8, 14, 0, '0.00', '8.74', '0.00', '11.36', 3, 1, 1),
+(29, 30, 'DURAN AMILCAR JOSE', '20.015.858', 'V', 'VENEZUELA', 'LARA', 'H', 27, 'S', '05', 5, 'OPERARIO ESPECIALIZADO EN PINTURA', 0, 6, 0, 6, 0, '0.00', '9.78', '0.00', '12.71', 1, 1, 1),
+(30, 30, 'MENDOZA PARRA OMAR', '4.387.293', 'V', 'VENEZUELA', 'LARA', 'H', 62, 'C', '04', 6, 'OPERARIO ESPECIALIZADO  SOLDADURA', 0, 18, 8, 18, 0, '0.00', '11.08', '0.00', '14.40', 0, 1, 1),
+(31, 30, 'GUTIERREZ REGULO JOSE', '7.424.873', 'V', 'VENEZUELA', 'LARA', 'H', 50, 'S', '05', 3, 'COORDINADOR DE TORNERIA', 0, 10, 0, 10, 0, '0.00', '12.27', '0.00', '15.95', 1, 1, 1),
+(32, 30, 'OCHOA HECTOR ', '13.505.400', 'V', 'VENEZUELA', 'LARA', 'H', 38, 'S', '05', 5, 'OPERADOR DE MAQUINA', 0, 10, 7, 10, 0, '0.00', '8.39', '0.00', '10.91', 3, 1, 1),
+(33, 30, 'RODRIGUEZ JOSE LAUREANO', '15.230.256', 'V', 'VENEZUELA', 'LARA', 'H', 38, 'S', '04', 6, 'AYUDANTE DE ALMACEN', 0, 6, 0, 6, 0, '0.00', '8.00', '0.00', '10.40', 1, 1, 1),
+(34, 30, 'MENDOZA GIOVANNY', '15.778.964', 'V', 'VENEZUELA', 'CARACAS', 'H', 32, 'S', '05', 5, 'AYUDANTE DE TALLER', 0, 5, 10, 5, 0, '0.00', '8.00', '0.00', '10.40', 3, 1, 1),
+(35, 30, 'ESCALONA JUAN ENRIQUE', '9.483.425', 'V', 'VENEZUELA', 'LARA', 'H', 48, 'S', '05', 4, 'CHOFER', 0, 9, 2, 9, 0, '0.00', '10.03', '0.00', '13.04', 1, 1, 1),
+(36, 30, 'MANBEL LEOPOLDO A.', '5.783.124', 'V', 'VENEZUELA', 'LARA', 'H', 54, 'S', '04', 6, 'CHOFER', 0, 17, 11, 17, 0, '0.00', '10.97', '0.00', '14.26', 3, 1, 1),
+(37, 30, 'RODRIGUEZ SANCHEZ HEBERT', '14.590.765', 'V', 'VENEZUELA', 'LARA', 'H', 36, 'S', '04', 6, 'OPERADOR ESPECIALIZADO PINTURA', 0, 9, 2, 9, 0, '0.00', '10.03', '0.00', '13.04', 4, 1, 1),
+(38, 30, 'GONZALEZ NELSON ANTONIO', '11.427.124', 'V', 'VENEZUELA', 'LARA', 'H', 42, 'C', '05', 1, 'OPERADOR DE MAQUINA', 0, 15, 9, 15, 0, '0.00', '8.82', '0.00', '11.47', 4, 1, 1),
+(39, 30, 'GIMENEZ CLEIVER', '14.878.772', 'V', 'VENEZUELA', 'LARA', 'H', 37, 'S', '04', 6, 'ENSAMBLADOR', 0, 10, 9, 10, 0, '0.00', '8.39', '0.00', '10.91', 3, 1, 1),
+(40, 30, 'MOSQUERA TORIN ALI S.', '9.617.004', 'V', 'VENEZUELA', 'LARA', 'H', 49, 'S', '07', 4, 'OPERARIO ESPECIALIZADO SOLDADURA', 0, 17, 9, 17, 0, '0.00', '10.97', '0.00', '14.26', 4, 1, 1),
+(41, 30, 'RODRIGUEZ ARMANDO P.', '7.354.093', 'V', 'VENEZUELA', 'LARA', 'H', 57, 'S', '04', 6, 'ENSAMBLADOR', 0, 14, 0, 14, 0, '0.00', '8.65', '0.00', '11.24', 0, 1, 1),
+(42, 30, 'ALVAREZ JUSTO RAFAEL', '10.139.863', 'V', 'VENEZUELA', 'LARA', 'H', 49, 'S', '04', 6, 'OPERADOR DE MAQUINA TALLER', 0, 17, 8, 17, 0, '0.00', '9.00', '0.00', '11.70', 0, 1, 1),
+(43, 30, 'SANCHEZ JONATHAN', '14.185.025', 'V', 'VENEZUELA', 'CARABOBO', 'H', 35, 'S', '05', 5, 'AYUDANTE DE TALLER', 0, 5, 0, 5, 0, '0.00', '8.00', '0.00', '10.40', 3, 1, 1),
+(44, 30, 'PIÑA TRIJILIO', '11.882.794', 'V', 'VENEZUELA', 'LARA', 'H', 44, 'S', '04', 6, 'OPERADOR MAQUINA DE TALLER', 0, 5, 10, 2, 0, '0.00', '8.00', '0.00', '10.40', 5, 1, 1),
+(45, 30, 'MARQUEZ MAXEWEL', '4.274.113', 'V', 'VENEZUELA', 'LARA', 'H', 62, 'C', '05', 5, 'ENSAMBLADOR', 0, 17, 3, 17, 0, '0.00', '8.91', '0.00', '11.58', 5, 1, 1),
+(46, 30, 'MONTES ALVAREZ ROBERTO', '4.071.101', 'V', 'VENEZUELA', 'LARA', 'H', 65, 'S', '04', 6, 'AYUDANTE DE TORNERIA', 0, 17, 2, 17, 0, '0.00', '8.91', '0.00', '11.58', 0, 1, 1),
+(47, 30, 'HERNANDEZ ARGIMIRO', '9.557.902', 'V', 'VENEZUELA', 'LARA', 'H', 51, 'C', '05', 3, 'OPERADOR DE MAQUINA TALLER', 0, 10, 3, 10, 0, '0.00', '8.31', '0.00', '10.80', 2, 1, 1),
+(48, 30, 'PEÑA A. FRANCISCO', '15.351.564', 'V', 'VENEZUELA', 'LARA', 'H', 33, 'S', '05', 5, 'OPERARIO  ESPECIALIZADO  PUNTEADOR', 0, 10, 2, 10, 0, '0.00', '8.31', '0.00', '10.80', 0, 1, 1),
+(49, 30, 'CATARI CIRILO', '9.557.838', 'V', 'VENEZUELA', 'ZULIA', 'H', 49, 'S', '04', 6, 'OPERADOR DE MAQUINA TALLER', 0, 10, 2, 10, 0, '0.00', '8.31', '0.00', '10.80', 0, 1, 1),
+(50, 30, 'GUEDEZ TORRES OMAR', '7.359.557', 'V', 'VENEZUELA', 'GUARICO', 'H', 54, 'S', '04', 6, 'AYUDANTE DE MANTENIMIENTO', 0, 9, 2, 9, 0, '0.00', '10.03', '0.00', '13.04', 0, 1, 1),
+(51, 30, 'LOPEZ OSWALDO', '9.622.036', 'V', 'VENEZUELA', 'LARA', 'H', 46, 'S', '04', 6, 'OPERARIO ESPECIALIZADO EN PINTURA', 0, 10, 0, 10, 0, '0.00', '10.27', '0.00', '13.35', 3, 1, 1),
+(52, 30, 'GUTIERREZ BARRIOS JOSE', '9.623.823', 'V', 'VENEZUELA', 'LARA', 'H', 46, 'S', '05', 1, 'ENSAMBLADOR', 0, 10, 1, 10, 0, '0.00', '8.31', '0.00', '10.80', 0, 1, 1),
+(53, 30, 'BORGES MARCEL RAMON', '16.867.848', 'V', 'VENEZUELA', 'LARA', 'H', 31, 'S', '05', 4, 'ENSAMBLADOR', 0, 10, 1, 10, 0, '0.00', '8.31', '0.00', '10.80', 2, 1, 1),
+(54, 30, 'MENDEZ C. OSWALDO', '9.556.461', 'V', 'VENEZUELA', 'LARA', 'H', 53, 'S', '04', 6, '  OPERADOR DE MAQUINA DE TALLER', 0, 9, 11, 9, 0, '0.00', '8.31', '0.00', '10.80', 0, 1, 1),
+(55, 30, 'COLMENAREZ DIXSON', '11.599.620', 'V', 'VENEZUELA', 'LARA', 'H', 40, 'S', '04', 6, 'OPERARIO ESPECIALIZADO PUNTEADOR', 0, 9, 0, 9, 0, '0.00', '8.23', '0.00', '10.70', 1, 1, 1),
+(56, 30, 'ALVARADO N. RUBEN', '11.425.071', 'V', 'VENEZUELA', 'LARA', 'H', 44, 'S', '05', 5, 'OPERADOR ESPECIALIZADO', 0, 8, 9, 8, 0, '0.00', '10.03', '0.00', '13.04', 1, 1, 1),
+(57, 30, 'FIGUEROA ALFONSO', '13.083.989', 'V', 'VENEZUELA', 'LARA', 'H', 38, 'S', '04', 6, 'ENSAMBLADOR', 0, 8, 10, 8, 0, '0.00', '8.23', '0.00', '10.70', 2, 1, 1),
+(58, 30, 'ALVAREZ GERMAN', '13.842.976', 'V', 'VENEZUELA', 'LARA', 'H', 36, 'S', '05', 5, 'CHOFER', 0, 9, 0, 9, 0, '0.00', '10.03', '0.00', '13.04', 2, 1, 1),
+(59, 30, 'SANCHEZ ALMAO JHONNY', '9.554.294', 'V', 'VENEZUELA', 'LARA', 'H', 51, 'C', '05', 6, 'OPERADOR DE MAQUINA DE TALLER', 0, 9, 2, 20, 0, '0.00', '10.03', '0.00', '13.04', 2, 1, 1),
+(60, 30, 'ARANGUREN ROBERT', '16.404.628', 'V', 'VENEZUELA', 'LARA', 'H', 34, 'S', '05', 2, 'AYUDANTE DE DESPACHO', 0, 8, 9, 5, 0, '0.00', '8.23', '0.00', '10.70', 2, 1, 1),
+(61, 30, 'COLMENAREZ PABLO', '8.059.708', 'V', 'VENEZUELA', 'PORTUGUESA', 'H', 69, 'S', '02', 0, 'OPERARIO ESPECIALIZADO EN PINTURA', 0, 7, 7, 3, 0, '0.00', '10.12', '0.00', '13.16', 0, 1, 1),
+(62, 30, 'GONZALEZ ROJAS JOSE', '16.139.987', 'V', 'VENEZUELA', 'LARA', 'H', 37, 'S', '07', 2, 'OPERADOR DE MAQUINA', 0, 8, 9, 5, 0, '0.00', '8.23', '0.00', '10.70', 1, 1, 1),
+(63, 30, 'TIMAURE JHONNY', '13.774.526', 'V', 'VENEZUELA', 'LARA', 'H', 37, 'S', '04', 4, 'OPERADOR MAQUINA TALLER', 0, 3, 11, 3, 0, '0.00', '7.88', '0.00', '10.24', 0, 1, 1),
+(64, 30, 'ESCOBAR CARLOS', '18.332.350', 'V', 'VENEZUELA', 'LARA', 'H', 26, 'S', '04', 5, 'OPERADOR MAQUINA TALLER', 0, 4, 0, 4, 0, '0.00', '7.88', '0.00', '10.24', 3, 1, 1),
+(65, 30, 'PACHECO JAIRO', '11.788.478', 'V', 'VENEZUELA', 'LARA', 'H', 41, 'S', '05', 5, 'AYUDANTE SERVICIOS GENERALES', 0, 4, 0, 4, 0, '0.00', '5.87', '0.00', '7.63', 3, 1, 1),
+(66, 30, 'PIÑA PEREZ ALEXANDER', '7.397.698', 'V', 'VENEZUELA', 'LARA', 'H', 46, 'S', '05', 5, 'MENSAJERO', 0, 29, 3, 25, 0, '0.00', '12.97', '0.00', '16.85', 3, 1, 1),
+(67, 30, 'MAMBELL JEAN CARLOS', '21.246.258', 'V', 'VENEZUELA', 'LARA', 'H', 29, 'S', '05', 5, 'OPERADOR MAQUINA TALLER', 0, 3, 8, 3, 0, '0.00', '7.88', '0.00', '10.24', 0, 1, 1),
+(68, 30, 'QUERALES MARLENE', '7.388.179', 'V', 'VENEZUELA', 'LARA', 'M', 48, 'S', '05', 5, 'AYUDANTE SERVICIOS GENERALES', 0, 3, 8, 3, 0, '0.00', '5.87', '0.00', '7.63', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2497,113 +2969,81 @@ CREATE TABLE IF NOT EXISTS `nomina_tipo_sindicato` (
   KEY `tipo_sindicato` (`tipo_sindicato`,`id_nomina`,`cod_convencion_nomina`),
   KEY `id_nomina` (`id_nomina`),
   KEY `cod_convencion_nomina` (`cod_convencion_nomina`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=101 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
 
 --
 -- Volcado de datos para la tabla `nomina_tipo_sindicato`
 --
 
 INSERT INTO `nomina_tipo_sindicato` (`id`, `tipo_sindicato`, `id_nomina`, `cod_convencion_nomina`) VALUES
-(1, 1, 830, 3),
-(2, 1, 831, 3),
-(3, 1, 832, 3),
-(4, 1, 833, 3),
-(5, 1, 834, 3),
-(6, 1, 835, 3),
-(7, 1, 836, 3),
-(8, 1, 837, 3),
-(9, 1, 838, 3),
-(10, 1, 839, 3),
-(11, 1, 840, 3),
-(12, 1, 841, 3),
-(13, 1, 842, 3),
-(14, 1, 843, 3),
-(15, 1, 844, 3),
-(16, 1, 845, 3),
-(17, 1, 846, 3),
-(18, 1, 847, 3),
-(19, 1, 848, 3),
-(20, 1, 849, 3),
-(21, 1, 850, 3),
-(22, 1, 851, 3),
-(23, 1, 852, 3),
-(24, 1, 853, 3),
-(25, 1, 854, 3),
-(26, 1, 855, 3),
-(27, 1, 856, 3),
-(28, 1, 857, 3),
-(29, 1, 858, 3),
-(30, 1, 859, 3),
-(31, 1, 860, 3),
-(32, 1, 861, 3),
-(33, 1, 862, 3),
-(34, 1, 863, 3),
-(35, 1, 864, 3),
-(36, 1, 865, 3),
-(37, 1, 866, 3),
-(38, 1, 867, 3),
-(39, 1, 868, 3),
-(40, 1, 869, 3),
-(41, 1, 870, 3),
-(42, 1, 871, 3),
-(43, 1, 872, 3),
-(44, 1, 873, 3),
-(45, 1, 874, 3),
-(46, 1, 875, 3),
-(47, 1, 876, 3),
-(48, 1, 877, 3),
-(49, 1, 878, 3),
-(50, 1, 879, 3),
-(51, 2, 830, 3),
-(52, 2, 831, 3),
-(53, 2, 832, 3),
-(54, 2, 833, 3),
-(55, 2, 834, 3),
-(56, 2, 835, 3),
-(57, 2, 836, 3),
-(58, 2, 837, 3),
-(59, 2, 838, 3),
-(60, 2, 839, 3),
-(61, 2, 840, 3),
-(62, 2, 841, 3),
-(63, 2, 842, 3),
-(64, 2, 843, 3),
-(65, 2, 844, 3),
-(66, 2, 845, 3),
-(67, 2, 846, 3),
-(68, 2, 847, 3),
-(69, 2, 848, 3),
-(70, 2, 849, 3),
-(71, 2, 850, 3),
-(72, 2, 851, 3),
-(73, 2, 852, 3),
-(74, 2, 853, 3),
-(75, 2, 854, 3),
-(76, 2, 855, 3),
-(77, 2, 856, 3),
-(78, 2, 857, 3),
-(79, 2, 858, 3),
-(80, 2, 859, 3),
-(81, 2, 860, 3),
-(82, 2, 861, 3),
-(83, 2, 862, 3),
-(84, 2, 863, 3),
-(85, 2, 864, 3),
-(86, 2, 865, 3),
-(87, 2, 866, 3),
-(88, 2, 867, 3),
-(89, 2, 868, 3),
-(90, 2, 869, 3),
-(91, 2, 870, 3),
-(92, 2, 871, 3),
-(93, 2, 872, 3),
-(94, 2, 873, 3),
-(95, 2, 874, 3),
-(96, 2, 875, 3),
-(97, 2, 876, 3),
-(98, 2, 877, 3),
-(99, 2, 878, 3),
-(100, 2, 879, 3);
+(1, 1, 1, 30),
+(2, 1, 2, 30),
+(3, 1, 3, 30),
+(4, 1, 4, 30),
+(5, 1, 5, 30),
+(6, 1, 6, 30),
+(7, 1, 7, 30),
+(8, 1, 8, 30),
+(9, 1, 9, 30),
+(10, 1, 10, 30),
+(11, 1, 11, 30),
+(12, 1, 12, 30),
+(13, 1, 13, 30),
+(14, 1, 14, 30),
+(15, 1, 15, 30),
+(16, 1, 16, 30),
+(17, 1, 17, 30),
+(18, 1, 18, 30),
+(19, 1, 19, 30),
+(20, 1, 20, 30),
+(21, 1, 21, 30),
+(22, 1, 22, 30),
+(23, 1, 23, 30),
+(24, 1, 24, 30),
+(25, 1, 25, 30),
+(26, 1, 26, 30),
+(27, 1, 27, 30),
+(28, 1, 28, 30),
+(29, 1, 29, 30),
+(30, 1, 30, 30),
+(31, 1, 31, 30),
+(32, 1, 32, 30),
+(33, 1, 33, 30),
+(34, 1, 34, 30),
+(35, 1, 35, 30),
+(36, 1, 36, 30),
+(37, 1, 37, 30),
+(38, 1, 38, 30),
+(39, 1, 39, 30),
+(40, 1, 40, 30),
+(41, 1, 41, 30),
+(42, 1, 42, 30),
+(43, 1, 43, 30),
+(44, 1, 44, 30),
+(45, 1, 45, 30),
+(46, 1, 46, 30),
+(47, 1, 47, 30),
+(48, 1, 48, 30),
+(49, 1, 49, 30),
+(50, 1, 50, 30),
+(51, 1, 51, 30),
+(52, 1, 52, 30),
+(53, 1, 53, 30),
+(54, 1, 54, 30),
+(55, 1, 55, 30),
+(56, 1, 56, 30),
+(57, 1, 57, 30),
+(58, 1, 58, 30),
+(59, 1, 59, 30),
+(60, 1, 60, 30),
+(61, 1, 61, 30),
+(62, 1, 62, 30),
+(63, 1, 63, 30),
+(64, 1, 64, 30),
+(65, 1, 65, 30),
+(66, 1, 66, 30),
+(67, 1, 67, 30),
+(68, 1, 68, 30);
 
 -- --------------------------------------------------------
 
@@ -3776,7 +4216,7 @@ CREATE TABLE IF NOT EXISTS `rama` (
   `codigo_grupo` tinyint(4) NOT NULL,
   `codigo_clase` tinyint(4) NOT NULL,
   `codigo_rama` tinyint(4) NOT NULL,
-  `rama` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `rama` varchar(255) NOT NULL,
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=801 ;
 
@@ -4606,13 +5046,30 @@ CREATE TABLE IF NOT EXISTS `representante_empresa` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `resumen_clausuras`
+--
+
+CREATE TABLE IF NOT EXISTS `resumen_clausuras` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `cod_convencion` bigint(20) unsigned NOT NULL,
+  `cod_tipo` bigint(20) unsigned NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `cod_convencion` (`cod_convencion`),
+  KEY `cod_tipo` (`cod_tipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `seccion`
 --
 
 CREATE TABLE IF NOT EXISTS `seccion` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `codigo` varchar(5) CHARACTER SET latin1 NOT NULL,
-  `seccion` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `seccion` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
@@ -4652,7 +5109,7 @@ INSERT INTO `seccion` (`id`, `codigo`, `seccion`) VALUES
 
 CREATE TABLE IF NOT EXISTS `sector` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `nombre` varchar(255) NOT NULL,
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -4672,33 +5129,32 @@ INSERT INTO `sector` (`id`, `nombre`) VALUES
 
 CREATE TABLE IF NOT EXISTS `sindicato` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `siglas` varchar(20) CHARACTER SET latin1 NOT NULL,
-  `nro_boleta_inscripcion` varchar(15) CHARACTER SET latin1 NOT NULL,
-  `folio_registro` smallint(6) NOT NULL,
-  `tomo_registroo` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `rif` varchar(20) CHARACTER SET latin1 NOT NULL,
-  `direccion` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `nombre` text NOT NULL,
+  `siglas` varchar(20) NOT NULL,
+  `nro_boleta_inscripcion` varchar(15) NOT NULL,
+  `folio_registro` varchar(10) NOT NULL,
+  `tomo_registroo` varchar(255) NOT NULL,
+  `rif` varchar(20) NOT NULL,
+  `direccion` text NOT NULL,
   `estado` int(11) NOT NULL,
   `municipio` int(11) NOT NULL,
   `parroquia` int(11) NOT NULL,
-  `telefono` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `federacion_nacional` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `federacion_regional` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `telefono` varchar(100) NOT NULL,
+  `federacion_nacional` varchar(255) NOT NULL,
+  `federacion_regional` varchar(255) NOT NULL,
   `sector` int(11) unsigned NOT NULL,
   `ambito` int(11) NOT NULL,
   `tipo_organizacion` tinyint(11) unsigned NOT NULL,
-  `fecha_registro` date NOT NULL,
-  `fecha_actualizacion` date NOT NULL,
-  `duracion_junta_directiva` int(11) NOT NULL,
-  `fecha_inicio_vigencia` date NOT NULL,
-  `fecha_cese_vigencia` date NOT NULL,
-  `fecha_informe_finanzas` date NOT NULL,
-  `fecha_nomina_afiliado` date NOT NULL,
-  `fecha_ultimas_elecciones` date NOT NULL,
+  `fecha_registro` date DEFAULT NULL,
+  `fecha_actualizacion` date DEFAULT NULL,
+  `duracion_junta_directiva` int(11) DEFAULT NULL,
+  `fecha_inicio_vigencia` date DEFAULT NULL,
+  `fecha_cese_vigencia` date DEFAULT NULL,
+  `fecha_informe_finanzas` date DEFAULT NULL,
+  `fecha_nomina_afiliado` date DEFAULT NULL,
+  `fecha_ultimas_elecciones` date DEFAULT NULL,
   `cod_convencion` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
   KEY `estado` (`estado`),
   KEY `municipio` (`municipio`),
   KEY `parroquia` (`parroquia`),
@@ -4706,22 +5162,162 @@ CREATE TABLE IF NOT EXISTS `sindicato` (
   KEY `ambito` (`ambito`),
   KEY `tipo_organizacion` (`tipo_organizacion`),
   KEY `cod_convencion` (`cod_convencion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `sindicato`
 --
 
 INSERT INTO `sindicato` (`id`, `nombre`, `siglas`, `nro_boleta_inscripcion`, `folio_registro`, `tomo_registroo`, `rif`, `direccion`, `estado`, `municipio`, `parroquia`, `telefono`, `federacion_nacional`, `federacion_regional`, `sector`, `ambito`, `tipo_organizacion`, `fecha_registro`, `fecha_actualizacion`, `duracion_junta_directiva`, `fecha_inicio_vigencia`, `fecha_cese_vigencia`, `fecha_informe_finanzas`, `fecha_nomina_afiliado`, `fecha_ultimas_elecciones`, `cod_convencion`) VALUES
-(5, 'sindicato4', '4', '1234-12-12345', 1, '1', 'V173898148', 'caracas', 14, 234, 633, '0212-4813639', 'nose', 'nose', 1, 1, 2, '2015-10-13', '2015-10-08', 111, '2015-10-14', '2015-10-14', '2015-10-07', '2015-10-22', '2015-10-28', 26),
-(6, 'sindicato unico de trabajadores', 'SUT', '0202-02-12345', 12, '12', 'V173898149', 'caracas', 24, 462, 1119, '0212-4813639', 'nose', 'nose', 1, 2, 1, '2015-10-23', '2015-10-23', 10, '2015-10-01', '2015-10-23', '0000-00-00', '2015-10-28', '2015-10-28', 8),
-(7, 'sindicato1', '1', '1234-12-12345', 2, '23', '', 'caracas', 2, 11, 31, '0212-4813639', 'nose', 'nose', 2, 2, 2, '2015-10-27', '2015-10-30', 9, '2015-10-27', '2015-10-27', '0000-00-00', '2015-10-27', '2015-10-27', 10),
-(8, 'probando sindicatp', 'ps', '1234-12-12345', 2, '2', 'v173898149', 'caracas', 24, 462, 1123, '0212-4813639', 'nose', 'nose', 2, 2, 2, '2015-11-11', '2015-11-04', 10, '2015-11-27', '2015-11-30', '0000-00-00', '2015-11-30', '2015-11-30', 27),
-(9, 'sindicato unico de trabajadores', 'SUT', '1234-12-12345', 2, '2', 'V-173898149', 'caracas', 6, 68, 226, '0212-4813639', 'nose', 'nose', 2, 1, 2, '2015-11-17', '2015-11-19', 10, '2015-11-18', '2015-11-30', '0000-00-00', '2015-11-25', '2015-11-18', 28),
-(10, 'unico de trabajadores', 'ut', '1234-12-12345', 2, '2', '', 'caracas, no se, no se', 24, 462, 1119, '0212-3336677', 'no se', ' no se', 1, 2, 1, '2015-11-01', '2015-11-01', 10, '2015-11-04', '2015-11-30', '0000-00-00', '2015-11-25', '2015-11-25', 29),
-(16, 'sindicato 5', 's5', '1234-11-11111', 2, 'nose', '', 'caracas', 24, 462, 1118, '0212-4813639', 'no se', 'no se', 1, 1, 1, '0000-00-00', '0000-00-00', 10, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 8),
-(17, 'sindicato 6', 's6', '1234-11-11111', 12, 'aweqwe', '', 'caracas', 24, 462, 1117, '0212-4813639', 'nose', 'nose', 1, 1, 2, '0000-00-00', '0000-00-00', 10, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 8),
-(18, 'sindicato 6', 's6', '1234-11-11111', 12, '12', '', 'caracas', 24, 462, 1118, '0212-4813639', 'no se', 'no se', 1, 1, 1, '0000-00-00', '0000-00-00', 20, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 8);
+(1, 'sindicato bolivariano de trabajadores y trabajadoras de las empresas e induatriales del metal similares conexos y afines del estado lara ', 'sinbotrametal', '885', '85-86', '4', '', '', 12, 146, 464, '0251-2370612', '', '', 2, 4, 1, '2006-03-03', NULL, 36, '2013-08-01', '2016-08-01', NULL, NULL, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sub_tipo`
+--
+
+CREATE TABLE IF NOT EXISTS `sub_tipo` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_tipo_clausura` bigint(20) unsigned NOT NULL,
+  `nombre_sub_tipo_clausura` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `id_tipo_clausura` (`id_tipo_clausura`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=86 ;
+
+--
+-- Volcado de datos para la tabla `sub_tipo`
+--
+
+INSERT INTO `sub_tipo` (`id`, `id_tipo_clausura`, `nombre_sub_tipo_clausura`) VALUES
+(5, 1, 'Aporte Caja de Ahorro'),
+(6, 1, 'Antigüedad y Cesantía'),
+(7, 1, 'Bonificación por Matrimonio'),
+(8, 1, 'Bonificación por Numero de Hijos'),
+(9, 1, 'Bonificación por Muerte de Familiar'),
+(10, 1, 'Bonificación por Muerte del Trabajador'),
+(11, 1, 'Bonificación por Matrimonio (Nacimiento de Hijo)'),
+(12, 1, 'Bono Nocturno'),
+(13, 1, 'Bono por la Firma del Contracto'),
+(14, 1, 'Contribución al Primero de Mayo'),
+(15, 1, 'Cesta Tickets'),
+(16, 1, 'Días Pagados por Vacaciones a Salario Básico (Bono Vacacional)'),
+(17, 1, 'Eventos Sindicales'),
+(18, 1, 'Fideicomiso o Intereses por Prestaciones'),
+(19, 1, 'Horas Extras Domingo'),
+(20, 1, 'Horas Extras eh Días Feriados'),
+(21, 1, 'Horas Extras Diurnas'),
+(22, 1, 'Horas Extras Nocturnas'),
+(23, 1, 'Jornada Nocturna'),
+(24, 1, 'Montepío o Mutuo Auxilio'),
+(25, 1, 'Mutuo Auxilio o Montepío (Muerte De Familiar)'),
+(26, 1, 'Prima Por Asistencia Perfecta'),
+(27, 1, 'Prima Por Producción'),
+(28, 1, 'Prima por Antigüedad'),
+(29, 1, 'Salario Mínimo'),
+(30, 1, 'Salario de Enganche o de Ingreso'),
+(31, 1, 'Utilidades o Aguinaldo a Salario Básico'),
+(32, 1, 'Utilidades o Aguinaldo a Salario Promedio'),
+(33, 1, 'Viáticos'),
+(34, 2, 'Permisos para Asistir a Actos Sindicales'),
+(35, 2, 'Bono de Incapacidad'),
+(36, 2, 'Comedor'),
+(37, 2, 'Contratación de Trabajadores'),
+(38, 2, 'Descuentos y Regalos'),
+(39, 2, 'Estabilidad Laboral'),
+(40, 2, 'Examen de Laboratorio'),
+(41, 2, 'Fuero Sindical'),
+(42, 2, 'Formación Profesional'),
+(43, 2, 'Guardería'),
+(44, 2, 'Higiene en los Sitios Locales y Centros de Trabajo'),
+(45, 2, 'Jornada de Trabajo'),
+(46, 2, 'Jubilaciones'),
+(47, 2, 'Juguetes'),
+(48, 2, 'Proveeduría'),
+(49, 2, 'Profesionalización'),
+(50, 2, 'Prestamos Económicos'),
+(51, 2, 'Permisos Remunerados'),
+(52, 2, 'Plan Recreacional'),
+(53, 2, 'Plan de Vivienda'),
+(54, 2, 'Permisos Sindicales'),
+(55, 2, 'Ropas, Equipos y Accesorios de Protección Personal'),
+(56, 2, 'Servicio de Farmacia'),
+(57, 2, 'Servicio Odontológico'),
+(58, 2, 'Servicio Oftalmológico'),
+(59, 2, 'Seguro de Hospitalización'),
+(60, 2, 'Seguro Social'),
+(61, 2, 'Seguro de Vida'),
+(62, 2, 'Servicio Medico'),
+(63, 2, 'Transporte'),
+(64, 2, 'Útiles Escolares'),
+(65, 6, 'Agua Potable'),
+(66, 6, 'Servicios Sanitarios'),
+(67, 6, 'Comedor'),
+(68, 6, 'Ventilación'),
+(69, 6, 'Sala de Descanso'),
+(70, 6, 'Puestos de Primeros Auxilios'),
+(71, 6, 'Ambulancia'),
+(72, 6, 'Botiquin de Primeros Auxilios'),
+(73, 4, 'Dotación De Uniformes'),
+(74, 4, 'Guantes'),
+(75, 4, 'Anteojos'),
+(76, 4, 'Caretas'),
+(77, 4, 'Cinturones'),
+(78, 4, 'Calzados de Seguridad'),
+(79, 4, 'Cascos de Seguridad'),
+(80, 4, 'Útiles y Herramientas de Trabajo'),
+(81, 4, 'Impermeables'),
+(82, 4, 'Paraguas'),
+(83, 7, 'Compromiso de la Empresa de Formar el Comité'),
+(84, 7, 'Existencia del Comité'),
+(85, 1, 'Vacaciones dias de disfrute');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipos_campos`
+--
+
+CREATE TABLE IF NOT EXISTS `tipos_campos` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `tipo` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Volcado de datos para la tabla `tipos_campos`
+--
+
+INSERT INTO `tipos_campos` (`id`, `tipo`) VALUES
+(1, 'entero'),
+(2, 'booleano');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_clausura`
+--
+
+CREATE TABLE IF NOT EXISTS `tipo_clausura` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre_tipo_clausura` varchar(255) NOT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Volcado de datos para la tabla `tipo_clausura`
+--
+
+INSERT INTO `tipo_clausura` (`id`, `nombre_tipo_clausura`) VALUES
+(1, 'Económicas'),
+(2, 'Sociales'),
+(3, 'Seguridad Industrial'),
+(4, 'Ropas, Equipos y Accesorios de Seguridad Personal'),
+(5, 'Comité de Empresa'),
+(6, 'Higiene en los Sitios, Locales y Centros de  Trabajo'),
+(7, 'Comité de Higiene y Seguridad');
 
 -- --------------------------------------------------------
 
@@ -4731,7 +5327,7 @@ INSERT INTO `sindicato` (`id`, `nombre`, `siglas`, `nro_boleta_inscripcion`, `fo
 
 CREATE TABLE IF NOT EXISTS `tipo_organizacion` (
   `id` tinyint(11) unsigned NOT NULL AUTO_INCREMENT,
-  `descripcion` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `descripcion` varchar(100) NOT NULL,
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
@@ -4943,6 +5539,109 @@ INSERT INTO `usuario` (`id`, `nombres`, `cedula`, `correo`, `nivel`, `estatus`, 
 (1, 'administrador', 123456, 'example@example.com', 1, 1, '02125555555', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
 (2, 'cargador', 123456, 'probando@probnado.com', 2, 1, '02124813639', 'cargador', 'f2b318b5e71f2afe39fcda462a7702f7');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `variable_subtipo_clausura`
+--
+
+CREATE TABLE IF NOT EXISTS `variable_subtipo_clausura` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_subtipo` bigint(20) unsigned NOT NULL,
+  `tipo_campo` bigint(20) unsigned NOT NULL,
+  `nombre_variable` varchar(255) NOT NULL,
+  `tamanio` int(11) NOT NULL,
+  `nomenclatura` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_subtipo` (`id_subtipo`),
+  KEY `tipo_campo` (`tipo_campo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
+
+--
+-- Volcado de datos para la tabla `variable_subtipo_clausura`
+--
+
+INSERT INTO `variable_subtipo_clausura` (`id`, `id_subtipo`, `tipo_campo`, `nombre_variable`, `tamanio`, `nomenclatura`) VALUES
+(1, 5, 1, 'Monto del patrono a la caja de ahorro', 10, 'Monto en Bs.'),
+(2, 6, 1, 'monto por antiguedad', 10, 'Monto en Bs. Anualmente'),
+(3, 7, 1, 'monto por matrimonio', 10, 'Monto en Bs. por matrimonio'),
+(4, 8, 1, 'monto por hijos', 10, 'Monto en Bs. por cantidad de hijos del trabajador'),
+(5, 9, 1, 'monto por muerte familiar', 10, 'Monto en Bs. Cuando Fallece Familiar'),
+(6, 10, 1, 'monto por muerte trabajador', 10, 'Monto en Bs. para gastos de entierro'),
+(7, 11, 1, 'monto por nacimiento', 10, 'Monto en Bs. cada vez que le nazca un hijo'),
+(8, 12, 1, 'bono nocturno', 10, 'Monto en Bs. por laborar en horas nocturnas'),
+(9, 13, 1, 'monto por firma contracto', 10, 'Monto en Bs.'),
+(10, 14, 1, 'monto contribucion al primero de mayo', 10, 'Monto en Bs. que da la empresa para preparativos del 1ro. Mayo'),
+(11, 15, 1, 'tickets de alimentacion', 10, 'Monto en Bs. que da la empresa para la adquisicion de alimentos'),
+(12, 16, 1, 'dias pagados', 10, 'Cantidad de Dias'),
+(13, 17, 1, 'monto para eventos', 10, 'Monto en Bs. que realiza el patrono para los eventos sindicales'),
+(14, 18, 2, 'fideicomiso o prestaciones', 10, 'Posee Fideicomiso o Acumula Intereses por Prestaciones'),
+(15, 20, 1, 'Monto dia feriado', 10, 'Monto en bs. por laborar Dias Feriados'),
+(16, 21, 1, 'monto horas extras diurnas', 10, 'Monto en Bs. por hora extra diurna'),
+(17, 22, 1, 'monto hora extra nocturna', 10, 'Monto en Bs. por hora extra nocturna'),
+(18, 23, 1, 'monto jornada nocturna', 10, 'Monto en Bs. por Jornada Nocturna'),
+(19, 24, 1, 'montepio o mutuo auxilio', 10, 'Monto que se le descuenta en Bs. la trabajador cuando fallece uno de ellos'),
+(20, 25, 1, 'mutuo auxilio o montepio', 10, 'Monto en Bs. que se le descuenta al trabajador cuando fallece un familiar de estos'),
+(21, 26, 1, 'prima por asistencia perfecta', 10, 'Monto en Bs.por asistencia perfecta'),
+(22, 27, 1, 'monto por produccion', 10, 'Monto en Bs. por produccion '),
+(23, 28, 1, 'prima por antiguedad', 10, 'Monto en Bs. por tiempo que tiene el trabajor en la empresa'),
+(24, 29, 2, 'salario minimo ', 10, 'La empresa pagara el salario minimo de acuerdo a la ley'),
+(25, 30, 2, 'salario de enganche o ingreso', 10, 'La empresa pagara el salario cuando ingrese un trabajador'),
+(26, 31, 1, 'dias de pago a salario basico', 10, 'Cantidad de dias que se le paga al trabajador por participacion en las utilidades de la empresa'),
+(27, 32, 1, 'dias de pago a salario promedio', 10, 'Cantidad de dias que se le paga al trabajador por participacion en las utilidades de la empresa'),
+(28, 85, 1, 'cantidad de dias por vacaciones', 10, 'Cantidad de Dias por concepto de Vacaciones'),
+(29, 33, 2, 'viaticos', 10, 'la empresa ofrece viaticos para viajes, comidas y alojamiento'),
+(30, 34, 2, 'permisos para actos sindicales', 10, 'la empresa da permiso para actos sindicales'),
+(31, 35, 2, 'bono de incapacidad', 10, 'la empresa da un bono por incapacidad'),
+(32, 36, 2, 'comedor', 10, 'la empresa sumistra comida, ya sea en Bs. o dotacion'),
+(33, 37, 2, 'contratacion de trabajadores', 10, 'acuerdo entre empresa y sindicato para contratar trabajadores'),
+(34, 38, 2, 'descuentos y regalos', 10, 'la empresa ofrece descuentos y regalos'),
+(35, 39, 2, 'estabilidad laboral', 10, 'la empresa ofrece estabilidad laboral'),
+(36, 40, 2, 'laboratorio', 10, 'la empresa ofrece laboratorio'),
+(37, 41, 2, 'fuero sindical', 10, 'los trabajadores no podran ser despedidos o desmejorados'),
+(38, 42, 2, 'formacion profesional', 10, 'la empresa ofrece formacion profesional'),
+(39, 43, 2, 'guarderia', 10, 'la empresa ofrece guarderia'),
+(40, 44, 2, 'agua potable', 10, 'la empresa mantendra un filtro de agua potable'),
+(41, 44, 2, 'servicio sanitario', 10, 'la empresa provee vestuario, casilleros, jabon, baño, etc.'),
+(42, 44, 2, 'comedor (sitio)', 10, 'local donde los trabajadores puedan consumir sus alimentos'),
+(43, 45, 1, 'jornada de trabajo(tiempo)', 10, 'tiempo en horas durante el cual el trabajador esta a disposicion del patrono'),
+(44, 46, 2, 'jubilaciones', 10, 'jubilacion'),
+(45, 47, 2, 'juguetes', 10, 'la empresa concede  juguetes  a los hijos de los trabajadores en el mes de diciembre'),
+(46, 48, 2, 'proveeduria', 10, 'la empresa ofrece local que expenda alimentos'),
+(47, 49, 2, 'profesionalizacion', 10, 'profesionalizacion'),
+(48, 50, 2, 'prestamos economicos', 10, 'prestamos economicos de la empresa en caso de emergencia'),
+(49, 51, 2, 'permisos remunerados', 10, 'permiso remunerado que ofrece la empresa al trabajador'),
+(50, 52, 2, 'plan recreacional', 10, 'plan que ofrece la empresa a sus trabajadores para su recreacion'),
+(51, 53, 2, 'plan de vivienda', 10, 'la empresa adquiere compromiso para tramitar lo pertinente a adquision de vivienda'),
+(52, 56, 2, 'servicio de farmacia', 10, 'dotacion de servicio o contribucion de la empresa para comprar medicinas'),
+(53, 57, 2, 'servicio odontologico', 10, 'dotacion de servicio o contribucion de la empresa para colaborar con este servicio'),
+(54, 58, 2, 'servicio oftalmologico', 10, 'dotacion de servicio o contribucion de la empresa para colaborar con este servicio'),
+(55, 59, 2, 'seguro de hospitalizacion', 10, 'la empresa ofrece poliza de seguro'),
+(56, 60, 2, '10', 10, 'seguro social'),
+(57, 61, 2, 'seguridad de vida', 10, 'seguro de vida'),
+(58, 62, 2, 'servicio medico', 10, 'servicio medico'),
+(59, 63, 2, 'transporte', 10, 'transporte'),
+(60, 64, 2, 'utiles escolares', 10, 'utiles escolares'),
+(62, 66, 2, 'servicios sanitarios', 10, 'servicios sanitarios'),
+(63, 68, 2, 'ventilacion', 10, 'ventilacion'),
+(64, 69, 2, 'sala de descanso', 10, 'sala de descanso'),
+(65, 70, 2, 'puesto de primeros auxilios', 10, 'puesto de primeros auxilios'),
+(66, 71, 2, 'ambulancia', 10, 'ambulancia'),
+(67, 72, 2, 'botiquin de primero auxilios', 10, 'botiquin de primero auxilios'),
+(68, 73, 2, 'dotacion de uniformes', 10, 'dotacion de uniformes'),
+(69, 74, 2, 'guantes', 10, 'guantes'),
+(70, 75, 2, 'anteojos', 10, 'anteojos'),
+(71, 76, 2, 'caretas', 10, 'caretas'),
+(72, 77, 2, 'cinturones', 10, 'cinturones'),
+(73, 78, 2, 'calzado de seguridad', 10, 'calzado de seguridad'),
+(74, 79, 2, 'cascos de seguridad', 10, 'cascos de seguridad'),
+(75, 80, 2, 'herramientras de trabajo', 10, 'herramientas de trabajo'),
+(76, 81, 2, 'impermiables', 10, 'impermiables'),
+(77, 82, 2, 'paraguas', 10, 'paraguas'),
+(78, 83, 2, 'compromiso empresa formar el comite', 10, 'compromiso de la empresa de formar el comite'),
+(79, 84, 2, 'existencia comite', 10, 'existencia del comite'),
+(80, 47, 1, 'juguetes por hijos', 10, 'monto por juguetes');
+
 --
 -- Restricciones para tablas volcadas
 --
@@ -4951,14 +5650,17 @@ INSERT INTO `usuario` (`id`, `nombres`, `cedula`, `correo`, `nivel`, `estatus`, 
 -- Filtros para la tabla `clausuras`
 --
 ALTER TABLE `clausuras`
-  ADD CONSTRAINT `clausuras_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
+  ADD CONSTRAINT `clausuras_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
+  ADD CONSTRAINT `clausuras_ibfk_2` FOREIGN KEY (`tipo_clausura`) REFERENCES `tipo_clausura` (`id`),
+  ADD CONSTRAINT `clausuras_ibfk_3` FOREIGN KEY (`sub_tipo`) REFERENCES `sub_tipo` (`id`),
+  ADD CONSTRAINT `clausuras_ibfk_4` FOREIGN KEY (`id_variable`) REFERENCES `variable_subtipo_clausura` (`id`);
 
 --
 -- Filtros para la tabla `consultor`
 --
 ALTER TABLE `consultor`
-  ADD CONSTRAINT `consultor_ibfk_2` FOREIGN KEY (`cod_sindicato`) REFERENCES `sindicato` (`id`),
-  ADD CONSTRAINT `consultor_ibfk_1` FOREIGN KEY (`cod_empresa`) REFERENCES `empresa` (`id`);
+  ADD CONSTRAINT `consultor_ibfk_1` FOREIGN KEY (`cod_empresa`) REFERENCES `empresa` (`id`),
+  ADD CONSTRAINT `consultor_ibfk_2` FOREIGN KEY (`cod_sindicato`) REFERENCES `sindicato` (`id`);
 
 --
 -- Filtros para la tabla `convencion`
@@ -5003,10 +5705,10 @@ ALTER TABLE `empresa`
 -- Filtros para la tabla `nomina`
 --
 ALTER TABLE `nomina`
-  ADD CONSTRAINT `nomina_ibfk_6` FOREIGN KEY (`id_sindicato`) REFERENCES `sindicato` (`id`),
   ADD CONSTRAINT `nomina_ibfk_2` FOREIGN KEY (`nivel_educativo`) REFERENCES `nivel_educativo` (`cod_interno`),
   ADD CONSTRAINT `nomina_ibfk_4` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id`),
-  ADD CONSTRAINT `nomina_ibfk_5` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
+  ADD CONSTRAINT `nomina_ibfk_5` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
+  ADD CONSTRAINT `nomina_ibfk_6` FOREIGN KEY (`id_sindicato`) REFERENCES `sindicato` (`id`);
 
 --
 -- Filtros para la tabla `nomina_tipo_sindicato`
@@ -5015,6 +5717,13 @@ ALTER TABLE `nomina_tipo_sindicato`
   ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_4` FOREIGN KEY (`tipo_sindicato`) REFERENCES `tipo_sindicato` (`id`),
   ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_5` FOREIGN KEY (`id_nomina`) REFERENCES `nomina` (`id`),
   ADD CONSTRAINT `nomina_tipo_sindicato_ibfk_7` FOREIGN KEY (`cod_convencion_nomina`) REFERENCES `empresa` (`id`);
+
+--
+-- Filtros para la tabla `resumen_clausuras`
+--
+ALTER TABLE `resumen_clausuras`
+  ADD CONSTRAINT `resumen_clausuras_ibfk_1` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`),
+  ADD CONSTRAINT `resumen_clausuras_ibfk_2` FOREIGN KEY (`cod_tipo`) REFERENCES `tipo_clausura` (`id`);
 
 --
 -- Filtros para la tabla `sindicato`
@@ -5027,6 +5736,19 @@ ALTER TABLE `sindicato`
   ADD CONSTRAINT `sindicato_ibfk_5` FOREIGN KEY (`ambito`) REFERENCES `ambito` (`id`),
   ADD CONSTRAINT `sindicato_ibfk_6` FOREIGN KEY (`tipo_organizacion`) REFERENCES `tipo_organizacion` (`id`),
   ADD CONSTRAINT `sindicato_ibfk_7` FOREIGN KEY (`cod_convencion`) REFERENCES `convencion` (`id`);
+
+--
+-- Filtros para la tabla `sub_tipo`
+--
+ALTER TABLE `sub_tipo`
+  ADD CONSTRAINT `sub_tipo_ibfk_1` FOREIGN KEY (`id_tipo_clausura`) REFERENCES `tipo_clausura` (`id`);
+
+--
+-- Filtros para la tabla `variable_subtipo_clausura`
+--
+ALTER TABLE `variable_subtipo_clausura`
+  ADD CONSTRAINT `variable_subtipo_clausura_ibfk_1` FOREIGN KEY (`id_subtipo`) REFERENCES `sub_tipo` (`id`),
+  ADD CONSTRAINT `variable_subtipo_clausura_ibfk_2` FOREIGN KEY (`tipo_campo`) REFERENCES `tipos_campos` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

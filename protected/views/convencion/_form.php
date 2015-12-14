@@ -64,7 +64,7 @@ $(document).ready(function(){
                     
                 }?>
             
-                <?php echo $form->textField($model,'numero_expediente',array('size'=>20,'maxlength'=>20, 'placeholder'=>'000-0000-00-0000'));?>
+                <?php echo $form->textField($model,'numero_expediente',array('size'=>20,'maxlength'=>20, 'placeholder'=>'000-0000-00-00000'));?>
 		<?php echo $form->error($model,'numero_expediente'); ?>
 	</div>
 
@@ -73,10 +73,7 @@ $(document).ready(function(){
 		
 		 <?php echo $form->dropDownList($model,'inspectoria',
                         CHtml::listData(Inspectoria::model()->findAll(array('order'=>'inspectoria ASC', 'select'=>'id, concat(inspectoria, " - ",id) as inspectoria')),'id','inspectoria'),
-                        array(
-                    'ajax' => array(
-                    'type' => 'POST',
-                                ),'prompt' => 'Seleccione una Inspectoria...',
+                        array('prompt' => 'Seleccione una Inspectoria...',
             )
                 ); ?>
                     
@@ -88,9 +85,7 @@ $(document).ready(function(){
                 <?php echo $form->dropDownList($model,'sector',
                         CHtml::listData(Sector::model()->findAll(array('order'=>'id ASC')),'id','nombre'),
                         array(
-                    'ajax' => array(
-                    'type' => 'POST',
-                                ),'prompt' => 'Seleccione un Sector...',
+                  'prompt' => 'Seleccione un Sector...',
             )
                 ); ?>
             
@@ -104,9 +99,7 @@ $(document).ready(function(){
 		 <?php echo $form->dropDownList($model,'ambito',
                         CHtml::listData(Ambito::model()->findAll(array('order'=>'id ASC')),'id','nombre_ambito'),
                         array(
-                    'ajax' => array(
-                    'type' => 'POST',
-                                ),'prompt' => 'Seleccione un Ambito...',
+                    'prompt' => 'Seleccione un Ambito...',
             )
                 ); ?>
 		<?php echo $form->error($model,'ambito'); ?>

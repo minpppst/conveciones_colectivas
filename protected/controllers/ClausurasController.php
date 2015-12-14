@@ -77,9 +77,9 @@ class ClausurasController extends Controller
                     if(!empty($_POST['Clausuras']['sub_tipo'])){
                     $sql="select id, upper(nombre_variable) as nombre_variable from variable_subtipo_clausura where id_subtipo='".$_POST['Clausuras']['sub_tipo']."'";
                     $resultado=YII::app()->db->createCommand($sql)->queryAll();
-                    
+                    // $transaction = Yii::app()->db->beginTransaction();
                     try{
-                    $transaction = Yii::app()->db->beginTransaction();
+                   
                    
                     foreach($resultado as $valor){
                         
@@ -102,8 +102,9 @@ class ClausurasController extends Controller
                      $model->save();
                       $mensaje1=0; 
                    
-                     $transaction->commit();
+                     
                      }//si existe la variable se toma su valor e id de la variable en caso que no exista no se guardará
+                    // $transaction->commit();
                      }//fin de verificar
                      
                      } 
@@ -112,7 +113,7 @@ class ClausurasController extends Controller
                        //  Yii::app()->user->setFlash('error',$error);
                           Yii::app()->user->setFlash('error',"¡Error Al Registrar Clausura!, Verificar Si Ya Existe");
                           $mensaje1=1;
-                          $transaction->rollback();
+                         // $transaction->rollback();
                     }
                     if($mensaje1==0)
                      Yii::app()->user->setFlash('success',"¡Datos grabados correctamente!");

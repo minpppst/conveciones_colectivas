@@ -49,7 +49,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nro_boleta_inscripcion'); ?>
-		<?php echo $form->textField($model,'nro_boleta_inscripcion',array('size'=>15,'maxlength'=>15, 'placeholder'=>'XXXX-XX-XXXXX')); ?>
+		<?php echo $form->textField($model,'nro_boleta_inscripcion',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nro_boleta_inscripcion'); ?>
 	</div>
 
@@ -224,9 +224,7 @@
                 <?php echo $form->dropDownList($model,'sector',
                         CHtml::listData(Sector::model()->findAll(array('order'=>'id ASC')),'id','nombre'),
                         array(
-                    'ajax' => array(
-                    'type' => 'POST',
-                                ),'prompt' => 'Seleccione un Sector...',
+                    'prompt' => 'Seleccione un Sector...',
             )
                 ); ?>
             
@@ -240,9 +238,7 @@
 		 <?php echo $form->dropDownList($model,'ambito',
                         CHtml::listData(Ambito::model()->findAll(array('order'=>'id ASC')),'id','nombre_ambito'),
                         array(
-                    'ajax' => array(
-                    'type' => 'POST',
-                                ),'prompt' => 'Seleccione un Ambito...',
+                   'prompt' => 'Seleccione un Ambito...',
             )
                 ); ?>
 		<?php echo $form->error($model,'ambito'); ?>
@@ -253,9 +249,7 @@
 		 <?php echo $form->dropDownList($model,'tipo_organizacion',
                         CHtml::listData(Tipo_orgaizacion::model()->findAll(array('order'=>'id ASC')),'id','descripcion'),
                         array(
-                    'ajax' => array(
-                    'type' => 'POST',
-                                ),'prompt' => 'Seleccione un tipo de organización...',
+                    'prompt' => 'Seleccione un tipo de organización...',
             )
                 ); ?>
                 

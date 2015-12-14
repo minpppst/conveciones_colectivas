@@ -93,13 +93,13 @@ class SindicatoController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Sindicato']))
+		if(isset($_POST['Sindicato']) && isset($_POST['yt0']))
 		{
 			$model->attributes=$_POST['Sindicato'];
                         $model->telefono=$_POST['telefono'][0]."/".$_POST['telefono'][1];
 			if($model->save()){
                                if($_GET['nueva']!=1)
-                             $this->redirect(array('Nomina/create','convencion'=>$model->cod_convencion, 'id_sindicato'=>$model->id));
+                             $this->redirect(array('Nomina/create','convencion'=>$model->cod_convencion, 'id_sindicato'=>$model->id)); 
                         }
 		}
                 
@@ -122,7 +122,7 @@ class SindicatoController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Sindicato'])  && isset($_POST['telefono']))
+		if(isset($_POST['Sindicato'])  && isset($_POST['telefono']) && isset($_POST['yt0']))
 		{
 			$model->attributes=$_POST['Sindicato'];
                         $model->telefono=$_POST['telefono'][0]."/".$_POST['telefono'][1];

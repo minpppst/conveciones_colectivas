@@ -8,7 +8,7 @@
  * @property string $nombre
  * @property string $siglas
  * @property string $nro_boleta_inscripcion
- * @property integer $folio_registro
+ * @property string $folio_registro
  * @property string $tomo_registroo
  * @property string $rif
  * @property string $direccion
@@ -32,13 +32,15 @@
  * @property string $cod_convencion
  *
  * The followings are the available model relations:
- * @property Ambito $ambito0
+ * @property Consultor[] $consultors
+ * @property Nomina[] $nominas
  * @property Estados $estado0
  * @property Municipios $municipio0
  * @property Parroquias $parroquia0
  * @property Sector $sector0
+ * @property Ambito $ambito0
+ * @property Tipo_organizacion $tipo_Organizacion
  * @property Convencion $codConvencion
- * @property TipoOrganizacion $tipoOrganizacion
  */
 class Sindicato extends CActiveRecord
 {
@@ -68,27 +70,29 @@ class Sindicato extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			
-                        array('nombre, siglas,  direccion, estado, municipio, parroquia,  sector, ambito, tipo_organizacion, fecha_registro, fecha_actualizacion, duracion_junta_directiva, fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones, cod_convencion', 'required'),
-			array('folio_registro, estado, municipio, parroquia, ambito, tipo_organizacion, duracion_junta_directiva', 'numerical', 'integerOnly'=>true),
-			array('nombre, tomo_registroo, direccion, federacion_nacional, federacion_regional', 'length', 'max'=>255),
+			array('nombre, siglas, estado, municipio, parroquia, sector, ambito, tipo_organizacion, cod_convencion', 'required'),
+			array('estado, municipio, parroquia, ambito, tipo_organizacion, duracion_junta_directiva', 'numerical', 'integerOnly'=>true),
 			array('siglas, rif, cod_convencion', 'length', 'max'=>20),
 			array('nro_boleta_inscripcion', 'length', 'max'=>15),
+			array('folio_registro', 'length', 'max'=>10),
+			array('tomo_registroo, federacion_nacional, federacion_regional', 'length', 'max'=>255),
 			array('telefono', 'length', 'max'=>100),
 			array('sector', 'length', 'max'=>11),
-                        array('telefono','validartelefonoreal'),
+                    array('telefono','validartelefonoreal'),
                         array('telefono','validartelefono'),
-                        array('nro_boleta_inscripcion','validarboleta'),
+                        //array('nro_boleta_inscripcion','validarboleta'),
                         array('rif', 'validarif'),
                         array('fecha_registro, fecha_informe_finanzas, fecha_actualizacion,fecha_inicio_vigencia, fecha_cese_vigencia, fecha_nomina_afiliado, fecha_ultimas_elecciones','formatear_fechas'),
                         //array('fecha_cese_vigencia','compare','compareAttribute'=>'fecha_inicio_vigencia','operator'=>'>=','message'=>'Fecha de Cese de Vigencia debe ser superior a Fecha de Inicio Vigencia'),
                         array('fecha_cese_vigencia','validar_fecha'),
-                        
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, nombre, siglas, nro_boleta_inscripcion, folio_registro, tomo_registroo, rif, direccion, estado, municipio, parroquia, telefono, federacion_nacional, federacion_regional, sector, ambito, tipo_organizacion, fecha_registro, fecha_actualizacion, duracion_junta_directiva, fecha_inicio_vigencia, fecha_cese_vigencia, fecha_informe_finanzas, fecha_nomina_afiliado, fecha_ultimas_elecciones, cod_convencion', 'safe', 'on'=>'search'),
 		);
 	}
+        
+        
+        
         public function validartelefonoreal(){
             if(!preg_match("/^([0-9]{4})(-)([0-9]{7})$/",$_POST['telefono'][0])){
                  $this->addError('telefono', 'Telefono No Tiene El Formato Correcto, ejemplo: 1234-1234567');
@@ -109,13 +113,13 @@ class Sindicato extends CActiveRecord
                     
                 }
         
-        public function validarboleta(){
+       /* public function validarboleta(){
             if(!preg_match("/^([0-9]{4})(-)([0-9]{2})(-)([0-9]{5})$/",$this->nro_boleta_inscripcion)){
                  $this->addError('nro_boleta_inscripcion', 'Nro. Boleta de Inscripción No Tiene El Formato Correcto, ejemplo: XXXX-XX-XXXXX');
             }
             
             
-        }
+        }*/
         
         public function validar_fecha(){
           
@@ -138,17 +142,76 @@ class Sindicato extends CActiveRecord
         public function formatear_fechas(){
                    
             
-                   if(!empty($this->fecha_actualizacion) && !empty($this->fecha_cese_vigencia) &&!empty($this->fecha_informe_finanzas) && !empty($this->fecha_inicio_vigencia) && !empty($this->fecha_nomina_afiliado) && !empty($this->fecha_registro) && !empty($this->fecha_ultimas_elecciones)) 
-                   { $this->fecha_actualizacion=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_actualizacion);
-                   $this->fecha_cese_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_cese_vigencia);
-                   $this->fecha_informe_finanzas=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_informe_finanzas);
-                   $this->fecha_inicio_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_inicio_vigencia);
-                   $this->fecha_nomina_afiliado=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_nomina_afiliado);
-                   $this->fecha_registro=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_registro);
-                   $this->fecha_ultimas_elecciones=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_ultimas_elecciones);
-                  
-                   }
-            }
+//                   if(!empty($this->fecha_actualizacion) && !empty($this->fecha_cese_vigencia) &&!empty($this->fecha_informe_finanzas) && !empty($this->fecha_inicio_vigencia) && !empty($this->fecha_nomina_afiliado) && !empty($this->fecha_registro) && !empty($this->fecha_ultimas_elecciones)) 
+//                   { $this->fecha_actualizacion=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_actualizacion);
+//                   $this->fecha_cese_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_cese_vigencia);
+//                   $this->fecha_informe_finanzas=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_informe_finanzas);
+//                   $this->fecha_inicio_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_inicio_vigencia);
+//                   $this->fecha_nomina_afiliado=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_nomina_afiliado);
+//                   $this->fecha_registro=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_registro);
+//                   $this->fecha_ultimas_elecciones=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_ultimas_elecciones);
+//                  
+            
+            
+            if(!empty($this->fecha_actualizacion))
+                   	$this->fecha_actualizacion=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_actualizacion);
+                        else{
+                            $this->fecha_actualizacion=NULL;
+                        }
+
+                   	if(!empty($this->fecha_cese_vigencia))
+                   		$this->fecha_cese_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_cese_vigencia);
+                        else{
+                            $this->fecha_cese_vigencia=NULL;
+                        }
+
+                   	if(!empty($this->fecha_informe_finanzas))
+                   		$this->fecha_informe_finanzas=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_informe_finanzas);
+                        else{
+                          $this->fecha_informe_finanzas=NULL;  
+                        }
+
+                   	if(!empty($this->fecha_inicio_vigencia))
+                   		$this->fecha_inicio_vigencia=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_inicio_vigencia);
+                        else{
+                         $this->fecha_inicio_vigencia=NULL;   
+                        }
+
+                   	if(!empty($this->fecha_nomina_afiliado))
+                   		$this->fecha_nomina_afiliado=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_nomina_afiliado);
+                        else{
+                            $this->fecha_nomina_afiliado=NULL;
+                        }
+
+                   	if(!empty($this->fecha_registro))
+                   		$this->fecha_registro=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_registro);
+                        else{
+                            $this->fecha_registro=NULL;
+                        }
+                   	
+                   	if(!empty($this->fecha_ultimas_elecciones))
+                   		$this->fecha_ultimas_elecciones=Yii::app()->dateformatter->format("yyyy-MM-dd",$this->fecha_ultimas_elecciones);
+                        else{
+                            $this->fecha_ultimas_elecciones=NULL;
+                        }
+                
+            
+                   
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 
 	/**
@@ -159,13 +222,15 @@ class Sindicato extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'ambito0' => array(self::BELONGS_TO, 'Ambito', 'ambito'),
+			'consultors' => array(self::HAS_MANY, 'Consultor', 'cod_sindicato'),
+			'nominas' => array(self::HAS_MANY, 'Nomina', 'id_sindicato'),
 			'estado0' => array(self::BELONGS_TO, 'Estados', 'estado'),
 			'municipio0' => array(self::BELONGS_TO, 'Municipios', 'municipio'),
 			'parroquia0' => array(self::BELONGS_TO, 'Parroquias', 'parroquia'),
 			'sector0' => array(self::BELONGS_TO, 'Sector', 'sector'),
-			'tipoOrganizacion' => array(self::BELONGS_TO, 'Tipo_organizacion', 'tipo_organizacion'),
-                        'codConvencion' => array(self::BELONGS_TO, 'Convencion', 'cod_convencion'),
+			'ambito0' => array(self::BELONGS_TO, 'Ambito', 'ambito'),
+			'tipo_Organizacion' => array(self::BELONGS_TO, 'Tipo_organizacion', 'tipo_organizacion'),
+			'codConvencion' => array(self::BELONGS_TO, 'Convencion', 'cod_convencion'),
 		);
 	}
 
@@ -178,7 +243,7 @@ class Sindicato extends CActiveRecord
 			'id' => 'ID',
 			'nombre' => 'Nombre',
 			'siglas' => 'Siglas',
-			'nro_boleta_inscripcion' => 'Nro. Boleta Inscripcion',
+			'nro_boleta_inscripcion' => 'Nro Boleta Inscripcion',
 			'folio_registro' => 'Folio Registro',
 			'tomo_registroo' => 'Tomo Registro',
 			'rif' => 'Rif',
@@ -193,8 +258,8 @@ class Sindicato extends CActiveRecord
 			'ambito' => 'Ambito',
 			'tipo_organizacion' => 'Tipo Organizacion',
 			'fecha_registro' => 'Fecha Registro',
-			'fecha_actualizacion' => 'Fecha Actualización',
-			'duracion_junta_directiva' => 'Duración Junta Directiva',
+			'fecha_actualizacion' => 'Fecha Actualizacion',
+			'duracion_junta_directiva' => 'Duracion Junta Directiva',
 			'fecha_inicio_vigencia' => 'Fecha Inicio Vigencia',
 			'fecha_cese_vigencia' => 'Fecha Cese Vigencia',
 			'fecha_informe_finanzas' => 'Fecha Informe Finanzas',
@@ -219,7 +284,7 @@ class Sindicato extends CActiveRecord
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('siglas',$this->siglas,true);
 		$criteria->compare('nro_boleta_inscripcion',$this->nro_boleta_inscripcion,true);
-		$criteria->compare('folio_registro',$this->folio_registro);
+		$criteria->compare('folio_registro',$this->folio_registro,true);
 		$criteria->compare('tomo_registroo',$this->tomo_registroo,true);
 		$criteria->compare('rif',$this->rif,true);
 		$criteria->compare('direccion',$this->direccion,true);
@@ -236,7 +301,7 @@ class Sindicato extends CActiveRecord
 		$criteria->compare('fecha_actualizacion',$this->fecha_actualizacion,true);
 		$criteria->compare('duracion_junta_directiva',$this->duracion_junta_directiva);
 		$criteria->compare('fecha_inicio_vigencia',$this->fecha_inicio_vigencia,true);
-		$criteria->compare('fecha_cese_vigencia',$this->fecha_cese_vigencia);
+		$criteria->compare('fecha_cese_vigencia',$this->fecha_cese_vigencia,true);
 		$criteria->compare('fecha_informe_finanzas',$this->fecha_informe_finanzas,true);
 		$criteria->compare('fecha_nomina_afiliado',$this->fecha_nomina_afiliado,true);
 		$criteria->compare('fecha_ultimas_elecciones',$this->fecha_ultimas_elecciones,true);
@@ -246,6 +311,7 @@ class Sindicato extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
         
          public static function getListcod_convencion()
              {
@@ -261,4 +327,6 @@ class Sindicato extends CActiveRecord
                             'application.behaviors.ActiveRecordLogableBehavior',
                     );
                 }
+        
+        
 }

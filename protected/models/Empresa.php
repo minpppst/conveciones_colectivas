@@ -82,7 +82,7 @@ class Empresa extends CActiveRecord
                         array('rif','validarif'),
                         array('telefono','validartelefonoreal'),
                         array('telefono','validartelefono'),
-                        array('identificacion_laboral', 'validaril'),
+                        //array('identificacion_laboral', 'validaril'),
 		);
 	}
 
@@ -110,7 +110,7 @@ class Empresa extends CActiveRecord
                 
                 public function validaril(){
                      if(!preg_match('/^[0-9]{6,6}([- ]?[0-9]{1,8})?$/', $this->identificacion_laboral)){
-                     $this->addError('identificacion_laborar', 'Identificacion Laborar No Tiene El Formato Correcto, ejemplo: ######-#..');
+                     $this->addError('identificacion_laboral', 'Identificacion Laborar No Tiene El Formato Correcto, ejemplo: ######-#..');
                 }
                 }
                 
