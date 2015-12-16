@@ -17,6 +17,7 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
+       
 	'attributes'=>array(
 		'id',
 		'nombre',
@@ -73,6 +74,7 @@ $this->menu=array(
                 array('name'=>'fecha_ultimas_elecciones',
                     'value'=>Yii::app()->dateFormatter->format("dd/M/yyyy", $model->fecha_ultimas_elecciones)
                     ),
-		'cod_convencion',
+		 array('name'=>'cod_convencion',
+                'value'=>$model->codConvencion->nombre,),
 	),
 )); ?>

@@ -64,7 +64,7 @@ class Empresa extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('razon_social, rif, identificacion_laboral, seguro_social, actividad_economica, sector, capital_empresa, nro_sucursales, direccion, estado, municipio, parroquia, cod_convencion', 'required'),
+			array('razon_social, rif, identificacion_laboral, actividad_economica, sector, capital_empresa, nro_sucursales, direccion, estado, municipio, parroquia, cod_convencion', 'required'),
 			array('nro_sucursales, estado, municipio, parroquia', 'numerical', 'integerOnly'=>true),
 			array('razon_social, direccion', 'length', 'max'=>255),
 			array('rif, actividad_economica, capital_empresa, fax', 'length', 'max'=>20),

@@ -10360,3 +10360,110 @@ in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
 REQUEST_URI=/convenciones_colectivas_resp/index.php?r=Clausuras/index
 HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=sindicato/view&id=61
 ---
+2015/12/14 13:47:49 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/12/14 13:57:53 [warning] [application] Error al definir unsafe el atributo "direccion" de "Sindicato".
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\SindicatoController.php (127)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/12/14 14:15:16 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/12/14 14:18:45 [error] [exception.CrugeException.401] action_tipoclausura_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=tipoclausura/index
+---
+2015/12/14 14:19:05 [error] [exception.CrugeException.401] action_subtipo_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=subtipo/index
+---
+2015/12/14 14:20:59 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/12/14 14:21:40 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/12/14 14:21:43 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/12/14 14:24:28 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/12/14 14:24:32 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/12/14 20:30:37 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=site/index
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php
+---
+2015/12/15 22:33:21 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/12/16 13:10:27 [error] [exception.CrugeException.401] action_site_index<br/>401
+REQUEST_URI=/convenciones_colectivas_resp/
+---
+2015/12/16 13:32:36 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`convenciones_colectivas`.`nomina`, CONSTRAINT `nomina_ibfk_2` FOREIGN KEY (`nivel_educativo`) REFERENCES `nivel_educativo` (`cod_interno`)). La sentencia SQL ejecutada fue: INSERT INTO `nomina` (`nombres`, `cedula`, `nacionalidad`, `pais_origen`, `lugar_nacimiento`, `sexo`, `edad`, `estado_civil`, `nivel_educativo`, `grado_anio_aprobado`, `oficio_dentro_establecimiento`, `codigo_ocupacion`, `tiempo_serv_establecimiento_anios`, `tiempo_serv_establecimiento_meses`, `tiempo_ejerciendo_profesion_anios`, `tiempo_ejerciendo_profesion_meses`, `remuneracion_antes_contra_empleado`, `remuneracion_antes_contra_obrero`, `remuneracion_despues_contra_empleado`, `remuneracion_despues_contra_obrero`, `carga_familiar`, `cod_convencion`, `id_empresa`, `id_sindicato`, `id`) VALUES (:nombres, :cedula, :nacionalidad, :pais_origen, :lugar_nacimiento, :sexo, :edad, :estado_civil, :nivel_educativo, :grado_anio_aprobado, :oficio_dentro_establecimiento, :codigo_ocupacion, :tiempo_serv_establecimiento_anios, :tiempo_serv_establecimiento_meses, :tiempo_ejerciendo_profesion_anios, :tiempo_ejerciendo_profesion_meses, :remuneracion_antes_contra_empleado, :remuneracion_antes_contra_obrero, :remuneracion_despues_contra_empleado, :remuneracion_despues_contra_obrero, :carga_familiar, :cod_convencion, :id_empresa, :id_sindicato, :id).
+in C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php (209)
+in C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\wamp\www\convenciones_colectivas_resp\index.php (13)
+2015/12/16 13:47:32 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nomina"."cod_interno" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('cod_interno')
+#1 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(628): CActiveRecord->__get('cod_interno')
+#2 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(482): CJoinElement->applyLazyCondition(Object(CJoinQuery), Object(Nomina))
+#3 C:\wamp\www\yii\framework\db\ar\CActiveFinder.php(163): CJoinElement->lazyFind(Object(Nomina))
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(272): CActiveFinder->lazyFind(Object(Nomina))
+#5 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(141): CActiveRecord->getRelated('id_niveleducati...')
+#6 C:\wamp\www\convenciones_colectivas_resp\protected\views\nomina\view.php(31): CActiveRecord->__get('id_niveleducati...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\con...')
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\con...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\con...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#11 C:\wamp\www\convenciones_colectivas_resp\protected\controllers\NominaController.php(57): CController->render('view', Array)
+#12 [internal function]: NominaController->actionView('942')
+#13 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(NominaController), Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(NominaController), Object(ReflectionMethod), Array)
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\convenciones_colectivas_resp\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/view')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\convenciones_colectivas_resp\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/convenciones_colectivas_resp/index.php?r=nomina/view&id=942
+HTTP_REFERER=http://127.0.0.1/convenciones_colectivas_resp/index.php?r=nomina/index
+---

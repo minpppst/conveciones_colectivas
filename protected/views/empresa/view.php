@@ -42,6 +42,8 @@ $this->menu=array(
 		'correo',
 		'web',
 		'rnc',
-		'cod_convencion',
+                 array('name'=>'cod_convencion',
+                'value'=>$model->codConvencion->nombre,),
+		
 	),
 )); ?>

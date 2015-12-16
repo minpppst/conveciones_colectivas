@@ -33,6 +33,7 @@
  * @property Convencion $codConvencion
  * @property Empresa $id_empresa
  * @property Sindicato $id_sindicato
+ * @property NivelEducativo $id_niveleducativo
  */
 class Nomina extends CActiveRecord
 {
@@ -99,6 +100,7 @@ class Nomina extends CActiveRecord
 			'codConvencion' => array(self::BELONGS_TO, 'Convencion', 'cod_convencion'),
                         'id_empresa' => array(self::BELONGS_TO, 'Empresa', 'id'),
                         'id_sindicato' => array(self::BELONGS_TO, 'Sindicato', 'id'),
+                        'id_niveleducativo'=>array(self::BELONGS_TO, 'NivelEducativo', 'nivel_educativo'),
 		);
 	}
 
@@ -134,6 +136,7 @@ class Nomina extends CActiveRecord
 			'cod_convencion' => 'Cod Convencion',
                         'id_empresa' => 'Codigo Empresa',
                         'id_sindicato' => 'Codigo Sindicato',
+                        'id_niveleducativo'=>'Codigo_NivelEducativo'
 		);
 	}
 

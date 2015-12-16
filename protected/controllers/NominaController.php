@@ -94,12 +94,32 @@ class NominaController extends Controller
                              $newmodel=new Nomina();       
                              //echo ($data[23]); exit();
                              
-                             if(!empty($data[3])  && ($data[3]=='x' || $data[3]=='X') && empty($data[23]) ){
+                             if(!empty($data[3])){
+                             if(($data[3]=='x' || $data[3]=='X')){
                                   $data[3]='V';
                              }else{
-                                 if(!empty($data[4]) && ($data[4]=='x' || $data[4]=='X') && empty($data[23])){
+                                 if(empty($data[23])){
+                                     echo "<script type='text/javascript'>
+                                     alert('Error, Nacionalidad No Cumple Los Parametros');
+                                     history.back(-1);
+                                     </script>";
+                                 }
+                             }
+                             }//fin del if de vacio
+                             
+                             else{
+                                 if(!empty($data[4]))
+                                 if(($data[4]=='x' || $data[4]=='X')){
                                  $data[3]='E';
                              }else{
+                                 if(empty($data[23])){
+                                     echo "<script type='text/javascript'>
+                                     alert('Error, Nacionalidad No Cumple Los Parametros');
+                                     history.back(-1);
+                                     </script>";
+                                 }
+                             }
+                             /*else{
                                  if(empty($data[23])){
                                  echo "<script type='text/javascript'>
                                         alert('Error, Nacionalidad No Cumple Los Parametros');
@@ -108,10 +128,11 @@ class NominaController extends Controller
                                         $transaction->rollback();
                                         
                                  exit(); }
-                             }
+                             }*/
                              
-                                 }
+                                 } //fin de nacionalidad
                             
+                                 if(!empty($data[9])){
                              if($data[9]!='S' && $data[9]!='C' && $data[9]!='D' && $data[9]!='V' && empty($data[23])){
                                 
                                   echo "<script type='text/javascript'>
@@ -123,9 +144,10 @@ class NominaController extends Controller
                                         exit();
                                  
                              }
+                                 }// fin del vacio de estado civil
                              
                              //verificando si existe el codigo de nivel educativo
-                             
+                             if(!empty($data[10])){
                              $resultado_sql= Yii::app()->db->createCommand("SELECT id as resultado from nivel_educativo where cod_interno='0".$data[10]."'")->queryRow();
                             
                              if($resultado_sql['resultado']<1 && empty($data[23])){
@@ -137,7 +159,10 @@ class NominaController extends Controller
                                         $transaction->rollback();
                                         exit();
                        }
-                             
+                             }//fin dle if de nivel educativo
+                             else{
+                              $data[10]=1;   
+                             }
                              
                              
                                  if(empty($data[23])){

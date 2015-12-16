@@ -11,13 +11,19 @@
         <?php echo CHtml::link(CHtml::encode($data->nombres), array('view', 'id'=>$data->id)); ?>
 	
 	<br />
-
-	
+        
+        
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nacionalidad')); ?>:</b>
 	<?php echo CHtml::encode($data->nacionalidad); ?>
 	<br />
-
+        
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('cedula')); ?>:</b>
+        <?php echo CHtml::encode($data->cedula); ?>
+	
+	<br />
+        
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pais_origen')); ?>:</b>
 	<?php echo CHtml::encode($data->pais_origen); ?>
 	<br />

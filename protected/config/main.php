@@ -51,14 +51,14 @@ return array(
 				'baseUrl'=>'http://coco.com/',
 
 				 // NO OLVIDES PONER EN FALSE TRAS INSTALAR
-				 'debug'=>true,
+				 'debug'=>false,
 				 'rbacSetupEnabled'=>true,
 				 'allowUserAlways'=>false,
 
 				// MIENTRAS INSTALAS..PONLO EN: false
 				// lee mas abajo respecto a 'Encriptando las claves'
 				//
-				'useEncryptedPassword' => false,
+				'useEncryptedPassword' => true,
 
 				// Algoritmo de la función hash que deseas usar
 				// Los valores admitidos están en: http://www.php.net/manual/en/function.hash-algos.php
